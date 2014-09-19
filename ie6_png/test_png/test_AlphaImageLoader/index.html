@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>AlphaImageLoader筛选器 - IE6支持PNG透明(alpha通道)的4种方法</title>
+<style type="text/css">
+body {background:url(images/checkerboard.gif)}
+ol,p,h3{clear:both;}
+
+.background li{float:left;border:1px solid #000;list-style:none;margin:2px;width:232px;height:232px;}
+
+</style>
+</head>
+
+<body>
+<h1>AlphaImageLoader筛选器 - IE6支持PNG透明(alpha通道)的4种方法</h1>
+
+<h3>以CSS背景方式插入透明png</h3>
+<ol class="background">
+<li class="background_shadow" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/shadow.png', sizingMethod='scale');">png阴影</li>
+<li class="background_opacity" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/opacity.png', sizingMethod='scale');">png局部透明</li>
+<li class="background_opacity2" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/opacity2.png', sizingMethod='scale');">png全透</li>
+</ol>
+
+<h3>注意事项:</h3>
+<ol>
+<li>AlphaImageLoader难以实现插入图片<code>&lt;img src=&quot;.png&quot;/&gt;透明</code></li>
+<li>AlphaImageLoader方法用于背景图片上,实现background-image的效果</li>
+<li>AlphaImageLoader IE8不支持</li>
+<li>因为IE7支持AlphaImageLoader,避免冲突建议使用CSS hack区分开,只针对IE6使用</li>
+</ol>
+
+<p>源文:<a href="http://blog.gulu77.com/?p=147">http://blog.gulu77.com/?p=147</a></p>
+</body>
+</html>

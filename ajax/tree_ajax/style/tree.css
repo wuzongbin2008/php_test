@@ -1,0 +1,6 @@
+/* Basic style */
+
+.fld_ln {
+	float:left;overflow:hidden;width:145px;
+	padding-left:5px;
+	}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pie>
+  <!--
+  <message bg_color="#CCBB00" text_color="#FFFFFF">
+    <![CDATA[You can broadcast any message to chart from data XML file]]>
+  </message>
+  -->
+  <slice title="服务器1" pull_out="true" descrīption="4026小时41分钟">14496075</slice>
+  <slice title="默认天数" descrīption="360小时19分钟">1297151</slice>
+  <slice title="Never" url="http://www.interactivemaps.org" descrīption="Click on the slice to find more information" alpha="50">0</slice>
+</pie>

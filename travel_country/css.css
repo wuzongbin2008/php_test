@@ -1,0 +1,529 @@
+/* CSS Document */
+.font01 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #363636;
+	text-decoration: none;
+}
+.font01 a:link {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #363636;
+	text-decoration: none;
+}
+.font01 a:visited {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #363636;
+	text-decoration: none;
+}
+.font01 a:hover {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #b52e2d;
+	text-decoration: none;
+}
+.font02 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #831f00;
+	text-decoration: none;
+}
+.font02 a:link {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #831f00;
+	text-decoration: none;
+}
+.font02 a:visited {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #831f00;
+	text-decoration: none;
+}
+.font02 a:hover {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #831f00;
+	text-decoration: none;
+}
+.font03 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #000000;
+	text-decoration: none;
+}
+.font04 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #f50034;
+	text-decoration: none;
+}
+.font04 a:link {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #f50034;
+	text-decoration: none;
+}
+.font04 a:hover {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #f50034;
+	text-decoration: none;
+}.font04 a:visited {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #f50034;
+	text-decoration: none;
+}
+.font05 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 26px;
+	color: #363636;
+	text-decoration: none;
+}
+.font06 {
+	font-family: SimSun;
+	font-size: 30px;
+	line-height: 40px;
+	font-weight:bold;
+	color: #363636;
+	text-decoration: none;
+}
+.font07 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #f97500;
+	text-decoration: none;
+}
+.font08 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #18763f;
+	text-decoration: none;
+}
+.font09 {
+	font-family: SimSun;
+	font-size: 28px;
+	line-height: 30px;
+	color: #831f00;
+	text-decoration: none;
+}
+.font10 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 28px;
+	color: #494949;
+	text-decoration: none;
+}
+.font11 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #494949;
+	text-decoration: none;
+}
+.font12 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #008ebd;
+	text-decoration: none;
+}
+.font13 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 24px;
+	color: #494949;
+	text-decoration: none;
+}
+.font14 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #ffffff;
+	text-decoration: none;
+}
+.font14 a:link {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #ffffff;
+	text-decoration: none;
+}
+.font14 a:visited {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #ffffff;
+	text-decoration: none;
+}
+.font14 a:hover {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #ffffff;
+	text-decoration: none;
+}
+.font15 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 18px;
+	color: #18763f;
+	text-decoration: none;
+}
+.font15 a:link {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 18px;
+	color: #18763f;
+	text-decoration: none;
+}
+.font15 a:visited {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 18px;
+	color: #18763f;
+	text-decoration: none;
+}
+.font15 a:hover {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 18px;
+	color: #18763f;
+	text-decoration: none;
+}
+.font16 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 24px;
+	color: #363636;
+	text-decoration: none;
+}
+.font16 a:link{
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 24px;
+	color: #363636;
+	text-decoration: none;
+}
+.font16 a:hover {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 24px;
+	color: #831f00;
+	text-decoration: none;
+}
+.font16 a:visited {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 24px;
+	color: #363636;
+	text-decoration: none;
+}
+.font17 {
+	font-family: SimSun;
+	font-size: 15px;
+	color: #404040;
+	text-decoration: none;
+}
+.font18 {
+	font-family: SimSun;
+	font-size: 12px;
+	color: #5f5f5f;
+	text-decoration: none;
+}
+.font19 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 21px;
+	color: #831f00;
+	text-decoration: none;
+}
+.font19 a:link {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 21px;
+	color: #831f00;
+	text-decoration: none;
+}
+.font19 a:visited {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 21px;
+	color: #831f00;
+	text-decoration: none;
+}
+.font19 a:hover {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 21px;
+	color: #831f00;
+	text-decoration: none;
+}
+.font20 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 21px;
+	color: #004ca1;
+	text-decoration: none;
+}
+.font20 a:link {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 21px;
+	color: #004ca1;
+	text-decoration: none;
+}
+.font20 a:visited {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 21px;
+	color: #004ca1;
+	text-decoration: none;
+}
+.font20 a:hover {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 21px;
+	color: #004ca1;
+	text-decoration: underline;
+}
+.font21 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #848484;
+	text-decoration: none;
+}
+.font21 a:link {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #848484;
+	text-decoration: none;
+}
+.font21 a:visited {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #848484;
+	text-decoration: none;
+}
+.font21 a:hover {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 20px;
+	color: #848484;
+	text-decoration: underline;
+}
+.font22 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 21px;
+	color: #333333;
+	text-decoration: none;
+}
+.font22 a:link {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 21px;
+	color: #333333;
+	text-decoration: none;
+}
+.font22 a:visited {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 21px;
+	color: #333333;
+	text-decoration: none;
+}
+.font22 a:hover {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 21px;
+	color: #333333;
+	text-decoration: underline;
+}
+.font23 {
+	font-family: SimSun;
+	font-size: 15px;
+	line-height: 20px;
+	color: #831f00;
+	text-decoration: none;
+}
+.font23 a:link {
+	font-family: SimSun;
+	font-size: 15px;
+	line-height: 20px;
+	color: #831f00;
+	text-decoration: none;
+}
+.font23 a:visited {
+	font-family: SimSun;
+	font-size: 15px;
+	line-height: 20px;
+	color: #831f00;
+	text-decoration: none;
+}
+.font23 a:hover {
+	font-family: SimSun;
+	font-size: 15px;
+	line-height: 20px;
+	color: #831f00;
+	text-decoration: none;
+}
+.font24 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 24px;
+	color: #004ca1;
+	text-decoration: none;
+}
+.font24 a:link {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 24px;
+	color: #004ca1;
+	text-decoration: none;
+}
+.font24 a:visited {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 24px;
+	color: #004ca1;
+	text-decoration: none;
+}
+.font24 a:hover {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 24px;
+	color: #004ca1;
+	text-decoration: underline;
+}
+.font25 {
+	font-family: SimSun;
+	font-size: 24px;
+	line-height: 30px;
+	color: #831f00;
+	text-decoration: none;
+}
+.font26 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 24px;
+	color: #363636;
+	text-decoration: line-through;
+}
+.font27 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 24px;
+	color: #0000FF;
+	text-decoration: underline;
+}
+.font27 a:link {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 24px;
+	color: #0000FF;
+	text-decoration: none;
+}
+.font27 a:visited {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 24px;
+	color: #0000FF;
+	text-decoration: none;
+}
+.font27 a:hover {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 24px;
+	color:  #0000FF;
+	text-decoration: none;
+}
+.font28 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 22px;
+	color: #363636;
+	text-decoration: none;
+}
+.font28 a:link {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 22px;
+	color: #363636;
+	text-decoration: none;
+}
+.font28 a:visited {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 22px;
+	color: #363636;
+	text-decoration: none;
+}
+.font28 a:hover {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 22px;
+	color: #363636;
+	text-decoration: underline;
+}
+.font30 {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 18px;
+	color: #363636;
+	text-decoration: none;
+}
+.font30 a:link {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 18px;
+	color: #363636;
+	text-decoration: none;
+}
+.font30 a:visited {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 18px;
+	color: #363636;
+	text-decoration: none;
+}
+.font30 a:hover {
+	font-family: SimSun;
+	font-size: 12px;
+	line-height: 18px;
+	color: #b52e2d;
+	text-decoration: none;
+}
+#practice2{background:#fef4d1; width:198px; height:17px;} 
+.ptop{display:block;background:##fef4d1;} 
+.ptop div{height:1px;overflow:hidden;background:#fef4d1;display:block;} 
+.ptop1{margin:0 3px;} 
+.ptop2{margin:0 2px;} 
+.ptop3{margin:0 1px;} 
+.con {background:#fef4d1;}
+.ptop .ptop4{margin:0 1px;height:1px;} 
+.font {font-size:12px; line-height:17px; color:#831f00; }
+
+#practice3{background:#fef4d1; width:212px; height:17px;} 
+

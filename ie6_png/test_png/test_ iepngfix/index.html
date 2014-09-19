@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>IE PNG Fix v1.0 / 2.0 Alpha 2 - IE6支持PNG透明(alpha通道)的4种方法</title>
+<style type="text/css">
+img, div, input{_behavior: url("iepngfix.htc");}
+
+body {background:url(images/checkerboard.gif)}
+ol,p,h3{clear:both;}
+
+.background li{float:left;border:1px solid #000;list-style:none; margin:2px; width:232px;height:232px;_behavior:url("iepngfix.htc");}
+.background_shadow{background:url(images/shadow.png)}
+.background_opacity{background:url(images/opacity.png)}
+.background_opacity2{background:url(images/opacity2.png)}
+</style>
+</head>
+
+<body>
+<h1>IE PNG Fix v1.0 / 2.0 Alpha 2 - IE6支持PNG透明(alpha通道)的4种方法</h1>
+
+<h3>以图片方式插入透明png:</h3>
+<img src="images/shadow.png"/>
+<img src="images/opacity.png"/>
+<img src="images/opacity2.png"/>
+
+<h3>以CSS背景方式插入透明png:</h3>
+<ul class="background">
+<li class="background_shadow">png阴影</li>
+<li class="background_opacity">png局部透明</li>
+<li class="background_opacity2">png全透</li>
+</ul>
+
+<h3>注意事项:</h3>
+<ol>
+<li>images目录的blank.gif透明图片作为png图片的替换,如目录有变请修改iepngfix.htc里blank.gif代码路径</li>
+<li>iepngfix.htc为IE6所用,本例子以"_"hack作为区分</li>
+<li>应用有PNG透明图片的标签,均要读取behavior:url("iepngfix.htc")</li>
+<li>iepngfix方法在背景应用上只能做到background-image的效果, 背景重复坐标调用等暂时实现不了</li>
+<li>透明png背景图片会以所在层的宽高度拉伸填充,border计算在层的宽高内(所以宽高是232px)</li>
+</ol>
+
+<p>源文:<a href="http://blog.gulu77.com/?p=147">http://blog.gulu77.com/?p=147</a></p>
+</body>
+</html>

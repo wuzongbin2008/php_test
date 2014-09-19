@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>崇武古城墙 泉州 - 新浪地图</title>
+<meta name="Keywords" content="," />
+<meta name="Description" content="" />
+<link rel="stylesheet" type="text/css" href="http://dev.map.sina.com.cn/css/map_common.css" />
+<link rel="stylesheet" type="text/css" href="http://dev.map.sina.com.cn/css/map.css" />
+<style type="text/css">
+	#picRoll{ margin:0 auto; position:relative;overflow:hidden;}/**/
+	#picRoll p{ float:left; margin-right:38px;margin-top:58px; vertical-align:bottom;border:#ccc solid 1px; line-height:0; font-size:0;  text-align:center;}
+	#picRoll p img{margin:5}
+	#box1,#box2{margin:0; padding:0; border:0;}
+	
+	.map_detail .map_main{
+		width:1200px;
+		height:auto;
+		margin:0 auto;
+		position:relative;
+	}
+	
+	.detail_blk_l{
+		margin-right: 0;
+		width: 860px;
+		overflow:hidden;
+	}
+	
+	.detail_blk_r{
+		padding:52px 0 0;
+		width:327px;
+		overflow:hidden;
+	}
+    .blk_info{
+        padding: 15px;
+    }
+
+    .blk_info table{
+        text-align:left;
+        color:#595959;
+    }
+
+    .blk_info table th, .blk_info table td{
+        line-height:2;
+    }
+
+    .blk_info table th{
+        font-weight:bold;
+    }
+/* 站点信息 */
+#siteinfo{color:#999;padding:70px 10px 15px;text-align:center;clear:both}
+#siteinfo a{color:#999}
+#siteinfo p{padding-bottom:3px}
+#siteinfo p.tu{margin-bottom:8px;border-bottom:1px dashed #D9D9D9}
+#siteinfo p.tu a{color:#33C}
+</style>
+    <!--[if gte IE 8]>
+    <style>
+     #oncityth{width: 200px;}
+    </style>
+    <![endif]-->
+<script type="text/javascript" src="http://api.map.sina.com.cn/engines/m3.0/smap.js?key=fd2ce04626aaefc55351eff262a1"></script>
+<script type="text/javascript" charset="utf-8" src="http://i.sso.sina.com.cn/js/ssologin.js"></script>
+<script type="text/javascript" src="http://d1.sina.com.cn/shh/sinadot_intext/20090521/new/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="http://dev.map.sina.com.cn/js/prototype-1.4.0.js"></script>
+<script type="text/javascript" src="http://dev.map.sina.com.cn/js/sinamap.js"></script>
+<script type="text/javascript" src="http://dev.map.sina.com.cn/js/iaskmap.js"></script>
+<script type="text/javascript" src="http://dev.map.sina.com.cn/js/user.js"></script>
+<script type="text/javascript" src="http://dev.map.sina.com.cn/js/comment.js"></script>
+<script type="text/javascript" src="http://dev.map.sina.com.cn/js/common.js"></script>
+<script type="text/javascript" src="http://dev.map.sina.com.cn/js/index.js"></script>
+<script type="text/javascript" src="http://dev.map.sina.com.cn/js/mark.js"></script>
+<script type="text/javascript">
+	var poi_title = "崇武古城墙";
+	function h(s) {
+		$(s).style.display = "none";
+	}
+	function $(o) {
+		return document.getElementById(o);
+	}
+	function goTab(num, tab_num, pre) {
+		for (var i = 0; i < tab_num; i++) {
+			$(pre + "_info_" + i).style.display = "none";
+		}
+		for (var i = 0; i < tab_num; i++) {
+			$(pre + "_tab_" + i).className = "";
+		}
+		$(pre + "_tab_" + num).className = "selected";
+		$(pre + "_info_" + num).style.display = "block";
+	}
+	function goIndex(index, pars) {
+		var url = "";
+		url = getUrlByPars(index, pars);
+		window.open(url, "_blank");
+	}
+	function gbcount(message, total, used, remain) {
+		var max;
+		max = total.value;
+		if (message.value.length > max) {
+			message.value = message.value.substring(0, max);
+			used.value = max;
+			remain.innerHTML = 0;
+			alert("对不起，您输入的评论超过500字！");
+		} else {
+			used.value = message.value.length;
+			remain.innerHTML = max - used.value;
+		}
+	}
+	function postComment(){
+		if (!window.user.loginIf){
+			$("username").value = "";
+		} else {
+			$("username").value = window.user.getNick();
+		}
+		$("formcomm").action = "addcomment.php";
+		$("formcomm").method = "post";
+		$("formcomm").submit();
+	}
+	function submitcomment(form) {
+		var r, re;
+		re = /(^\s*)|(\s*$)/g;
+		r = form.content.value.replace(re, "");
+		if (0 == r.length) {
+			//show_center_div("emptycomm");
+			alert("提示：评论内容不能为空");
+			//show_div_cover();
+			return 0;
+		} else {
+			if(!window.user.loginIf){
+				if(!$("anonymous").checked){
+					window.user.checkLogin(function(){
+						$("anonymous").checked = false;
+						$("anonymous").disabled = true;
+						postComment();
+				});
+				} else {
+					postComment();
+				}
+			} else {
+				postComment();
+			}
+		}
+	}
+	function com_suc(loginStatus) {
+		if (loginStatus["result"] == true) {
+			window.user.loginLocation = "poi_comment";
+			window.user.setLogin(loginStatus["userinfo"]["displayname"]);
+			var f = $("formcomm");
+			$("username").value = loginStatus["userinfo"]["displayname"];
+			f.action = "addcomment.php";
+			f.method = "post";
+			f.submit();
+		} else {
+			alert("尚未登录，或者请直接使用匿名发表");
+		}
+	}
+	function linkToOtherPage(filename, $num) {
+		var page = $('optionLink').value;
+		window.location.href = filename + "&num=" + $num + "&page=" + (page - 1);
+		$("optionLink").selectedIndex = page;
+	}
+
+	if (window.navigator.userAgent.toString().toLowerCase().indexOf("msie") < 1) { //firefox   innerText   define
+		HTMLElement.prototype.__defineGetter__("innerText",
+		function() {
+			var anyString = "";
+			var childS = this.childNodes;
+			for (var i = 0; i < childS.length; i++) {
+				if (childS[i].nodeType == 1) {
+					anyString += childS[i].tagName == "BR" ? '\n': childS[i].innerText;
+				} else if (childS[i].nodeType == 3) {
+					anyString += childS[i].nodeValue;
+				}
+			}
+			return anyString;
+		});
+		HTMLElement.prototype.__defineSetter__("innerText",
+		function(sText) {
+			this.textContent = sText;
+		});
+	}
+
+</script>
+</head>
+<body class="map_detail">
+<div class="map_wrap" id="map_index">
+  <div class="map_header">
+    <div class="top_nav"> <span class="logo left"><a href="/"><img src="http://dev.map.sina.com.cn/images/logo.gif" width="183" height="47" alt="新浪地图"></a></span> </div>
+    <div class="user_info"> <span class="login" id="login"> <a href="javascript:;" onclick="javascript:showLogin();"> 登录 </a> | <a href="http://login.sina.com.cn/signup/signupmail.php?entry=map&r=map.sina.com.cn"
+				target="_blank"> 注册 </a> </span> <span> | <a target="_blank" href="http://open.weibo.com/wiki/API%E6%96%87%E6%A1%A3#.E5.BE.AE.E5.8D.9A.E5.9C.B0.E7.90.86.E4.BD.8D.E7.BD.AE.E4.BF.A1.E6.81.AF.E6.8E.A5.E5.8F.A3"> 地图API </a> | <a target="_blank" href="guest_b.html"> 意见反馈 </a> | <a href="/"> 地图首页 </a> </span> </div>
+  </div>
+  <div class="tools"> <a href="/"> 地图首页 </a> &gt; <span> 崇武古城墙 详细信息 </span> </div>
+  <div class="map_main">
+    <div class="detail_blk_l">
+      <div class="title">崇武古城墙</div>
+      <div class="blk_gray" id="blk_gray">
+        <div class="blk_info clearfix">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tbody>
+				<tr>
+					<th width="70" id="oncityth">所在城市：</th>
+					<td width="190">泉州</td>
+					<th>所属分类：</th>
+					<td width="280" id="navigat"></td>
+				</tr>
+				<tr>
+					<th>电　　话：</th>
+					<td width="190" id="tel"></td>
+					<th width="70">传　　真：</th>
+					<td width="280" id="fax"></td>
+				</tr>
+				<tr>
+					<th>地　　址：</th>
+					<td colspan="3" id="addr"></td>
+				</tr>
+				<tr valign="top">
+					<th>简　　介：</th>
+					<td colspan="3" id="intro"></td>
+				</tr>
+				<tr>
+					<th>网　　站：</th>
+					<td colspan="3" id="url"></td>
+				</tr>
+				<tr>
+					<th>E-mail：</th>
+					<td colspan="3" id="email"></td>
+				</tr>
+				</tbody>
+			</table>
+			<p class="right"> <a href="mark_add.php?city=0595&amp;id=25829&amp;type=1">地点信息纠错</a> </p>
+        </div>
+      </div>
+      <div class="scroll_pic_wrap clearfix">
+        <div class="scroll_pic clearfix" id="scroll_pic">
+          <div class="page_up clearfix"> <a href="javascript:;" id="btnleft"> 上一张 </a> </div>
+          <div class="pic_box clearfix" id="picRoll"> </div>
+          <div class="page_down clearfix"> <a href="javascript:;" id="btnright"> 下一张 </a> </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+		var minSize, picScroll,maxSize,smallImgMarginTop = 58;
+        var picTotal = 9;
+        var blk_grayWidth = jQuery("#blk_gray").width();
+		if (picTotal != 0) {
+			var strPic = "http://image.iask.sina.com.cn/dituimg/images/indexpic/0595/25829/3.jpg,http://image.iask.sina.com.cn/dituimg/images/indexpic/0595/25829/4.jpg,http://image.iask.sina.com.cn/dituimg/images/indexpic/0595/25829/2.jpg,http://image.iask.sina.com.cn/dituimg/images/indexpic/0595/25829/0.jpg,http://image.iask.sina.com.cn/dituimg/images/indexpic/0597/14622/4.jpg,http://image.iask.sina.com.cn/dituimg/images/indexpic/0597/14622/3.jpg,http://image.iask.sina.com.cn/dituimg/images/indexpic/0597/14622/2.jpg,http://image.iask.sina.com.cn/dituimg/images/indexpic/0597/14622/0.jpg,http://image.iask.sina.com.cn/dituimg/images/indexpic/0597/14622/1.jpg";
+			var arrPic = strPic.split(",");
+			for (var i = 0; i < arrPic.length; i++) {
+				document.getElementById('picRoll').innerHTML += "<p><img src='" + arrPic[i] + "' alt=\"\"></p>";
+			}
+			setTimeout("Initial()", 500);
+		} else {
+			document.getElementById('picRoll').style.display = 'none';
+			document.getElementById('btnleft').style.display = 'none';
+			document.getElementById('btnright').style.display = 'none';
+		}
+		//等比缩放
+		function imgResize(img, w, h) {
+            var yw = img.width();
+            var yh = img.height();
+			var wb = w / yw,
+			hb = h / yh;
+			if (wb <= hb) {
+				img.width(w);
+				img.height(yh * wb);
+			} else {
+				img.width(yw * hb);
+				img.height(h);
+			}
+		}
+		//得到等比缩放后的宽窄（重复使用会因数据精确度而有失真）
+		function getMatchSize(img, w, h) {
+			var yw = img.width();
+			var yh = img.height();
+			var wb = w / yw,
+			hb = h / yh;
+			if (wb <= hb) {
+				return {
+					w: w,
+					h: yh * wb
+				};
+			} else {
+				return {
+					w: yw * hb,
+					h: h
+				};
+			}
+		}
+		//根据制定图片的序号，将之变大
+		function setBigPic(n) {
+			var tempimg = picScroll.cont.find('img:eq(' + n + ')');
+			tempimg.parents('p').css({
+				width: maxSize.w + 'px',
+				height: maxSize.h + 'px',
+				'margin-top':0
+			});
+			imgResize(tempimg, maxSize.w, maxSize.h);
+			if (tempimg.height() < maxSize.h) {
+				tempimg.css('marginTop',maxSize.h-tempimg.height()+'px');
+			} else {
+				tempimg.css('marginTop', 0)
+			}
+		}
+		//根据制定图片的序号，将之变小
+		function setSmallPic(n) {
+			var tempimg = picScroll.cont.find('img:eq(' + n + ')');
+			tempimg.parents('p').css({
+				width: minSize.w + 'px',
+				height: minSize.h + 'px',
+				'margin-top': smallImgMarginTop+'px'
+			});
+			imgResize(tempimg, minSize.w, minSize.h);
+			if (tempimg.height() < maxSize.h) {
+				tempimg.css('marginTop', minSize.h - tempimg.height() + 'px');
+			} else {
+				tempimg.css('marginTop', 0)
+			}
+		}
+		function Initial() {
+            minSize = {
+                w: 138,
+                h: 120
+            },
+            maxSize = {
+                w: 258,
+                h: 178
+            }; //图片大、小尺寸
+            picScroll = {
+                container: jQuery('#picRoll'),
+                //图片列表容器
+                step: 178,
+                //每次切换步长
+                diff: 120,
+                //大小图之间的差值
+                picsNum: 0,
+                //图片总数，在下面"控制图片大小"模块赋值
+                direction: 'right',
+                //移动方向
+                leftPicNum: 0, //可视最左侧的图片序号
+                //误差系数
+                modulus : 0
+            };
+
+            //兼容1024 * 768 像素
+            if(blk_grayWidth < 808){
+                minSize = {
+                    w: 89,
+                    h: 78
+                },
+                maxSize = {
+                    w: 168,
+                    h: 115
+                }; //图片大、小尺寸
+                picScroll.step = 129;
+                picScroll.diff = 79;
+                smallImgMarginTop = 37;
+                jQuery("#scroll_pic").css("width","600px");
+                jQuery("#btnleft").css({"marginRight":"37px","marginTop":"66px"});
+                jQuery("#btnright").css({"marginLeft":"37px","marginTop":"66px"});
+                jQuery("#picRoll p").css({marginTop:"37px"});
+            }
+
+			//控制图片大小
+			picScroll.container.find('img').each(function() {
+				var img = jQuery(this);
+				imgResize(img, minSize.w, minSize.h);
+				if (img.height() < minSize.h) {
+					img.css('marginTop', minSize.h - img.height() + 'px');
+				}
+				picScroll.picsNum++;
+			});
+
+			//如果少于3张则复制
+			if (picScroll.picsNum == 1) {
+				var chtml = picScroll.container.html();
+				picScroll.container.html(chtml + chtml + chtml);
+				picScroll.picsNum = 3;
+			} else if (picScroll.picsNum == 2) {
+				var chtml = picScroll.container.html();
+				picScroll.container.html(chtml + chtml);
+				picScroll.picsNum = 4;
+			}
+			picScroll.leftPicNum = picScroll.picsNum; //初始化最左侧图片
+			//为无缝滚动重写内容（设置两层容器）
+			var html = picScroll.container.html();
+            var boxWidth = picScroll.picsNum * picScroll.step + picScroll.diff + picScroll.modulus;
+            if(blk_grayWidth < 808){
+                jQuery("#picRoll").css({"width":boxWidth+"px",height:"117px"}); //兼容1024 * 768 像素
+            }else{
+                jQuery("#picRoll").css({"width":620+"px",height:"180px"});
+            }
+			picScroll.container.html(jQuery('<div id="cont" style="width:'+(boxWidth * 2)+'px;position:absolute;left:0;top:0;"/>').append(jQuery('<div id="box1" style="float:left;width:' + (boxWidth) + 'px;overflow:hidden;">').html(html)).append(jQuery('<div id="box2" style="float:left;">').html(html)));
+		
+			picScroll.cont = jQuery('#cont');
+			picScroll.box1 = jQuery('#box1');
+			picScroll.box2 = jQuery('#box2');
+			picScroll.cont.css('left', -(boxWidth) + 'px'); //初始化位置
+			//设置初始大图（2）
+			setBigPic(picScroll.leftPicNum + 1);
+			setBigPic(picScroll.leftPicNum + 1 - picScroll.picsNum);
+		}
+		//左右按钮事件
+		jQuery('#btnleft').click(function() {
+			picScroll.direction = 'left';
+			if (picScroll.leftPicNum == 0) { //控制板块切换，实现无缝滚动
+				picScroll.cont.css('left', -picScroll.box1.width() + 'px');
+				picScroll.leftPicNum += picScroll.picsNum;
+			}
+			picScroll.leftPicNum--;
+			move();
+		});
+		jQuery('#btnright').click(function() {
+			picScroll.direction = 'right';
+			if (picScroll.leftPicNum >= picScroll.picsNum) { //控制板块切换，实现无缝滚动
+				picScroll.cont.css('left', (picScroll.leftPicNum - picScroll.picsNum) * picScroll.step + 'px');
+				picScroll.leftPicNum -= picScroll.picsNum;
+			}
+			picScroll.leftPicNum++;
+			move();
+		});
+		//根据制定图片序号，使之动态变小
+		function bigToSmall(n) {
+			var bigPic = picScroll.cont.find('img:eq(' + n + ')');
+			var bigPicSize = getMatchSize(bigPic, minSize.w, minSize.h);
+
+			bigPic.animate({
+				width: bigPicSize.w + 'px',
+				height: bigPicSize.h + 'px',
+				marginTop: (bigPicSize.h < minSize.h ? minSize.h - bigPicSize.h: 0) + 'px'
+			},
+			300);
+
+			bigPic.parents('p').animate({
+				width: minSize.w + 'px',
+				height: minSize.h + 'px',
+				marginTop: smallImgMarginTop+'px'
+			},
+			300);
+		}
+		//根据制定图片序号，使之动态变大
+		function smallToBig(n) {
+			var bigPic = picScroll.cont.find('img:eq(' + n + ')');
+			var bigPicSize = getMatchSize(bigPic, maxSize.w, maxSize.h);
+			bigPic.animate({
+				width: bigPicSize.w + 'px',
+				height: bigPicSize.h + 'px',
+				marginTop: (bigPicSize.h < maxSize.h ? maxSize.h - bigPicSize.h: 0) + 'px'
+			},
+			300);
+			bigPic.parents('p').animate({
+				width: maxSize.w + 'px',
+				height: maxSize.h + 'px',
+				marginTop: '0px'
+			},
+			300);
+		}
+		//移动
+		function move() {
+			var left = '', moveNum = parseInt(picScroll.leftPicNum * picScroll.step);
+			if (picScroll.direction == 'left') {//向左运动
+                //计算移动位置
+                if (picScroll.leftPicNum && picScroll.leftPicNum != 1) {
+                    if(picTotal<=3){
+                        moveNum += picScroll.diff;
+                    }else if((picScroll.picsNum-picScroll.leftPicNum) ==1){
+                        moveNum += picScroll.diff;
+                    }
+                }
+                left = "-"+moveNum + 'px';
+
+                //移动
+				picScroll.cont.animate({
+					left: left
+				},
+				300);
+				//变化
+				//原大图变小
+				bigToSmall(picScroll.leftPicNum + 2);
+				bigToSmall(picScroll.leftPicNum + 2 >= picScroll.picsNum ? picScroll.leftPicNum + 2 - picScroll.picsNum: picScroll.leftPicNum + 2 + picScroll.picsNum);
+				//新任小图变大
+				smallToBig(picScroll.leftPicNum + 1);
+				smallToBig(picScroll.leftPicNum + 1 >= picScroll.picsNum ? picScroll.leftPicNum + 1 - picScroll.picsNum: picScroll.leftPicNum + 1 + picScroll.picsNum);
+		
+			} else {//向右运动
+                if (picScroll.leftPicNum && picScroll.leftPicNum != 1) {
+                    if(picTotal<=3){
+                        moveNum += picScroll.diff;
+                    }else if(picScroll.leftPicNum == picScroll.picsNum || (picScroll.picsNum-picScroll.leftPicNum) ==1){
+                        moveNum += picScroll.diff;
+                    }
+                }
+                left = "-"+moveNum + 'px';
+
+                //移动
+				picScroll.cont.animate({
+					left: left
+				},
+				300);
+				//变化
+				//原大图变小
+				bigToSmall(picScroll.leftPicNum);
+				bigToSmall(picScroll.leftPicNum >= picScroll.picsNum ? picScroll.leftPicNum - picScroll.picsNum: picScroll.leftPicNum + picScroll.picsNum);
+				//新任小图变大
+				smallToBig(picScroll.leftPicNum + 1);
+				smallToBig(picScroll.leftPicNum + 1 >= picScroll.picsNum ? picScroll.leftPicNum + 1 - picScroll.picsNum: picScroll.leftPicNum + 1 + picScroll.picsNum);
+			}
+		}		
+	  </script>
+      <div class="blk_gray" style="visibility:hidden; height:0px; display:none; margin:0px; padding:0px; ">
+        <iframe name="comment_iframe" style="display:none;"> </iframe>
+        <form target="comment_iframe" id="formcomm">
+          <input type="hidden" name="city" id="city" value="0595" />
+          <input type="hidden" name="id" id="id" value="25829" />
+          <input type="hidden" name="username" id="username" value="" />
+          <div class="send_comment"> <strong> 发表评论 </strong> <span id="showUser"> </span> <span>
+            <input id="anonymous" type="checkbox">
+            使用匿名发表 </span> <span style="display:none;">
+            <input disabled maxLength="4" name="total" size="3" value="500">
+            <input disabled maxLength="4" name="used" size="3" value="0">
+            </span></div>
+          <div class="comment_textarea">
+            <p class="tips"> 您还可以输入 <span id="remain"> 500 </span> 字 </p>
+            <textarea name="content" onkeydown="gbcount(this.form.content,this.form.total,this.form.used,$('remain'));" onkeyup="gbcount(this.form.content,this.form.total,this.form.used,$('remain'));"></textarea>
+			<div class="btn"> <a href="javascript:;" onclick="javascript:submitcomment($('formcomm'));"> 提交评论 </a> </div>
+          </div>
+        </form>
+      </div>
+      <div id="addcomm" class="main1" style="display:none;position:absolute; left:180px; top:310px;">
+        <div id="headerbg">
+          <h2> 新浪地图提示 </h2>
+          <span> <a href="javascript:h('addcomm');refresh();void(0);"> <img src="http://i3.sinaimg.cn/pfp/i/z3/close1.gif" alt="关闭" onclick="h('addcomm');"
+							/> </a> </span> </div>
+        <div id="pop_cont1">
+          <div class="area"> <img src="http://i0.sinaimg.cn/pfp/i/z3/notice_grzx.gif" alt="notice"/>
+            <p style="line-height:22px;"> 您的评论已经提交成功！ <br/>请您稍候几分钟，审核通过后即可显示。 </p>
+          </div>
+          <div id="butt_area">
+            <div style="padding-top:7px;">
+              <input type="button" value="确 定" id="addvic" name="" class="buttBg1" onClick="refresh();h('addcomm');void(0);" onMouseOver="this.className='buttBg2';" onMouseOut="this.className='buttBg1';" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="emptycomm" class="main1" style="display:none;position:absolute; left:180px; top:310px;">
+        <div id="headerbg">
+          <h2>新浪地图提示</h2>
+          <span><a href="javascript:h('emptycomm');void(0);"><img src="http://i3.sinaimg.cn/pfp/i/z3/close1.gif" alt="关闭" onMouseMove="imgchange(this,'http://i0.sinaimg.cn/pfp/i/z3/close2.gif')" onMouseOut="imgchange(this,'http://i3.sinaimg.cn/pfp/i/z3/close1.gif')" /></a></span>
+		</div>
+        <div id="pop_cont1">
+          <div class="area">
+			<img src="http://i0.sinaimg.cn/pfp/i/z3/notice_grzx.gif" alt="notice" />
+            <p style="line-height:22px;">评论内容不能为空！<br/>&nbsp;&nbsp;&nbsp;</p>
+          </div>
+          <div id="butt_area">
+            <div style="padding-top:7px;">
+              <input type="button" value="确 定" id="addtrue" name="" class="buttBg1" onClick="javascript:h('emptycomm');void(0);" onMouseOver="this.className = 'buttBg2';" onMouseOut="this.className = 'buttBg1';" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user_comments">
+        <div class="title">
+          <div class="page"></div>
+          <strong>用户评论</strong><span>共 0 条 </span> </div>
+		<ul></ul>
+        <div class="page_wrap"></div>
+      </div>
+    </div>
+    <div class="detail_blk_r">
+      <div class="sinamap" id="sinaMap" style="width:100%;height:300px"></div>
+      <div class="search_wrap" style="margin:20px 0 0;">
+        <ul class="lay_tag clearfix" id="tag_ul">
+          <li class="selected" id="tip_tab_0" onclick="goTab(0,3,'tip');"> <a href="javascript:void(0);" class="go">到这里去</a></li>
+          <li id="tip_tab_1" onclick="goTab(1,3,'tip');"> <a href="javascript:void(0);" class="from">从这里出发</a></li>
+          <li id="tip_tab_2" onclick="goTab(2,3,'tip');"> <a href="javascript:void(0);" class="near">在附近找</a></li>
+        </ul>
+        <div class="lay_content clearfix" style="display:block" id="tip_info_0"> 
+			<span class="left txt">起点</span>
+			<div class="lay_input left">
+				<input id="poibegin" type="text" class="lay_txt">
+				<span class="btn"></span>
+			</div>
+			<a id="gj_btn_0" href="javascript:void(0);" class="map_botton left" onclick="if($('poibegin').value.match(/^\s*$/)){alert('请输入起点！');return false;}var checkbegin=checkinput($('poibegin').value);if(!checkbegin)return false;goIndex(2,'泉州,'+$('poibegin').value+',,崇武古城墙,25829');">公交</a>
+			<a href="javascript:void(0);" class="map_botton left" onclick="if($('poibegin').value.match(/^\s*$/)){alert('请输入起点！');return false;} var checkbegin=checkinput($('poibegin').value);if(!checkbegin)return false;goIndex(3,'泉州,0595,0595,'+$('poibegin').value+',,崇武古城墙,25829,');">驾车</a>
+		</div>
+        <div class="lay_content clearfix" style="display:none" id="tip_info_1">
+			<span class="left txt"> 终点 </span>
+			<div class="lay_input left"><input type="text" class="lay_txt" id="poiend"><span class="btn"></span></div>
+			<a id="gj_btn_1" href="javascript:void(0);" class="map_botton left" onclick="if($('poiend').value.match(/^\s*$/)){alert('请输入终点！');return false;}var checkend=checkinput($('poiend').value);if(!checkend)return false;goIndex(2,'泉州,崇武古城墙,25829,'+$('poiend').value+',,');">公交</a>
+			<a href="javascript:void(0);" class="map_botton left" onclick="if($('poiend').value.match(/^\s*$/)){alert('请输入终点！');return false;} var checkend=checkinput($('poiend').value);if(!checkend)return false;goIndex(3,'泉州,0595,0595,崇武古城墙,25829,'+$('poiend').value+',,');">驾车</a>
+		</div>
+        <div class="lay_content clearfix lay_content1" style="display:none" id="tip_info_2">
+          <div class="box1 clearfix"> <span class="left txt">查找附近</span>
+            <div class="left">
+              <select id="s_dr">
+				<option value=500> 500米 </option>
+				<option value=1000> 1千米 </option>
+				<option value=2000 selected> 2千米 </option>
+				<option value=5000> 5千米 </option>
+				<option value=10000> 10千米 </option>
+			  </select>
+			</div>
+            <span class="left txt"> 范围内的： </span>
+		  </div>
+          <p class="labels"><a href="#" onclick="goIndex(1,'泉州,'+this.innerText+',崇武古城墙,25829,category:160100,dr,'+$('s_dr').value+',0,10');"> 银行 </a> <a href="#" onclick="goIndex(1,'泉州,'+this.innerText+',崇武古城墙,25829,category:100100,dr,'+$('s_dr').value+',0,10');"> 宾馆 </a> <a href="#" onclick="goIndex(1,'泉州,'+this.innerText+',崇武古城墙,25829,category:50000,dr,'+$('s_dr').value+',0,10');"> 饭店 </a> <a href="#" onclick="goIndex(1,'泉州,'+this.innerText+',崇武古城墙,25829,category:60100,dr,'+$('s_dr').value+',0,10');"> 商场 </a> <a href="#" onclick="goIndex(1,'泉州,'+this.innerText+',崇武古城墙,25829,category:60400,dr,'+$('s_dr').value+',0,10');"> 超市 </a> <a href="#" onclick="goIndex(1,'泉州,'+this.innerText+',崇武古城墙,25829,category:70300,dr,2000,0,10');"> 售票处 </a></p>
+          <div> 
+			<span class="left txt">其他</span>
+            <div class="lay_input left">
+              <input id='key' type="text" class="lay_txt">
+            </div>
+            <a class="map_botton left" href="javascript:void(0);" onclick="if($('key').value.match(/^\s*$/)){alert('关键字不能为空！');return false;} var checkkey=checkinput($('key').value);if(!checkkey)return false;goIndex(1,'泉州,'+$('key').value+',崇武古城墙,25829,,dr,'+$('s_dr').value+',0,10');">搜索</a>
+		  </div>
+        </div>
+      </div>
+      <div class="news_list">
+        <div class="title">相关新闻</div>
+		<ul>
+		<p>抱歉，没有找到相关新闻。想了解更多内容，请点击【更多】</p>
+		</ul>
+        <p class="more" style="margin-top: 0px"> <a href="http://iask.com/n?k=崇武古城墙"> 更多&gt;&gt; </a> </p>
+      </div>
+    </div>
+  </div>
+  <div id="siteinfo">
+	<p class="tu"><a href="javascript:void(0)" onclick="addURLToFavorite();">收藏本站</a> | <a href="guest_b.html" target="_blank">意见反馈</a> | <a href="/help/help.html" target="_blank">使用帮助</a> | <a href="mark_add.php?city=0595" target="_blank">新地标登记</a></p>
+	<p><a href="http://place.weibo.com/hotpoi" target="_blank">城市热点</a> - <a href="/" target="_blank">地图首页</a>
+	<p><a href="http://www.sina.com.cn/" target="_blank"><img src="/images/maplogo_dm.gif" width="28" height="20" alt="新浪首页" /></a> &copy; 2013 Sina.com&nbsp;&nbsp;<a href="http://iask.com/help/mzsm.html" target="_blank">免责声明</a></p>
+  </div>
+</div>
+<div id="loginDlg" style="position:absolute;display:none;z-index:1001">
+	<iframe src="about:blank" allowtransparency="true" id="loginFm" style="width:284px; height: 200px; display:none;" frameborder="0"></iframe>
+</div>
+<script type="text/javascript">
+if(window.user.loginIf){window.user.loginLocation="index";window.user.setLoginDisplay();}
+</script>
+<script type="text/javascript">
+	if (window.user.loginIf) {
+		$("anonymous").checked = false;
+		$("anonymous").disabled = true;
+	} else {
+		$("anonymous").checked = true;
+		$("anonymous").checked = false;
+	}
+//	window.user.initUser("nologin", "showUser");
+	/*
+	$("user").onfocus = function(e) {
+		$("anonymous").checked = false;
+		$("anonymous").disabled = true;
+	}
+	$("password").onblur = function(e) {
+		if ($("user").value == "" || $("password").value == "") {
+			$("anonymous").checked = true;
+			$("anonymous").disabled = false;
+		}
+	}
+	$("password").onfocus = $("user").onfocus;
+	$("password").onblur = $("user").onblur;
+	*/
+	initpoi();
+	var hasbus = "1";
+	if (hasbus != "" && hasbus == 0) {
+		document.getElementById("gj_btn_0").style.display = "none";
+		document.getElementById("gj_btn_1").style.display = "none";
+	}
+</script>
+</body>
+</html>

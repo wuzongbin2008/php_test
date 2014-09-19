@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="css/jqtp.css"/>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.jqupload.min.js"></script>
+
+<script type="text/javascript">
+function myfunc(return_message){
+   eval("data="+return_message);
+   $("#demo_message").html(data.message);
+}
+
+$(document).ready(function() {
+   //the simple way, use default alert message and callback
+   //$("#my_form").jqupload();
+
+   //the second way, use json object and set the message to a div/span
+   //$("#my_form").jqupload({"output":"demo_message"});
+
+   //advanced way, define your own logic to handle the return message
+   $("#my_form").jqupload({"callback":"myfunc"});
+   $("#my_form").jqupload_form();
+});
+</script>
+
+</head>
+<body>
+<div id="demo_message"></div>
+<form id="my_form" name="my_form" method="post" action="upload.php" enctype="multipart/form-data">
+<input type="file" name="file" id="file">
+<input type="submit">
+</form>
+</body>
+</html>
+
+
+

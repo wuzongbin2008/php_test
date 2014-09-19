@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>PNG Transparency in IE - IE6支持PNG透明(alpha通道)的4种方法</title>
+<!--[if IE 6]>
+<script language="JavaScript" type="text/javascript">
+if (navigator.platform == "Win32" && navigator.appName == "Microsoft Internet Explorer" && window.attachEvent) {
+window.attachEvent("onload", enableAlphaImages);
+}
+
+function enableAlphaImages(){
+var rslt = navigator.appVersion.match(/MSIE (\d+\.\d+)/, '');
+var itsAllGood = (rslt != null && Number(rslt[1]) >= 5.5);
+if (itsAllGood) {
+for (var i=0; i<document.all.length; i++){
+var obj = document.all[i];
+var bg = obj.currentStyle.backgroundImage;
+var img = document.images[i];
+if (bg && bg.match(/\.png/i) != null) {
+var img = bg.substring(5,bg.length-2);
+var offset = obj.style["background-position"];
+obj.style.filter =
+"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+img+"', sizingMethod='crop')";
+obj.style.backgroundImage = "url('images/spacer.gif')";//替换透明PNG的图片
+obj.style["background-position"] = offset; // reapply
+} else if (img && img.src.match(/\.png$/i) != null) {
+var src = img.src;
+img.style.width = img.width + "px";
+img.style.height = img.height + "px";
+img.style.filter =
+"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+src+"', sizingMethod='crop')"
+img.src = "images/spacer.gif";//替换透明PNG的图片
+}
+}
+}
+}
+</script>
+<![endif]-->
+
+<style type="text/css">
+body {background:url(images/checkerboard.gif)}
+ol,p,h3{clear:both;}
+
+.background li{float:left;border:1px solid #000;list-style:none;margin:2px;width:234px;height:234px;}
+.background_shadow{background:url(images/shadow.png)}
+.background_opacity{background:url(images/opacity.png)}
+.background_opacity2{background:url(images/opacity2.png)}
+</style>
+</head>
+
+<body>
+<h1>PNG Transparency in IE - IE6支持PNG透明(alpha通道)的4种方法</h1>
+
+<h3>以图片方式插入透明png</h3>
+<img src="images/shadow.png"/>
+<img src="images/opacity.png"/>
+<img src="images/opacity2.png"/>
+
+<h3>以CSS背景方式插入透明png</h3>
+<ol class="background">
+<li class="background_shadow">png阴影</li>
+<li class="background_opacity">png局部透明</li>
+<li class="background_opacity2">png全透</li>
+</ol>
+
+<h3>注意事项:</h3>
+<ol>
+<li>根目录的spacer.gif透明图片作为png图片的替换,写在JavaScript中的spacer.gif路径根据需要调整</li>
+<li>PNGTransparncyinIE方法在背景应用上只能做到background-image的效果, 背景重复坐标调用等暂时实现不了</li>
+</ol>
+
+<p>源文:<a href="http://blog.gulu77.com/?p=147">http://blog.gulu77.com/?p=147</a></p>
+</body>
+</html>

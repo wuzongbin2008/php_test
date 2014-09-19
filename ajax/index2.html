@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery ajaxStart() Example</title>
+    <script type="text/javascript"src="jquery-1.4.4.min.js"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+    
+        $(document).ready(function () {
+            $("div#divStatus").ajaxStart(function () {
+                $(this).html("Contacting the server");
+            });
+            
+            $("div#divStatus2").ajaxStop(function () {
+                $(this).html("Response received.");
+            });
+        });                
+        
+        //function to get customer information
+        function requestCustomerInfo() {
+        
+            //get the ID
+            var sId = $("input#txtCustomerId").val();
+
+            //send the request
+            $("div#divCustomerInfo").load("mysql_test.php?id=" + sId);            
+        }
+
+        //]]>
+    </script>
+</head>
+<body>
+    <p>Enter customer ID number to retrieve information:</p>
+    <p>Customer ID: <input type="text" id="txtCustomerId" value="" /></p>
+    <p><input type="button" value="Get Customer Info" onclick="requestCustomerInfo()" /></p>
+    <div id="divStatus" style="color: blue"></div>
+    <div id="divStatus2" style="color: blue"></div>
+    <div id="divCustomerInfo"></div>    
+</body>
+</html

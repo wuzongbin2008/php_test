@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="Mr.Think青鸟" />
+<meta name="keywords" content="Mr.Think,青鸟,前端开发,前端技术,网站策划,网站优化,javascript,css,Mr.Think的博客,青鸟的博客,PHP爱好者,Bluebirdsky" />
+<meta name="description" content="Mr.Think的个人博客,中文网名青鸟,现专注于WEB前端开发,同时也是一位PHP的爱好者.爱思考,有点代码洁癖,生吃过螃蟹腿,喜好肉食.这里是我记录知识与生活琐事的地方." />
+<title>实用齐全的表单验证程序@原作者Vanadium,由@Mr.Think中文整理@www.MrThink.net</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="js/vanadium.js"></script>
+<style>
+body{font-size:0.8em;letter-spacing:1px;font-family:"微软雅黑"; line-height:1.2}
+a{color:#047;text-decoration:none}
+a:hover{color:#a40000;text-decoration:none}
+h1{font-size:1em; font-weight:normal; line-height:1.8em}
+h1 a{background:#CFF; padding:2px 3px; text-decoration:none}
+h1 a:hover{background:#eee; text-decoration:underline}
+h2,h3{font-size:1em; font-weight:normal; color:#a40000; margin:1em auto; position:relative}
+h3{color:#888; font-weight:bold}
+h2 span{position:absolute; right:2%; background:#cff; padding:3px}
+form *{padding:0; margin:0}
+form{margin:20px; background:#eee; padding:5px 10px;}
+input{margin:0 8px 0 15px; height:20px; line-height:20px;width:200px;}
+input[type="submit"]{widows:100px;}
+fieldset{padding:10px; border:1px solid #000;}
+table{width:100%; border:0; border-collapse:collapse; line-height:30px; margin:10px 0;}
+table th{text-align:right; width:20%; font-weight:normal;}
+table td span{color:#a40000}
+input.rightformcss,select.rightformcss,textarea.rightformcss{border:1px solid green;padding:1px;}
+.failmsg{color:#a40000;}
+.msgvaluecss{font-style:italic;}
+input.failformcss,select.failformcss,textarea.failformcss{border:1px solid #a40000;padding:1px;}
+</style>
+<script>
+/*
+ *本插件原作者Vanadium,原文请移步前往http://vanadiumjs.com/查看
+ *本插件由Mr.Think中文整理,Mr.Think的博客:http://MrThink.net/
+ *转载及使用请务必注明原作者.
+*/
+$(function(){
+	//必填项加红*,Mr.Think添加,原插件无
+    $("input[class*=:required]").after("<span> *</span>")
+});
+ //弹出信息样式设置
+Vanadium.config = {
+    valid_class: 'rightformcss',//验证正确时表单样式
+    invalid_class: 'failformcss',//验证失败时该表单样式
+    message_value_class: 'msgvaluecss',//这个样式是弹出信息中调用值的样式
+    advice_class: 'failmsg',//验证失败时文字信息的样式
+    prefix: ':',
+    separator: ';',
+    reset_defer_timeout: 100
+}
+//验证类型及弹出信息设置
+Vanadium.Type = function(className, validationFunction, error_message, message, init) {
+  this.initialize(className, validationFunction, error_message, message, init);
+};
+Vanadium.Type.prototype = {
+  initialize: function(className, validationFunction, error_message, message, init) {
+    this.className = className;
+    this.message = message;
+    this.error_message = error_message;
+    this.validationFunction = validationFunction;
+    this.init = init;
+  },
+  test: function(value) {
+    return this.validationFunction.call(this, value);
+  },
+  validMessage: function() {
+    return this.message;
+  },
+  invalidMessage: function() {
+    return this.error_message;
+  },
+  toString: function() {
+    return "className:" + this.className + " message:" + this.message + " error_message:" + this.error_message
+  },
+  init: function(parameter) {
+    if (this.init) {
+      this.init(parameter);
+    }
+  }
+};
+Vanadium.setupValidatorTypes = function() {
+Vanadium.addValidatorType('empty', function(v) {
+    return  ((v == null) || (v.length == 0));
+  });
+//***************************************以下为验证方法,使用时可仅保留用到的判断
+Vanadium.addValidatorTypes([
+	//匹配大小写的等值
+    ['equal', function(v, p) {
+      return v == p;
+    }, function (_v, p) {
+      return '输入的值必须与<span class="' + Vanadium.config.message_value_class + '">' + p + '相符\(区分大小写\)</span>.'
+    }],
+    //不匹配大小写的等值
+    ['equal_ignore_case', function(v, p) {
+      return v.toLowerCase() == p.toLowerCase();
+    }, function (_v, p) {
+      return '输入的值必须与<span class="' + Vanadium.config.message_value_class + '">' + p + '相符\(不区分大小写\)</span>.'
+    }],
+    //是否为空
+    ['required', function(v) {
+      return !Vanadium.validators_types['empty'].test(v);
+    }, '此项不可为空!'],
+    //强制选中 
+    ['accept', function(v, _p, e) {
+      return e.element.checked;
+    }, '必须接受!'],
+    //
+    ['integer', function(v) {
+      if (Vanadium.validators_types['empty'].test(v)) return true;
+      var f = parseFloat(v);
+      return (!isNaN(f) && f.toString() == v && Math.round(f) == f);
+    }, '请输入一个正确的整数值.'],
+    //数字
+    ['number', function(v) {
+      return Vanadium.validators_types['empty'].test(v) || (!isNaN(v) && !/^\s+$/.test(v));
+    }, '请输入一个正确的数字.'],
+    //
+    ['digits', function(v) {
+      return Vanadium.validators_types['empty'].test(v) || !/[^\d]/.test(v);
+    }, '请输入一个非负整数,含0.'],
+    //只能输入英文字母
+    ['alpha', function (v) {
+      return Vanadium.validators_types['empty'].test(v) || /^[a-zA-Z\u00C0-\u00FF\u0100-\u017E\u0391-\u03D6]+$/.test(v)   //% C0 - FF (� - �); 100 - 17E (? - ?); 391 - 3D6 (? - ?)
+    }, '请输入英文字母.'],
+    //仅限ASCII编码模式下输入英文字母
+    ['asciialpha', function (v) {
+      return Vanadium.validators_types['empty'].test(v) || /^[a-zA-Z]+$/.test(v)   //% C0 - FF (� - �); 100 - 17E (? - ?); 391 - 3D6 (? - ?)
+    }, '请在ASCII下输入英文字母.'],
+	//英文字母或正数
+    ['alphanum', function(v) {
+      return Vanadium.validators_types['empty'].test(v) || !/\W/.test(v)
+    }, '请输入英文字母或正数.'],
+	//邮箱验证
+    ['email', function (v) {
+      return (Vanadium.validators_types['empty'].test(v) || /\w{1,}[@][\w\-]{1,}([.]([\w\-]{1,})){1,3}$/.test(v))
+    }, '邮箱格式不正确,请检查.正确格式例如mrthink@gmail.com'],
+    //网址
+    ['url', function (v) {
+      return Vanadium.validators_types['empty'].test(v) || /^(http|https|ftp):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+)(:(\d+))?\/?/i.test(v)
+    }, '请输入正确的网址,比如:http://www.mrthink.net'],
+    //日期格式
+    ['date_au', function(v) {
+      if (Vanadium.validators_types['empty'].test(v)) return true;
+      var regex = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+      if (!regex.test(v)) return false;
+      var d = new Date(v.replace(regex, '$2/$1/$3'));
+      return ( parseInt(RegExp.$2, 10) == (1 + d.getMonth()) ) && (parseInt(RegExp.$1, 10) == d.getDate()) && (parseInt(RegExp.$3, 10) == d.getFullYear() );
+    }, '请输入正确的日期格式,比如:28/05/2010.'],
+    //输入固定长度字符串
+    ['length',
+      function (v, p) {
+        if (p === undefined) {
+          return true
+        } else {
+          return v.length == parseInt(p)
+        }
+        ;
+      },
+      function (_v, p) {
+        return '输入字符长度等于<span class="' + Vanadium.config.message_value_class + '">' + p + '</span>个.'
+      }
+    ],
+    //
+    ['min_length',
+      function (v, p) {
+        if (p === undefined) {
+          return true
+        } else {
+          return v.length >= parseInt(p)
+        }
+        ;
+      },
+      function (_v, p) {
+        return '输入字符长度不低于<span class="' + Vanadium.config.message_value_class + '">' + p + '</span>个.'
+      }
+    ],
+    ['max_length',
+      function (v, p) {
+        if (p === undefined) {
+          return true
+        } else {
+          return v.length <= parseInt(p)
+        }
+        ;
+      },
+      function (_v, p) {
+        return '输入字符长度不大于<span class="' + Vanadium.config.message_value_class + '">' + p + '</span>个.'
+      }
+    ],
+	//判断密码是相同
+    ['same_as',
+      function (v, p) {
+        if (p === undefined) {
+          return true
+        } else {
+          var exemplar = document.getElementById(p);
+          if (exemplar)
+            return v == exemplar.value;
+          else
+            return false;
+        }
+        ;
+      },
+      function (_v, p) {
+        var exemplar = document.getElementById(p);
+        if (exemplar)
+          return '两次密码输入不相同.';
+        else
+          return '没有可参考值!'
+      },
+      "",
+      function(validation_instance) {
+        var exemplar = document.getElementById(validation_instance.param);
+        if (exemplar){
+          jQuery(exemplar).bind('validate', function(){
+            jQuery(validation_instance.element).trigger('validate');
+          });
+        }
+      }
+    ],
+	//ajax判断是否存在值
+    ['ajax',
+      function (v, p, validation_instance, decoration_context, decoration_callback) {
+        if (Vanadium.validators_types['empty'].test(v)) return true;
+        if (decoration_context && decoration_callback) {
+          jQuery.getJSON(p, {value: v, id: validation_instance.element.id}, function(data) {
+            decoration_callback.apply(decoration_context, [[data], true]);
+          });
+        }
+        return true;
+      }]
+    ,
+	//正则匹配,此用法不甚理解
+    ['format',
+      function(v, p) {
+        var params = p.match(/^\/(((\\\/)|[^\/])*)\/(((\\\/)|[^\/])*)$/);        
+        if (params.length == 7) {
+          var pattern = params[1];
+          var attributes = params[4];
+          try
+          {
+            var exp = new RegExp(pattern, attributes);
+            return exp.test(v);
+          }
+          catch(err)
+          {
+            return false
+          }
+        } else {
+          return false
+        }
+      },
+      function (_v, p) {
+        var params = p.split('/');
+        if (params.length == 3 && params[0] == "") {
+          return '输入的值必须与 <span class="' + Vanadium.config.message_value_class + '">' + p.toString() + '</span> 相匹配.';
+        } else {
+          return '提供的值与<span class="' + Vanadium.config.message_value_class + '">' + p.toString() + '</span>不匹配.';
+        }
+      }
+    ]
+  ])
+  if (typeof(VanadiumCustomValidationTypes) !== "undefined" && VanadiumCustomValidationTypes) Vanadium.addValidatorTypes(VanadiumCustomValidationTypes);
+};
+</script>
+</head>
+<body>
+<h1><a href="http://mrthink.net/">Mr.Think的个人博客</a><br />@专注前端技术,热爱PHP,崇尚简单生活.</h1>
+<h2>实用齐全的表单验证程序@原作者Vanadium,由@Mr.Think中文整理@www.MrThink.net<span><a href="/demo/download/VanadiuFormValidationModifiedforMrThink.7z">点此下载本页DEMO</a></span></h2>
+<h3>返回文章页:<a href="http://mrthink.net/jquery-form-validation-plugin/">http://mrthink.net/jquery-form-validation-plugin/</a></h3>
+</body>
+<form id="iform" name="iform" method="post" action="#">
+<fieldset>
+<legend>基于JQUERY的表单验证插件.原作者<a href="http://vanadiumjs.com/" target="_blank" title="前往原作者网站">@Vanadium</a>,由<a href="http://mrthink.net/" target="_blank" title="前往Mr.Think的博客">Mr.Think</a>进行中文整理</legend>
+<table>
+<tr><th><label for="checkempty">请输入Mr.Think(区分大小写):</label></td><td align="left"><input id="checkempty" class=":equal;Mr.Think" /></td></tr>
+<tr><th><label for="checkempty">请输入Mr.Think(不区分大小写):</label></td><td align="left"><input id="checkempty" class=":equal_ignore_case;Mr.Think" /></td></tr>
+<tr><th><label for="checkempty">输入不能为空:</label></td><td><input id="checkempty" class=":required" /></td></tr>
+<tr><th><label for="checkinteger">输入整数(含负):</label></td><td><input id="checkinteger" class=":integer" /></td></tr>
+<tr><th><label for="checknum">输入数字:</label></td><td><input id="checknum" class=":number" /></td></tr>
+<tr><th><label for="checkfloat">输入正数值:</label></td><td><input id="checkfloat" class=":digits :required" /></td></tr>
+<tr><th><label for="checkletter">输入字母:</label></td><td><input id="checkletter" class=":alpha" /></td></tr>
+<tr><th><label for="checkletterasc">请在ASC编码下输入字母:</label></td><td><input id="checkletterasc" class=":asciialpha" /></td></tr><tr><th><label for="checkletternum">请输入英文字母或正数:</label></td><td><input id="checkletternum" class=":alphanum" /></td></tr>
+<tr><th><label for="checkmail">请输入邮箱:</label></td><td><input id="checkmail" class=":email :required" /></td></tr>
+<tr><th><label for="checkurl">请输入网址:</label></td><td><input id="checkurl" class=":url" /></td></tr>
+</tr><tr><th><label for="checkdate">请输入日期:</label></td><td><input id="checkdate" class=":date_au" /></td></tr>
+</tr><tr><th><label for="checklength">请输入4个字符:</label></td><td><input id="checklength" class=":length;4" /></td></tr>
+<tr><th><label for="checkminlength">最少输入4个字符:</label></td><td><input id="checkminlength"  class=":min_length;4 :required" /></td></tr>
+<tr><th><label for="checkmaxlength">最多输入4个字符:</label></td><td><input id="checkmaxlength"  class=":max_length;4" /></td></tr>
+<tr><th><label for="checkmaxmin">最多输入4到8个字符:</label></td><td><input id="checkmaxmin"  class=":min_length;4 :max_length;8" /></td></tr>
+<tr><th><label for="checkpsw">请输入密码:</label></th><td><input id="checkpsw" class=":required" type="password" /></td></tr>
+<tr><th><label for="checkpswrepeat">请再次输入密码:</label></th><td><input id="checkpswrepeat" class=":same_as;checkpsw" type="password" /></td></tr>
+<tr><th><label for="checkvalue">正则匹配:</label></td><td><input id="checkvalue" class=":format;/^(Mr.Think)+$/i" /></td></tr>
+<tr><th><label for="checkpass">账号验证:</label></td><td><input id="checkpass" class=":ajax;/mrthink.php" /><em>此项须连接服务器测试才有效</em></td></tr>
+<tr><th><label for="checkaccept">必须接受:</label></td><td><input type="checkbox" id="checkaccept" class=":accept" /></td></tr>
+<tr><th></th><td><input type="submit" value="提交表单" style="width:80px; padding:0.2em; height:30px;" /></td></tr>
+</table>
+</fieldset>
+</form>
+<!--@Mr.Think统计代码,使用本DEMO请勿复制:)-->
+<script>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>
+try {
+var pageTracker = _gat._getTracker("UA-15924173-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<!--@end-->
+</html>
+
+

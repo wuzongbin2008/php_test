@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- 项目根路径 -->
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+<meta name="GENERATOR" content="IBM Software Development Platform"/>
+<title></title>
+<script type="text/javascript" src="../javascript/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="./date.js"></script>
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<style type="text/css">
+    body {margin:0px;font-size:12px;background:white;}
+    select {margin:0;padding:0;font-size:12px;border:1px solid #fff;}
+    #config {width:940px;padding:5px;background:#000;color:#fff;margin-top:5px;}
+    #ServerList {margin-top:5px;}
+    .cTitle {position:absolute;width:12px;height:12px;overflow:hidden;}
+    .cTitleHover {background:#000;border:1px solid yellow;opacity:0.5;}
+    #temp_title {width:auto;height:auto;background:#000;color:#fff;border:1px solid yellow;line-height:20px;position:absolute;padding:5px;opacity:0.9;}
+    .tip
+    {
+        color: #121212;
+        background: #7A7A7A;
+        display: none; /*--Hides by default--*/
+        padding-top: 9px;
+        padding-left: 6px;
+        position: absolute;
+        width: 120px;
+        opacity: .8;
+        font-weight: bold;
+        font-size: 12px;
+        z-index: 1000; /*-webkit-border-radius: 3px;
+     -moz-border-radius: 3px; border-radius: 3px;*/
+    }
+</style>
+<script type="text/javascript">
+var xInterval=30;
+var yInterval;
+var Data = {
+    'Text' : true,
+    'Grid' : true,
+    'Ruler' : true,
+    'LineW' : 0.8,
+    'Even' : 3,
+    'Time' : GetTimeList(),
+    'List' : [
+        {
+            'Title' : '一区',
+            'Check' : true,
+            'Color' : '#ff0',
+            'Data' : [{'time':"14:19:00",'value':"0%"},
+                {'time':"14:19:30",'value':"15%"},
+                {'time':"14:20:02",'value':"50%"},
+                {'time':"14:20:47",'value':"13%"},
+                {'time':"14:20:56",'value':"11%"},
+                {'time':"14:21:18",'value':"17%"},
+                {'time':"14:21:39",'value': "11%"},
+                {'time':"14:22:02",'value':"11%"},
+                {'time':"14:22:21",'value':"11%"},
+                {'time':"14:23:00",'value':"11%"},
+                {'time':"14:23:45",'value':"11%"},
+                {'time':"14:24:31",'value': "11%"},
+                {'time':"14:24:57",'value':"11%"},
+                {'time':"14:25:46",'value': "11%"},
+                {'time':"14:25:58",'value': "11%"}]
+        } ,
+        {
+
+            'Title' : '二区',
+
+            'Check' : true,
+
+            'Color' : '#0f0',
+
+            //        'Data' : [400, 1150, 200, 1600, 1400, 1100, 2100, 2200, 2300, 2400, 3200, 4210, 3700, 3600, 4210]
+            'Data' : [{'time':"14:19:01",'value':"0%"},
+                {'time':"14:19:14",'value':"20%"},
+                {'time':"14:19:28",'value':"60%"},
+                {'time':"14:19:47",'value':"22%"},
+                {'time':"14:20:29",'value':"60%"},
+                {'time':"14:20:56",'value':"20%"},
+                {'time':"14:21:33",'value': "20%"},
+                {'time':"14:22:12",'value':"80%"},
+                {'time':"14:22:21",'value':"80%"},
+                {'time':"14:23:06",'value':"20%"},
+                {'time':"14:23:32",'value':"40%"},
+                {'time':"14:24:12",'value': "60%"},
+                {'time':"14:24:50",'value':"80%"},
+                {'time':"14:25:40",'value': "20%"},
+                {'time':"14:25:50",'value': "100%"}]
+        },
+        {
+            'Title' : '三区',
+            'Check' : true,
+            'Color' : '#f0f',
+            //        'Data' : [200, 650, 300, 1200, 1500, 600, 3100, 1200, 2100, 1900, 800, 2510, 3000, 3121, 3321]
+            'Data' : [{'time':"14:19:18",'value':"10%"},
+                {'time':"14:19:27",'value':"81%"},
+                {'time':"14:20:38",'value':"82%"},
+                {'time':"14:20:45",'value':"83%"},
+                {'time':"14:20:48",'value':"84%"},
+                {'time':"14:21:28",'value':"85%"},
+                {'time':"14:21:41",'value':"86%"},
+                {'time':"14:22:10",'value':"87%"},
+                {'time':"14:22:15",'value':"88%"},
+                {'time':"14:23:08",'value':"89%"},
+                {'time':"14:23:48",'value':"90%"},
+                {'time':"14:24:30",'value': "10%"},
+                {'time':"14:24:55",'value':"10%"},
+                {'time':"14:25:41",'value': "10%"},
+                {'time':"14:25:52",'value': "50%"}]
+        }
+    ]
+}
+var ctx;
+
+function manageDate(date){
+    date=date.addSeconds(-10);
+    var s=(date.getHours() + ':' + date.getMinutes() + ':' + (date.getSeconds() > 30 ? 30 : 0)).replace(/\b(\d)\b/g, '0$1')
+    return (date.getHours() + ':' + date.getMinutes() + ':' + (date.getSeconds() > 30 ? 30 : 0)).replace(/\b(\d)\b/g, '0$1');
+}
+
+function GetTimeList(now){
+    var now = now || Date.parse("14:26:00");
+    xInterval=30;
+    var re = [];
+    for(var i = 0; i < 15; i ++){
+        re.push((now.getHours() + ':' + now.getMinutes() + ':' + (now.getSeconds() >=30 ? 30 : 0)).replace(/\b(\d)\b/g, '0$1'));
+        now=now.addSeconds(-30);
+    }
+    return re.reverse();
+}
+jQuery.noConflict();
+jQuery(document).ready(function($){
+    canvas = document.getElementById("canvas");
+    if(canvas.getContext)     {
+        ctx = canvas.getContext("2d");
+        ctx.strokeStyle = "red";
+        ctx.beginPath();
+        /* y axis along the left edge of the canvas*/
+        ctx.moveTo(0,0);
+        ctx.lineTo(0,105);
+        ctx.stroke();
+        /* x axis along the bottom edge of the canvas*/
+        //	ctx.moveTo(0,105);
+        //	ctx.lineTo(180,105);
+        //	ctx.fillStyle="#ffffff";
+        //	ctx.fillRect(0,0,150,75);
+        // 	ctx.fillRect(25,25,100,100);
+        //	ctx.clearRect(45,45,60,60);
+        //	ctx.strokeRect(50,50,50,50);
+
+        //	ctx.stroke();
+        //		draw();
+    }
+    //
+    //	}
+    //	var a=Date.parse("12 1,2000 16:30:30");
+    var date1=Date.parse("16:30:30");
+    var date2=Date.parse("16:30:30");
+    var s=Date.today().compareTo(date2);
+    var s=date1.compareTo(date2);
+    //	var a=Data.list[0];
+    //	var b=a.Data[1];
+    var st=compareTime(Data.Time,Data.List[0].Data[1].time);
+    Show(document.getElementById("canvas"), Data, document.getElementById("ServerList"));
+    //}
+});
+
+function Run(o, i){
+    if(document.all) return false;//判断是否是ie
+    if(o) Data.List[i].Check = o.checked;
+    Show(document.getElementById("canvas"), Data, document.getElementById("ServerList"));
+}
+
+function ShowTitle(str, event, color){
+    var e = window.event || event;
+    if(document.getElementById("temp_title")){
+        document.getElementById("temp_title").style.display = 'block';
+        document.getElementById("temp_title").style.borderColor = color;
+    }
+    else{
+        var v = document.createElement("div");
+        v.id = "temp_title";
+        v.style.borderColor = color;
+        document.body.appendChild(v);
+    }
+
+    document.getElementById("temp_title").innerHTML =  str.replace(/\n/g, '<br />');
+    var xtop = e.clientY + document.documentElement.scrollTop + 17;
+    var xleft = e.clientX + document.documentElement.scrollLeft + 10;
+    document.getElementById("temp_title").style.top = xtop + "px";
+    document.getElementById("temp_title").style.left = xleft + "px";
+}
+
+function compareTime(timeList,timeStr){
+    outer:	for(var i = 0; i < timeList.length; i ++){
+        var date1=Date.parse(timeStr);
+        var date2=Date.parse(timeList[i]);
+        var s=date1.compareTo(date2);
+        if(i==0){
+            switch(s){
+                case -1:
+                    return null;
+                case 0:
+                    return i;
+                case 1:
+                    continue outer;
+                default:
+                    break;
+            }
+        }else if(i==timeList.length-1){
+            switch(s){
+                case -1:
+                    return i-1;
+                case 0:
+                    return i;
+                case 1:
+                    return null;
+                default:
+                    break;
+            }
+        }else{
+            switch(s){
+                case -1:
+                    return i-1;
+                case 0:
+                    return i;
+                case 1:
+                    continue outer;
+                default:
+                    break;
+            }
+        }
+    }
+}
+
+function lineTo(o, arr, time, even, ht, text, colw, rowh){
+    o.beginPath();
+    o.fillStyle = o.strokeStyle = arr.Color;
+    for(var i = 0; i < arr.Data.length; i ++){
+        var resultTimeIndex=compareTime(Data.Time,arr.Data[i].time);
+        if(resultTimeIndex!=null){
+            var timeArray=arr.Data[i].time.split(":");
+            timeArray[2]=timeArray[2].replace(/\b0{1}/g,"");
+            var distanceToOrigin=(timeArray[2]>=xInterval?timeArray[2]-xInterval:timeArray[2])/xInterval*colw+resultTimeIndex*colw;
+            if(text) {
+                //先把%去掉，再按rowh的比例计算
+                o.fillText(arr.Data[i].value, distanceToOrigin + 46, ht - parseInt(arr.Data[i].value.replace(/\%/g,""))/20*rowh - 46);
+            }
+            o.lineTo(distanceToOrigin + 50, ht-parseInt(arr.Data[i].value.replace(/\%/g,""))/20*rowh - 30);
+        }
+    }
+    o.stroke();
+    o.closePath();
+    for(var i = 0; i < arr.Data.length; i ++){
+        var resultTimeIndex=compareTime(Data.Time,arr.Data[i].time);
+        if(resultTimeIndex!=null){
+            var timeArray=arr.Data[i].time.split(":");
+            timeArray[2]=timeArray[2].replace(/\b0{1}/g,"");
+            var distanceToOrigin=(timeArray[2]>=xInterval?timeArray[2]-xInterval:timeArray[2])/xInterval*colw+resultTimeIndex*colw;
+            o.beginPath();
+
+            var x = distanceToOrigin + 50, y = ht - parseInt(arr.Data[i].value.replace(/\%/g,""))/20*rowh - 30;
+            o.arc(x, y, even || 3, 0, 360, false);
+            var d = document.createElement('div');
+            d.className = 'cTitle';
+            d.style.left = x - 7 + 'px';
+            d.style.top = (y - 7+document.getElementById("canvas").getBoundingClientRect().top+document.documentElement.scrollTop) + 'px';
+            d.style.borderColor = arr.Color;
+            d._title = 'Title:' + arr.Title + '\nTime:' + arr.Data[i].time + '\nData:' + arr.Data[i].value;
+            d.onmouseover = function(event){
+                ShowTitle(this._title, event, arr.Color);
+                this.className += ' cTitleHover';
+                this.onmouseout = function(){
+                    if(document.getElementById("temp_title")) document.getElementById("temp_title").style.display='none';
+                    this.className = 'cTitle';
+                }
+            }
+            document.body.appendChild(d);
+            o.stroke();
+            o.fill();
+            o.closePath();
+        }
+    }
+}
+
+/*
+ *colw--列宽，rowh--行高
+ */
+function Show(d, data, f, colw, rowh){
+    var colw = colw || (d.offsetWidth - 20) / data.Time.length;
+    var rowh=rowh||(d.offsetHeight - 20)/6
+    var c = d.getContext('2d');
+    c.fillStyle = '#000';
+    c.lineWidth = 0.3;
+    c.fillRect(0, 0, d.offsetWidth, d.offsetHeight);
+    c.strokeStyle = "#ccc";
+    c.fillStyle = '#0ff';
+    c.font = '9px verdana';
+    c.textBaseline = 'top';
+
+    var j=0;
+    for(var i = 70; i < d.offsetHeight; i += rowh){
+        c.beginPath();
+        //y轴的刻度，到时候可以依照需求自己画
+        if(data.Ruler){
+            var t=(100-j*20)+"%";//左侧刻度百分比
+            c.fillText(t, (5 - new String(t).length) * 7, i -4);
+        }
+        //画平行于 x轴的线
+        if(data.Grid){
+            c.lineTo(40, i);
+            c.lineTo(d.offsetWidth, i);
+        }
+        c.stroke();
+        c.closePath();
+        j++;
+    }
+
+    if(data.Grid){
+        //画平行于 y轴的线
+        for(var i = 50; i < d.offsetWidth; i += colw){
+            c.beginPath();
+            c.lineTo(i, 0);
+            c.lineTo(i, d.offsetHeight - 20);
+            c.stroke();
+            c.closePath();
+        }
+
+    }
+    if(data.Ruler){
+        c.beginPath();
+        //x轴的刻度
+        for(var i = 0; i < data.Time.length; i ++){
+            c.fillText(data.Time[i], i * colw + 25, d.offsetHeight - 13)
+        }
+        c.stroke();
+        c.closePath();
+
+    }
+    c.lineWidth = data.LineW || 0.8;
+    if(!f.innerHTML){
+        for(var i = 0; i < data.List.length; i ++){
+            f.innerHTML += "<input type='checkbox' value='" + data.List[i].Title + "' checked='" + data.List[i].Check + "' onclick='Run(this, " + i + ");' /><font style='color:" + data.List[i].Color + "'>" + data.List[i].Title + "</font>";
+        }
+
+    }
+
+    for(var i = 0; i < data.List.length; i ++){
+        if(data.List[i].Check){
+            lineTo(c, data.List[i], data.Time, data.Even, d.offsetHeight, data.Text, colw, rowh);
+        }
+    }
+}
+</script>
+</head>
+
+<body>
+
+<canvas id="canvas" width="1000" height="500">
+    Your browser does not support the canvas element.
+</canvas>
+
+<div id="config">
+    <div>
+
+        <input type="checkbox" onclick="Data.Text = checked;Run();" checked="true" />显示标注
+        <input type="checkbox" onclick="Data.Grid = checked;Run();" checked="true" />显示网格
+        <input type="checkbox" onclick="Data.Ruler = checked;Run();" checked="true" />显示标尺
+        <select onchange="Data.LineW = value;Run();">
+            <option value="0">0</option>
+            <option value="0.1">0.1</option>
+            <option value="0.5">0.5</option>
+            <option value="0.8" selected="true">0.8</option>
+            <option value="1">1</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>曲线宽度
+        <select onchange="Data.Even = value;Run();">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected="true">3</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+        </select>交点半径
+
+    </div>
+    <div id="ServerList"></div>
+</div>
+
+</body>
+</html>

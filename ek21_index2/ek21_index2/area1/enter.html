@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<title>尋夢園明星聊天室</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style></head>
+<!--document.form2.nickname.focus();"onload="MM_preloadImages('images/pic11h.jpg');-->
+<script type="text/javascript">
+function OnLogin4() {
+	var ff = document.form2;
+	var nick = ff.nickname.value;
+	if(nick=='') { alert("暱稱未填"); ff.nickname.focus(); return; }
+	var num = 0;
+	for(var i=0;i<nick.length;i++) {
+		num += (nick.charCodeAt(i)>256)? 2:1;
+	}
+	if(num<2) { alert("暱稱太短"); ff.nickname.focus(); return; }
+	if(num>16) { alert("暱稱太長"); ff.nickname.focus(); return; }
+	var dirtys = ['$', '\\', '&', '"', "'", ' ', '/', '<', '>', '|', '*', ';', ':', '@', '!', '%', '.'];	
+	for(var i=0;i<dirtys.length;i++) {
+		if(nick.indexOf(dirtys[i])!=-1) { alert("暱稱中請勿含有空白或特殊符號"); ff.nickname.focus(); return; }
+	}
+	var chatwin = window.open('', 'age_9', 'toolbar=no,location=no,directories=no,menubar=no,resizable=yes');
+	chatwin.document.writeln("載入中,請稍候...");
+	ff.target = 'age_9';
+	ff.action = "http://ip4.ek21.com/login?r="+Math.random();
+	setTimeout("document.form2.submit();document.form2.password.value='';", 200);
+}
+</script>
+<form name="form2" method="post" action="" onSubmit="return(false)" autocomplete="off" style="margin:0">
+<input type="hidden" name="roomid" value="age_9">
+<input type='hidden' name='trademark' value='尋夢園聊天室' />
+ <input type='hidden' name='title' value='尋夢園聊天室' />
+ <input type="hidden" name="vshow_deny" value="50,51,52,53,60,61,62,63">
+ <input type="hidden" name="initbanner" value="<a href='http://board.ek21.com/A?548641' target='_blank'><img src='http://vshow.ek21.com/sn999/images/logo150120.jpg' border='0'></a>" />
+ 
+
+</head>
+
+<body>
+<table width="366" border="0">
+  <tr>
+    <th width="360" height="314" valign="top" background="images/362x336.jpg" scope="row"><table width="255" border="0">
+      <tr>
+        <th width="249" height="128" scope="row">&nbsp;</th>
+      </tr>
+      <tr>
+        <th height="163" valign="top" scope="row"><body onLoad="document.form2.nickname.focus();"><center><br />
+<div style="margin-top:7px;margin-bottom:3px;"></div>
+<form name="form2" method="post" action="" onSubmit="return(false)" autocomplete="off" style="margin:0">
+  <table border="0">
+<tr><td>暱稱：</td><td align="left"><input type="text" name="nickname" value="" maxlength="18" style="width:120px;height:18px;"></td></tr>
+<tr><td>性別：</td><td align="left"><input type="radio" name="gender" value="boy" id="boy" checked><label for="boy">男生</label> <input type="radio" name="gender" value="girl" id="girl"><label for="girl">女生</label></td></tr>
+<tr><td>密碼：</td><td align="left"><input type="text" value="非會員不需密碼" style="width:120px;height:18px;" onfocus="this.style.display='none';form.password.style.display='inline';form.password.focus();" />
+<input name="password" type="password" style="width:120px;height:18px;display:none;"></td></tr>
+<tr><td height="28">&nbsp;</td>
+<td align="left"><input type="button" value="進入聊天" onClick="OnLogin4()" style="margin-left:3px;margin-top:4px;" /></td></tr>
+</table>
+</form>
+
+<div style="margin-top:12px;"></div></th>
+      </tr>
+    </table></th>
+  </tr>
+</table>
+</body>
+</html>

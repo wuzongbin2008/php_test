@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="1.1"
+	baseProfile="full"
+	onload="main(evt)">
+	<!--宏定义-->
+	<defs id="defs2190">
+		<!--坐标轴滤镜-->
+		<linearGradient 
+			id="line_gradient"
+			x1="523.25903"
+			y1="497.97971"
+			x2="522.28949"
+			y2="0"
+			gradientUnits="userSpaceOnUse"
+			gradientTransform="matrix(1.0020158,0,0,1.0060699,2.2420574e-3,-2.2465885e-3)">
+			<stop style="stop-color:#C4E1FF;stop-opacity:0.8;" offset="0"/>
+			<stop style="stop-color:#C4E1FF;stop-opacity:0;" offset="1"/>
+		</linearGradient>
+		<!--坐标轴箭头定义-->
+		<marker
+			orient="auto"
+			refY="0.0"
+			refX="0.0"
+			id="end_arrow"
+			style="overflow:visible;">
+			<path
+				id="path7068"
+				d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+				style="fill:#ff0000;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.0pt;marker-start:none;"
+				transform="scale(0.4) rotate(180) translate(10,0)" />
+		</marker>
+	</defs>
+	<!--顶层图形组-->
+	<g id="grid_group"></g>
+	<g id="curve"></g>
+	<g id="text_group"></g>
+	<g id="axis_group"></g>
+</svg>

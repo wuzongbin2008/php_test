@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>根据城市名称、区县名称、省份名称、区号、邮编进行地图定位</title>
+    <script language="javascript" src="http://api.map.sina.com.cn/engines/m3.1.1/smap.js"></script>
+    <script language="javascript">
+
+        var mapObj,toolbar,overview,scale;
+        function mapInit()
+        {
+            var opt = {
+                level:13,//初始地图视野级别
+                center:new SMap.LngLat(116.397428,39.90923),//设置地图中心点
+                doubleClickZoom:true,//双击放大地图
+                scrollWheel:true//鼠标滚轮缩放地图
+            }
+            mapObj = new SMap.Map("iCenter",opt);
+            mapObj.plugin("SMap.ToolBar", function(){
+                //加载工具条
+                toolbar = new SMap.ToolBar();
+                toolbar.autoPosition=false;
+                mapObj.addControl(toolbar);
+            });
+            mapObj.plugin("SMap.Scale", function(){
+                //加载比例尺
+                scale = new SMap.Scale();
+                mapObj.addControl(scale);
+            });
+        }
+        function setCity_areaCode(){//根据区号设置位置
+            var areaCode = document.getElementById("areaCode").value;
+            mapObj.setCity(areaCode);
+        }
+        function setCity_name(){//根据名称设置位置
+            var name = document.getElementById("name").value;
+            mapObj.setCity(name);
+        }
+        function setCity_provinceName(){//根据省份名称设置位置
+            var provinceName = document.getElementById("provinceName").value;
+            mapObj.setCity(provinceName);
+        }
+        function setCity_districtName(){//根据区县名称设置位置
+            var districtName = document.getElementById("districtName").value;
+            mapObj.setCity(districtName);
+        }
+        function setCity_administrativeDivisionCode(){//根据行政区号设置位置
+            var administrativeDivisionCode = document.getElementById("administrativeDivisionCode").value;
+            mapObj.setCity(administrativeDivisionCode);
+        }
+    </script>
+</head>
+<body onload="mapInit();">
+<div id="iCenter" style="width:500px; height:500px"></div>
+区号：<input type="text" name="areaCode" id="areaCode" value="021"/><input type="button" value="根据区号设置位置" onclick="setCity_areaCode()" /><br/>
+名称：<input type="text" name="name" id="name" value="北京"/><input type="button" value="根据名称设置位置" onclick="setCity_name()" /><br/>
+省份：<input type="text" name="provinceName" id="provinceName" value="青海"/><input type="button" value="根据省份名称设置位置" onclick="setCity_provinceName()" /><br/>
+区县名称：<input type="text" name="districtName" id="districtName" value="海淀区"/><input type="button" value="根据区县名称设置位置" onclick="setCity_districtName()" /><br/>
+行政区号：<input type="text" name="administrativeDivisionCode" id="administrativeDivisionCode" value="110000"/><input type="button" value="根据行政区号设置位置" onclick="setCity_administrativeDivisionCode()" />
+</body>
+</html>

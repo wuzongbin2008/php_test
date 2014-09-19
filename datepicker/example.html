@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+	<head>
+		<title>jQuery UI Example Page</title>
+		<link type="text/css" href="css/smoothness/jquery-ui-1.7.custom.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.7.custom.min.js"></script>
+		<style type="text/css">
+			body{ font: 62.5% "Trebuchet MS", sans-serif; margin: 50px;}
+			.demo{border:1px solid #ddd;width:500px;height:300px;padding:10px;float:left;}
+			ul{float:left;padding:0px;margin:0 0 0 10px;}
+			ul li{padding:5px 0;cursor:pointer;margin-left:20px;list-style:disc outside;}
+			ul li:hover{text-decoration:underline;color:#1b75bb;}
+			ul.color{width:200px;}
+			ul.color li{float:left;margin-right:15px;}
+		</style>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("ul.type li").each(function(){
+				$(this).click(function(){
+					$(".demo").load($(this).attr("class")+".html");
+				});
+			});
+			$("ul.color li").each(function(){
+				$(this).click(function(){
+					var imgSrc = $(this).children("img").attr("src");
+					var beginPlace = imgSrc.lastIndexOf("\/");
+					var endPlace = imgSrc.lastIndexOf("\.");
+					var linkValue = imgSrc.substring(beginPlace+1,endPlace);
+					$("link:first").nextAll("link").remove();
+					$('\<link type=\"text\/css\" href=\"development-bundle\/themes\/base\/' + linkValue + '\.css\" rel=\"stylesheet\" \/\>').insertAfter("link:first");
+				});
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<!-- Datepicker -->
+		<div class="demo">
+			<p>Date: <input type="text" size="30" id="datepicker" class=""/></p>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$(function() {
+					$("#datepicker").datepicker();
+				});
+			});
+			</script>
+		</div>
+		<ul class="type">
+			<li class="default">Default functionality</li>
+			<li class="date-formats">Format date</li>
+			<li class="min-max">Restrict date range</li>
+			<li class="localization">Localize calendar</li>
+			<li class="alt-field">Populate alternate field</li>
+			<li class="inline">Display inline</li>
+			<li class="buttonbar">Display button bar</li>
+			<li class="dropdown-month-year">Display month and year menus</li>
+			<li class="multiple-calendars">Display multiple months</li>
+			<li class="icon-trigger">Icon trigger</li>
+		</ul>
+		<ul class="color">
+			<li class=""><img src="images/yellow1.png" /></li>
+			<li class=""><img src="images/yellow2.png" /></li>
+			<li class=""><img src="images/yellow3.png" /></li>
+			<li class=""><img src="images/black1.png" /></li>
+			<li class=""><img src="images/black2.png" /></li>
+			<li class=""><img src="images/black3.png" /></li>
+			<li class=""><img src="images/black4.png" /></li>
+			<li class=""><img src="images/black5.png" /></li>
+			<li class=""><img src="images/black6.png" /></li>
+			<li class=""><img src="images/blue1.png" /></li>
+			<li class=""><img src="images/blue2.png" /></li>
+			<li class=""><img src="images/blue3.png" /></li>
+			<li class=""><img src="images/blue4.png" /></li>
+			<li class=""><img src="images/blue5.png" /></li>
+			<li class=""><img src="images/gray.png" /></li>
+			<li class=""><img src="images/green.png" /></li>
+			<li class=""><img src="images/red.png" /></li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<script type="text/javascript"  src="datepicker/js/jquery-ui-1.8.6.custom.min.js"></script>
+<div id="close_capsule_circle"><div id="l_halfcircle"><img src="images/cap_board_l.png" width="160px" height="270px" border="0" /></div><div id="r_halfcircle"><img src="images/cap_board_R.png" width="160px" height="270px" border="0" /></div></div>
+<div id="xuan"></div>
+<div id="alio-capsule-create-content" style="display:none;">
+<div id="note_div" style="display:none;">
+  <div id="error_l"></div>
+  <div id="error_m"></div>
+  <div id="error_r"></div>
+</div>
+<div id="error_arrow"></div>
+<form name="capsule_form" id="capsule_form">
+    <input type="hidden" name="_rev" id="_rev" value="" />
+    <input type="hidden" name="_id" id="_id" value="" />
+	<input type="hidden" name="cap_kind" id="cap_kind" value="{{create_time}}" />
+	<div id="left_circle"><img  src="images/cap_board_l.png" width="160px" height="270px" border="0px"/></div>
+	<div id="form_body">
+	<div id="step">1/3 Step</div>
+	<div class="cr_body">
+	<div id="create_finish_div" style="display:none;"></div>
+    <div id="add1">
+		<div id="who">WHO?</div>
+		<div id="selected_name">
+		   <input type="text" id="friendname" value="Select receiver" />
+		</div>
+	</div>
+    <div id="add2" style="display:none;">
+	    <div id="what">WHAT?</div>
+        <div id="msg_div"><textarea id="message" name="message">Write your message here</textarea></div>
+        <div id="attachment_div">
+        	<span id="attachment">+Attachment</span>
+			<span id="delimg">&nbsp;X</span>
+			<input type="file" id="_attachments" name="_attachments"/>
+		</div>
+    </div>
+	{{#create_time}}
+	<div id="add3" style="display:none;">
+	    <div id="when">WHEN?</div>
+		<div id="date_div">
+         <div id="datepicker_div"><input type="text" id="datepicker"  name="datepicker" /></div>
+		 <div id="hour_div"><input type="text" id="hour"  name="hour" /></div>
+		 <div id="colon_div">:</div>
+		 <div id="minute_div"><input type="text" id="minute"  name="minute" /></div>
+		</div>
+		<div id="after_week">After 1 week</div><div id="after_month">After 1 month</div>
+    </div>
+	<link type="text/css" href="datepicker/css/ui-lightness/yellow.css" rel="stylesheet" />
+	<script type="text/javascript" src="script/init_datepicker.js"></script>
+	{{/create_time}}
+	{{^create_time}}
+    <div id="add3" style="display:none;">
+	    <div id="how">HOW?</div>
+        <div id="q_div"><textarea id="question"  name="question">Set Question</textarea></div>
+        <div id="a_div"><input type="text" id="answer"  name="answer" value="Set Answer" /></div>
+    </div>
+	{{/create_time}}
+	<div id="submit_div">
+		<img src="images/button_next.png" id="Next" />
+	    <img src="images/button_create.png" id="Create" />
+		<img src="images/button_prev.png" id="Pre" />
+	</div>
+	</div>
+	</div>
+	<div id="right_circle"><img src="images/cap_board_R.png" width="160px" height="270px" border="0px"/></div>
+</form>
+</div>
+<div id="arrow_down"></div>
+<div id="alio-capsule-create-footnote">
+	<div id="step_div">
+	    <div class="step_subdiv_doing" id="step1">
+	    	<span class="arrow_left"></span>
+			<span class="step_middle">
+			  <span class="step_circle"><img id="step1_circle" src="images/step_doing.png" width="35px" height="35px" border="0" /></span>
+			  <span class="step_title" id="step1_title">Set the reciver</span>
+			  <span class="step_desc" name="step1_desc">who do you want to sent this capsule to?</span>
+			</span>
+			<span class="arrow_right"><img id="step1_arrow_right" src="images/arrow_right.png" width="20px" height="18px" border="0px"></span>
+		</div>
+		<div class="step_subdiv_undo" id="step2">
+			<span class="arrow_left"><img style="display:none;" id="step2_arrow_left"  src="images/arrow_left.png" width="20px" height="18px" border="0px"></span>
+			<span class="step_middle">
+			  <span class="step_circle"><img id="step2_circle" src="images/step_undo.png" width="35px" height="35px" border="0" /></span>
+			  <span class="step_title_undo" id="step2_title">Write down the message</span>
+			  <span class="step_desc" name="step2_desc" style="display:none;">write down your message then seal in capsule.</span>
+			  <span class="step_desc" name="step2_desc" style="display:none;">you can add one attachemnt.</span>
+			</span>
+			<span class="arrow_right"><img style="display:none;" id="step2_arrow_right" src="images/arrow_right.png" width="20px" height="18px" border="0px"></span>
+		</div>
+		<div class="step_subdiv_undo" id="step3">
+			<span class="arrow_left"><img style="display:none;" id="step3_arrow_left"  src="images/arrow_left.png" width="20px" height="18px" border="0px"></span>
+			<span class="step_middle">
+			  <span class="step_circle"><img id="step3_circle" src="images/step_undo.png" width="35px" height="35px" border="0" /></span>
+			  <span class="step_title_undo" id="step3_title">Set the open time</span>
+			  <span class="step_desc" name="step3_desc" style="display:none;">The receiver can open the capsule only when the open time condition is met [time].</span>
+			</span>
+			<span class="arrow_right"></span>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="script/fileupload.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery-autocomplete/jquery.autocomplete.css" />
+<script type='text/javascript' src='jquery-autocomplete/lib/jquery.bgiframe.min.js'></script>
+<script type='text/javascript' src='jquery-autocomplete/lib/jquery.ajaxQueue.js'></script>
+<script type='text/javascript' src='jquery-autocomplete/lib/thickbox-compressed.js'></script>
+<script type='text/javascript' src='jquery-autocomplete/jquery.autocomplete.js'></script>
+<script type="text/javascript" src="script/setRecepient.js"></script>
+<script type="text/javascript" src="script/multi-friend-input.js"></script>
+<script type="text/javascript" src="script/unit.js"></script>
+<script type="text/javascript">
+ $(function() {
+	  $$($("#capsule_form")).step=1;
+	  $$($("#capsule_form")).done_step=1;
+	  $$($("#capsule_form")).selected_rows=0;
+	  $$($("#capsule_form")).selected_friends=0;
+	  $$($("#capsule_form")).cap_kind="{{create_time}}";
+ });
+</script>

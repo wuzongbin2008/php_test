@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 25
+/svn/myproject/!svn/ver/4
+END
+t
+K 25
+svn:wc:ra_dav:version-url
+V 27
+/svn/myproject/!svn/ver/1/t
+END
+t2.php
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/myproject/!svn/ver/10/t2.php
+END

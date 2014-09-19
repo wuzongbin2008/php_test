@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/jQuerydemos/codefans.net/jQ学习第三季/jQuery3(cssrain)/jQuery3/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/jQuerydemos/codefans.net/jQ学习第三季/jsondemo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/jQuerydemos/codefans.net/jQ学习第三季/jQuery4/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/jQuerydemos/codefans.net/jQ学习第三季/jQuery4(数据库版)/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/jQuerydemos/codefans.net/jQ学习第三季/jQuery2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/javascript/uploadfile/valums-file-uploader-461068d/valums-file-uploader-461068d/server" isTestSource="false" packagePrefix="com.bluelotussoftware.apache.commons.fileupload.example" />
+      <sourceFolder url="file://$MODULE_DIR$/jQuerydemos/codefans.net/jQ学习第三季/jQuery3/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
+
