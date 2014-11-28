@@ -1,5 +1,5 @@
 <?php 
-//strtok()¬O±q¤@­Ó¦r²Å¦ê¤¤´£¨ú²Ä¤@­Ó¥H¯S©w¦r²Å¦ê¬°¤À³Îªº¦r²Å¦ê¡A­ì¦ê³Q¯}Ãa¡C 
+//strtok()ï¿½Oï¿½qï¿½@ï¿½Ó¦rï¿½Å¦ê¤¤ï¿½ï¿½ï¿½ï¿½Ä¤@ï¿½Ó¥Hï¿½Sï¿½wï¿½rï¿½Å¦ê¬°ï¿½ï¿½ï¿½Îªï¿½ï¿½rï¿½Å¦ï¿½Aï¿½ï¿½ï¿½Qï¿½}ï¿½aï¿½C 
 $string = "This is\tan example\nstring";
 /* Use tab and newline as tokenizing characters as well  */
 $tok = strtok($string," \n\t");
@@ -14,7 +14,7 @@ $tok = strtok($string," \n\t");
 
 $s='\aa\bb\cc';
 $a=strtok($s,'\\');
-//echo $a;
+var_dump($a);exit;
 while ($a) 
 {
     echo "Word=$a<br>";
