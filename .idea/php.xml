@@ -5,6 +5,6 @@
       <PhpSdkConfig version="5.3.10" home="F:\wamp\bin\php\php5.3.10" />
     </sdk>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="5.3.0" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="5.5.0" />
 </project>
 

@@ -6,9 +6,12 @@
  * Time: 下午6:20
  */
 
-$str = "dacb";
-//echo strlen($str);
-//echo substr($str,1,1);exit;
+$str = "a,b,c";
+$arr = explode(",", $str);
+$n = substr_count($str, ',');
+var_dump($n);
+//print_r($arr);
+//var_dump(count($arr));
 
 function str_to_array(){
         global $str;
@@ -16,11 +19,6 @@ function str_to_array(){
 
         return $arr;
 }
-$arr = str_to_array();
-asort($arr);
-print_r($arr);
-//var_dump(count($arr));
-
 
 function array_to_str()
 {
