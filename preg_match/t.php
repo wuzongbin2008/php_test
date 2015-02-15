@@ -1,35 +1,45 @@
 <?php
+$G_CONF_TYPE_LIST = array(
+	'large'=>'.lar', 'bmiddle' => '.bmi', 'small' => '.int', 'nmw690' => '.int', 'thumbnail' => '.thu',
+	'mw690' => '.lar',
 
-$str="ab#&123_*cde";
+	'mw1024' => '.lar', 'mw720' => '.lar', 'mw2048' => '.lar',
 
-$arr = str_split($str);
-//print_r($arr);
-//echo strlen($str);
+	'square' => '.int', 'mw600' => '.lar', 'mw240' => '.int', 'cmw205' => '.int', 'cmw218' => '.int', 'sq612' => '.int',
+	'mw220' => '.int', 'sq480' => '.lar',
 
-$p1 = "([a-zA-Z]{1})";
-$p2 = "([^a-zA-Z]{1})";
+	/* wap **/
+	'wap800'=>'.lar',
+	'wap690'=>'.lar', 'wap35'=>'.thu', 'wap50'=>'.int',
+	'wap120'=>'.thu', 'wap128'=>'.int', 'wap176'=>'.bmi',
+	'wap240'=>'.bmi', 'wap320'=>'.bmi',	'woriginal' => '.lar',
+	'wap180'=>'.int', 'wap360'=>'.int', 'wap720'=>'.lar',
 
-foreach($arr as $k=>$v){
-    //echo "k=>$k\tv=>$v\n";
-    if(preg_match_all($p1,$v,$match)){
-        $need_reverse[] = $v;
-        $arr[$k] = "is_re";
-    }else{
-        $a2[] = array(
-            "k"=>$k,
-            "v"=>$v,
-        );
-    }
+	/* webp **/
+	'webp180'=>'.int', 'webp360'=>'.int', 'webp720'=>'.lar',
+	'webp440'=>'.bmi',
+
+	/* others */
+	'thumb50'=> '.int', 'thumb30'=>'.int', 'thumb180'=> '.int', 'thumb150' => '.int',
+	'ms080' => '.int', 'ms160' => '.int', 'thumb300' => '.int',
+
+	/**/
+	'crop' => '.lar',
+);
+$t = "interim";
+
+if (!array_key_exists($t, $G_CONF_TYPE_LIST)) {
+	print "no exists\n";
+	if (!preg_match('/^([a-z0-9]+)\.(\d+)\.(\d+)\.(\d+)\.(\d+)(\.(\d+))?/', $t, $arg)) {
+		var_dump($arg);
+		return false;
+	}
+	$t = $arg[1];
+	var_dump($t);
+	if (!array_key_exists($t, $G_CONF_TYPE_LIST)) {
+
+		return false;
+	}
+
 }
-print_r($arr);
-//exit;
-foreach($arr as $k=>$v){
-    if($v == "is_re"){
-        $arr[$k] = array_pop($need_reverse);
-    }
-}
-$str = implode("",$arr);
-//print_r($arr);
-echo $str;
-//print_r($need_reverse);
-//print_r($a2);
+

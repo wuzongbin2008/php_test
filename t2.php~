@@ -1,14 +1,6 @@
 <?php
 error_reporting(-1);
-
-if (@file_put_contents("1.txt", "r"))
-{
-	print "open 1.txt";
-}
-if(@rename("2.txt", "22.txt"))
-{
-	print "rename";
-}
+phpinfo();
 exit;
 
 
