@@ -34,7 +34,9 @@ class CHASH {
                 foreach ($config as $k => $v) {
                         for ($i=0; $i<$replics; $i++) {
                                 $str = $v.":".$i;
+	                        printf("str %d: %s\nk: %s\n", $i, $str, $k);
                                 $hash = $this->_hash($str);
+				printf("hash %d: %s\n\n", $i, $hash);
 
                                 //debug
                                 if(isset($this->pos[$hash])) {
@@ -84,7 +86,7 @@ class CHASH {
         function get_nodes($key, $n)
         {
                 if (!$this->ok) return false;
-                if ($n > $this->nodes) return false;
+                if ($n > count($this->nodes)) return false;
                 //echo "key: $key\n";
 
                 $tmp = array();

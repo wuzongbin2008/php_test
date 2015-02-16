@@ -1,14 +1,9 @@
 <?php
 error_reporting(-1);
 
-if (@file_put_contents("1.txt", "r"))
-{
-	print "open 1.txt";
-}
-if(@rename("2.txt", "22.txt"))
-{
-	print "rename";
-}
+$a[] = array("a"=>1, "b"=>2);
+$a[] = array("a"=>1, "b"=>2);
+echo json_encode($a);
 exit;
 
 
