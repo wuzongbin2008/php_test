@@ -1,7 +1,19 @@
 <?php
 error_reporting(-1);
 
+$a = array();
+arr_t($a);
+
+function arr_t(){
+	if($a){
+		echo "true\n";
+	}else{
+		echo "false\n";
+	}
+}
+
 $a[] = array("a"=>1, "b"=>2);
+
 $a[] = array("a"=>1, "b"=>2);
 echo json_encode($a);
 exit;

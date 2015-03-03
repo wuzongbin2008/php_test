@@ -15,7 +15,7 @@ $rings = array();
 foreach($cluster as $ring) {
 	$ch = new CHASH($ring);
 	array_push($rings, $ch);
-	break;
+	//break;
 }
 
 foreach ($rings as $ring) {
@@ -29,7 +29,9 @@ foreach ($rings as $ring) {
 	if (!$host_list) {
 		return false;
 	}
-	//echo "host_list:";print_r($host_list);exit;
+
+	//echo "host_list:";print_r($host_list);
+	exit;
 	foreach ($host_list as $k => $host) {
 		echo("k: $k\tset host: {$host}\n");
 		/*$ret = $this->post_data($url, $host, $blob);

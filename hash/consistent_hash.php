@@ -21,7 +21,9 @@ class CHASH {
 
                 $this->nodes = $config;
                 $this->ok = true;
+
                 if ($replics < 1) $this->ok = false;
+
                 if (empty($config) || !is_array($config) || count($config) < 1)
                         $this->ok = false;
 
@@ -33,27 +35,19 @@ class CHASH {
 
                 foreach ($config as $k => $v) {
                         for ($i=0; $i<$replics; $i++) {
+
+
                                 $str = $v.":".$i;
-	                        printf("str %d: %s\nk: %s\n", $i, $str, $k);
                                 $hash = $this->_hash($str);
-				printf("hash %d: %s\n\n", $i, $hash);
 
-                                //debug
-                                if(isset($this->pos[$hash])) {
-                                        $exist++;
-                                        $exist_arr[] = array(
-                                                "hash" =>$hash,
-                                                "old" =>$pos_arr[$hash]['str'],
-                                                "new" =>$str
-                                        );
-                                }
-                                $pos_arr[$hash] = array(
-                                        "k" =>$k,
-                                        "str" =>$str
-                                );
-                                //end debug
+	                        if ($i == 0){
+		                        printf("\nk: %s\nv: %s\ni: %s", $k, $v, $i);
+		                        printf("\nstr: %s", $str);
+					printf("\nhash %d: %s\n\n", $i, $hash);
+	                        }
 
-                                $this->pos[$hash] = $k;
+	                        $this->pos[$hash] = $k;
+
                         }
                 }
                 //echo "exist: $exist\n";
@@ -95,8 +89,8 @@ class CHASH {
 
                 while ($n) {
                         $pos = $this->_find_pos($pos);
-                        //echo "pos: $pos\t";
-                        //echo "pos[pos]:".$this->pos[$pos]."\n";
+                        echo "pos: $pos\t";
+                        echo "pos[pos]:".$this->pos[$pos]."\n";
                         if (in_array($this->pos[$pos], $tmp)) {
                                 $pos += 1;
                                 continue;
@@ -106,7 +100,7 @@ class CHASH {
                         $this->ptr = $pos;
                         $pos += 1;
                 }
-                echo "tmp: ";print_r($tmp);
+                //echo "tmp: ";print_r($tmp);
                 $res = array();
                 foreach ($tmp as $pos) {
                         array_push($res, $this->nodes[$pos]);
