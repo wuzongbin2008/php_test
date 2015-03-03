@@ -72,17 +72,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="consistent_hash.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="consistent_hash.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hash/consistent_hash.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="33" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.2478185" vertical-offset="488" max-vertical-offset="2295">
+            <state line="32" column="45" selection-start="1015" selection-end="1015" vertical-scroll-proportion="13.0" vertical-offset="732" max-vertical-offset="1305">
               <folding>
-                <element signature="n#__destruct#0;n#CHASH#0;n#!!top" expanded="true" />
-                <element signature="e#1873#1988#0" expanded="true" />
-                <element signature="n#get_node#0;n#CHASH#0;n#!!top" expanded="true" />
-                <element signature="n#get_nodes#0;n#CHASH#0;n#!!top" expanded="true" />
-                <element signature="e#3320#3403#0" expanded="true" />
-                <element signature="n#next_node#0;n#CHASH#0;n#!!top" expanded="true" />
+                <element signature="e#1691#1806#0" expanded="true" />
                 <element signature="n#_find_pos#0;n#CHASH#0;n#!!top" expanded="true" />
                 <element signature="n#_hash#0;n#CHASH#0;n#!!top" expanded="true" />
               </folding>
@@ -90,10 +85,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="password_hash.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hash/password_hash.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="33" selection-start="175" selection-end="175" vertical-scroll-proportion="0.5124224" vertical-offset="0" max-vertical-offset="360">
+              <folding>
+                <element signature="e#6#81#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hash.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hash/hash.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="465">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="t.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hash/t.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="40" selection-start="694" selection-end="694" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="855">
+            <state line="38" column="36" selection-start="1013" selection-end="1013" vertical-scroll-proportion="-14.375" vertical-offset="225" max-vertical-offset="855">
               <folding />
             </state>
           </provider>
@@ -113,7 +128,6 @@
         <option value="$PROJECT_DIR$/multi_friend_input/input.html" />
         <option value="$PROJECT_DIR$/math/t.php" />
         <option value="$PROJECT_DIR$/t.php" />
-        <option value="$PROJECT_DIR$/hash/hash.php" />
         <option value="$PROJECT_DIR$/csv/import_csv.php" />
         <option value="$PROJECT_DIR$/map/js_api/location.html" />
         <option value="$PROJECT_DIR$/D3js/d3.v3.js" />
@@ -130,6 +144,8 @@
         <option value="$PROJECT_DIR$/t2.php" />
         <option value="$PROJECT_DIR$/hash/consistent_hash.php" />
         <option value="$PROJECT_DIR$/hash/t.php" />
+        <option value="$PROJECT_DIR$/hash/hash.php" />
+        <option value="$PROJECT_DIR$/hash/password_hash.php" />
       </list>
     </option>
   </component>
@@ -221,7 +237,7 @@
     <property name="options.lastSelected" value="editor.preferences.import" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../picservice/launch_center" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../picservice/upload" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -232,13 +248,8 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="PHP Script.t.php (2)">
+  <component name="RunManager" selected="PHP Script.password_hash.php">
     <configuration default="false" name="t2.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/t2.php">
-      <RunnerSettings RunnerId="PhpRunner" />
-      <ConfigurationWrapper RunnerId="PhpRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="t.php (1)" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/preg_match/t.php">
       <RunnerSettings RunnerId="PhpRunner" />
       <ConfigurationWrapper RunnerId="PhpRunner" />
       <method />
@@ -254,6 +265,11 @@
       <method />
     </configuration>
     <configuration default="false" name="t.php (2)" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/hash/t.php">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="password_hash.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/hash/password_hash.php">
       <RunnerSettings RunnerId="PhpRunner" />
       <ConfigurationWrapper RunnerId="PhpRunner" />
       <method />
@@ -289,18 +305,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="PHP Script.t2.php" />
-      <item index="1" class="java.lang.String" itemvalue="PHP Script.t.php (1)" />
-      <item index="2" class="java.lang.String" itemvalue="PHP Script.t.php" />
-      <item index="3" class="java.lang.String" itemvalue="PHP Script.hash.php" />
-      <item index="4" class="java.lang.String" itemvalue="PHP Script.t.php (2)" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.t.php" />
+      <item index="2" class="java.lang.String" itemvalue="PHP Script.hash.php" />
+      <item index="3" class="java.lang.String" itemvalue="PHP Script.t.php (2)" />
+      <item index="4" class="java.lang.String" itemvalue="PHP Script.password_hash.php" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="PHP Script.t.php (2)" />
-        <item index="1" class="java.lang.String" itemvalue="PHP Script.t2.php" />
-        <item index="2" class="java.lang.String" itemvalue="PHP Script.t.php" />
-        <item index="3" class="java.lang.String" itemvalue="PHP Script.hash.php" />
-        <item index="4" class="java.lang.String" itemvalue="PHP Script.t.php (1)" />
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.password_hash.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.hash.php" />
+        <item index="2" class="java.lang.String" itemvalue="PHP Script.t.php (2)" />
+        <item index="3" class="java.lang.String" itemvalue="PHP Script.t2.php" />
+        <item index="4" class="java.lang.String" itemvalue="PHP Script.t.php" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -342,11 +358,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17884915" sideWeight="0.5866209" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17884915" sideWeight="0.5866209" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.75878596" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40095848" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -422,22 +438,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hash/consistent_hash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="51" selection-start="4865" selection-end="4875" vertical-scroll-proportion="0.0" vertical-offset="2355" max-vertical-offset="2520">
-          <folding>
-            <element signature="n#__destruct#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="e#1873#1988#0" expanded="true" />
-            <element signature="n#get_node#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="n#get_nodes#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="e#3320#3403#0" expanded="true" />
-            <element signature="n#next_node#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="n#_find_pos#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="n#_hash#0;n#CHASH#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hash/t.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="855">
@@ -449,12 +449,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="42" selection-start="516" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2325">
           <folding>
-            <element signature="n#__destruct#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="e#1873#1988#0" expanded="true" />
-            <element signature="n#get_node#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="n#get_nodes#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="e#3320#3403#0" expanded="true" />
-            <element signature="n#next_node#0;n#CHASH#0;n#!!top" expanded="true" />
+            <element signature="e#1691#1806#0" expanded="true" />
             <element signature="n#_find_pos#0;n#CHASH#0;n#!!top" expanded="true" />
             <element signature="n#_hash#0;n#CHASH#0;n#!!top" expanded="true" />
           </folding>
@@ -472,12 +467,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="155" column="28" selection-start="4813" selection-end="4813" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2325">
           <folding>
-            <element signature="n#__destruct#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="e#1873#1988#0" expanded="true" />
-            <element signature="n#get_node#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="n#get_nodes#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="e#3320#3403#0" expanded="true" />
-            <element signature="n#next_node#0;n#CHASH#0;n#!!top" expanded="true" />
+            <element signature="e#1691#1806#0" expanded="true" />
             <element signature="n#_find_pos#0;n#CHASH#0;n#!!top" expanded="true" />
             <element signature="n#_hash#0;n#CHASH#0;n#!!top" expanded="true" />
           </folding>
@@ -701,30 +691,36 @@
         <state line="44" column="1" selection-start="756" selection-end="756" vertical-scroll-proportion="0.8638743" vertical-offset="0" max-vertical-offset="585" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="43" selection-start="515" selection-end="515" vertical-scroll-proportion="0.5235602" vertical-offset="0" max-vertical-offset="573" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hash/t.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="40" selection-start="694" selection-end="694" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="855">
+        <state line="38" column="36" selection-start="1013" selection-end="1013" vertical-scroll-proportion="-14.375" vertical-offset="225" max-vertical-offset="855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/hash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hash/consistent_hash.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="33" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.2478185" vertical-offset="488" max-vertical-offset="2295">
+        <state line="32" column="45" selection-start="1015" selection-end="1015" vertical-scroll-proportion="13.0" vertical-offset="732" max-vertical-offset="1305">
           <folding>
-            <element signature="n#__destruct#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="e#1873#1988#0" expanded="true" />
-            <element signature="n#get_node#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="n#get_nodes#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="e#3320#3403#0" expanded="true" />
-            <element signature="n#next_node#0;n#CHASH#0;n#!!top" expanded="true" />
+            <element signature="e#1691#1806#0" expanded="true" />
             <element signature="n#_find_pos#0;n#CHASH#0;n#!!top" expanded="true" />
             <element signature="n#_hash#0;n#CHASH#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/password_hash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="33" selection-start="175" selection-end="175" vertical-scroll-proportion="0.5124224" vertical-offset="0" max-vertical-offset="360">
+          <folding>
+            <element signature="e#6#81#0" expanded="true" />
           </folding>
         </state>
       </provider>

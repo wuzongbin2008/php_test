@@ -27,20 +27,14 @@ class CHASH {
                 if (empty($config) || !is_array($config) || count($config) < 1)
                         $this->ok = false;
 
-                //debug
-                $exist = 0;
-                $pos_arr = array();
-                $exist_arr = array();
-                //end debug
-
                 foreach ($config as $k => $v) {
                         for ($i=0; $i<$replics; $i++) {
-
 
                                 $str = $v.":".$i;
                                 $hash = $this->_hash($str);
 
-	                        if ($i == 0){
+	                        $switch = false;
+	                        if ($i == 0 and $switch){
 		                        printf("\nk: %s\nv: %s\ni: %s", $k, $v, $i);
 		                        printf("\nstr: %s", $str);
 					printf("\nhash %d: %s\n\n", $i, $hash);
@@ -50,8 +44,7 @@ class CHASH {
 
                         }
                 }
-                //echo "exist: $exist\n";
-                //print_r($exist_arr);
+
                 ksort($this->pos, SORT_NUMERIC);
         }
 
