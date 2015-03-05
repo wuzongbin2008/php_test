@@ -75,9 +75,11 @@
       <file leaf-file-name="consistent_hash.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hash/consistent_hash.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="43" selection-start="1117" selection-end="1117" vertical-scroll-proportion="-6.25" vertical-offset="315" max-vertical-offset="1305">
+            <state line="72" column="36" selection-start="2088" selection-end="2088" vertical-scroll-proportion="-8.125" vertical-offset="630" max-vertical-offset="1755">
               <folding>
+                <element signature="n#__construct#0;n#CHASH#0;n#!!top" expanded="true" />
                 <element signature="e#1675#1790#0" expanded="true" />
+                <element signature="n#get_nodes#0;n#CHASH#0;n#!!top" expanded="true" />
                 <element signature="n#_find_pos#0;n#CHASH#0;n#!!top" expanded="true" />
                 <element signature="n#_hash#0;n#CHASH#0;n#!!top" expanded="true" />
               </folding>
@@ -88,7 +90,7 @@
       <file leaf-file-name="t.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hash/t.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="32" selection-start="682" selection-end="682" vertical-scroll-proportion="1.8881118" vertical-offset="0" max-vertical-offset="885">
+            <state line="9" column="0" selection-start="400" selection-end="400" vertical-scroll-proportion="0.2356021" vertical-offset="0" max-vertical-offset="1020">
               <folding />
             </state>
           </provider>
@@ -317,7 +319,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="0" width="1330" height="768" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -328,7 +330,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.686901" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45527157" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -415,7 +417,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="42" selection-start="516" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2325">
           <folding>
+            <element signature="n#__construct#0;n#CHASH#0;n#!!top" expanded="true" />
             <element signature="e#1675#1790#0" expanded="true" />
+            <element signature="n#get_nodes#0;n#CHASH#0;n#!!top" expanded="true" />
             <element signature="n#_find_pos#0;n#CHASH#0;n#!!top" expanded="true" />
             <element signature="n#_hash#0;n#CHASH#0;n#!!top" expanded="true" />
           </folding>
@@ -433,7 +437,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="155" column="28" selection-start="4813" selection-end="4813" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2325">
           <folding>
+            <element signature="n#__construct#0;n#CHASH#0;n#!!top" expanded="true" />
             <element signature="e#1675#1790#0" expanded="true" />
+            <element signature="n#get_nodes#0;n#CHASH#0;n#!!top" expanded="true" />
             <element signature="n#_find_pos#0;n#CHASH#0;n#!!top" expanded="true" />
             <element signature="n#_hash#0;n#CHASH#0;n#!!top" expanded="true" />
           </folding>
@@ -669,9 +675,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hash/consistent_hash.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="43" selection-start="1117" selection-end="1117" vertical-scroll-proportion="-6.25" vertical-offset="315" max-vertical-offset="1305">
+        <state line="72" column="36" selection-start="2088" selection-end="2088" vertical-scroll-proportion="-8.125" vertical-offset="630" max-vertical-offset="1755">
           <folding>
+            <element signature="n#__construct#0;n#CHASH#0;n#!!top" expanded="true" />
             <element signature="e#1675#1790#0" expanded="true" />
+            <element signature="n#get_nodes#0;n#CHASH#0;n#!!top" expanded="true" />
             <element signature="n#_find_pos#0;n#CHASH#0;n#!!top" expanded="true" />
             <element signature="n#_hash#0;n#CHASH#0;n#!!top" expanded="true" />
           </folding>
@@ -680,7 +688,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hash/t.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="32" selection-start="682" selection-end="682" vertical-scroll-proportion="1.8881118" vertical-offset="0" max-vertical-offset="885">
+        <state line="9" column="0" selection-start="400" selection-end="400" vertical-scroll-proportion="0.2356021" vertical-offset="0" max-vertical-offset="1020">
           <folding />
         </state>
       </provider>
