@@ -16,7 +16,7 @@ $slice_icache_servers_0 = array(
 );
 $cluster = array($slice_icache_servers_0, $slice_icache_servers_1);
 
-$retry_times = 3;
+$retry_times = 1;
 $token = "2183098411.9af8565bc6c28f082b4cadd965727262.713062.240.1418111810.pic";
 
 $hash_v = (crc32($token) & 0x7fffffff) % 50119;
