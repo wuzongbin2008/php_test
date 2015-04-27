@@ -1,11 +1,15 @@
 <?php
 error_reporting(-1);
 
-$a = "a";
-$b = "b";
+$url = "/2/index/index/test/1/";
 
-$ab = "12";
+$requestUri = trim($url, '/');
 
-echo "{{{$a}{$b}}}";
+$arr = explode('/', $requestUri, 4);
 
-?>
+$applicationPrefix = $arr[0];
+$control = (isset($arr[1]) && ''!= $arr[1]) ? $arr[1] : 'index';
+
+echo $control;
+
+
