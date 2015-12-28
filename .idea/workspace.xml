@@ -72,23 +72,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="consistent_hash.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hash/consistent_hash.php">
+      <file leaf-file-name="phpinput_server.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phpinput_server.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="45" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.4973822" vertical-offset="135" max-vertical-offset="1305">
-              <folding>
-                <element signature="e#1691#1806#0" expanded="true" />
-                <element signature="n#_find_pos#0;n#CHASH#0;n#!!top" expanded="true" />
-                <element signature="n#_hash#0;n#CHASH#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="308">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="t.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hash/t.php">
+      <file leaf-file-name="phpinput_post.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phpinput_post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="36" selection-start="1013" selection-end="1013" vertical-scroll-proportion="-12.166667" vertical-offset="278" max-vertical-offset="855">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="t.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/file/t.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="3" selection-start="82" selection-end="82" vertical-scroll-proportion="0.25831702" vertical-offset="0" max-vertical-offset="511">
               <folding />
             </state>
           </provider>
@@ -120,12 +125,12 @@
         <option value="$PROJECT_DIR$/reflection/reflection_t.class.php" />
         <option value="$PROJECT_DIR$/datetime/date.php" />
         <option value="$PROJECT_DIR$/preg_match/t.php" />
-        <option value="$PROJECT_DIR$/file/t.php" />
         <option value="$PROJECT_DIR$/t2.php" />
         <option value="$PROJECT_DIR$/hash/consistent_hash.php" />
         <option value="$PROJECT_DIR$/hash/t.php" />
         <option value="$PROJECT_DIR$/hash/hash.php" />
         <option value="$PROJECT_DIR$/hash/password_hash.php" />
+        <option value="$PROJECT_DIR$/file/t.php" />
       </list>
     </option>
   </component>
@@ -133,16 +138,17 @@
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="php5.5.10">
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="php5.5.12">
     <include_path>
       <path value="." />
       <path value="C:\php\pear" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="36" />
-    <option name="width" value="1330" />
-    <option name="height" value="768" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1364" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -172,7 +178,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -187,7 +192,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="phpTest" />
+              <option name="myItemId" value="php_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -197,16 +202,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="phpTest" />
+              <option name="myItemId" value="php_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hash" />
+              <option name="myItemId" value="file" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Favorites" />
     </panes>
@@ -217,7 +223,7 @@
     <property name="options.lastSelected" value="editor.preferences.import" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../picservice/upload" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -228,7 +234,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="PHP Script.password_hash.php">
+  <component name="RunManager" selected="PHP Script.t.php">
     <configuration default="false" name="t2.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/t2.php">
       <RunnerSettings RunnerId="PhpRunner" />
       <ConfigurationWrapper RunnerId="PhpRunner" />
@@ -292,11 +298,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="PHP Script.password_hash.php" />
-        <item index="1" class="java.lang.String" itemvalue="PHP Script.hash.php" />
-        <item index="2" class="java.lang.String" itemvalue="PHP Script.t.php (2)" />
-        <item index="3" class="java.lang.String" itemvalue="PHP Script.t2.php" />
-        <item index="4" class="java.lang.String" itemvalue="PHP Script.t.php" />
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.t.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.password_hash.php" />
+        <item index="2" class="java.lang.String" itemvalue="PHP Script.hash.php" />
+        <item index="3" class="java.lang.String" itemvalue="PHP Script.t.php (2)" />
+        <item index="4" class="java.lang.String" itemvalue="PHP Script.t2.php" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -330,19 +336,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="0" width="1330" height="768" extended-state="6" />
-    <editor active="true" />
+    <frame x="1" y="1" width="1364" height="728" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17884915" sideWeight="0.5866209" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19248466" sideWeight="0.5866209" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40095848" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -420,45 +426,17 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/hash/t.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="855">
-          <folding />
-        </state>
+        <state line="32" column="48" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="855" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hash/consistent_hash.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="42" selection-start="516" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2325">
-          <folding>
-            <element signature="e#1691#1806#0" expanded="true" />
-            <element signature="n#_find_pos#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="n#_hash#0;n#CHASH#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="155" column="28" selection-start="4813" selection-end="4813" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2325" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hash/t.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="48" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="855">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/consistent_hash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="28" selection-start="4813" selection-end="4813" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2325">
-          <folding>
-            <element signature="e#1691#1806#0" expanded="true" />
-            <element signature="n#_find_pos#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="n#_hash#0;n#CHASH#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="48" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="855">
-          <folding />
-        </state>
+        <state line="32" column="48" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="855" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/t2.php">
@@ -656,11 +634,6 @@
         <state line="35" column="9" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.62020904" vertical-offset="169" max-vertical-offset="765" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="1" selection-start="339" selection-end="339" vertical-scroll-proportion="0.65445024" vertical-offset="0" max-vertical-offset="573" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/t2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="28" selection-end="108" vertical-scroll-proportion="0.078397214" vertical-offset="0" max-vertical-offset="574" />
@@ -673,35 +646,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hash/hash.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="465">
-          <folding />
-        </state>
+        <state line="7" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="465" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hash/password_hash.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="46" selection-start="310" selection-end="310" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="390">
-          <folding>
-            <element signature="e#6#81#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="14" column="46" selection-start="310" selection-end="310" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="390" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hash/t.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="36" selection-start="1013" selection-end="1013" vertical-scroll-proportion="-12.166667" vertical-offset="278" max-vertical-offset="855">
-          <folding />
-        </state>
+        <state line="38" column="36" selection-start="1013" selection-end="1013" vertical-scroll-proportion="-12.166667" vertical-offset="278" max-vertical-offset="855" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hash/consistent_hash.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="45" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.4973822" vertical-offset="135" max-vertical-offset="1305">
-          <folding>
-            <element signature="e#1691#1806#0" expanded="true" />
-            <element signature="n#_find_pos#0;n#CHASH#0;n#!!top" expanded="true" />
-            <element signature="n#_hash#0;n#CHASH#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="32" column="45" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1210" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpinput_server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpinput_post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="638">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file/t.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="3" selection-start="82" selection-end="82" vertical-scroll-proportion="0.25831702" vertical-offset="0" max-vertical-offset="511">
+          <folding />
         </state>
       </provider>
     </entry>

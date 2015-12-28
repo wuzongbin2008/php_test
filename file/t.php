@@ -7,7 +7,7 @@
  */
 error_reporting(-1);
 
-var_dump(rename_t());
+var_dump(dirname(__FILE__));
 
 
 function rename_t()
