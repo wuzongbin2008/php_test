@@ -22,7 +22,7 @@ $server = new OAuth2\Server($storage);
 $server->addGrantType(new OAuth2\GrantType\ClientCredentials($storage));
 
 // Add the "Authorization Code" grant type (this is where the oauth magic happens)
-$server->addGrantType(new OAuth2\GrantType\AuthorizationCode($storage));
+ $server->addGrantType(new OAuth2\GrantType\AuthorizationCode($storage));
 
 
 ?>
