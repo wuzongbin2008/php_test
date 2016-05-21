@@ -33,8 +33,8 @@ class CHASH {
                                 $str = $v.":".$i;
                                 $hash = $this->_hash($str);
 
-	                        $switch = false;
-	                        if ($i == 0 and $switch){
+	                        $switch = 0;
+	                        if ($switch){
 		                        printf("\nk: %s\nv: %s\ni: %s", $k, $v, $i);
 		                        printf("\nstr: %s", $str);
 					printf("\nhash %d: %s\n\n", $i, $hash);
