@@ -1,587 +1,633 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75c38368-e2bc-47de-bbe0-d71f2acc1dad" name="Default" comment="" />
-    <ignored path="phpTest.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <option name="TRACKING_ENABLED" value="true" />
+    <list default="true" id="0ae56755-b1a7-482e-84a4-39cd7fa4c621" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0.tar.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/Auth/CreateAdWordsUserWithoutIniFile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/Auth/GetRefreshToken.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/Auth/GetRefreshTokenWithoutIniFile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/Auth/init.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/AccountManagement/CreateAccount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/AccountManagement/GetAccountChanges.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/AccountManagement/GetAccountHierarchy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/AdvancedOperations/AddAdCustomizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/AdvancedOperations/AddAdGroupBidModifier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/AdvancedOperations/AddClickToDownloadAd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/AdvancedOperations/AddHtml5Ad.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/AdvancedOperations/AddTextAdWithUpgradedUrls.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/AdvancedOperations/GetAdGroupBidModifiers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/AdvancedOperations/UseSharedBiddingStrategy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/AddAdGroupDemographicCriteria.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/AddAdGroups.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/AddCampaigns.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/AddKeywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/AddTextAds.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/GetAdGroups.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/GetCampaigns.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/GetCampaignsWithAwql.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/GetKeywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/GetLabels.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/GetTextAds.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/PauseAd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/RemoveAd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/RemoveAdGroup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/RemoveCampaign.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/RemoveKeyword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/UpdateAdGroup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/UpdateCampaign.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/BasicOperations/UpdateKeyword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/CampaignManagement/AddCampaignLabels.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/CampaignManagement/AddCompleteCampaignsUsingBatchJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/CampaignManagement/AddExperiment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/CampaignManagement/AddKeywordsUsingIncrementalBatchJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/CampaignManagement/GetAllDisapprovedAds.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/CampaignManagement/GetAllDisapprovedAdsWithAwql.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/CampaignManagement/GetCampaignsByLabel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/CampaignManagement/PromoteExperiment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/CampaignManagement/SetAdParameters.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/CampaignManagement/SetBidModifier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/CampaignManagement/ValidateTextAd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/ErrorHandling/HandlePartialFailures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/ErrorHandling/HandlePolicyViolationError.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Express/AddExpressBusinesses.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Express/AddPromotion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Express/GetBudgetSuggestion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Express/GetExpressBusinesses.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Express/GetProductServices.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Express/GetPromotions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Express/UpdateExpressBusiness.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Express/UpdatePromotion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Extensions/AddGoogleMyBusinessLocationExtensions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Extensions/AddSitelinks.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Extensions/AddSitelinksUsingFeeds.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Migration/MigrateToExtensionSettings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Migration/UpgradeAdUrl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Misc/GetAllImagesAndVideos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Misc/UploadImage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Misc/UploadMediaBundle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Optimization/EstimateKeywordTraffic.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Optimization/GetKeywordBidSimulations.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Optimization/GetKeywordIdeas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Remarketing/AddAudience.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Remarketing/AddConversionTracker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Remarketing/AddCrmBasedUserList.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Remarketing/AddRuleBasedUserLists.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Remarketing/UploadOfflineConversions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Reporting/DownloadCriteriaReport.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Reporting/DownloadCriteriaReportWithAwql.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Reporting/GetReportFields.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/ShoppingCampaigns/AddProductPartitionTree.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/ShoppingCampaigns/AddProductScope.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/ShoppingCampaigns/AddShoppingCampaign.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/ShoppingCampaigns/GetProductCategoryTaxonomy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Targeting/AddCampaignTargetingCriteria.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Targeting/GetCampaignTargetingCriteria.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Targeting/GetTargetableLanguagesAndCarriers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/Targeting/LookupLocation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201509/init.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/AccountManagement/CreateAccount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/AccountManagement/GetAccountChanges.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/AccountManagement/GetAccountHierarchy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/AdvancedOperations/AddAdCustomizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/AdvancedOperations/AddAdGroupBidModifier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/AdvancedOperations/AddClickToDownloadAd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/AdvancedOperations/AddHtml5Ad.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/AdvancedOperations/AddTextAdWithUpgradedUrls.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/AdvancedOperations/GetAdGroupBidModifiers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/AdvancedOperations/UseSharedBiddingStrategy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/AddAdGroupDemographicCriteria.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/AddAdGroups.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/AddCampaigns.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/AddKeywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/AddTextAds.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/GetAdGroups.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/GetCampaigns.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/GetCampaignsWithAwql.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/GetKeywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/GetLabels.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/GetTextAds.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/PauseAd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/RemoveAd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/RemoveAdGroup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/RemoveCampaign.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/RemoveKeyword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/UpdateAdGroup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/UpdateCampaign.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/BasicOperations/UpdateKeyword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/CampaignManagement/AddCampaignLabels.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/CampaignManagement/AddCompleteCampaignsUsingBatchJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/CampaignManagement/AddExperiment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/CampaignManagement/AddKeywordsUsingIncrementalBatchJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/CampaignManagement/GetAllDisapprovedAds.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/CampaignManagement/GetAllDisapprovedAdsWithAwql.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/CampaignManagement/GetCampaignsByLabel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/CampaignManagement/PromoteExperiment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/CampaignManagement/SetAdParameters.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/CampaignManagement/SetBidModifier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/CampaignManagement/ValidateTextAd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/ErrorHandling/HandlePartialFailures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/ErrorHandling/HandlePolicyViolationError.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Express/AddExpressBusinesses.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Express/AddPromotion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Express/GetBudgetSuggestion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Express/GetExpressBusinesses.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Express/GetProductServices.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Express/GetPromotions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Express/UpdateExpressBusiness.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Express/UpdatePromotion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Extensions/AddGoogleMyBusinessLocationExtensions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Extensions/AddSitelinks.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Extensions/AddSitelinksUsingFeeds.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Migration/MigrateToExtensionSettings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Migration/UpgradeAdUrl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Misc/GetAllImagesAndVideos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Misc/UploadImage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Misc/UploadMediaBundle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Optimization/EstimateKeywordTraffic.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Optimization/GetKeywordBidSimulations.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Optimization/GetKeywordIdeas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Remarketing/AddAudience.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Remarketing/AddConversionTracker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Remarketing/AddCrmBasedUserList.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Remarketing/AddRuleBasedUserLists.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Remarketing/UploadOfflineConversions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Reporting/DownloadCriteriaReport.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Reporting/DownloadCriteriaReportWithAwql.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Reporting/GetReportFields.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/ShoppingCampaigns/AddProductPartitionTree.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/ShoppingCampaigns/AddProductScope.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/ShoppingCampaigns/AddShoppingCampaign.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/ShoppingCampaigns/GetProductCategoryTaxonomy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Targeting/AddCampaignTargetingCriteria.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Targeting/GetCampaignTargetingCriteria.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Targeting/GetTargetableLanguagesAndCarriers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/Targeting/LookupLocation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201601/init.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/AccountManagement/CreateAccount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/AccountManagement/GetAccountChanges.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/AccountManagement/GetAccountHierarchy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/AdvancedOperations/AddAdCustomizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/AdvancedOperations/AddAdGroupBidModifier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/AdvancedOperations/AddClickToDownloadAd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/AdvancedOperations/AddHtml5Ad.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/AdvancedOperations/AddTextAdWithUpgradedUrls.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/AdvancedOperations/GetAdGroupBidModifiers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/AdvancedOperations/UsePortfolioBiddingStrategy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/AddAdGroupDemographicCriteria.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/AddAdGroups.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/AddCampaigns.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/AddKeywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/AddTextAds.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/GetAdGroups.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/GetCampaigns.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/GetCampaignsWithAwql.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/GetKeywords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/GetLabels.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/GetTextAds.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/PauseAd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/RemoveAd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/RemoveAdGroup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/RemoveCampaign.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/RemoveKeyword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/UpdateAdGroup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/UpdateCampaign.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/BasicOperations/UpdateKeyword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/CampaignManagement/AddCampaignLabels.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/CampaignManagement/AddCompleteCampaignsUsingBatchJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/CampaignManagement/AddDraft.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/CampaignManagement/AddExperiment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/CampaignManagement/AddKeywordsUsingIncrementalBatchJob.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/CampaignManagement/AddTrial.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/CampaignManagement/GetAllDisapprovedAds.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/CampaignManagement/GetAllDisapprovedAdsWithAwql.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/CampaignManagement/GetCampaignsByLabel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/CampaignManagement/GraduateTrial.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/CampaignManagement/PromoteExperiment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/CampaignManagement/SetAdParameters.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/CampaignManagement/SetBidModifier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/CampaignManagement/ValidateTextAd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/ErrorHandling/HandlePartialFailures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/ErrorHandling/HandlePolicyViolationError.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Express/AddExpressBusinesses.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Express/AddPromotion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Express/GetBudgetSuggestion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Express/GetExpressBusinesses.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Express/GetProductServices.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Express/GetPromotions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Express/UpdateExpressBusiness.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Express/UpdatePromotion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Extensions/AddGoogleMyBusinessLocationExtensions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Extensions/AddSitelinks.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Extensions/AddSitelinksUsingFeeds.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Migration/MigrateToExtensionSettings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Migration/UpgradeAdUrl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Misc/GetAllImagesAndVideos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Misc/UploadImage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Misc/UploadMediaBundle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Optimization/EstimateKeywordTraffic.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Optimization/GetCampaignCriterionBidModifierSimulations.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Optimization/GetKeywordBidSimulations.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Optimization/GetKeywordIdeas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Remarketing/AddAudience.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Remarketing/AddConversionTracker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Remarketing/AddCrmBasedUserList.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Remarketing/AddRuleBasedUserLists.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Remarketing/UploadOfflineConversions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Reporting/DownloadCriteriaReport.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Reporting/DownloadCriteriaReportWithAwql.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Reporting/GetReportFields.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/ShoppingCampaigns/AddProductPartitionTree.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/ShoppingCampaigns/AddProductScope.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/ShoppingCampaigns/AddShoppingCampaign.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/ShoppingCampaigns/GetProductCategoryTaxonomy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Targeting/AddCampaignTargetingCriteria.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Targeting/GetCampaignTargetingCriteria.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Targeting/GetTargetableLanguagesAndCarriers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/Targeting/LookupLocation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/AdWords/v201603/init.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/examples/Common/ExampleUtils.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/lib/Google/Api/Ads/AdWords/Lib/AdWordsConstants.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/lib/Google/Api/Ads/AdWords/Lib/AdWordsSoapClient.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/lib/Google/Api/Ads/AdWords/Lib/AdWordsSoapClientFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/lib/Google/Api/Ads/AdWords/Lib/AdWordsUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/lib/Google/Api/Ads/AdWords/Lib/api.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/lib/Google/Api/Ads/AdWords/Lib/build.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/lib/Google/Api/Ads/AdWords/Util/BatchJobException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/lib/Google/Api/Ads/AdWords/Util/ReportDownloadException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/lib/Google/Api/Ads/AdWords/Util/TempIdGenerator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/lib/Google/Api/Ads/AdWords/Util/XmlDeserializer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/lib/Google/Api/Ads/AdWords/Util/XmlSerializer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/lib/Google/Api/Ads/AdWords/Util/v201509/BatchJobClasses.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/lib/Google/Api/Ads/AdWords/Util/v201509/BatchJobUtils.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adwords-examples-and-lib-8.3.0/adwords-examples-and-lib-8.3.0/lib/Google/Api/Ads/AdWords/Util/v201509/ReportClasses.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curl/baidu_static.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/excel/Tests/wj_test.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/excel/phpexcel_1.8.1/Examples/wj_t.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/t.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ant.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php_test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datetime/date.php" beforeDir="false" afterPath="$PROJECT_DIR$/datetime/date.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oauth2.0/doc/OAuth2-master.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oauth2.0/oauth2-demo-master/oauth2-server-php" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2.0/oauth2-demo-master/oauth2-server-php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oauth2.0/oauth2-demo-master/oauth2-server-php/src/OAuth2/Autoloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/oauth2.0/oauth2-demo-master/oauth2-server-php/src/OAuth2/Autoloader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/htmlspecialchars.php" beforeDir="false" afterPath="$PROJECT_DIR$/string/htmlspecialchars.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/t2.php" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FavoritesManager">
-    <favorites_list name="phpTest" />
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="token.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/oauth2.0/token.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="34" selection-start="144" selection-end="144" vertical-scroll-proportion="0.2504744" vertical-offset="0" max-vertical-offset="527">
-              <folding>
-                <element signature="n#create_token#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/excel/phpexcel_1.8.1/Examples/05featuredemo.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="app.function.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../sina/vdiskapi/1/2.1/app/function/app.function.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/excel/phpexcel_1.8.1/Examples/05featuredemo.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1011" column="0" selection-start="24738" selection-end="25196" vertical-scroll-proportion="-1.625" vertical-offset="4287" max-vertical-offset="5016">
-              <folding>
-                <element signature="n#check_open_api_user#0;n#!!top" expanded="true" />
-                <element signature="n#loger_debug#0;n#!!top" expanded="true" />
-                <element signature="n#create_token#0;n#!!top" expanded="true" />
-                <marker date="1384850183698" expanded="true" signature="22141:22179" placeholder="create table..$table_log like..." />
-                <marker date="1384850183698" expanded="true" signature="22991:23034" placeholder="create table..$table_log like..." />
-                <marker date="1384850183698" expanded="true" signature="23378:23480" placeholder="INSERT INTO ..." />
-                <marker date="1384850183698" expanded="true" signature="23610:23649" placeholder="create table..$table_log like..." />
-                <marker date="1384850183698" expanded="true" signature="25560:25617" placeholder="select user_..token..." />
-              </folding>
+            <state relative-caret-position="275">
+              <caret line="218" column="17" lean-forward="true" selection-start-line="216" selection-start-column="16" selection-end-line="218" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FindManager">
-    <FindUsagesManager>
-      <setting name="OPEN_NEW_TAB" value="false" />
-    </FindUsagesManager>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>officelogo.jpg</find>
+      <find>$postUrl</find>
+      <find>getDefaultStyle</find>
+      <find>Color</find>
+    </findStrings>
+    <dirStrings>
+      <dir>E:\Project\php\demo\php_test\excel\Tests</dir>
+      <dir>E:\Project\php\demo\php_test\excel\phpexcel_1.8.1\Examples</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config.inc.php" />
-        <option value="$PROJECT_DIR$/multi_friend_input/input.html" />
-        <option value="$PROJECT_DIR$/math/t.php" />
-        <option value="$PROJECT_DIR$/t.php" />
-        <option value="$PROJECT_DIR$/csv/import_csv.php" />
-        <option value="$PROJECT_DIR$/map/js_api/location.html" />
-        <option value="$PROJECT_DIR$/D3js/d3.v3.js" />
-        <option value="$PROJECT_DIR$/convert/t.php" />
-        <option value="$PROJECT_DIR$/string/t.php" />
-        <option value="$PROJECT_DIR$/array/sort_t.php" />
-        <option value="$PROJECT_DIR$/string/strtok.php" />
-        <option value="$PROJECT_DIR$/yield/yield_t.php" />
-        <option value="$PROJECT_DIR$/reflection/a.class.php" />
-        <option value="$PROJECT_DIR$/reflection/reflection_t.class.php" />
         <option value="$PROJECT_DIR$/datetime/date.php" />
-        <option value="$PROJECT_DIR$/preg_match/t.php" />
-        <option value="$PROJECT_DIR$/t2.php" />
-        <option value="$PROJECT_DIR$/hash/consistent_hash.php" />
-        <option value="$PROJECT_DIR$/hash/t.php" />
-        <option value="$PROJECT_DIR$/hash/hash.php" />
-        <option value="$PROJECT_DIR$/hash/password_hash.php" />
-        <option value="$PROJECT_DIR$/file/t.php" />
-        <option value="$PROJECT_DIR$/oauth2.0/token.php" />
+        <option value="$PROJECT_DIR$/excel/Tests/wj_test.php" />
+        <option value="$PROJECT_DIR$/excel/phpexcel_1.8.1/Examples/wj_t.php" />
+        <option value="$PROJECT_DIR$/curl/baidu_static.php" />
+        <option value="$PROJECT_DIR$/curl/baidu_test.php" />
       </list>
     </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="php5.5.12">
-    <include_path>
-      <path value="." />
-      <path value="C:\php\pear" />
-    </include_path>
-  </component>
-  <component name="ProjectFrameBounds">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP7" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <OptionsSetting value="true" id="Undo Check Out" />
-    <OptionsSetting value="true" id="Get Latest Version" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
-  <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents ProjectPane="true" />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phptest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phptest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phptest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oauth2.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="php_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_test" type="462c0819:PsiDirectoryNode" />
+              <item name="excel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_test" type="462c0819:PsiDirectoryNode" />
+              <item name="excel" type="462c0819:PsiDirectoryNode" />
+              <item name="phpexcel_1.8.1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php_test" type="462c0819:PsiDirectoryNode" />
+              <item name="excel" type="462c0819:PsiDirectoryNode" />
+              <item name="phpexcel_1.8.1" type="462c0819:PsiDirectoryNode" />
+              <item name="Examples" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="editor.preferences.import" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../sina/vdiskapi/1/2.1/app/function/app.function.php" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
-  <component name="RunManager" selected="PHP Script.t.php">
-    <configuration default="false" name="t2.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/t2.php">
-      <RunnerSettings RunnerId="PhpRunner" />
-      <ConfigurationWrapper RunnerId="PhpRunner" />
-      <method />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="PHP Script.05featuredemo.inc.php">
+    <configuration name="01simple.php (1)" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/excel/phpexcel_1.8.1/Examples/01simple.php">
+      <method v="2" />
     </configuration>
-    <configuration default="false" name="t.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/file/t.php">
-      <RunnerSettings RunnerId="PhpRunner" />
-      <ConfigurationWrapper RunnerId="PhpRunner" />
-      <method />
+    <configuration name="05featuredemo.inc.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/excel/phpexcel_1.8.1/Examples/05featuredemo.inc.php">
+      <method v="2" />
     </configuration>
-    <configuration default="false" name="hash.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/hash/hash.php">
-      <RunnerSettings RunnerId="PhpRunner" />
-      <ConfigurationWrapper RunnerId="PhpRunner" />
-      <method />
+    <configuration name="baidu_static.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/curl/baidu_static.php">
+      <method v="2" />
     </configuration>
-    <configuration default="false" name="t.php (2)" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/hash/t.php">
-      <RunnerSettings RunnerId="PhpRunner" />
-      <ConfigurationWrapper RunnerId="PhpRunner" />
-      <method />
+    <configuration name="baidu_test.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/curl/baidu_test.php">
+      <method v="2" />
     </configuration>
-    <configuration default="false" name="password_hash.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/hash/password_hash.php">
-      <RunnerSettings RunnerId="PhpRunner" />
-      <ConfigurationWrapper RunnerId="PhpRunner" />
-      <method />
+    <configuration name="wj_t.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/excel/phpexcel_1.8.1/Examples/wj_t.php">
+      <method v="2" />
     </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
-    <configuration default="true" type="XSLT" factoryName="XSLT">
-      <option name="myOutputFile" />
-      <option name="myOpenOutputFile" value="false" />
-      <option name="myOpenInBrowser" value="false" />
-      <option name="mySmartErrorHandling" value="true" />
-      <option name="myRunnerPort" value="34873" />
-      <option name="myVmArguments" />
-      <option name="myWorkingDirectory" />
-      <option name="myModule" />
-      <option name="myJdk" />
-      <parameters />
-      <OutputType value="CONSOLE" save-to-file="false" />
-      <FileType name="XML" />
-      <JdkChoice value="FROM_MODULE" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="PHP Script.t2.php" />
-      <item index="1" class="java.lang.String" itemvalue="PHP Script.t.php" />
-      <item index="2" class="java.lang.String" itemvalue="PHP Script.hash.php" />
-      <item index="3" class="java.lang.String" itemvalue="PHP Script.t.php (2)" />
-      <item index="4" class="java.lang.String" itemvalue="PHP Script.password_hash.php" />
-    </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="PHP Script.t.php" />
-        <item index="1" class="java.lang.String" itemvalue="PHP Script.password_hash.php" />
-        <item index="2" class="java.lang.String" itemvalue="PHP Script.hash.php" />
-        <item index="3" class="java.lang.String" itemvalue="PHP Script.t.php (2)" />
-        <item index="4" class="java.lang.String" itemvalue="PHP Script.t2.php" />
+      <list>
+        <item itemvalue="PHP Script.05featuredemo.inc.php" />
+        <item itemvalue="PHP Script.baidu_test.php" />
+        <item itemvalue="PHP Script.baidu_static.php" />
+        <item itemvalue="PHP Script.wj_t.php" />
+        <item itemvalue="PHP Script.01simple.php (1)" />
       </list>
     </recent_temporary>
-    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
-      <Host>localhost</Host>
-      <Port>5050</Port>
-    </configuration>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="75c38368-e2bc-47de-bbe0-d71f2acc1dad" name="Default" comment="" />
-      <created>1292143749730</created>
-      <updated>1292143749730</updated>
+      <changelist id="0ae56755-b1a7-482e-84a4-39cd7fa4c621" name="Default Changelist" comment="" />
+      <created>1562309537672</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562309537672</updated>
+      <workItem from="1562309538880" duration="481000" />
+      <workItem from="1562756369468" duration="798000" />
+      <workItem from="1563355626989" duration="150000" />
+      <workItem from="1563356329328" duration="6890000" />
+      <workItem from="1563411914566" duration="2546000" />
+      <workItem from="1563421905061" duration="394000" />
+      <workItem from="1563933947128" duration="6864000" />
+      <workItem from="1563949362755" duration="1377000" />
+      <workItem from="1563953285807" duration="5872000" />
+      <workItem from="1564018251214" duration="1623000" />
+      <workItem from="1564021196714" duration="468000" />
+      <workItem from="1564022344466" duration="42000" />
+      <workItem from="1564052950478" duration="285000" />
+      <workItem from="1564120763352" duration="453000" />
+      <workItem from="1564628961352" duration="1233000" />
+      <workItem from="1564639225414" duration="298000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="29774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16187595" sideWeight="0.5866209" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.22519083" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32833335" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.93666667" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hash/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="48" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="855" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/consistent_hash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="28" selection-start="4813" selection-end="4813" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2325" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="48" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="855" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="28" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="570" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/file/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="1" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="465" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/consistent_hash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="40" selection-start="3688" selection-end="3688" vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="2415" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="21" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/file/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="48" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="210" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preg_match/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="9" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="22" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datetime/date.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="180" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/consistent_hash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="34" selection-start="4577" selection-end="4577" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2415" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="29" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="29" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/consistent_hash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="25" selection-start="2770" selection-end="2778" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="510" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="289" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="375" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/consistent_hash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="27" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="2355" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="2" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/string/chr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="15" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="270" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/string/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="240" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="2" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="390" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="2" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="165" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="2" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/house.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/00.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="65" selection-start="6494" selection-end="6494" vertical-scroll-proportion="0.2973913" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.198813" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redis/chunk_test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="33" selection-start="172" selection-end="172" vertical-scroll-proportion="0.18292683" vertical-offset="0" max-vertical-offset="574" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/convert/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="21" selection-start="105" selection-end="105" vertical-scroll-proportion="0.21052632" vertical-offset="0" max-vertical-offset="570" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/array/sort_t.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="16" selection-start="214" selection-end="214" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/string/chr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="15" selection-start="327" selection-end="327" vertical-scroll-proportion="0.15817223" vertical-offset="0" max-vertical-offset="569" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/string/strtok.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="18" selection-start="365" selection-end="365" vertical-scroll-proportion="0.6169666" vertical-offset="0" max-vertical-offset="435" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/string/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="12" selection-start="289" selection-end="289" vertical-scroll-proportion="0.73264784" vertical-offset="0" max-vertical-offset="510" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_0.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="564" column="34" selection-start="15823" selection-end="15833" vertical-scroll-proportion="0.36555362" vertical-offset="1157" max-vertical-offset="3060" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yield/yield_t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="10" selection-start="305" selection-end="305" vertical-scroll-proportion="0.44815466" vertical-offset="0" max-vertical-offset="569" />
+        <state relative-caret-position="267">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datetime/date.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="0.13066202" vertical-offset="0" max-vertical-offset="574" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preg_match/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="9" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.62020904" vertical-offset="169" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="28" selection-end="108" vertical-scroll-proportion="0.078397214" vertical-offset="0" max-vertical-offset="574" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reflection/reflection_t.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="1" selection-start="756" selection-end="756" vertical-scroll-proportion="0.8638743" vertical-offset="0" max-vertical-offset="585" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="465" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/password_hash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="46" selection-start="310" selection-end="310" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="390" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="36" selection-start="1013" selection-end="1013" vertical-scroll-proportion="-12.166667" vertical-offset="278" max-vertical-offset="855" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/consistent_hash.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="45" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1210" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/file/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="82" selection-end="82" vertical-scroll-proportion="0.25831702" vertical-offset="0" max-vertical-offset="511">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../sina/vdiskapi/1/2.1/app/function/app.function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1011" column="0" selection-start="24738" selection-end="25196" vertical-scroll-proportion="-1.625" vertical-offset="4287" max-vertical-offset="5016">
+        <state relative-caret-position="325">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
-            <element signature="n#check_open_api_user#0;n#!!top" expanded="true" />
-            <element signature="n#loger_debug#0;n#!!top" expanded="true" />
-            <element signature="n#create_token#0;n#!!top" expanded="true" />
-            <marker date="1384850183698" expanded="true" signature="22141:22179" placeholder="create table..$table_log like..." />
-            <marker date="1384850183698" expanded="true" signature="22991:23034" placeholder="create table..$table_log like..." />
-            <marker date="1384850183698" expanded="true" signature="23378:23480" placeholder="INSERT INTO ..." />
-            <marker date="1384850183698" expanded="true" signature="23610:23649" placeholder="create table..$table_log like..." />
-            <marker date="1384850183698" expanded="true" signature="25560:25617" placeholder="select user_..token..." />
+            <element signature="e#6#33#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oauth2.0/token.php">
+    <entry file="file://$PROJECT_DIR$/excel/Tests/05featuredemo.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/Tests/05featuredemo.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="34" selection-start="144" selection-end="144" vertical-scroll-proportion="0.2504744" vertical-offset="0" max-vertical-offset="527">
+        <state relative-caret-position="175">
+          <caret line="195" column="23" lean-forward="true" selection-start-line="195" selection-start-column="23" selection-end-line="195" selection-end-column="28" />
           <folding>
-            <element signature="n#create_token#0;n#!!top" expanded="true" />
+            <element signature="e#15073#15652#0#PHP" />
+            <element signature="e#15657#15941#0#PHP" />
+            <element signature="e#15944#16115#0#PHP" />
+            <element signature="e#16118#16309#0#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/Classes/PHPExcel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5850">
+          <caret line="54" column="6" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/Tests/wj_test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="15" selection-start-line="15" selection-end-line="46" selection-end-column="1" />
+          <folding>
+            <element signature="n#exportBillExcel#0;n#!!top" />
+            <element signature="n#output_excel#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/Tests/01simple.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="33" column="15" lean-forward="true" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/phpexcel_1.8.1/Examples/01simple.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="27" selection-start-line="27" selection-end-line="36" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/phpexcel_1.8.1/Examples/02types.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1800" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/phpexcel_1.8.1/Classes/PHPExcel/Cell.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="888" selection-start-line="888" selection-end-line="888" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/phpexcel_1.8.1/Classes/PHPExcel/Style/Alignment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-575">
+          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#1054#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/phpexcel_1.8.1/Examples/wj_t.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1525">
+          <caret line="61" column="92" selection-start-line="61" selection-start-column="92" selection-end-line="61" selection-end-column="92" />
+          <folding>
+            <element signature="n#writePeakDay#0;n#!!top" />
+            <element signature="n#writePeak5m#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curl/baidu_static.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="19" lean-forward="true" selection-end-line="56" selection-end-column="1" />
+          <folding>
+            <element signature="n#curlPost#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curl/baidu_test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+          <folding>
+            <element signature="n#curlPost#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/phpexcel_1.8.1/Examples/29advancedvaluebinder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2211">
+          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/phpexcel_1.8.1/Examples/05featuredemo.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/phpexcel_1.8.1/Examples/05featuredemo.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="218" column="17" lean-forward="true" selection-start-line="216" selection-start-column="16" selection-end-line="218" selection-end-column="17" />
         </state>
       </provider>
     </entry>
   </component>
 </project>
-
