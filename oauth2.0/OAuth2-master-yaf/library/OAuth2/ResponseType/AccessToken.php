@@ -65,7 +65,7 @@ class AccessToken implements AccessTokenInterface
      * Handle the creation of access token, also issue refresh token if supported / desirable.
      *
      * @param $client_id                client identifier related to the access token.
-     * @param $user_id                  user ID associated with the access token
+     * @param $user_id                  user uniqid associated with the access token
      * @param $scope                    OPTIONAL scopes to be stored in space-separated string.
      * @param bool $includeRefreshToken if true, a new refresh_token will be added to the response
      *

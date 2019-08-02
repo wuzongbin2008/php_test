@@ -214,7 +214,7 @@ class PHPExcel_Shared_OLERead {
 	/**
 	 * Read a standard stream (by joining sectors using information from SAT)
 	 *
-	 * @param int $bl Sector ID where the stream starts
+	 * @param int $bl Sector uniqid where the stream starts
 	 * @return string Data for standard stream
 	 */
 	private function _readData($bl)

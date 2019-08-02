@@ -524,7 +524,7 @@ class PHPExcel_DocumentProperties
             case 'storage'    :    //    Binary Storage
             case 'ostorage'    :    //    Binary Storage Object
             case 'vstream'    :    //    Binary Versioned Stream
-            case 'clsid'    :    //    Class ID
+            case 'clsid'    :    //    Class uniqid
             case 'cf'        :    //    Clipboard Data
                 return $propertyValue;
                 break;
@@ -576,7 +576,7 @@ class PHPExcel_DocumentProperties
             case 'storage'    :    //    Binary Storage
             case 'ostorage'    :    //    Binary Storage Object
             case 'vstream'    :    //    Binary Versioned Stream
-            case 'clsid'    :    //    Class ID
+            case 'clsid'    :    //    Class uniqid
             case 'cf'        :    //    Clipboard Data
                 return self::PROPERTY_TYPE_UNKNOWN;
                 break;

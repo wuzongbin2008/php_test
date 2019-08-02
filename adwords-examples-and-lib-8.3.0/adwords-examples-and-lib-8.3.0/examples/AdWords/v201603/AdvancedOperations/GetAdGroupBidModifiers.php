@@ -56,7 +56,7 @@ function GetAdGroupBidModifiersExample(AdWordsUser $user) {
         if (is_numeric($modifier->bidModifier)) {
           $value = $modifier->bidModifier;
         }
-        printf("Campaign ID %d, AdGroup ID %d, Criterion ID %d has ad group " .
+        printf("Campaign uniqid %d, AdGroup uniqid %d, Criterion uniqid %d has ad group " .
             "level modifier: %s\n",
           $modifier->campaignId,
           $modifier->adGroupId,

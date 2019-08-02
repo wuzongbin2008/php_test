@@ -95,9 +95,9 @@ class PHPExcel_Reader_SYLK extends PHPExcel_Reader_Abstract implements PHPExcel_
 			return FALSE;
 		}
 
-		// Analyze first line looking for ID; signature
+		// Analyze first line looking for uniqid; signature
 		$lines = explode("\n", $data);
-		if (substr($lines[0],0,4) != 'ID;P') {
+		if (substr($lines[0],0,4) != 'uniqid;P') {
 			return FALSE;
 		}
 

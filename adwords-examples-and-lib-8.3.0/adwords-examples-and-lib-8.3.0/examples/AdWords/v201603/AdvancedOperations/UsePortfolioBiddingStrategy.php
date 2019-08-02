@@ -34,7 +34,7 @@ $budgetId = null;
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param string|null $sharedBudgetId the shared budget ID to re-use or null
+ * @param string|null $sharedBudgetId the shared budget uniqid to re-use or null
  *    to create a new one
  */
 function UsePortfolioBiddingStrategyExample(AdWordsUser $user,
@@ -79,7 +79,7 @@ function CreateBiddingStrategy(AdWordsUser $user) {
   $newBiddingStrategy = $result->value[0];
 
   printf(
-      "Portfolio bidding strategy with name '%s' and ID %d of type %s was "
+      "Portfolio bidding strategy with name '%s' and uniqid %d of type %s was "
           . "created.\n",
       $newBiddingStrategy->name,
       $newBiddingStrategy->id,
@@ -160,7 +160,7 @@ function CreateCampaignWithBiddingStrategy(AdWordsUser $user,
 
   $newCampaign = $result->value[0];
 
-  printf("Campaign with name '%s', ID %d and bidding scheme ID %d was "
+  printf("Campaign with name '%s', uniqid %d and bidding scheme uniqid %d was "
         . "created.\n", $newCampaign->name, $newCampaign->id,
           $newCampaign->biddingStrategyConfiguration->biddingStrategyId);
 

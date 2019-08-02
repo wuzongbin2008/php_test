@@ -40,7 +40,7 @@ function UpdateAdGroupExample(AdWordsUser $user, $adGroupId) {
   // Get the service, which loads the required classes.
   $adGroupService = $user->GetService('AdGroupService', ADWORDS_VERSION);
 
-  // Create ad group using an existing ID.
+  // Create ad group using an existing uniqid.
   $adGroup = new AdGroup();
   $adGroup->id = $adGroupId;
 
@@ -63,7 +63,7 @@ function UpdateAdGroupExample(AdWordsUser $user, $adGroupId) {
 
   // Display result.
   $adGroup = $result->value[0];
-  printf("Ad group with ID '%s' has updated default bid '$%s'.\n", $adGroup->id,
+  printf("Ad group with uniqid '%s' has updated default bid '$%s'.\n", $adGroup->id,
       $adGroup->biddingStrategyConfiguration->bids[0]->bid->microAmount /
           AdWordsConstants::MICROS_PER_DOLLAR);
 

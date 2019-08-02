@@ -73,7 +73,7 @@ try {
       createContentMetadataKeyHierarchies(array($contentMetadataKeyHierarchy));
 
   foreach ($contentMetadataKeyHierarchies as $contentMetadataKeyHierarchy) {
-    printf("Content metadata key hierarchy with ID '%d', name '%s', and %d "
+    printf("Content metadata key hierarchy with uniqid '%d', name '%s', and %d "
         . "levels was created.\n", $contentMetadataKeyHierarchy->id,
         $contentMetadataKeyHierarchy->name,
         count($contentMetadataKeyHierarchy->hierarchyLevels));

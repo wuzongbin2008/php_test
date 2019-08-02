@@ -5040,7 +5040,7 @@ if (!class_exists("GetAdRulesByStatement", false)) {
    * @param filterStatement a Publisher Query Language statement used to filter
    * a set of ad rules
    * @return the ad rules that match the given filter
-   * @throws ApiException if the ID of the active network does not exist or
+   * @throws ApiException if the uniqid of the active network does not exist or
    * there is a backend error
    * @package GoogleApiAdsDfp
    * @subpackage v201505
@@ -6794,7 +6794,7 @@ if (!class_exists("AdRuleService", false)) {
      * @param filterStatement a Publisher Query Language statement used to filter
      * a set of ad rules
      * @return the ad rules that match the given filter
-     * @throws ApiException if the ID of the active network does not exist or
+     * @throws ApiException if the uniqid of the active network does not exist or
      * there is a backend error
      */
     public function getAdRulesByStatement($statement) {

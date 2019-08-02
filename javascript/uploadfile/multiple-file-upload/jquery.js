@@ -33,7 +33,7 @@ var jQuery = function( selector, context ) {
 	// A central reference to the root jQuery(document)
 	rootjQuery,
 
-	// A simple way to check for HTML strings or ID strings
+	// A simple way to check for HTML strings or uniqid strings
 	// (both of which we optimize for)
 	quickExpr = /^[^<]*(<[\w\W]+>)[^>]*$|^#([\w-]+)$/,
 
@@ -89,7 +89,7 @@ jQuery.fn = jQuery.prototype = {
 
 		// Handle HTML strings
 		if ( typeof selector === "string" ) {
-			// Are we dealing with HTML string or an ID?
+			// Are we dealing with HTML string or an uniqid?
 			match = quickExpr.exec( selector );
 
 			// Verify a match, and that no context was specified for #id
@@ -123,7 +123,7 @@ jQuery.fn = jQuery.prototype = {
 
 					if ( elem ) {
 						// Handle the case where IE and Opera return items
-						// by name instead of ID
+						// by name instead of uniqid
 						if ( elem.id !== match[2] ) {
 							return rootjQuery.find( selector );
 						}
@@ -976,7 +976,7 @@ jQuery.extend({
 			return null;
 		}
 
-		// Compute a unique ID for the element
+		// Compute a unique uniqid for the element
 		if ( !id ) { 
 			id = ++uuid;
 		}
@@ -1533,7 +1533,7 @@ jQuery.event = {
 			elem = window;
 		}
 
-		// Make sure that the function being executed has a unique ID
+		// Make sure that the function being executed has a unique uniqid
 		if ( !handler.guid ) {
 			handler.guid = jQuery.guid++;
 		}
@@ -2524,8 +2524,8 @@ var Sizzle = function(selector, context, results, seed) {
 			}
 		}
 	} else {
-		// Take a shortcut and set the context if the root selector is an ID
-		// (but not if it'll be faster if the inner selector is an ID)
+		// Take a shortcut and set the context if the root selector is an uniqid
+		// (but not if it'll be faster if the inner selector is an uniqid)
 		if ( !seed && parts.length > 1 && context.nodeType === 9 && !contextXML &&
 				Expr.match.ID.test(parts[0]) && !Expr.match.ID.test(parts[parts.length - 1]) ) {
 			var ret = Sizzle.find( parts.shift(), context, contextXML );
@@ -3352,7 +3352,7 @@ if ( document.querySelectorAll ) {
 			context = context || document;
 
 			// Only use querySelectorAll on non-XML documents
-			// (ID selectors don't work in non-HTML documents)
+			// (uniqid selectors don't work in non-HTML documents)
 			if ( !seed && context.nodeType === 9 && !isXML(context) ) {
 				try {
 					return makeArray( context.querySelectorAll(query), extra );

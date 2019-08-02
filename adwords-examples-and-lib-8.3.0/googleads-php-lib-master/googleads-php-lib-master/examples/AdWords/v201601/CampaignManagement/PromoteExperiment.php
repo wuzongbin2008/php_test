@@ -37,7 +37,7 @@ $experimentId = 'INSERT_EXPERIMENT_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param string $experimentId the ID of the experiment to promote
+ * @param string $experimentId the uniqid of the experiment to promote
  */
 function PromoteExperimentExample(AdWordsUser $user, $experimentId) {
   // Get the service, which loads the required classes.
@@ -60,7 +60,7 @@ function PromoteExperimentExample(AdWordsUser $user, $experimentId) {
 
   // Display result.
   $experiment = $result->value[0];
-  printf ("Experiment with name '%s' and ID '%s' was promoted.\n",
+  printf ("Experiment with name '%s' and uniqid '%s' was promoted.\n",
       $experiment->name, $experiment->id);
 }
 

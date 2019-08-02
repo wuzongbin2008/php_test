@@ -756,7 +756,7 @@ if (!class_exists("Keyword", false)) {
 if (!class_exists("Location", false)) {
   /**
    * Represents Location criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is enabled for AdX.</span>
    * @package Google_Api_Ads_AdWords_v201509
    * @subpackage v201509

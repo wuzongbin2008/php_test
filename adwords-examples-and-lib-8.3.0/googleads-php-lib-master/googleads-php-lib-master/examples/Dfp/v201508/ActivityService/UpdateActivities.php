@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201508/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the activity to update.
+// Set the uniqid of the activity to update.
 $activityId = 'INSERT_ACTIVITY_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the ActivityService.
   $activityService = $user->GetService('ActivityService', 'v201508');
 
-  // Create a statement to select a single activity by ID.
+  // Create a statement to select a single activity by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -71,7 +71,7 @@ try {
   $activities = $activityService->updateActivities(array($activity));
 
   foreach ($activities as $updatedActivity) {
-    printf("Activity with ID %d, and name '%s' was updated.\n",
+    printf("Activity with uniqid %d, and name '%s' was updated.\n",
         $updatedActivity->id, $updatedActivity->name);
   }
 } catch (OAuth2Exception $e) {

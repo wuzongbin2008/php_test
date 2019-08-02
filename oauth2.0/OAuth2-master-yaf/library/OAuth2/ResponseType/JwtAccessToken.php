@@ -22,7 +22,7 @@ class JwtAccessToken extends AccessToken
      * @param $config
      *  - store_encrypted_token_string (bool true)
      *       whether the entire encrypted string is stored,
-     *       or just the token ID is stored
+     *       or just the token uniqid is stored
      */
     public function __construct(PublicKeyInterface $publicKeyStorage = null, AccessTokenStorageInterface $tokenStorage = null, RefreshTokenInterface $refreshStorage = null, array $config = array(), EncryptionInterface $encryptionUtil = null)
     {
@@ -48,7 +48,7 @@ class JwtAccessToken extends AccessToken
      * @param $client_id
      * Client identifier related to the access token.
      * @param $user_id
-     * User ID associated with the access token
+     * User uniqid associated with the access token
      * @param $scope
      * (optional) Scopes to be stored in space-separated string.
      * @param bool $includeRefreshToken

@@ -67,7 +67,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $activityGroup) {
-        printf("%d) Activity group with ID %d, and name '%s' was found.\n",
+        printf("%d) Activity group with uniqid %d, and name '%s' was found.\n",
             $i++, $activityGroup->id, $activityGroup->name);
       }
     }

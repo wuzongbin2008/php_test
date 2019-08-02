@@ -75,7 +75,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $adUnit) {
-        printf("%d) Suggested ad unit with ID %s, and number of requests %d "
+        printf("%d) Suggested ad unit with uniqid %s, and number of requests %d "
             . "will be approved.\n", $i++, $adUnit->id, $adUnit->numRequests);
       }
     }

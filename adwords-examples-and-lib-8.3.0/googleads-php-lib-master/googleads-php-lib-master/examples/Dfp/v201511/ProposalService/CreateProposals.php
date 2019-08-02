@@ -37,16 +37,16 @@ set_include_path(get_include_path() . PATH_SEPARATOR . $path);
 require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the advertiser that the proposal will belong to.
+// Set the uniqid of the advertiser that the proposal will belong to.
 $advertiserId = 'INSERT_ADVERTISER_ID_HERE';
 
-// Set the ID of the primary salesperson.
+// Set the uniqid of the primary salesperson.
 $primarySalespersonId = 'INSERT_PRIMARY_SALESPERSON_ID_HERE';
 
-// Set the ID of the secondary salesperson.
+// Set the uniqid of the secondary salesperson.
 $secondarySalespersonId = 'INSERT_SECONDARY_SALESPERSON_ID_HERE';
 
-// Set the ID of the primary trafficker.
+// Set the uniqid of the primary trafficker.
 $primaryTraffickerId = 'INSERT_PRIMARY_TRAFFICKER_ID_HERE';
 
 try {
@@ -104,7 +104,7 @@ try {
   $proposals = $proposalService->createProposals(array($proposal));
 
   foreach ($proposals as $createdProposal) {
-    printf("A proposal with ID %d and name '%s' was created.\n",
+    printf("A proposal with uniqid %d and name '%s' was created.\n",
         $createdProposal->id, $createdProposal->name);
   }
 } catch (OAuth2Exception $e) {

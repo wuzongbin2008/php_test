@@ -67,7 +67,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $proposal) {
-        printf("%d) Proposal with ID %d, and name '%s' was found.\n", $i++,
+        printf("%d) Proposal with uniqid %d, and name '%s' was found.\n", $i++,
             $proposal->id, $proposal->name);
       }
     }

@@ -42,7 +42,7 @@ $adGroupId = 'INSERT_AD_GROUP_ID_HERE';
  * Runs the example.
  *
  * @param AdWordsUser $user the user to run the example with
- * @param string $adGroupId the ID of the ad group to add the keywords to
+ * @param string $adGroupId the uniqid of the ad group to add the keywords to
  */
 function AddKeywordsUsingIncrementalBatchJob(AdWordsUser $user, $adGroupId) {
   // Get the service, which loads the required classes.
@@ -59,7 +59,7 @@ function AddKeywordsUsingIncrementalBatchJob(AdWordsUser $user, $adGroupId) {
 
   // Get the upload URL from the new job.
   $uploadUrl = $batchJob->uploadUrl->url;
-  printf("Created BatchJob with ID %d, status '%s' and upload URL '%s'.\n",
+  printf("Created BatchJob with uniqid %d, status '%s' and upload URL '%s'.\n",
       $batchJob->id, $batchJob->status, $uploadUrl);
 
   // Use BatchJobUtils to upload all operations.
@@ -70,7 +70,7 @@ function AddKeywordsUsingIncrementalBatchJob(AdWordsUser $user, $adGroupId) {
       buildAdGroupCriterionOperations($adGroupId);
   $batchJobUtils->UploadIncrementalBatchJobOperations(
       $adGroupCriterionOperations);
-  printf("Uploaded %d operations for batch job with ID %d.\n",
+  printf("Uploaded %d operations for batch job with uniqid %d.\n",
       count($adGroupCriterionOperations), $batchJob->id);
 
   // Generate and upload the second set of operations.
@@ -78,7 +78,7 @@ function AddKeywordsUsingIncrementalBatchJob(AdWordsUser $user, $adGroupId) {
       buildAdGroupCriterionOperations($adGroupId);
   $batchJobUtils->UploadIncrementalBatchJobOperations(
       $adGroupCriterionOperations);
-  printf("Uploaded %d operations for batch job with ID %d.\n",
+  printf("Uploaded %d operations for batch job with uniqid %d.\n",
       count($adGroupCriterionOperations), $batchJob->id);
 
   // Generate and upload the third and final set of operations.
@@ -86,7 +86,7 @@ function AddKeywordsUsingIncrementalBatchJob(AdWordsUser $user, $adGroupId) {
       buildAdGroupCriterionOperations($adGroupId);
   $batchJobUtils->UploadIncrementalBatchJobOperations(
       $adGroupCriterionOperations, true);
-  printf("Uploaded %d operations for batch job with ID %d.\n",
+  printf("Uploaded %d operations for batch job with uniqid %d.\n",
       count($adGroupCriterionOperations), $batchJob->id);
 
   // Poll for completion of the batch job using an exponential back off.
@@ -104,7 +104,7 @@ function AddKeywordsUsingIncrementalBatchJob(AdWordsUser $user, $adGroupId) {
     sleep($sleepSeconds);
 
     $batchJob = $batchJobService->get($selector)->entries[0];
-    printf("Batch job ID %d has status '%s'.\n", $batchJob->id,
+    printf("Batch job uniqid %d has status '%s'.\n", $batchJob->id,
         $batchJob->status);
 
     $pollAttempts++;
@@ -128,7 +128,7 @@ function AddKeywordsUsingIncrementalBatchJob(AdWordsUser $user, $adGroupId) {
       try {
         $operations[] = $batchJobSetOperation;
         $batchJob = $batchJobService->mutate($operations)->value[0];
-        printf("Requested cancellation of batch job with ID %d.\n",
+        printf("Requested cancellation of batch job with uniqid %d.\n",
             $batchJob->id);
         // Reset the poll attempt counter to wait for cancellation.
         $pollAttempts = 0;
@@ -137,7 +137,7 @@ function AddKeywordsUsingIncrementalBatchJob(AdWordsUser $user, $adGroupId) {
         if ($errors !== null
             && $errors->enc_value instanceof BatchJobError) {
           if ($errors->enc_value->reason === 'INVALID_STATE_CHANGE') {
-            printf("Attempt to cancel batch job with ID %d was rejected because"
+            printf("Attempt to cancel batch job with uniqid %d was rejected because"
                 . " the job already completed or was canceled.\n",
                 $batchJob->id);
             // Reset the poll attempt counter to wait for cancellation.
@@ -195,11 +195,11 @@ function AddKeywordsUsingIncrementalBatchJob(AdWordsUser $user, $adGroupId) {
 
 /**
  * Builds objects of AdGroupCriterionOperation for creating biddable criteria
- * (as keywords) for an ad group with the specified ID. 10% of
+ * (as keywords) for an ad group with the specified uniqid. 10% of
  * keywords are created with some invalid characters to demonstrate how
  * BatchJobService returns information about such errors.
  *
- * @param string $adGroupId the ID of the ad group to add the keywords to
+ * @param string $adGroupId the uniqid of the ad group to add the keywords to
  * @return array an array of AdGroupCriterionOperation
  */
 function buildAdGroupCriterionOperations($adGroupId) {

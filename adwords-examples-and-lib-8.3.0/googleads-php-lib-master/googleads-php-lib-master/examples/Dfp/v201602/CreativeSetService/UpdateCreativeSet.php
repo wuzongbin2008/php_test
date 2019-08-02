@@ -38,10 +38,10 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201602/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the creative set to update.
+// Set the uniqid of the creative set to update.
 $creativeSetId = 'INSERT_CREATIVE_SET_ID_HERE';
 
-// Set the ID of the companion creative to add to the creative set.
+// Set the uniqid of the companion creative to add to the creative set.
 $companionCreativeId = 'INSERT_COMPANION_CREATIVE_ID_HERE';
 
 try {
@@ -55,7 +55,7 @@ try {
   // Get the CreativeSetService.
   $creativeSetService = $user->GetService('CreativeSetService', 'v201602');
 
-  // Create a statement to select a single creative set by ID.
+  // Create a statement to select a single creative set by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -73,7 +73,7 @@ try {
   // Update the creative set on the server.
   $updatedCreativeSet = $creativeSetService->updateCreativeSet($creativeSet);
 
-  printf("Creative set with ID %d, master creative ID %d, and companion "
+  printf("Creative set with uniqid %d, master creative uniqid %d, and companion "
       . "creative IDs [%s] was updated.\n", $updatedCreativeSet->id,
       $updatedCreativeSet->masterCreativeId,
       implode(',', $updatedCreativeSet->companionCreativeIds));

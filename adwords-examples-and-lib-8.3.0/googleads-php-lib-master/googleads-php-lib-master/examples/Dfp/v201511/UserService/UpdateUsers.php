@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201511/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the user to update.
+// Set the uniqid of the user to update.
 $userId = 'INSERT_USER_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the UserService.
   $userService = $user->GetService('UserService', 'v201511');
 
-  // Create a statement to select a single user by ID.
+  // Create a statement to select a single user by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -71,7 +71,7 @@ try {
   $users = $userService->updateUsers(array($user));
 
   foreach ($users as $updatedUser) {
-    printf("User with ID %d, name '%s' was updated.\n", $updatedUser->id,
+    printf("User with uniqid %d, name '%s' was updated.\n", $updatedUser->id,
         $updatedUser->name);
   }
 } catch (OAuth2Exception $e) {

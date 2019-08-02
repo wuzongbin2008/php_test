@@ -39,7 +39,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the first party audience segment to update.
+// Set the uniqid of the first party audience segment to update.
 $audienceSegmentId = 'INSERT_AUDIENCE_SEGMENT_ID_HERE';
 
 try {
@@ -54,7 +54,7 @@ try {
   $audienceSegmentService =
       $user->GetService('AudienceSegmentService', 'v201505');
 
-  // Create a statement to select a single first party audience segment by ID.
+  // Create a statement to select a single first party audience segment by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id and type = :type')
       ->OrderBy('id ASC')
@@ -75,7 +75,7 @@ try {
       $audienceSegmentService->updateAudienceSegments(array($audienceSegment));
 
   foreach ($audienceSegments as $updatedAudienceSegment) {
-    printf("Audience segment with ID %d, and name '%s' was updated.\n",
+    printf("Audience segment with uniqid %d, and name '%s' was updated.\n",
         $updatedAudienceSegment->id, $updatedAudienceSegment->name);
   }
 } catch (OAuth2Exception $e) {

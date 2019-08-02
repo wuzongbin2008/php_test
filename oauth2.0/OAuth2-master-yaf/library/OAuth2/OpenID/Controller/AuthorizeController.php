@@ -82,7 +82,7 @@ class AuthorizeController extends BaseAuthorizeController implements AuthorizeCo
     /**
      * Returns whether the current request needs to generate an id token.
      *
-     * ID Tokens are a part of the OpenID Connect specification, so this
+     * uniqid Tokens are a part of the OpenID Connect specification, so this
      * method checks whether OpenID Connect is enabled in the server settings
      * and whether the openid scope was requested.
      *

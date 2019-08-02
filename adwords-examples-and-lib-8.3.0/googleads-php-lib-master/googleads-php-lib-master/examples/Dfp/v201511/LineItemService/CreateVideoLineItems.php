@@ -41,13 +41,13 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201511/DateTimeUtils.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the order that the line item will belong to.
+// Set the uniqid of the order that the line item will belong to.
 $orderId = 'INSERT_ORDER_ID_HERE';
 
-// Set the ID of the ad unit that the line item will target.
+// Set the uniqid of the ad unit that the line item will target.
 $targetedVideoAdUnitId = 'INSERT_TARGETED_VIDEO_AD_UNIT_ID_HERE';
 
-// Set the custom targeting value ID representing the metadata on the content to
+// Set the custom targeting value uniqid representing the metadata on the content to
 // target. This would typically be from a key representing a "genre" and the
 // value representing something like "comedy". The value must be from a key in a
 // content metadata key hierarchy.
@@ -145,7 +145,7 @@ try {
 
   // Display results.
   foreach ($lineItems as $createdLineItem) {
-    printf("A line item with with ID %d, belonging to order ID %d, and name "
+    printf("A line item with with uniqid %d, belonging to order uniqid %d, and name "
         . "'%s' was created.\n",
         $createdLineItem->id,
         $createdLineItem->orderId,

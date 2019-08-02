@@ -1124,7 +1124,7 @@ if (!class_exists("BiddingStrategyConfiguration", false)) {
    * <ul>
    * <li>{@linkplain BiddingStrategyConfiguration#biddingScheme bidding scheme}</li>
    * <li>{@linkplain BiddingStrategyConfiguration#biddingStrategyType bidding strategy type}</li>
-   * <li>{@linkplain BiddingStrategyConfiguration#biddingStrategyId bidding strategy ID} for
+   * <li>{@linkplain BiddingStrategyConfiguration#biddingStrategyId bidding strategy uniqid} for
    * flexible bid strategies.</li>
    * </ul>
    * <p>If the bidding strategy type is used, then schemes are created using default values.
@@ -2588,7 +2588,7 @@ if (!class_exists("ForwardCompatibilityError", false)) {
 if (!class_exists("Gender", false)) {
   /**
    * Represents a Gender criterion.
-   * <p>A criterion of this type can only be created using an ID. A criterion of this type can be either targeted or excluded.
+   * <p>A criterion of this type can only be created using an uniqid. A criterion of this type can be either targeted or excluded.
    * <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span>
    * @package Google_Api_Ads_AdWords_v201601
    * @subpackage v201601
@@ -3908,7 +3908,7 @@ if (!class_exists("PagingError", false)) {
 if (!class_exists("ParentCriterion", false)) {
   /**
    * Parent criterion.
-   * <p>A criterion of this type can only be created using an ID. A criterion of this type can be either targeted or excluded.
+   * <p>A criterion of this type can only be created using an uniqid. A criterion of this type can be either targeted or excluded.
    * <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span>
    * @package Google_Api_Ads_AdWords_v201601
    * @subpackage v201601
@@ -4311,7 +4311,7 @@ if (!class_exists("ProductDimension", false)) {
 
 if (!class_exists("ProductOfferId", false)) {
   /**
-   * An offer ID as specified by the merchant.
+   * An offer uniqid as specified by the merchant.
    * @package Google_Api_Ads_AdWords_v201601
    * @subpackage v201601
    */
@@ -4363,7 +4363,7 @@ if (!class_exists("ProductPartition", false)) {
    * instances of the same class.
    * 
    * To create a subdivision and child node in the same API request, they should refer to each other
-   * using temporary criterion IDs in the {@code parentCriterionId} of the child, and ID field of the
+   * using temporary criterion IDs in the {@code parentCriterionId} of the child, and uniqid field of the
    * subdivision. Temporary IDs are specified by using any negative integer. Temporary IDs only exist
    * within the scope of a single API request. The API will assign real criterion IDs, and replace
    * the temporary values, and the API response will reflect this.
@@ -9323,7 +9323,7 @@ if (!class_exists("AdxError", false)) {
 if (!class_exists("AgeRange", false)) {
   /**
    * Represents an Age Range criterion.
-   * <p>A criterion of this type can only be created using an ID. A criterion of this type can be either targeted or excluded.
+   * <p>A criterion of this type can only be created using an uniqid. A criterion of this type can be either targeted or excluded.
    * <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span>
    * @package Google_Api_Ads_AdWords_v201601
    * @subpackage v201601
@@ -9414,7 +9414,7 @@ if (!class_exists("AppPaymentModel", false)) {
    * Represents a criterion for targeting paid apps.
    * 
    * <p>Possible IDs: {@code 30} ({@code APP_PAYMENT_MODEL_PAID}).</p>
-   * <p>A criterion of this type can only be created using an ID. A criterion of this type is only targetable.
+   * <p>A criterion of this type can only be created using an uniqid. A criterion of this type is only targetable.
    * <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span>
    * @package Google_Api_Ads_AdWords_v201601
    * @subpackage v201601

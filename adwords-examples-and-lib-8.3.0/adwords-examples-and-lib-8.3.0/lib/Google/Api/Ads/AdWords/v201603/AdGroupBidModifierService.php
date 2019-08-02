@@ -2772,7 +2772,7 @@ if (!class_exists("OperatorError", false)) {
 if (!class_exists("Platform", false)) {
   /**
    * Represents Platform criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is enabled for AdX.</span>
    * @package Google_Api_Ads_AdWords_v201603
    * @subpackage v201603
@@ -2820,7 +2820,7 @@ if (!class_exists("PreferredContent", false)) {
    * Represents a PreferredContent criterion.
    * 
    * <p>Possible IDs: {@code 400} ({@code YOUTUBE_TOP_CONTENT}).</p>
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span>
    * @package Google_Api_Ads_AdWords_v201603
    * @subpackage v201603

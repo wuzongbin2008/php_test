@@ -1,6 +1,6 @@
 <?php
 /**
- * A temporary ID generator produces decreasing negative integers. They can be
+ * A temporary uniqid generator produces decreasing negative integers. They can be
  * assigned to AdWords entities (Operands) to create dependency relationships
  * between them in Operations that are uploaded to the upload URL of
  * BatchJobService.
@@ -37,17 +37,17 @@ if (PHP_INT_SIZE == 4) {
 class TempIdGenerator {
 
   /**
-   * A non-positive integer used to assign as a temporary ID for Operands
+   * A non-positive integer used to assign as a temporary uniqid for Operands
    * (e.g., Campaign, AdGroup) of operations sent to BatchJobService.
    */
   private static $tempId = 0;
 
   /**
-   * Generates a negative temporary ID which is a decreasing negative integer
+   * Generates a negative temporary uniqid which is a decreasing negative integer
    * starting from -1. The function returns negative integers until reaching
    * minimal integer value, which an exception is thrown instead.
    *
-   * @throws UnderflowException if the temp ID has reached to MIN_INT
+   * @throws UnderflowException if the temp uniqid has reached to MIN_INT
    * @return integer a negative integer
    */
   public static function Generate() {

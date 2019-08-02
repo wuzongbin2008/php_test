@@ -42,7 +42,7 @@ function GetCampaignsByLabelExample(AdWordsUser $user, $labelId) {
   // Create selector.
   $selector = new Selector();
   $selector->fields = array('Id', 'Name', 'Labels');
-  // Labels filtering is performed by ID. You can use containsAny to select
+  // Labels filtering is performed by uniqid. You can use containsAny to select
   // campaigns with any of the label IDs, containsAll to select campaigns with
   // all of the label IDs, or containsNone to select campaigns with none of the
   // label IDs.
@@ -60,7 +60,7 @@ function GetCampaignsByLabelExample(AdWordsUser $user, $labelId) {
     // Display results.
     if (isset($page->entries)) {
       foreach ($page->entries as $campaign) {
-        printf("Campaign with name '%s' and ID '%d' and labels '%s'" .
+        printf("Campaign with name '%s' and uniqid '%d' and labels '%s'" .
             " was found.\n", $campaign->name, $campaign->id,
             implode(', ',
                 array_map(function($label) {

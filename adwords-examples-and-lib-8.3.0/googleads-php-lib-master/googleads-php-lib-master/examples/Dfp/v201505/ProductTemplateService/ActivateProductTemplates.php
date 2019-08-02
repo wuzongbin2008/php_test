@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the product template to activate.
+// Set the uniqid of the product template to activate.
 $productTemplateId = 'INSERT_PRODUCT_TEMPLATE_ID_HERE';
 
 try {
@@ -53,7 +53,7 @@ try {
   $productTemplateService = $user->GetService('ProductTemplateService',
       'v201505');
 
-  // Create a statement to select a single product template by ID.
+  // Create a statement to select a single product template by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -73,7 +73,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $productTemplate) {
-        printf("%d) Product template with ID %d and name '%s' will be "
+        printf("%d) Product template with uniqid %d and name '%s' will be "
             . "activated.\n",
             $i++,
             $productTemplate->id,

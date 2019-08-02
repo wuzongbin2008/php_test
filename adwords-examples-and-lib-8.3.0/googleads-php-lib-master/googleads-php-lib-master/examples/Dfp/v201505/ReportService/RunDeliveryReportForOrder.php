@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Util/v201505/ReportDownloader.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the order to run the report for.
+// Set the uniqid of the order to run the report for.
 $orderId = 'INSERT_ORDER_ID_HERE';
 
 try {

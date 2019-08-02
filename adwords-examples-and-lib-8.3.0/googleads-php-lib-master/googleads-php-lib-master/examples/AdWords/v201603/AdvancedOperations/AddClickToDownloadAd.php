@@ -37,7 +37,7 @@ $adGroupId = 'INSERT_ADGROUP_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param string $adGroupId the ID of the ad group to add the ad to
+ * @param string $adGroupId the uniqid of the ad group to add the ad to
  */
 function AddClickToDownloadAd(AdWordsUser $user, $adGroupId) {
   // Get the AdGroupAdService, which loads the required classes.
@@ -106,7 +106,7 @@ function AddClickToDownloadAd(AdWordsUser $user, $adGroupId) {
   $result = $adGroupAdService->mutate($operations);
 
   foreach ($result->value as $adGroupAd) {
-    printf('New click-to-download ad with ID = %d and URL = "%s" ' .
+    printf('New click-to-download ad with uniqid = %d and URL = "%s" ' .
         "was created.\n", $adGroupAd->ad->id, $adGroupAd->ad->finalUrls[0]);
   }
 }

@@ -37,7 +37,7 @@ $adGroupId = 'INSERT_AD_GROUP_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param string $adGroupId the ID of the ad group to hypothetically add the
+ * @param string $adGroupId the uniqid of the ad group to hypothetically add the
  *     text ad to
  */
 function ValidateTextAdExample(AdWordsUser $user, $adGroupId) {

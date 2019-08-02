@@ -34,7 +34,7 @@ $campaignId = 'INSERT_CAMPAIGN_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param string $campaignId the ID of the campaign to add the ad group to
+ * @param string $campaignId the uniqid of the campaign to add the ad group to
  */
 function AddAdGroupsExample(AdWordsUser $user, $campaignId) {
   // Get the service, which loads the required classes.
@@ -86,7 +86,7 @@ function AddAdGroupsExample(AdWordsUser $user, $campaignId) {
   // Display result.
   $adGroups = $result->value;
   foreach ($adGroups as $adGroup) {
-    printf("Ad group with name '%s' and ID '%s' was added.\n", $adGroup->name,
+    printf("Ad group with name '%s' and uniqid '%s' was added.\n", $adGroup->name,
         $adGroup->id);
   }
 }

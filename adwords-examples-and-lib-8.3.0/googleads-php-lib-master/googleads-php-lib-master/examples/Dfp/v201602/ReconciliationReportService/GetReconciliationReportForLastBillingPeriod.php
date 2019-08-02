@@ -82,7 +82,7 @@ try {
       $i = $page->startIndex;
       foreach ($page->results as $reconciliationReport) {
         printf(
-            "%d) Reconciliation report with ID %d for month %s/%s was found.\n",
+            "%d) Reconciliation report with uniqid %d for month %s/%s was found.\n",
             $i++,
             $reconciliationReport->id,
             $reconciliationReport->startDate->month,

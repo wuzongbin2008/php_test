@@ -2423,7 +2423,7 @@ if (!class_exists("GetReportDownloadURL", false)) {
    * <p>
    * The report will be generated as a gzip archive, containing the report file itself.
    * 
-   * @param reportJobId the ID of the {@link ReportJob}
+   * @param reportJobId the uniqid of the {@link ReportJob}
    * @param exportFormat the {@link ExportFormat} for the report file
    * @return the URL for report file download
    * @package GoogleApiAdsDfp
@@ -2518,7 +2518,7 @@ if (!class_exists("GetReportDownloadUrlWithOptions", false)) {
    * By default, the report will be generated as a gzip archive, containing the report file itself.
    * This can be changed by setting {@link ReportDownloadOptions#useGzipCompression} to false.
    * 
-   * @param reportJobId the ID of the {@link ReportJob}
+   * @param reportJobId the uniqid of the {@link ReportJob}
    * @param reportDownloadOptions the {@link ReportDownloadOptions} for the request
    * @return the URL for report file download
    * @package GoogleApiAdsDfp
@@ -2607,13 +2607,13 @@ if (!class_exists("GetReportDownloadUrlWithOptionsResponse", false)) {
 
 if (!class_exists("GetReportJob", false)) {
   /**
-   * Returns the {@link ReportJob} uniquely identified by the given ID with only the
+   * Returns the {@link ReportJob} uniquely identified by the given uniqid with only the
    * {@link ReportJob#reportJobStatus} and {@link ReportJob#id} fields filled in.
    * 
    * <p>Replaced with {@code ReportService.getReportJobStatus} beginning in V201505.
    * 
    * @param reportJobId the Id of the report job which must already exist
-   * @return the {@code ReportJob} uniquely identified by the given ID with the ID and status
+   * @return the {@code ReportJob} uniquely identified by the given uniqid with the uniqid and status
    * fields filled in.
    * @package GoogleApiAdsDfp
    * @subpackage v201502
@@ -2702,7 +2702,7 @@ if (!class_exists("RunReportJob", false)) {
    * </ul>
    * 
    * @param reportJob the report job to run
-   * @return the report job with its ID filled in
+   * @return the report job with its uniqid filled in
    * @package GoogleApiAdsDfp
    * @subpackage v201502
    */
@@ -3222,7 +3222,7 @@ if (!class_exists("ReportService", false)) {
      * <p>
      * The report will be generated as a gzip archive, containing the report file itself.
      * 
-     * @param reportJobId the ID of the {@link ReportJob}
+     * @param reportJobId the uniqid of the {@link ReportJob}
      * @param exportFormat the {@link ExportFormat} for the report file
      * @return the URL for report file download
      */
@@ -3238,7 +3238,7 @@ if (!class_exists("ReportService", false)) {
      * By default, the report will be generated as a gzip archive, containing the report file itself.
      * This can be changed by setting {@link ReportDownloadOptions#useGzipCompression} to false.
      * 
-     * @param reportJobId the ID of the {@link ReportJob}
+     * @param reportJobId the uniqid of the {@link ReportJob}
      * @param reportDownloadOptions the {@link ReportDownloadOptions} for the request
      * @return the URL for report file download
      */
@@ -3248,13 +3248,13 @@ if (!class_exists("ReportService", false)) {
       return $result->rval;
     }
     /**
-     * Returns the {@link ReportJob} uniquely identified by the given ID with only the
+     * Returns the {@link ReportJob} uniquely identified by the given uniqid with only the
      * {@link ReportJob#reportJobStatus} and {@link ReportJob#id} fields filled in.
      * 
      * <p>Replaced with {@code ReportService.getReportJobStatus} beginning in V201505.
      * 
      * @param reportJobId the Id of the report job which must already exist
-     * @return the {@code ReportJob} uniquely identified by the given ID with the ID and status
+     * @return the {@code ReportJob} uniquely identified by the given uniqid with the uniqid and status
      * fields filled in.
      */
     public function getReportJob($reportJobId) {
@@ -3271,7 +3271,7 @@ if (!class_exists("ReportService", false)) {
      * </ul>
      * 
      * @param reportJob the report job to run
-     * @return the report job with its ID filled in
+     * @return the report job with its uniqid filled in
      */
     public function runReportJob($reportJob) {
       $args = new RunReportJob($reportJob);

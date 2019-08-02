@@ -39,8 +39,8 @@ $baseCampaignId = 'INSERT_BASE_CAMPAIGN_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param int $draftId the ID of the draft used to create a trial
- * @param int $baseCampaignId the ID of the base campaign used to create
+ * @param int $draftId the uniqid of the draft used to create a trial
+ * @param int $baseCampaignId the uniqid of the base campaign used to create
  *     a trial
  */
 function AddTrialExample(AdWordsUser $user, $draftId, $baseCampaignId) {
@@ -82,7 +82,7 @@ function AddTrialExample(AdWordsUser $user, $draftId, $baseCampaignId) {
     sleep($sleepSeconds);
 
     $trial = $trialService->get($selector)->entries[0];
-    printf("Trial ID %d has status '%s'.\n", $trial->id, $trial->status);
+    printf("Trial uniqid %d has status '%s'.\n", $trial->id, $trial->status);
 
     $pollAttempts++;
     $isPending = ($trial->status === 'CREATING') ? true : false;
@@ -90,7 +90,7 @@ function AddTrialExample(AdWordsUser $user, $draftId, $baseCampaignId) {
 
   if ($trial->status === 'ACTIVE') {
     // The trial creation was successful.
-    printf("Trial created with ID %d and trial campaign ID %d\n", $trial->id,
+    printf("Trial created with uniqid %d and trial campaign uniqid %d\n", $trial->id,
         $trial->trialCampaignId);
   } else if ($trial->status === 'CREATION_FAILED') {
     // The trial creation failed, and errors can be fetched from the
@@ -102,7 +102,7 @@ function AddTrialExample(AdWordsUser $user, $draftId, $baseCampaignId) {
     $errors = $trialAsynErrorService->get($selector)->entries;
 
     if (count($errors) === 0) {
-      printf("Could not retrieve errors for the trial with ID %d\n",
+      printf("Could not retrieve errors for the trial with uniqid %d\n",
           $trial->id);
     } else {
       printf("Could not create trial due to the following errors:\n");
@@ -114,8 +114,8 @@ function AddTrialExample(AdWordsUser $user, $draftId, $baseCampaignId) {
   } else {
     // Most likely, the trial is still being created. You can continue polling,
     // but we have limited the number of attempts in the example.
-    printf("Timed out waiting to create trial from draft with ID %d with base "
-        . "campaign with ID %d\n", $draftId, $baseCampaignId);
+    printf("Timed out waiting to create trial from draft with uniqid %d with base "
+        . "campaign with uniqid %d\n", $draftId, $baseCampaignId);
   }
 }
 

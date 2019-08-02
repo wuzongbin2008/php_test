@@ -59,7 +59,7 @@ function AddCampaignLabelsExample(AdWordsUser $user, array $campaignIds,
 
   // Display results.
   foreach ($result->value as $campaignLabel) {
-    printf("Campaign label for campaign ID '%s' and label ID '%d' was added.\n",
+    printf("Campaign label for campaign uniqid '%s' and label uniqid '%d' was added.\n",
         $campaignLabel->campaignId, $campaignLabel->labelId);
   }
 }

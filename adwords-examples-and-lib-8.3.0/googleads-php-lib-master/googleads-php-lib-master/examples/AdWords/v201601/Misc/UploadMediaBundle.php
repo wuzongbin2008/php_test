@@ -50,7 +50,7 @@ function UploadMediaBundleExample(AdWordsUser $user) {
   $mediaBundle = $result[0];
   $dimensions = MapUtils::GetMap($mediaBundle->dimensions);
   printf(
-      "HTML5 media with ID %d, dimensions '%dx%d', MIME type '%s' was "
+      "HTML5 media with uniqid %d, dimensions '%dx%d', MIME type '%s' was "
           . "uploaded.\n",
               $mediaBundle->mediaId,
               $dimensions['FULL']->width,

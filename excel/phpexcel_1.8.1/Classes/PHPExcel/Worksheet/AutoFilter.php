@@ -217,7 +217,7 @@ class PHPExcel_Worksheet_AutoFilter
 	 *	Set AutoFilter
 	 *
 	 *	@param	PHPExcel_Worksheet_AutoFilter_Column|string		$pColumn
-	 *			A simple string containing a Column ID like 'A' is permitted
+	 *			A simple string containing a Column uniqid like 'A' is permitted
 	 *	@throws	PHPExcel_Exception
 	 *	@return PHPExcel_Worksheet_AutoFilter
 	 */

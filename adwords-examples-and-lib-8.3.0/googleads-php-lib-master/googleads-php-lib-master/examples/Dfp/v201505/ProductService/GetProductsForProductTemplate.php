@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the product template to filter products by.
+// Set the uniqid of the product template to filter products by.
 $productTemplateId = 'INSERT_PRODUCT_TEMPLATE_ID_HERE';
 
 try {
@@ -73,7 +73,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $product) {
-        printf("%d) Product with ID %d, and name '%s' was found.\n", $i++,
+        printf("%d) Product with uniqid %d, and name '%s' was found.\n", $i++,
             $product->id, $product->name);
       }
     }

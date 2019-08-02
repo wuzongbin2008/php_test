@@ -48,10 +48,10 @@ try {
   // Get the ContactService.
   $contactService = $user->GetService('ContactService', 'v201511');
 
-  // Set the ID of the advertiser company this contact is associated with.
+  // Set the uniqid of the advertiser company this contact is associated with.
   $advertiserCompanyId = 'INSERT_ADVERTISER_COMPANY_ID_HERE';
 
-  // Set the ID of the agency company this contact is associated with.
+  // Set the uniqid of the agency company this contact is associated with.
   $agencyCompanyId = 'INSERT_AGENCY_COMPANY_ID_HERE';
 
   // Create an advertiser contact.
@@ -73,7 +73,7 @@ try {
   // Display results.
   if (isset($contacts)) {
     foreach ($contacts as $contact) {
-      printf("A contact with ID \"%d\" and name \"%s\" was created.\n",
+      printf("A contact with uniqid \"%d\" and name \"%s\" was created.\n",
           $contact->id, $contact->name);
     }
   } else {

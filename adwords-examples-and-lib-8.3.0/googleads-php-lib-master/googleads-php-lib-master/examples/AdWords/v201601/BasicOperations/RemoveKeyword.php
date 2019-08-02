@@ -44,7 +44,7 @@ function RemoveKeywordExample(AdWordsUser $user, $adGroupId, $criterionId) {
   $adGroupCriterionService =
       $user->GetService('AdGroupCriterionService', ADWORDS_VERSION);
 
-  // Create criterion using an existing ID. Use the base class Criterion
+  // Create criterion using an existing uniqid. Use the base class Criterion
   // instead of Keyword to avoid having to set keyword-specific fields.
   $criterion = new Criterion();
   $criterion->id = $criterionId;
@@ -66,7 +66,7 @@ function RemoveKeywordExample(AdWordsUser $user, $adGroupId, $criterionId) {
 
   // Display result.
   $adGroupCriterion = $result->value[0];
-  printf("Keyword with ID '%d' was removed.\n",
+  printf("Keyword with uniqid '%d' was removed.\n",
       $adGroupCriterion->criterion->id);
 }
 

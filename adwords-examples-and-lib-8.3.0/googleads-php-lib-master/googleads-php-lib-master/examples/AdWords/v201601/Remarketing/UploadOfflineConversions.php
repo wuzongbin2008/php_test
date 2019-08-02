@@ -1,7 +1,7 @@
 <?php
 /**
  * This code example imports offline conversion values for specific clicks to
- * your account. To get Google Click ID for a click, run
+ * your account. To get Google Click uniqid for a click, run
  * CLICK_PERFORMANCE_REPORT. To set up a conversion tracker, run the
  * AddConversionTracker.php example.
  *
@@ -41,7 +41,7 @@ $conversionValue = 'INSERT_CONVERSION_VALUE_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param string $campaignId the ID of the campaign to add the sitelinks to
+ * @param string $campaignId the uniqid of the campaign to add the sitelinks to
  */
 function UploadOfflineConversionsExample(AdWordsUser $user, $conversionName,
     $gclid, $conversionTime, $conversionValue) {
@@ -66,7 +66,7 @@ function UploadOfflineConversionsExample(AdWordsUser $user, $conversionName,
   $result = $offlineConversionService->mutate($offlineConversionOperations);
 
   $feed = $result->value[0];
-  printf('Uploaded offline conversion value of %d for Google Click ID = ' .
+  printf('Uploaded offline conversion value of %d for Google Click uniqid = ' .
       "'%s' to '%s'.", $feed->conversionValue, $feed->googleClickId,
       $feed->conversionName);
 }

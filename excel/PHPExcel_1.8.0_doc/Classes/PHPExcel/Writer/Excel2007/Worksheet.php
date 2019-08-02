@@ -610,7 +610,7 @@ class PHPExcel_Writer_Excel2007_Worksheet extends PHPExcel_Writer_Excel2007_Writ
 		// Hyperlink collection
 		$hyperlinkCollection = $pSheet->getHyperlinkCollection();
 
-		// Relation ID
+		// Relation uniqid
 		$relationId = 1;
 
 		// Write hyperlinks?

@@ -69,7 +69,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $company) {
-        printf("%d) Company with ID %d, name '%s', and type %s was found.\n",
+        printf("%d) Company with uniqid %d, name '%s', and type %s was found.\n",
             $i++, $company->id, $company->name, $company->type);
       }
     }

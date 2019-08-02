@@ -39,7 +39,7 @@ require_once dirname(__FILE__) . '/../../Common/ExampleUtils.php';
 
 /**
  * Gets an OAuth2 credential.
- * @param string $user the user that contains the client ID and secret
+ * @param string $user the user that contains the client uniqid and secret
  * @return array the user's OAuth 2 credentials
  */
 function GetOAuth2Credential($user) {
@@ -85,8 +85,8 @@ if (__FILE__ != realpath($_SERVER['PHP_SELF'])) {
 }
 
 try {
-  // Get the client ID and secret from the auth.ini file. If you do not have a
-  // client ID or secret, please create one of type "installed application" in
+  // Get the client uniqid and secret from the auth.ini file. If you do not have a
+  // client uniqid or secret, please create one of type "installed application" in
   // the Google API console: https://code.google.com/apis/console#access
   // and set it in the auth.ini file.
   $user = new DfpUser();

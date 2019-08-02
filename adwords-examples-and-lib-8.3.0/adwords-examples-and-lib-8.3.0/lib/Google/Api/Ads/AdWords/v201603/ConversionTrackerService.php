@@ -2253,7 +2253,7 @@ if (!class_exists("ConversionTrackerServiceMutate", false)) {
    * mutate a ConversionTracker that belongs to some other account. You may not directly
    * mutate a system-defined ConversionTracker, but you can create a mutable copy of it
    * in your account by sending a mutate request with an ADD operation specifying
-   * an originalConversionTypeId matching a system-defined conversion tracker's ID. That new
+   * an originalConversionTypeId matching a system-defined conversion tracker's uniqid. That new
    * ADDed ConversionTracker will inherit the statistics and properties
    * of the system-defined type, but will be editable as usual.</p>
    * 
@@ -4264,7 +4264,7 @@ if (!class_exists("ConversionTrackerService", false)) {
      * mutate a ConversionTracker that belongs to some other account. You may not directly
      * mutate a system-defined ConversionTracker, but you can create a mutable copy of it
      * in your account by sending a mutate request with an ADD operation specifying
-     * an originalConversionTypeId matching a system-defined conversion tracker's ID. That new
+     * an originalConversionTypeId matching a system-defined conversion tracker's uniqid. That new
      * ADDed ConversionTracker will inherit the statistics and properties
      * of the system-defined type, but will be editable as usual.</p>
      * 

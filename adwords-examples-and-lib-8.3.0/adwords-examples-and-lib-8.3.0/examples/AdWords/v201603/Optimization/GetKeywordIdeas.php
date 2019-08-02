@@ -55,7 +55,7 @@ function GetKeywordIdeasExample(AdWordsUser $user) {
   $selector->searchParameters[] = $relatedToQuerySearchParameter;
 
   // Create language search parameter (optional).
-  // The ID can be found in the documentation:
+  // The uniqid can be found in the documentation:
   //   https://developers.google.com/adwords/api/docs/appendix/languagecodes
   // Note: As of v201302, only a single language parameter is allowed.
   $languageParameter = new LanguageSearchParameter();

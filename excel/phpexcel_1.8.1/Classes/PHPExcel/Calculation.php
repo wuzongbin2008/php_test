@@ -2200,7 +2200,7 @@ class PHPExcel_Calculation {
 
 
 	/**
-	 * Calculate cell value (using formula from a cell ID)
+	 * Calculate cell value (using formula from a cell uniqid)
 	 * Retained for backward compatibility
 	 *
 	 * @access	public
@@ -2367,7 +2367,7 @@ class PHPExcel_Calculation {
 	 * Parse a cell formula and calculate its value
 	 *
 	 * @param	string			$formula	The formula to parse and calculate
-	 * @param	string			$cellID		The ID (e.g. A3) of the cell that we are calculating
+	 * @param	string			$cellID		The uniqid (e.g. A3) of the cell that we are calculating
 	 * @param	PHPExcel_Cell	$pCell		Cell to calculate
 	 * @return	mixed
 	 * @throws	PHPExcel_Calculation_Exception

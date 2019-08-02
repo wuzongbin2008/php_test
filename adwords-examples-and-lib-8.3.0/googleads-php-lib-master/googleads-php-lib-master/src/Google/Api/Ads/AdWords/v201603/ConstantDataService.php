@@ -2975,7 +2975,7 @@ if (!class_exists("AdxError", false)) {
 if (!class_exists("AgeRange", false)) {
   /**
    * Represents an Age Range criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span>
    * @package Google_Api_Ads_AdWords_v201603
    * @subpackage v201603
@@ -3111,7 +3111,7 @@ if (!class_exists("AuthorizationError", false)) {
 if (!class_exists("Carrier", false)) {
   /**
    * Represents a Carrier Criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is enabled for AdX.</span>
    * @package Google_Api_Ads_AdWords_v201603
    * @subpackage v201603
@@ -3299,7 +3299,7 @@ if (!class_exists("DistinctError", false)) {
 if (!class_exists("Gender", false)) {
   /**
    * Represents a Gender criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span>
    * @package Google_Api_Ads_AdWords_v201603
    * @subpackage v201603
@@ -3489,7 +3489,7 @@ if (!class_exists("Keyword", false)) {
 if (!class_exists("Language", false)) {
   /**
    * Represents a Language criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is enabled for AdX.</span>
    * @package Google_Api_Ads_AdWords_v201603
    * @subpackage v201603
@@ -3648,7 +3648,7 @@ if (!class_exists("MobileApplication", false)) {
 if (!class_exists("MobileDevice", false)) {
   /**
    * Represents a Mobile Device Criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is enabled for AdX.</span>
    * @package Google_Api_Ads_AdWords_v201603
    * @subpackage v201603
@@ -3808,7 +3808,7 @@ if (!class_exists("OperatingSystemVersion", false)) {
    * <a href="/adwords/api/docs/appendix/mobileplatforms">View the complete
    * list of available mobile platforms</a>. You can also get the list from
    * {@link ConstantDataService#getOperatingSystemVersionCriterion ConstantDataService}.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is enabled for AdX.</span>
    * @package Google_Api_Ads_AdWords_v201603
    * @subpackage v201603
@@ -4414,7 +4414,7 @@ if (!class_exists("ProductCustomAttribute", false)) {
 
 if (!class_exists("ProductOfferId", false)) {
   /**
-   * An offer ID as specified by the merchant.
+   * An offer uniqid as specified by the merchant.
    * @package Google_Api_Ads_AdWords_v201603
    * @subpackage v201603
    */

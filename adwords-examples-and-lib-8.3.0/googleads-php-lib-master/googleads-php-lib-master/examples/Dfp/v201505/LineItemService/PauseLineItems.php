@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the line item to pause.
+// Set the uniqid of the line item to pause.
 $lineItemId = 'INSERT_LINE_ITEM_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the LineItemService.
   $lineItemService = $user->GetService('LineItemService', 'v201505');
 
-  // Create a statement to select a single line item by ID.
+  // Create a statement to select a single line item by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -72,7 +72,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $lineItem) {
-        printf("%d) Line item with ID %d, belonging to order %d, and name '%s' "
+        printf("%d) Line item with uniqid %d, belonging to order %d, and name '%s' "
             . "will be paused.\n", $i++, $lineItem->id, $lineItem->orderId,
             $lineItem->name);
       }

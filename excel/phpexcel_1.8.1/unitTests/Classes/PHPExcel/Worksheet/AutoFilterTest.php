@@ -117,7 +117,7 @@ class AutoFilterTest extends PHPUnit_Framework_TestCase
 								'M' => 5
 							  );
 
-		//	If we request a specific column by its column ID, we should get an
+		//	If we request a specific column by its column uniqid, we should get an
 		//	integer returned representing the column offset within the range
 		foreach($columnIndexes as $columnIndex => $columnOffset) {
 			$result = $this->_testAutoFilterObject->getColumnOffset($columnIndex);
@@ -145,7 +145,7 @@ class AutoFilterTest extends PHPUnit_Framework_TestCase
 
 		$result = $this->_testAutoFilterObject->getColumns();
 		//	Result should be an array of PHPExcel_Worksheet_AutoFilter_Column
-		//	objects for each column we set indexed by the column ID
+		//	objects for each column we set indexed by the column uniqid
 		$this->assertInternalType('array', $result);
 		$this->assertEquals(1, count($result));
 		$this->assertArrayHasKey($expectedResult,$result);
@@ -173,7 +173,7 @@ class AutoFilterTest extends PHPUnit_Framework_TestCase
 
 		$result = $this->_testAutoFilterObject->getColumns();
 		//	Result should be an array of PHPExcel_Worksheet_AutoFilter_Column
-		//	objects for each column we set indexed by the column ID
+		//	objects for each column we set indexed by the column uniqid
 		$this->assertInternalType('array', $result);
 		$this->assertEquals(1, count($result));
 		$this->assertArrayHasKey($expectedResult,$result);
@@ -212,7 +212,7 @@ class AutoFilterTest extends PHPUnit_Framework_TestCase
 
 		$result = $this->_testAutoFilterObject->getColumns();
 		//	Result should be an array of PHPExcel_Worksheet_AutoFilter_Column
-		//	objects for each column we set indexed by the column ID
+		//	objects for each column we set indexed by the column uniqid
 		$this->assertInternalType('array', $result);
 		$this->assertEquals(count($columnIndexes), count($result));
 		foreach($columnIndexes as $columnIndex) {
@@ -229,7 +229,7 @@ class AutoFilterTest extends PHPUnit_Framework_TestCase
 			$this->_testAutoFilterObject->setColumn($columnIndex);
 		}
 
-		//	If we request a specific column by its column ID, we should
+		//	If we request a specific column by its column uniqid, we should
 		//	get a PHPExcel_Worksheet_AutoFilter_Column object returned
 		foreach($columnIndexes as $columnIndex) {
 			$result = $this->_testAutoFilterObject->getColumn($columnIndex);
@@ -255,7 +255,7 @@ class AutoFilterTest extends PHPUnit_Framework_TestCase
 
 	public function testGetColumnIfNotSet()
 	{
-		//	If we request a specific column by its column ID, we should
+		//	If we request a specific column by its column uniqid, we should
 		//	get a PHPExcel_Worksheet_AutoFilter_Column object returned
 		$result = $this->_testAutoFilterObject->getColumn('K');
 		$this->assertInstanceOf('PHPExcel_Worksheet_AutoFilter_Column', $result);

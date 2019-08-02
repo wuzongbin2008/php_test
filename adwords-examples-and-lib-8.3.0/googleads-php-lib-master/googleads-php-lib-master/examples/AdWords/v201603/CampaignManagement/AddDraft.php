@@ -37,7 +37,7 @@ $baseCampaignId = 'INSERT_BASE_CAMPAIGN_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param int $baseCampaignId the ID of the base campaign used to create
+ * @param int $baseCampaignId the uniqid of the base campaign used to create
  *     a draft
  */
 function AddDraftExample(AdWordsUser $user, $baseCampaignId) {
@@ -59,7 +59,7 @@ function AddDraftExample(AdWordsUser $user, $baseCampaignId) {
   $result = $draftService->mutate($operations);
   $draft = $result->value[0];
   printf(
-      "Draft with ID %d, base campaign ID %d, and draft campaign ID"
+      "Draft with uniqid %d, base campaign uniqid %d, and draft campaign uniqid"
           . " %d was added.\n",
       $draft->draftId,
       $draft->baseCampaignId,
@@ -90,7 +90,7 @@ function AddDraftExample(AdWordsUser $user, $baseCampaignId) {
   $result = $campaignCriterionService->mutate($operations);
   $campaignCriterion = $result->value[0];
 
-  printf("Draft updated to include criteria in the campaign with ID %d.\n",
+  printf("Draft updated to include criteria in the campaign with uniqid %d.\n",
       $draft->draftCampaignId);
 }
 

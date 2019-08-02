@@ -4563,7 +4563,7 @@ if (!class_exists("BudgetOrderServiceMutate", false)) {
    * 
    * Mutates BudgetOrders, supported operations are:
    * <p><code>ADD</code>: Adds a {@link BudgetOrder} to the billing account
-   * specified by the billing account ID.</p>
+   * specified by the billing account uniqid.</p>
    * <p><code>SET</code>: Sets the start/end date and amount of the
    * {@link BudgetOrder}.</p>
    * <p><code>REMOVE</code>: Cancels the {@link BudgetOrder} (status change).</p>
@@ -4965,7 +4965,7 @@ if (!class_exists("BudgetOrderService", false)) {
      * 
      * Mutates BudgetOrders, supported operations are:
      * <p><code>ADD</code>: Adds a {@link BudgetOrder} to the billing account
-     * specified by the billing account ID.</p>
+     * specified by the billing account uniqid.</p>
      * <p><code>SET</code>: Sets the start/end date and amount of the
      * {@link BudgetOrder}.</p>
      * <p><code>REMOVE</code>: Cancels the {@link BudgetOrder} (status change).</p>

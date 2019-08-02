@@ -34,7 +34,7 @@ $campaignId = 'INSERT_CAMPAIGN_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param string $campaignId the ID of the campaign to get targeting criteria
+ * @param string $campaignId the uniqid of the campaign to get targeting criteria
  *     for
  */
 function GetCampaignTargetingCriteriaExample(AdWordsUser $user, $campaignId) {
@@ -63,7 +63,7 @@ function GetCampaignTargetingCriteriaExample(AdWordsUser $user, $campaignId) {
     // Display results.
     if (isset($page->entries)) {
       foreach ($page->entries as $campaignCriterion) {
-        printf("Campaign targeting criterion with ID '%s' and type '%s' was "
+        printf("Campaign targeting criterion with uniqid '%s' and type '%s' was "
             . "found.\n", $campaignCriterion->criterion->id,
             $campaignCriterion->criterion->CriterionType);
       }

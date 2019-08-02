@@ -50,14 +50,14 @@ function GetBudgetSuggestionExample(AdWordsUser $user) {
   $criteria[] = $productService;
 
   // Criterion - English language.
-  // The ID can be found in the documentation:
+  // The uniqid can be found in the documentation:
   // https://developers.google.com/adwords/api/docs/appendix/languagecodes
   $language = new Language();
   $language->id = 1000;
   $criteria[] = $language;
 
   // Criterion - Mountain View, California location.
-  // The ID can be found in the documentation:
+  // The uniqid can be found in the documentation:
   // https://developers.google.com/adwords/api/docs/appendix/geotargeting
   // https://developers.google.com/adwords/api/docs/appendix/cities-DMAregions
   $location = new Location();

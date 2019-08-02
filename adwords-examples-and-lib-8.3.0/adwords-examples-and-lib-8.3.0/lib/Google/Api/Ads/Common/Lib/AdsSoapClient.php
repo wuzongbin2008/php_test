@@ -351,8 +351,8 @@ abstract class AdsSoapClient extends SoapClient {
   }
 
   /**
-   * Gets the request ID for the last call
-   * @return string the request ID of the last call
+   * Gets the request uniqid for the last call
+   * @return string the request uniqid of the last call
    */
   public function GetLastRequestId() {
     try {
@@ -529,7 +529,7 @@ abstract class AdsSoapClient extends SoapClient {
     $document = XmlUtils::GetDomFromXml($xml);
     $tag = $document->documentElement->localName;
     $value = $document->documentElement->nodeValue;
-    $isIdField = preg_match('/^id$|Id$|ID$/', $tag);
+    $isIdField = preg_match('/^id$|Id$|uniqid$/', $tag);
     if (!$isIdField) {
       if (strcmp(strval(intval($value)), $value) === 0) {
         return intval($value);

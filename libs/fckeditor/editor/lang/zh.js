@@ -232,7 +232,7 @@ DlgLnkProtoOther	: "<其他>",
 DlgLnkURL			: "URL",
 DlgLnkAnchorSel		: "請選擇錨點",
 DlgLnkAnchorByName	: "依錨點名稱",
-DlgLnkAnchorById	: "依元件 ID",
+DlgLnkAnchorById	: "依元件 uniqid",
 DlgLnkNoAnchors		: "<本文件尚無可用之錨點>",		//REVIEW : Change < and > with ( and )
 DlgLnkEMail			: "電子郵件",
 DlgLnkEMailSubject	: "郵件主旨",

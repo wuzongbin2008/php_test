@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the order to approve.
+// Set the uniqid of the order to approve.
 $orderId = 'INSERT_ORDER_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the OrderService.
   $orderService = $user->GetService('OrderService', 'v201505');
 
-  // Create a statement to select a single order by ID.
+  // Create a statement to select a single order by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -72,7 +72,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $order) {
-        printf("%d) Order with ID %d, name '%s', and advertiser ID %d will be "
+        printf("%d) Order with uniqid %d, name '%s', and advertiser uniqid %d will be "
             . "approved.\n", $i++, $order->id, $order->name,
             $order->advertiserId);
       }

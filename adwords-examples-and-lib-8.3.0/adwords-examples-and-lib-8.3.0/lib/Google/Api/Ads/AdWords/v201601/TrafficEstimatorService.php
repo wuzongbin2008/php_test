@@ -981,7 +981,7 @@ if (!class_exists("Keyword", false)) {
 if (!class_exists("Language", false)) {
   /**
    * Represents a Language criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is enabled for AdX.</span>
    * 
    * 
@@ -1038,7 +1038,7 @@ if (!class_exists("Language", false)) {
 if (!class_exists("Location", false)) {
   /**
    * Represents Location criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is enabled for AdX.</span>
    * 
    * 
@@ -1619,7 +1619,7 @@ if (!class_exists("Placement", false)) {
 if (!class_exists("Platform", false)) {
   /**
    * Represents Platform criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is enabled for AdX.</span>
    * 
    * 
@@ -4257,11 +4257,11 @@ if (!class_exists("CurrencyCodeErrorReason", false)) {
 
 if (!class_exists("TrafficEstimatorErrorReason", false)) {
   /**
-   * When the request with {@code null} campaign ID in
+   * When the request with {@code null} campaign uniqid in
    * {@link com.google.ads.api.services.trafficestimator.CampaignEstimateRequest}
    * contains an
    * {@link com.google.ads.api.services.trafficestimator.AdGroupEstimateRequest}
-   * with an ID.
+   * with an uniqid.
    * @package Google_Api_Ads_AdWords_v201601
    * @subpackage v201601
    */

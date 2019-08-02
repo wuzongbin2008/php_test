@@ -2481,8 +2481,8 @@ if (!class_exists("GetContentByStatementResponse", false)) {
 if (!class_exists("GetContentByStatementAndCustomTargetingValue", false)) {
   /**
    * Gets a {@link ContentPage} of {@link Content} objects that satisfy the
-   * given {@link Statement#query}. Additionally, filters on the given value ID
-   * and key ID that the value belongs to.
+   * given {@link Statement#query}. Additionally, filters on the given value uniqid
+   * and key uniqid that the value belongs to.
    * 
    * The following fields are supported for filtering:
    * <table>
@@ -3065,8 +3065,8 @@ if (!class_exists("ContentService", false)) {
     }
     /**
      * Gets a {@link ContentPage} of {@link Content} objects that satisfy the
-     * given {@link Statement#query}. Additionally, filters on the given value ID
-     * and key ID that the value belongs to.
+     * given {@link Statement#query}. Additionally, filters on the given value uniqid
+     * and key uniqid that the value belongs to.
      * 
      * The following fields are supported for filtering:
      * <table>

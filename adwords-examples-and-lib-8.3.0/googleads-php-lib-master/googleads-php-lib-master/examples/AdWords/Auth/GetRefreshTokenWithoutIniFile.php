@@ -30,7 +30,7 @@ require_once dirname(__FILE__) . '/init.php';
 
 /**
  * Gets an OAuth2 credential.
- * @param AdWordsUser $user the user that contains the client ID and secret
+ * @param AdWordsUser $user the user that contains the client uniqid and secret
  * @return array the user's OAuth 2 credentials
  */
 function GetOAuth2Credential(AdWordsUser $user) {
@@ -77,11 +77,11 @@ if (__FILE__ != realpath($_SERVER['PHP_SELF'])) {
 
 try {
   $stdin = fopen('php://stdin', 'r');
-  print('Please input your client ID and secret. '
-        . 'If you do not have a client ID or secret, please create one in '
+  print('Please input your client uniqid and secret. '
+        . 'If you do not have a client uniqid or secret, please create one in '
         . 'the API console: https://cloud.google.com/console'
         . "\n");
-  print('Enter your client ID: ');
+  print('Enter your client uniqid: ');
   $clientId = trim(fgets(STDIN));
   print('Enter your client secret: ');
   $clientSecret = trim(fgets(STDIN));

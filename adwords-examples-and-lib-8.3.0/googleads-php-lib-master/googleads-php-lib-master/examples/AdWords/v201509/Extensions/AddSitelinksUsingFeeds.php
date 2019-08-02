@@ -36,7 +36,7 @@ $campaignId = 'INSERT_CAMPAIGN_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param string $campaignId the ID of the campaign to add the sitelinks to
+ * @param string $campaignId the uniqid of the campaign to add the sitelinks to
  */
 function AddSitelinksUsingFeedsExample(AdWordsUser $user, $campaignId) {
   $sitelinksData = CreateSitelinksFeed($user);
@@ -95,7 +95,7 @@ function CreateSitelinksFeed(AdWordsUser $user) {
   $sitelinksData['line1FeedAttribute'] = $savedAttributes[2]->id;
   $sitelinksData['line2FeedAttribute'] = $savedAttributes[3]->id;
 
-  printf('Feed with name "%s" and ID %d with linkTextAttributeId %d'
+  printf('Feed with name "%s" and uniqid %d with linkTextAttributeId %d'
       . ", linkFinalUrlAttributeId %d, line1Attribute %d and line2Attribute %d "
       . "were created.\n",
       $savedFeed->name,
@@ -129,7 +129,7 @@ function CreateSitelinksFeedItems(AdWordsUser $user, $sitelinksData) {
   $products = NewSitelinkFeedItemAddOperation($sitelinksData, 'Products',
       'http://www.example.com/products', 'Products line 1', 'Products line 2');
   // This site link is using geographical targeting by specifying the criterion
-  // ID for California.
+  // uniqid for California.
   $aboutUs = NewSitelinkFeedItemAddOperation($sitelinksData, 'About Us',
       'http://www.example.com/about', 'About Us line 1', 'About Us line 2',
       21137);
@@ -198,8 +198,8 @@ function CreateSitelinksFeedMapping(AdWordsUser $user, $sitelinksData) {
   // Save the field mapping.
   $result = $feedMappingService->mutate($operations);
   foreach ($result->value as $feedMapping) {
-    printf('Feed mapping with ID %d and placeholderType %d was saved for ' .
-        "feed with ID %d.\n",
+    printf('Feed mapping with uniqid %d and placeholderType %d was saved for ' .
+        "feed with uniqid %d.\n",
         $feedMapping->feedMappingId,
         $feedMapping->placeholderType,
         $feedMapping->feedId);
@@ -210,7 +210,7 @@ function CreateSitelinksFeedMapping(AdWordsUser $user, $sitelinksData) {
  * Creates the CampaignFeed associated to the feed data already populated.
  * @param AdWordsUser $user the user to run the example with
  * @param array $sitelinksData IDs associated to created sitelinks feed metadata
- * @param string $campaignId the ID of the campaign to add the sitelinks to
+ * @param string $campaignId the uniqid of the campaign to add the sitelinks to
  */
 function CreateSitelinksCampaignFeed(AdWordsUser $user, $sitelinksData,
     $campaignId) {
@@ -240,7 +240,7 @@ function CreateSitelinksCampaignFeed(AdWordsUser $user, $sitelinksData,
 
   $result = $campaignFeedService->mutate($operations);
   foreach ($result->value as $savedCampaignFeed) {
-    printf("Campaign with ID %d was associated with feed with ID %d.\n",
+    printf("Campaign with uniqid %d was associated with feed with uniqid %d.\n",
         $savedCampaignFeed->campaignId,
         $savedCampaignFeed->feedId);
   }
@@ -253,7 +253,7 @@ function CreateSitelinksCampaignFeed(AdWordsUser $user, $sitelinksData,
  * @param string $finalUrl URL of the sitelink
  * @param string $line1 first line of the sitelink description
  * @param string $line2 second line of the sitelink description
- * @param int $locationId the criterion ID of location to be targeted
+ * @param int $locationId the criterion uniqid of location to be targeted
  */
 function NewSitelinkFeedItemAddOperation($sitelinksData, $text, $finalUrl,
     $line1, $line2, $locationId = null) {

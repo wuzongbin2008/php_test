@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201602/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the line item to fetch all LICAs for.
+// Set the uniqid of the line item to fetch all LICAs for.
 $lineItemId = "INSERT_LINE_ITEM_ID_HERE";
 
 try {
@@ -75,10 +75,10 @@ try {
       $i = $page->startIndex;
       foreach ($page->results as $lica) {
         if (isset($lica->creativeSetId)) {
-          printf("%d) LICA with line item ID %d, and creative set ID %d was "
+          printf("%d) LICA with line item uniqid %d, and creative set uniqid %d was "
               . "found.\n", $i++, $lica->lineItemId, $lica->creativeSetId);
         } else {
-          printf("%d) LICA with line item ID %d, and creative ID %d was "
+          printf("%d) LICA with line item uniqid %d, and creative uniqid %d was "
               . "found.\n", $i++, $lica->lineItemId, $lica->creativeId);
         }
       }

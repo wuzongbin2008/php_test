@@ -550,7 +550,7 @@ class PHPExcel_Writer_Excel2007_Worksheet extends PHPExcel_Writer_Excel2007_Writ
 			}
 		}
 
-		// Relation ID
+		// Relation uniqid
 		$relationId = 1;
 
 		// Write hyperlinks?

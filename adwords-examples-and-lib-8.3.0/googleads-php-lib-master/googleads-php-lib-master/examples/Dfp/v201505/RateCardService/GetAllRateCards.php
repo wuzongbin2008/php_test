@@ -66,7 +66,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $rateCard) {
-        printf("%d) Rate card with ID %d, name '%s', and currency '%s' was "
+        printf("%d) Rate card with uniqid %d, name '%s', and currency '%s' was "
             . "found.\n", $i++, $rateCard->id, $rateCard->name,
             $rateCard->currencyCode);
       }

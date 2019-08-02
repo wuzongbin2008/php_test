@@ -28,7 +28,7 @@
  */
 require_once dirname(__FILE__) . '/init.php';
 
-// If you don't have a client ID or secret,
+// If you don't have a client uniqid or secret,
 // see https://cloud.google.com/console/project
 define('CLIENT_ID', 'INSERT_CLIENT_ID_HERE');
 define('CLIENT_SECRET', 'INSERT_CLIENT_SECRET_HERE');
@@ -39,7 +39,7 @@ define('USER_AGENT', 'INSERT_USER_AGENT_HERE');
 
 /**
  * Run an example using the $user object.
- * @param AdWordsUser $user the user that contains the client ID and secret
+ * @param AdWordsUser $user the user that contains the client uniqid and secret
  */
 function RunExample(AdWordsUser $user) {
   $customerService = $user->GetService("CustomerService");

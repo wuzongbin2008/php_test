@@ -50,7 +50,7 @@ try {
   // Get the ReportService.
   $reportService = $user->GetService('ReportService', 'v201505');
 
-  // Set the ID of the custom field to include in the report.
+  // Set the uniqid of the custom field to include in the report.
   $CUSTOM_FIELD_ID = "INSERT_CUSTOM_FIELD_ID_HERE";
 
   // Create report query.

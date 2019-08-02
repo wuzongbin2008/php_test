@@ -67,7 +67,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $activity) {
-        printf("%d) Activity with ID %d, name '%s', and type %s was found.\n",
+        printf("%d) Activity with uniqid %d, name '%s', and type %s was found.\n",
             $i++, $activity->id, $activity->name, $activity->type);
       }
     }

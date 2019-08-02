@@ -73,10 +73,10 @@ function AddCrmBasedUserList(AdWordsUser $user, array $EMAILS) {
 
   // Display user list.
   $userListAdded = $result->value[0];
-  printf("User list with name '%s' and ID '%d' was added.\n",
+  printf("User list with name '%s' and uniqid '%d' was added.\n",
       $userListAdded->name, $userListAdded->id);
 
-  // Get a user list ID.
+  // Get a user list uniqid.
   $userListId = $userListAdded->id;
 
   // Create operation to add members to the user list based on email addresses.
@@ -109,7 +109,7 @@ function AddCrmBasedUserList(AdWordsUser $user, array $EMAILS) {
   //     members.
   foreach ($mutateMembersResult->userLists as $userListResult) {
     printf(
-        "%d email addresses were uploaded to user list with name '%s' and ID"
+        "%d email addresses were uploaded to user list with name '%s' and uniqid"
             . " '%d' and are scheduled for review.\n",
         count($EMAILS),
         $userListResult->name,

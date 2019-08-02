@@ -68,8 +68,8 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $baseRate) {
-        printf("%d) Base rate with ID %d and type '%s', belonging to rate card "
-            . "ID %d was found.\n", $i++, $baseRate->id,
+        printf("%d) Base rate with uniqid %d and type '%s', belonging to rate card "
+            . "uniqid %d was found.\n", $i++, $baseRate->id,
             get_class($baseRate), $baseRate->rateCardId);
       }
     }

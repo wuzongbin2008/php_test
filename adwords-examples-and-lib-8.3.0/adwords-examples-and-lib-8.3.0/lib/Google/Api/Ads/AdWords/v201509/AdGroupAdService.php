@@ -32,7 +32,7 @@ if (!class_exists("Ad", false)) {
   /**
    * The base class of all ad types. {@code Ad} objects themselves cannot be modified. If you want to
    * make a change to an {@code Ad} object, you must REMOVE its AdGroupAd and ADD a new AdGroupAd with
-   * the new {@code Ad}. This will result in a new {@code Ad} ID, so stats for the original {@code Ad}
+   * the new {@code Ad}. This will result in a new {@code Ad} uniqid, so stats for the original {@code Ad}
    * and the new {@code Ad} will appear under separate IDs in reports.
    * 
    * <p>When calling {@code AdGroupAdService} to update the {@code status} of an {@code AdGroupAd},
@@ -4543,7 +4543,7 @@ if (!class_exists("TemplateAd", false)) {
    * Represents a <a href=
    * "//www.google.com/adwords/displaynetwork/plan-creative-campaigns/display-ad-builder.html"
    * >Display Ad Builder</a> template ad. A template ad is
-   * composed of a template (specified by its ID) and the data that populates
+   * composed of a template (specified by its uniqid) and the data that populates
    * the template's fields. For a list of available templates and their required
    * fields, see <a href="/adwords/api/docs/appendix/templateads">Template Ads</a>.
    * <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span>

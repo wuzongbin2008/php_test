@@ -91,7 +91,7 @@ try {
 
   foreach ($updatedLineItemReports as $updatedLineItemReport) {
     printf(
-        "Reconciliation line item report with ID for line item ID %d was "
+        "Reconciliation line item report with uniqid for line item uniqid %d was "
         . "updated, with net billable revenue '%.2f' and reconciled volume "
         . "%d.\n",
         $updatedLineItemReport->id,

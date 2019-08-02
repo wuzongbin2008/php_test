@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the placement to deactivate.
+// Set the uniqid of the placement to deactivate.
 $placementId = 'INSERT_PLACEMENT_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the PlacementService.
   $placementService = $user->GetService('PlacementService', 'v201505');
 
-  // Create a statement to select a single placement by ID.
+  // Create a statement to select a single placement by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -72,7 +72,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $placement) {
-        printf("%d) Placement with ID %d, and name '%s' will be deactivated.\n",
+        printf("%d) Placement with uniqid %d, and name '%s' will be deactivated.\n",
             $i++, $placement->id, $placement->name);
       }
     }

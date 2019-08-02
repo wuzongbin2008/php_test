@@ -73,7 +73,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $exchangeRate) {
-        printf("%d) Exchange rate with ID %d, currency code '%s', direction "
+        printf("%d) Exchange rate with uniqid %d, currency code '%s', direction "
             . "'%s', and exchange rate %.2f was found.\n",
             $i++,
             $exchangeRate->id,

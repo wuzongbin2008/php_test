@@ -279,7 +279,7 @@ class PHPExcel_Reader_Excel2007 extends PHPExcel_Reader_Abstract implements PHPE
 //			echo 'SHARED FORMULA', PHP_EOL;
 			$instance = (string)$c->f['si'];
 
-//			echo 'Instance ID = ', $instance, PHP_EOL;
+//			echo 'Instance uniqid = ', $instance, PHP_EOL;
 //
 //			echo 'Shared Formula Array:', PHP_EOL;
 //			print_r($sharedFormulas);

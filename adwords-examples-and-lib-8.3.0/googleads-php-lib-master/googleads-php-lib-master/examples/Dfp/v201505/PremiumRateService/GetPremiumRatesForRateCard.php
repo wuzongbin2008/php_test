@@ -39,7 +39,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the rate card to get premium rates for.
+// Set the uniqid of the rate card to get premium rates for.
 $rateCardId = 'INSERT_RATE_CARD_ID_HERE';
 
 try {
@@ -73,8 +73,8 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $premiumRate) {
-        printf("%d) Premium rate with ID %d, of type '%s', assigned to rate "
-            . "card with ID %d was found.\n",
+        printf("%d) Premium rate with uniqid %d, of type '%s', assigned to rate "
+            . "card with uniqid %d was found.\n",
             $i++, $premiumRate->id,
             get_class($premiumRate->premiumFeature),
             $premiumRate->rateCardId

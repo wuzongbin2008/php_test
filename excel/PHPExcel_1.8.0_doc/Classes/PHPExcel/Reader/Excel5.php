@@ -896,7 +896,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 						case 0x19:
 							// Note
 //							echo 'Cell Annotation Object<br />';
-//							echo 'Object ID is ',$obj['idObjID'],'<br />';
+//							echo 'Object uniqid is ',$obj['idObjID'],'<br />';
 //
 							if (isset($this->_cellNotes[$obj['idObjID']])) {
 								$cellNote = $this->_cellNotes[$obj['idObjID']];
@@ -1211,7 +1211,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 		// loop through property decarations and properties
 		for ($i = 0; $i < $countProperties; ++$i) {
 
-			// offset: ($secOffset+8) + (8 * $i); size: 4; property ID
+			// offset: ($secOffset+8) + (8 * $i); size: 4; property uniqid
 			$id = self::_GetInt4d($this->_summaryInformation, ($secOffset+8) + (8 * $i));
 
 			// Use value of property id as appropriate
@@ -1375,9 +1375,9 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 		//	loop through property decarations and properties
 		for ($i = 0; $i < $countProperties; ++$i) {
 //			echo 'Property ',$i,'<br />';
-			//	offset: ($secOffset+8) + (8 * $i);	size: 4;	property ID
+			//	offset: ($secOffset+8) + (8 * $i);	size: 4;	property uniqid
 			$id = self::_GetInt4d($this->_documentSummaryInformation, ($secOffset+8) + (8 * $i));
-//			echo 'ID is ',$id,'<br />';
+//			echo 'uniqid is ',$id,'<br />';
 
 			// Use value of property id as appropriate
 			// offset: 60 + 8 * $i;	size: 4;	offset from beginning of section (48)
@@ -1531,7 +1531,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 			$noteAuthor = self::_readUnicodeStringLong(substr($recordData, 8));
 			$noteAuthor = $noteAuthor['value'];
 //			echo 'Note Address=',$cellAddress,'<br />';
-//			echo 'Note Object ID=',$noteObjID,'<br />';
+//			echo 'Note Object uniqid=',$noteObjID,'<br />';
 //			echo 'Note Author=',$noteAuthor,'<hr />';
 //
 			$this->_cellNotes[$noteObjID] = array('cellRef'		=> $cellAddress,

@@ -20,7 +20,7 @@ var jQuery = window.jQuery = window.$ = function( selector, context ) {
 	return new jQuery.fn.init( selector, context );
 };
 
-// A simple way to check for HTML strings or ID strings
+// A simple way to check for HTML strings or uniqid strings
 // (both of which we optimize for)
 var quickExpr = /^[^<]*(<(.|\s)+>)[^>]*$|^#(\w+)$/,
 
@@ -43,7 +43,7 @@ jQuery.fn = jQuery.prototype = {
 		}
 		// Handle HTML strings
 		if ( typeof selector == "string" ) {
-			// Are we dealing with HTML string or an ID?
+			// Are we dealing with HTML string or an uniqid?
 			var match = quickExpr.exec( selector );
 
 			// Verify a match, and that no context was specified for #id
@@ -60,7 +60,7 @@ jQuery.fn = jQuery.prototype = {
 					// Make sure an element was located
 					if ( elem ){
 						// Handle the case where IE and Opera return items
-						// by name instead of ID
+						// by name instead of uniqid
 						if ( elem.id != match[3] )
 							return jQuery().find( selector );
 
@@ -661,7 +661,7 @@ jQuery.extend({
 
 		var id = elem[ expando ];
 
-		// Compute a unique ID for the element
+		// Compute a unique uniqid for the element
 		if ( !id )
 			id = elem[ expando ] = ++uuid;
 
@@ -674,7 +674,7 @@ jQuery.extend({
 		if ( data !== undefined )
 			jQuery.cache[ id ][ name ] = data;
 
-		// Return the named cache data, or the ID for the element
+		// Return the named cache data, or the uniqid for the element
 		return name ?
 			jQuery.cache[ id ][ name ] :
 			id;
@@ -1568,7 +1568,7 @@ jQuery.extend({
 
 					} else {
 						// Otherwise, do a traditional filter check for
-						// ID, class, and element selectors
+						// uniqid, class, and element selectors
 						re2 = quickClass;
 						m = re2.exec(t);
 					}
@@ -1577,12 +1577,12 @@ jQuery.extend({
 
 					var elem = ret[ret.length-1];
 
-					// Try to do a global search by ID, where we can
+					// Try to do a global search by uniqid, where we can
 					if ( m[1] == "#" && elem && elem.getElementById && !jQuery.isXMLDoc(elem) ) {
 						// Optimization for HTML document case
 						var oid = elem.getElementById(m[2]);
 
-						// Do a quick check for the existence of the actual ID attribute
+						// Do a quick check for the existence of the actual uniqid attribute
 						// to avoid selecting by the name attribute in IE
 						// also check to insure id is a string to avoid selecting an element with the name of 'id' inside a form
 						if ( (jQuery.browser.msie||jQuery.browser.opera) && oid && typeof oid.id == "string" && oid.id != m[2] )
@@ -1608,11 +1608,11 @@ jQuery.extend({
 						if ( m[1] == "." )
 							r = jQuery.classFilter( r, m[2] );
 
-						// Same with ID filtering
+						// Same with uniqid filtering
 						if ( m[1] == "#" ) {
 							var tmp = [];
 
-							// Try to find the element with the ID
+							// Try to find the element with the uniqid
 							for ( var i = 0; r[i]; i++ )
 								if ( r[i].getAttribute("id") == m[2] ) {
 									tmp = [ r[i] ];
@@ -1831,7 +1831,7 @@ jQuery.event = {
 		if ( jQuery.browser.msie && elem.setInterval )
 			elem = window;
 
-		// Make sure that the function being executed has a unique ID
+		// Make sure that the function being executed has a unique uniqid
 		if ( !handler.guid )
 			handler.guid = this.guid++;
 

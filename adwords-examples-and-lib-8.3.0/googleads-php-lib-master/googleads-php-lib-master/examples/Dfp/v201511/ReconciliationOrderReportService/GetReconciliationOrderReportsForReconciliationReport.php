@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201511/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the reconciliation report to retrieve order reports for.
+// Set the uniqid of the reconciliation report to retrieve order reports for.
 $reconciliationReportId = 'INSERT_RECONCILIATION_REPORT_ID_HERE';
 
 try {
@@ -76,7 +76,7 @@ try {
       $i = $page->startIndex;
       foreach ($page->results as $reconciliationOrderReport) {
         printf(
-            "%d) Reconciliation order report with ID %d and status '%s' was "
+            "%d) Reconciliation order report with uniqid %d and status '%s' was "
                 . "found\n",
             $i++,
             $reconciliationOrderReport->id,

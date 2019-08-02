@@ -63,7 +63,7 @@ function AddConversionTrackerExample(AdWordsUser $user) {
 
   // Display result.
   $conversionTracker = $result->value[0];
-  printf("Conversion type with name '%s' and ID '%.0f' was added.\n",
+  printf("Conversion type with name '%s' and uniqid '%.0f' was added.\n",
       $conversionTracker->name, $conversionTracker->id);
   printf("Tag code:\n%s\n", $conversionTracker->snippet);
 }

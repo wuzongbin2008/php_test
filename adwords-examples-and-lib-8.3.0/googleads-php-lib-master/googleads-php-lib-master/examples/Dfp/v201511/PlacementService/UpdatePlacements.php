@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201511/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the placement to update.
+// Set the uniqid of the placement to update.
 $placementId = 'INSERT_PLACEMENT_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the PlacementService.
   $placementService = $user->GetService('PlacementService', 'v201511');
 
-  // Create a statement to select a single placement by ID.
+  // Create a statement to select a single placement by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -74,7 +74,7 @@ try {
   $placements = $placementService->updatePlacements(array($placement));
 
   foreach ($placements as $updatedPlacement) {
-    printf("Placement with ID %d, and name '%s' was updated.\n",
+    printf("Placement with uniqid %d, and name '%s' was updated.\n",
         $updatedPlacement->id, $updatedPlacement->name);
   }
 } catch (OAuth2Exception $e) {

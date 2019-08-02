@@ -36,17 +36,17 @@ $adGroupId = 'INSERT_AD_GROUP_ID_HERE';
  */
 class ProductPartitionHelper {
   /**
-   * The next temporary criterion ID to be used.
+   * The next temporary criterion uniqid to be used.
    *
    * When creating our tree we need to specify the parent-child relationships
    * between nodes. However, until a criterion has been created on the server
    * we do not have a criterionId with which to refer to it.
    *
    * Instead we can specify temporary IDs that are specific to a single mutate
-   * request. Once the criteria have been created they are assigned an ID as
-   * normal and the temporary ID will no longer refer to it.
+   * request. Once the criteria have been created they are assigned an uniqid as
+   * normal and the temporary uniqid will no longer refer to it.
    *
-   * A valid temporary ID is any negative integer.
+   * A valid temporary uniqid is any negative integer.
    * @var integer
    */
   private $nextId = -1;
@@ -58,14 +58,14 @@ class ProductPartitionHelper {
   private $operations = array();
 
   /**
-   * The ID of the AdGroup that we wish to attach the partition tree to.
+   * The uniqid of the AdGroup that we wish to attach the partition tree to.
    * @var int
    */
   private $adGroupId;
 
   /**
    * Constructor
-   * @param int $adGroupId The ID of the AdGroup that we wish to attach the
+   * @param int $adGroupId The uniqid of the AdGroup that we wish to attach the
    *                       partition tree to.
    */
   public function __construct($adGroupId) {
@@ -183,7 +183,7 @@ function addProductPartitionTreeExample(AdWordsUser $user, $adGroupId) {
   $otherBrand =
       $helper->createSubdivision($otherCondition, new ProductBrand());
 
-  // The value for the bidding category is a fixed ID for the 'Luggage & Bags'
+  // The value for the bidding category is a fixed uniqid for the 'Luggage & Bags'
   // category. You can retrieve IDs for categories from the ConstantDataService.
   // See the 'GetProductCategoryTaxonomy' example for more details.
   $helper->createUnit($otherBrand,

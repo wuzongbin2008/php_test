@@ -44,7 +44,7 @@ class AuthorizationCode implements AuthorizationCodeInterface
      * @param $client_id
      * Client identifier related to the authorization code
      * @param $user_id
-     * User ID associated with the authorization code
+     * User uniqid associated with the authorization code
      * @param $redirect_uri
      * An absolute URI to which the authorization server will redirect the
      * user-agent to when the end-user authorization step is completed.

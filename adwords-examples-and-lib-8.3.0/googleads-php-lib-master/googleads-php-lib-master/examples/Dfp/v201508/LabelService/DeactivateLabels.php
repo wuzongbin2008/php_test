@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201508/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the label to deactivate.
+// Set the uniqid of the label to deactivate.
 $labelId = 'INSERT_LABEL_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the LabelService.
   $labelService = $user->GetService('LabelService', 'v201508');
 
-  // Create a statement to select a single label by ID.
+  // Create a statement to select a single label by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -72,7 +72,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $label) {
-        printf("%d) Label with ID %d, and name '%s' will be deactivated.\n",
+        printf("%d) Label with uniqid %d, and name '%s' will be deactivated.\n",
             $i++, $label->id, $label->name);
       }
     }

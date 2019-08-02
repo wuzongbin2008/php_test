@@ -50,7 +50,7 @@ FCKToolbarStyleCombo.prototype.CreateItems = function( targetSpecialCombo )
 	FCKTools.AppendStyleSheet( oTargetDoc, FCKConfig.ToolbarComboPreviewCSS ) ;
 	oTargetDoc.body.className += ' ForceBaseFont' ;
 
-	// Add ID and Class to the body
+	// Add uniqid and Class to the body
 	if ( FCKConfig.BodyId && FCKConfig.BodyId.length > 0 )
 		oTargetDoc.body.id = FCKConfig.BodyId ;
 	if ( FCKConfig.BodyClass && FCKConfig.BodyClass.length > 0 )

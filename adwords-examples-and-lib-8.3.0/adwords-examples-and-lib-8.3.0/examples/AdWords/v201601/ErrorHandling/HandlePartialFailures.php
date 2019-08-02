@@ -70,7 +70,7 @@ function HandlePartialFailuresExample(AdWordsUser $user, $adGroupId) {
   // Display results.
   foreach ($result->value as $adGroupCriterion) {
     if ($adGroupCriterion->AdGroupCriterionType == 'BiddableAdGroupCriterion') {
-      printf("Keyword with text '%s', match type '%s', and ID '%s' was "
+      printf("Keyword with text '%s', match type '%s', and uniqid '%s' was "
           . "added.\n", $adGroupCriterion->criterion->text,
           $adGroupCriterion->criterion->matchType,
           $adGroupCriterion->criterion->id);

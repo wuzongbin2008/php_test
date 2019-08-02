@@ -35,13 +35,13 @@ $adId = 'INSERT_AD_ID_HERE';
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
  * @param string $adGroupId the id of the ad group containing the ad
- * @param string $adId the ID of the ad
+ * @param string $adId the uniqid of the ad
  */
 function PauseAdExample(AdWordsUser $user, $adGroupId, $adId) {
   // Get the service, which loads the required classes.
   $adGroupAdService = $user->GetService('AdGroupAdService', ADWORDS_VERSION);
 
-  // Create ad using an existing ID. Use the base class Ad instead of TextAd to
+  // Create ad using an existing uniqid. Use the base class Ad instead of TextAd to
   // avoid having to set ad-specific fields.
   $ad = new Ad();
   $ad->id = $adId;
@@ -66,7 +66,7 @@ function PauseAdExample(AdWordsUser $user, $adGroupId, $adId) {
 
   // Display result.
   $adGroupAd = $result->value[0];
-  printf("Ad of type '%s' with ID '%s' has updated status '%s'.\n",
+  printf("Ad of type '%s' with uniqid '%s' has updated status '%s'.\n",
       $adGroupAd->ad->AdType, $adGroupAd->ad->id, $adGroupAd->status);
 }
 

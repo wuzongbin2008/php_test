@@ -35,7 +35,7 @@ $trialId = 'INSERT_TRIAL_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param int $trialId the ID of the trial to graduate
+ * @param int $trialId the uniqid of the trial to graduate
  */
 function GraduateTrialExample(AdWordsUser $user, $trialId) {
   // Get the TrialService, which loads the required classes.
@@ -79,8 +79,8 @@ function GraduateTrialExample(AdWordsUser $user, $trialId) {
   // If you promote instead, make sure to see the polling scheme demonstrated
   // in AddTrial.php to wait for the asynchronous operation to finish.
   printf(
-      "Trial with ID %d graduated. Campaign with ID %d was given a new budget "
-          . "ID %d and is no longer dependent on this trial.\n",
+      "Trial with uniqid %d graduated. Campaign with uniqid %d was given a new budget "
+          . "uniqid %d and is no longer dependent on this trial.\n",
       $trial->id,
       $trial->trialCampaignId,
       $budget->budgetId

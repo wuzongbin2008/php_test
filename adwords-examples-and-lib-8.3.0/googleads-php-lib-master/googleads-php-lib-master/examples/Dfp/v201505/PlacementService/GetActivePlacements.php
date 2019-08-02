@@ -69,7 +69,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $placement) {
-        printf("%d) Placement with ID %d, and name '%s' was found.\n", $i++,
+        printf("%d) Placement with uniqid %d, and name '%s' was found.\n", $i++,
             $placement->id, $placement->name);
       }
     }

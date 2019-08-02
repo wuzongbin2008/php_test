@@ -37,7 +37,7 @@ set_include_path(get_include_path() . PATH_SEPARATOR . $path);
 require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once dirname(__FILE__) . '/../../Common/ExampleUtils.php';
 
-// If you don't have a client ID or secret,
+// If you don't have a client uniqid or secret,
 // see https://cloud.google.com/console/project
 define('CLIENT_ID', 'INSERT_CLIENT_ID_HERE');
 define('CLIENT_SECRET', 'INSERT_CLIENT_SECRET_HERE');
@@ -48,7 +48,7 @@ define('APPLICATION_NAME', 'INSERT_APPLICATION_NAME_HERE');
 
 /**
  * Run an example using the $user object.
- * @param string $user the user that contains the client ID and secret
+ * @param string $user the user that contains the client uniqid and secret
  */
 function RunExample(DfpUser $user) {
   // Get the NetworkService.

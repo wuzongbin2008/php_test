@@ -40,7 +40,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201602/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the user to delete user team associations for.
+// Set the uniqid of the user to delete user team associations for.
 $userId = 'INSERT_USER_ID_HERE';
 
 try {
@@ -75,7 +75,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $userTeamAssociation) {
-        printf("%d) User team association with user ID %d, and team ID %d will "
+        printf("%d) User team association with user uniqid %d, and team uniqid %d will "
             . "be deleted.\n", $i++, $userTeamAssociation->userId,
             $userTeamAssociation->teamId);
       }

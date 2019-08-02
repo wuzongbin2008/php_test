@@ -62,7 +62,7 @@ function AddExpressBusinessesExample(AdWordsUser $user) {
   $addedBusinesses = $businessService->mutate($operations);
 
   foreach($addedBusinesses as $addedBusiness) {
-    printf("Added express business with ID %d and name '%s'\n",
+    printf("Added express business with uniqid %d and name '%s'\n",
       $addedBusiness->id, $addedBusiness->name);
   }
 }

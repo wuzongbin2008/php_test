@@ -142,7 +142,7 @@ function AddRuleBasedUserLists(AdWordsUser $user) {
 
   // Display the results.
   foreach ($result->value as $userListResult) {
-    printf("User list added with ID %d, name '%s', status '%s', list type '%s'"
+    printf("User list added with uniqid %d, name '%s', status '%s', list type '%s'"
         . ", accountUserListStatus '%s', description '%s'.\n",
     $userListResult->id,
     $userListResult->name,

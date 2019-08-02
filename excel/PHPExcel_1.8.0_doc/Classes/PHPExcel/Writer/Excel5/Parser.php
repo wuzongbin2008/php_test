@@ -413,7 +413,7 @@ class PHPExcel_Writer_Excel5_Parser
 			  'DB'              => array( 247,   -1,    1,    0 ),
 			  'FREQUENCY'       => array( 252,    2,    0,    0 ),
 			  'ERROR.TYPE'      => array( 261,    1,    1,    0 ),
-			  'REGISTER.ID'     => array( 267,   -1,    1,    0 ),
+			  'REGISTER.uniqid'     => array( 267,   -1,    1,    0 ),
 			  'AVEDEV'          => array( 269,   -1,    0,    0 ),
 			  'BETADIST'        => array( 270,   -1,    1,    0 ),
 			  'GAMMALN'         => array( 271,    1,    1,    0 ),

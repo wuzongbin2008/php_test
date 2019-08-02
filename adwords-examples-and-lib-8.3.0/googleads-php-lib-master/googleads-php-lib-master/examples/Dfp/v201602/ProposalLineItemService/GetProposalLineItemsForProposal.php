@@ -39,7 +39,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201602/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the proposal to filter proposal line items on.
+// Set the uniqid of the proposal to filter proposal line items on.
 $proposalId = 'INSERT_PROPOSAL_ID_HERE';
 
 try {
@@ -75,7 +75,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $proposalLineItem) {
-        printf("%d) Proposal line item with ID %d and name '%s' was found.\n",
+        printf("%d) Proposal line item with uniqid %d and name '%s' was found.\n",
             $i++, $proposalLineItem->id, $proposalLineItem->name);
       }
     }

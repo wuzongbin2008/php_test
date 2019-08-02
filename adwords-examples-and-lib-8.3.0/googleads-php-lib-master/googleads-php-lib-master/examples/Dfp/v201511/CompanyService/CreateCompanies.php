@@ -65,7 +65,7 @@ try {
   // Display results.
   if (isset($companies)) {
     foreach ($companies as $company) {
-      print 'A company with ID "' . $company->id
+      print 'A company with uniqid "' . $company->id
           . '", name "'. $company->name
           . '", and type "' . $company->type . "\" was created.\n";
     }

@@ -109,7 +109,7 @@ function AddTextAdWithUpgradedUrlsExample(AdWordsUser $user, $adGroupId) {
   // Display results.
   foreach ($result->value as $adGroupAd) {
     $ad = $adGroupAd->ad;
-    printf("Text ad with headline '%s' and ID '%d' was added.\n",
+    printf("Text ad with headline '%s' and uniqid '%d' was added.\n",
         $ad->headline, $ad->id);
     printf("  displayUrl is '%s'\n",
         $ad->displayUrl);

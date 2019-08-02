@@ -73,7 +73,7 @@ try {
   // Display results.
   if (isset($orders)) {
     foreach ($orders as $order) {
-      print 'An order with with ID "' . $order->id
+      print 'An order with with uniqid "' . $order->id
           . '" and name "' . $order->name
           . "\" was created.\n";
     }

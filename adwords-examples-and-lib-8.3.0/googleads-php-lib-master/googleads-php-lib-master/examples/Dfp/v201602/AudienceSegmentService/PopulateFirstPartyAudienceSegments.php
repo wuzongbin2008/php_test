@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201602/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the first party audience segment to populate.
+// Set the uniqid of the first party audience segment to populate.
 $audienceSegmentId = 'INSERT_AUDIENCE_SEGMENT_ID_HERE';
 
 try {
@@ -75,7 +75,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $audienceSegment) {
-        printf("%d) Audience segment with ID %d and name '%s' will be "
+        printf("%d) Audience segment with uniqid %d and name '%s' will be "
             . "populated.\n", $i++, $audienceSegment->id,
             $audienceSegment->name);
       }

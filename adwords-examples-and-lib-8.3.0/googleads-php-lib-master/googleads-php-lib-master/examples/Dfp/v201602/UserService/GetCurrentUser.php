@@ -50,7 +50,7 @@ try {
   // Get the current user.
   $usr = $userService->getCurrentUser();
 
-  printf("User with ID '%s', email '%s', and role '%s' was found.\n",
+  printf("User with uniqid '%s', email '%s', and role '%s' was found.\n",
       $usr->id, $usr->email, $usr->roleName);
 } catch (OAuth2Exception $e) {
   ExampleUtils::CheckForOAuth2Errors($e);

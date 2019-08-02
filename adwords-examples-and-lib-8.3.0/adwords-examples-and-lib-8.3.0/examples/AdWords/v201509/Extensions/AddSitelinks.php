@@ -36,7 +36,7 @@ $campaignId = 'INSERT_CAMPAIGN_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param string $campaignId the ID of the campaign to add the sitelinks to
+ * @param string $campaignId the uniqid of the campaign to add the sitelinks to
  */
 function AddSitelinksExample(AdWordsUser $user, $campaignId) {
   // Get the services and load the required classes.
@@ -105,7 +105,7 @@ function AddSitelinksExample(AdWordsUser $user, $campaignId) {
 
   // Print the results.
   $newExtensionSetting = $result->value[0];
-  printf('Extension setting with type "%s" was added to campaign ID %d',
+  printf('Extension setting with type "%s" was added to campaign uniqid %d',
       $newExtensionSetting->extensionType, $newExtensionSetting->campaignId);
 
   return $newExtensionSetting;

@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201508/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the exchange rate to update.
+// Set the uniqid of the exchange rate to update.
 $exchangeRateId = 'INSERT_EXCHANGE_RATE_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the ExchangeRateService.
   $exchangeRateService = $user->GetService('ExchangeRateService', 'v201508');
 
-  // Create a statement to select a single exchange rate by ID.
+  // Create a statement to select a single exchange rate by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id and refreshRate = :refreshRate')
       ->OrderBy('id ASC')
@@ -73,7 +73,7 @@ try {
       $exchangeRateService->updateExchangeRates(array($exchangeRate));
 
   foreach ($exchangeRates as $updatedExchangeRate) {
-    printf("Exchange rate with ID %d, currency code '%s', direction '%s', and "
+    printf("Exchange rate with uniqid %d, currency code '%s', direction '%s', and "
         . "exchange rate %.2f was updated.\n",
         $updatedExchangeRate->id,
         $updatedExchangeRate->currencyCode,

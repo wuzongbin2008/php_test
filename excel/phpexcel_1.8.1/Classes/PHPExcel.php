@@ -43,7 +43,7 @@ if (!defined('PHPEXCEL_ROOT')) {
 class PHPExcel
 {
     /**
-     * Unique ID
+     * Unique uniqid
      *
      * @var string
      */
@@ -1128,7 +1128,7 @@ class PHPExcel
     }
 
     /**
-     * Return the unique ID value assigned to this spreadsheet workbook
+     * Return the unique uniqid value assigned to this spreadsheet workbook
      *
      * @return string
      */

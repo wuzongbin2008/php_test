@@ -49,7 +49,7 @@ class PHPExcel_Calculation_Database {
 	/**
 	 * __fieldExtract
 	 *
-	 * Extracts the column ID to use for the data field.
+	 * Extracts the column uniqid to use for the data field.
 	 *
 	 * @access	private
 	 * @param	mixed[]		$database		The range of cells that makes up the list or database.

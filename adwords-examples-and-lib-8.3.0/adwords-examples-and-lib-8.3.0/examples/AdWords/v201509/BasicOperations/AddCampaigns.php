@@ -118,7 +118,7 @@ function AddCampaignsExample(AdWordsUser $user) {
 
   // Display results.
   foreach ($result->value as $campaign) {
-    printf("Campaign with name '%s' and ID '%s' was added.\n", $campaign->name,
+    printf("Campaign with name '%s' and uniqid '%s' was added.\n", $campaign->name,
         $campaign->id);
   }
 }

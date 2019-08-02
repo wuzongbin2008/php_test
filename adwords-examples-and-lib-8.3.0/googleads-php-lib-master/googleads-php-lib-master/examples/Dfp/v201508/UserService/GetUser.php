@@ -1,6 +1,6 @@
 <?php
 /**
- * This example gets a user by its ID. To create users, run
+ * This example gets a user by its uniqid. To create users, run
  * CreateUsers.php.
  *
  * PHP version 5
@@ -48,7 +48,7 @@ try {
   // Get the UserService.
   $userService = $user->GetService('UserService', 'v201508');
 
-  // Set the ID of the user to get.
+  // Set the uniqid of the user to get.
   $userId = 'INSERT_USER_ID_HERE';
 
   // Get the user.
@@ -56,11 +56,11 @@ try {
 
   // Display results.
   if (isset($usr)) {
-    print 'User with ID "' . $usr->id
+    print 'User with uniqid "' . $usr->id
         . '", email "' . $usr->email
         . '", and role "' . $usr->roleName . "\" was found.\n";
   } else {
-    print "No user found for this ID.\n";
+    print "No user found for this uniqid.\n";
   }
 } catch (OAuth2Exception $e) {
   ExampleUtils::CheckForOAuth2Errors($e);

@@ -48,7 +48,7 @@ try {
   // Get the ActivityService.
   $activityService = $user->GetService('ActivityService', 'v201511');
 
-  // Set the ID of the activity group this activity is associated with.
+  // Set the uniqid of the activity group this activity is associated with.
   $activityGroupId = 'INSERT_ACTIVITY_GROUP_ID_HERE';
 
   // Create a daily visits activity.
@@ -70,7 +70,7 @@ try {
   // Display results.
   if (isset($activities)) {
     foreach ($activities as $activity) {
-      printf("An activity with ID \"%d\", name \"%s\", and type \"%s\" was " .
+      printf("An activity with uniqid \"%d\", name \"%s\", and type \"%s\" was " .
           "created.\n", $activity->id, $activity->name, $activity->type);
     }
   } else {

@@ -59,7 +59,7 @@ function GetAdGroupsExample(AdWordsUser $user, $campaignId) {
     // Display results.
     if (isset($page->entries)) {
       foreach ($page->entries as $adGroup) {
-        printf("Ad group with name '%s' and ID '%s' was found.\n",
+        printf("Ad group with name '%s' and uniqid '%s' was found.\n",
             $adGroup->name, $adGroup->id);
       }
     } else {

@@ -44,7 +44,7 @@ function SetBidModifierExample(AdWordsUser $user, $campaignId, $bidModifier) {
   $campaignCriterionService =
       $user->GetService('CampaignCriterionService', ADWORDS_VERSION);
 
-  // Create Mobile Platform. The ID can be found in the documentation.
+  // Create Mobile Platform. The uniqid can be found in the documentation.
   // https://developers.google.com/adwords/api/docs/appendix/platforms
   $mobile = new Platform();
   $mobile->id = 30001; // HighEndMobile = 30001
@@ -67,7 +67,7 @@ function SetBidModifierExample(AdWordsUser $user, $campaignId, $bidModifier) {
   if (count($results->value)) {
     foreach ($results->value as $campaignCriterion) {
       printf(
-          "Campaign criterion with campaign ID '%s', criterion ID '%s', "
+          "Campaign criterion with campaign uniqid '%s', criterion uniqid '%s', "
           . "and type '%s' was modified with bid %.2f.\n",
           $campaignCriterion->campaignId,
           $campaignCriterion->criterion->id,

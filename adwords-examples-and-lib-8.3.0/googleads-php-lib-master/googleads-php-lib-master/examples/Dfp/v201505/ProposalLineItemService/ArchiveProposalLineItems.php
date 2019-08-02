@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the proposal line item to archive.
+// Set the uniqid of the proposal line item to archive.
 $proposalLineItemId = 'INSERT_PROPOSAL_LINE_ITEM_ID_HERE';
 
 try {
@@ -53,7 +53,7 @@ try {
   $proposalLineItemService = $user->GetService('ProposalLineItemService',
       'v201505');
 
-  // Create a statement to select a single proposal line item by ID.
+  // Create a statement to select a single proposal line item by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -73,7 +73,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $proposalLineItem) {
-        printf("%d) Proposal line item with ID %d and name '%s' will be "
+        printf("%d) Proposal line item with uniqid %d and name '%s' will be "
             . "archived.\n",
             $i++,
             $proposalLineItem->id,

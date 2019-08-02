@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201511/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ad unit ID to archive underneath.
+// Set the ad unit uniqid to archive underneath.
 $parentAdUnitId = 'INSERT_AD_UNIT_ID_HERE';
 
 try {
@@ -73,7 +73,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $adUnit) {
-        printf("%d) Ad unit with ID %d, and name '%s' will be archived.\n",
+        printf("%d) Ad unit with uniqid %d, and name '%s' will be archived.\n",
             $i++, $adUnit->id, $adUnit->name);
       }
     }

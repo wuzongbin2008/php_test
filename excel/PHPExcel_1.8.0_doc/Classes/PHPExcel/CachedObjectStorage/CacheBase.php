@@ -304,7 +304,7 @@ abstract class PHPExcel_CachedObjectStorage_CacheBase {
 
 
 	/**
-	 * Generate a unique ID for cache referencing
+	 * Generate a unique uniqid for cache referencing
 	 *
 	 * @return string Unique Reference
 	 */

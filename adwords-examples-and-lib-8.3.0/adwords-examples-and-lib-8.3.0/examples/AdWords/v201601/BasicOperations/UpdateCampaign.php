@@ -34,13 +34,13 @@ $campaignId = 'INSERT_CAMPAIGN_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param string $campaignId the ID of the campaign to update
+ * @param string $campaignId the uniqid of the campaign to update
  */
 function UpdateCampaignExample(AdWordsUser $user, $campaignId) {
   // Get the service, which loads the required classes.
   $campaignService = $user->GetService('CampaignService', ADWORDS_VERSION);
 
-  // Create campaign using an existing ID.
+  // Create campaign using an existing uniqid.
   $campaign = new Campaign();
   $campaign->id = $campaignId;
   $campaign->status = 'PAUSED';
@@ -57,7 +57,7 @@ function UpdateCampaignExample(AdWordsUser $user, $campaignId) {
 
   // Display result.
   $campaign = $result->value[0];
-  printf("Campaign with ID '%s' was paused.\n", $campaign->id);
+  printf("Campaign with uniqid '%s' was paused.\n", $campaign->id);
 }
 
 // Don't run the example if the file is being included.

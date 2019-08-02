@@ -30,7 +30,7 @@ require_once dirname(dirname(__FILE__)) . '/init.php';
 
 // Enter parameters required by the code example.
 $campaignId = 'INSERT_CAMPAIGN_ID_HERE';
-// Replace the value below with the ID of a feed that has been configured for
+// Replace the value below with the uniqid of a feed that has been configured for
 // location targeting, meaning it has an ENABLED FeedMapping with criterionType
 // of 77. Feeds linked to a GMB account automatically have this FeedMapping.
 // If you don't have such a feed, set this value to null.
@@ -125,7 +125,7 @@ function AddCampaignTargetingCriteriaExample(AdWordsUser $user, $campaignId,
 
   // Display results.
   foreach ($result->value as $campaignCriterion) {
-    printf("Campaign targeting criterion with ID '%s' and type '%s' was "
+    printf("Campaign targeting criterion with uniqid '%s' and type '%s' was "
         . "added.\n", $campaignCriterion->criterion->id,
         $campaignCriterion->criterion->CriterionType);
   }

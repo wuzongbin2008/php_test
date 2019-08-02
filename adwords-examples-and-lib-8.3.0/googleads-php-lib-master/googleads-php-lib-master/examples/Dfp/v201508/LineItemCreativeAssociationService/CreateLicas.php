@@ -54,7 +54,7 @@ try {
   $licaService =
       $user->GetService('LineItemCreativeAssociationService', 'v201508');
 
-  // Set the line item ID and creative ID to associate
+  // Set the line item uniqid and creative uniqid to associate
   // them with.
   $lineItemId = 'INSERT_LINE_ITEM_ID_HERE';
   $creativeId = 'INSERT_CREATIVE_ID_HERE';
@@ -72,8 +72,8 @@ try {
   // Display results.
   if (isset($licas)) {
     foreach ($licas as $lica) {
-      print 'A LICA with line item ID "' . $lica->lineItemId
-          . '", creative ID "' . $lica->creativeId
+      print 'A LICA with line item uniqid "' . $lica->lineItemId
+          . '", creative uniqid "' . $lica->creativeId
           . '", and status "' . $lica->status
           . "\" was created.\n";
     }

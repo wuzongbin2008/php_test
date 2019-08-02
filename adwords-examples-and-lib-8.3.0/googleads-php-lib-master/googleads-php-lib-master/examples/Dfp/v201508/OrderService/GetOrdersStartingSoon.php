@@ -80,7 +80,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $order) {
-        printf("%d) Order with ID %d, name '%s', and advertiser ID %d was "
+        printf("%d) Order with uniqid %d, name '%s', and advertiser uniqid %d was "
             . "found.\n", $i++, $order->id, $order->name, $order->advertiserId);
       }
     }

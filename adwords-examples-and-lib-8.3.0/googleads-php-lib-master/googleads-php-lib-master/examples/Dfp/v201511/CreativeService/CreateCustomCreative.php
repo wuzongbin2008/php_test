@@ -40,7 +40,7 @@ require_once 'Google/Api/Ads/Common/Util/MediaUtils.php';
 require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the advertiser (company) that all creatives will be assigned
+// Set the uniqid of the advertiser (company) that all creatives will be assigned
 // to.
 $advertiserId = 'INSERT_ADVERTISER_COMPANY_ID_HERE';
 
@@ -84,7 +84,7 @@ try {
   $customCreatives = $creativeService->createCreatives(array($customCreative));
 
   foreach ($customCreatives as $customCreative) {
-    printf("A custom creative with ID '%s', name '%s', and size '%sx%s' was "
+    printf("A custom creative with uniqid '%s', name '%s', and size '%sx%s' was "
         . "created and can be previewed at: %s\n", $customCreative->id,
         $customCreative->name, $customCreative->size->width,
         $customCreative->size->height, $customCreative->previewUrl);

@@ -1,7 +1,7 @@
 <?php
 /**
- * SnowFlake ID Generator
- * Based on Twitter Snowflake to generate unique ID across multiple
+ * SnowFlake uniqid Generator
+ * Based on Twitter Snowflake to generate unique uniqid across multiple
  * datacenters and databases without having duplicates.
  *
  *
@@ -9,12 +9,15 @@
  *
  * 1 sign bit -- 0 is positive, 1 is negative
  * 41 bits -- milliseconds since epoch
- * 5 bits -- dataCenter ID
- * 5 bits -- machine ID
+ * 5 bits -- dataCenter uniqid
+ * 5 bits -- machine uniqid
  * 12 bits -- sequence number
  *
  * Total 64 bit integer/string
  */
+$obj = new SnowFlake(1, 1);
+$id = $obj->generateID();
+var_dump($id);
 
 class SnowFlake
 {
@@ -60,8 +63,8 @@ class SnowFlake
     /**
      * Constructor to set required paremeters
      *
-     * @param mixed $dataCenter_id Unique ID for datacenter (if multiple locations are used)
-     * @param mixed $machine_id Unique ID for machine (if multiple machines are used)
+     * @param mixed $dataCenter_id Unique uniqid for datacenter (if multiple locations are used)
+     * @param mixed $machine_id Unique uniqid for machine (if multiple machines are used)
      * @throws \Exception
      */
     public function __construct($dataCenter_id, $machine_id)
@@ -77,7 +80,7 @@ class SnowFlake
     }
 
     /**
-     * Generate an unique ID based on SnowFlake
+     * Generate an unique uniqid based on SnowFlake
      * @return string
      * @throws \Exception
      */

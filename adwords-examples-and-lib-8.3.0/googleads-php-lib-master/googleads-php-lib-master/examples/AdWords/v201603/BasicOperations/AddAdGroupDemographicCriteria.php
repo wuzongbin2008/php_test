@@ -80,7 +80,7 @@ function AddAdGroupDemographicCriteriaExample(AdWordsUser $user, $adGroupId) {
 
   // Display results.
   foreach ($result->value as $adGroupCriterion) {
-    printf("Ad group criterion with ad group ID '%s', criterion ID '%s' " .
+    printf("Ad group criterion with ad group uniqid '%s', criterion uniqid '%s' " .
         "and type '%s' was added.\n", $adGroupCriterion->adGroupId,
          $adGroupCriterion->criterion->id,
          $adGroupCriterion->criterion->CriterionType);

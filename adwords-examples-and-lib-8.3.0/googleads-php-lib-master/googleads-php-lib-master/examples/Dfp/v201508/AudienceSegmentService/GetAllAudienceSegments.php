@@ -68,7 +68,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $audienceSegment) {
-        printf("%d) Audience segment with ID %d, name '%s', and size %s was "
+        printf("%d) Audience segment with uniqid %d, name '%s', and size %s was "
             . "found.\n", $i++, $audienceSegment->id, $audienceSegment->name,
             $audienceSegment->size);
       }

@@ -55,7 +55,7 @@ try {
   // Get the NetworkService.
   $networkService = $user->GetService('NetworkService', 'v201505');
 
-  // Get the root ad unit ID used to target the whole site.
+  // Get the root ad unit uniqid used to target the whole site.
   $rootAdUnitId = $networkService->getCurrentNetwork()->effectiveRootAdUnitId;
 
   // Create inventory targeting.

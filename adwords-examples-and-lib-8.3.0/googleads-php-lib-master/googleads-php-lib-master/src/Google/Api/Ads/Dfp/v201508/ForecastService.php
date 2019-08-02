@@ -332,7 +332,7 @@ if (!class_exists("AppliedLabel", false)) {
   /**
    * Represents a {@link Label} that can be applied to an entity. To negate an
    * inherited label, create an {@code AppliedLabel} with {@code labelId} as the
-   * inherited label's ID and {@code isNegated} set to true.
+   * inherited label's uniqid and {@code isNegated} set to true.
    * @package GoogleApiAdsDfp
    * @subpackage v201508
    */
@@ -9801,7 +9801,7 @@ if (!class_exists("GetAvailabilityForecastById", false)) {
    * 
    * <p>Note: Beginning in v201502, this replaces the previous getForecastById method.
    * 
-   * @param lineItemId the ID of a {@link LineItem} to run the forecast on.
+   * @param lineItemId the uniqid of a {@link LineItem} to run the forecast on.
    * @param forecastOptions options controlling the forecast
    * @package GoogleApiAdsDfp
    * @subpackage v201508
@@ -11557,7 +11557,7 @@ if (!class_exists("ForecastService", false)) {
      * 
      * <p>Note: Beginning in v201502, this replaces the previous getForecastById method.
      * 
-     * @param lineItemId the ID of a {@link LineItem} to run the forecast on.
+     * @param lineItemId the uniqid of a {@link LineItem} to run the forecast on.
      * @param forecastOptions options controlling the forecast
      */
     public function getAvailabilityForecastById($lineItemId, $forecastOptions) {

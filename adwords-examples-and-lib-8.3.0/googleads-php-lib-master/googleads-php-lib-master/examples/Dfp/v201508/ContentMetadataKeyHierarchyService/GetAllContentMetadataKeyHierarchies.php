@@ -69,7 +69,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $contentMetadataKeyHierarchy) {
-        printf("%d) Content metadata key hierarchy with ID %d, and name '%s' "
+        printf("%d) Content metadata key hierarchy with uniqid %d, and name '%s' "
             . "was found.\n", $i++, $contentMetadataKeyHierarchy->id,
             $contentMetadataKeyHierarchy->name);
       }

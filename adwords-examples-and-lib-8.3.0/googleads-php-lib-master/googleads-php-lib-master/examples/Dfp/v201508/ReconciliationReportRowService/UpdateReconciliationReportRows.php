@@ -88,7 +88,7 @@ try {
 
   foreach ($updatedRows as $updatedRow) {
     printf(
-        "Reconciliation report row for line item ID %d and creative ID %d was "
+        "Reconciliation report row for line item uniqid %d and creative uniqid %d was "
             . "updated, with manual volume %d.\n",
         $updatedRow->lineItemId,
         $updatedRow->creativeId,

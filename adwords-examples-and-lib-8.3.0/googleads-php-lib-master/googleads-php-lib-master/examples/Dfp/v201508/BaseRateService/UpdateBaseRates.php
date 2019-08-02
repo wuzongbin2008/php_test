@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201508/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the base rate to update.
+// Set the uniqid of the base rate to update.
 $baseRateId = 'INSERT_BASE_RATE_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the BaseRateService.
   $baseRateService = $user->GetService('BaseRateService', 'v201508');
 
-  // Create a statement to select a single base rate by ID.
+  // Create a statement to select a single base rate by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -74,7 +74,7 @@ try {
   $baseRates = $baseRateService->updateBaseRates(array($baseRate));
 
   foreach ($baseRates as $updatedBaseRate) {
-    printf("Base rate with ID %d and type '%s', belonging to rate card ID %d "
+    printf("Base rate with uniqid %d and type '%s', belonging to rate card uniqid %d "
         . "was updated.\n",
         $updatedBaseRate->id,
         get_class($updatedBaseRate),

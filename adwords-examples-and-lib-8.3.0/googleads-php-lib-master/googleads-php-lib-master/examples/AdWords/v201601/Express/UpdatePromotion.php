@@ -61,7 +61,7 @@ function UpdatePromotionExample(AdWordsUser $user, $businessId, $promotionId) {
   $result = $promotionService->mutate($operations);
   $mutatedPromotion = $result[0];
 
-  printf("Promotion ID %d for business ID %d now has budget micro amount %d\n",
+  printf("Promotion uniqid %d for business uniqid %d now has budget micro amount %d\n",
     $mutatedPromotion->id, $businessId,
     $mutatedPromotion->budget->microAmount);
 }

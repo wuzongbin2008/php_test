@@ -59,7 +59,7 @@ function GetAllDisapprovedAdsWithAwqlExample(AdWordsUser $user, $adGroupId) {
     // Display results.
     if (isset($page->entries)) {
       foreach ($page->entries as $adGroupAd) {
-        printf("Ad with ID '%.0f', and type '%s' was disapproved for the "
+        printf("Ad with uniqid '%.0f', and type '%s' was disapproved for the "
             . "following reasons:\n", $adGroupAd->ad->id,
             $adGroupAd->ad->AdType);
         if (!empty($adGroupAd->disapprovalReasons)) {

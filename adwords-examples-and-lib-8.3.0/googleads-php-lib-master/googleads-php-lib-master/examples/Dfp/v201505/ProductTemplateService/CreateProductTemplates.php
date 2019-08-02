@@ -91,7 +91,7 @@ try {
   // Set the type of proposal line item to be created from the product template.
   $productTemplate->lineItemType = 'STANDARD';
 
-  // Get the root ad unit ID used to target the whole site.
+  // Get the root ad unit uniqid used to target the whole site.
   $rootAdUnitId = $networkService->getCurrentNetwork()->effectiveRootAdUnitId;
 
   // Create ad unit targeting for the root ad unit (i.e. the whole network).
@@ -135,7 +135,7 @@ try {
       array($productTemplate));
 
   foreach ($productTemplates as $createdProductTemplate) {
-    printf("A product template with ID %d and name '%s' was created.\n",
+    printf("A product template with uniqid %d and name '%s' was created.\n",
         $createdProductTemplate->id, $createdProductTemplate->name);
   }
 } catch (OAuth2Exception $e) {

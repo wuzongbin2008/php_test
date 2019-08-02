@@ -84,7 +84,7 @@ class AdWordsUser extends AdsUser {
    * @param string $userAgent the user agent name (required header). Will
    *     be prepended with the library name and version. Will overwrite the
    *     userAgent entry loaded from any INI file
-   * @param string $clientCustomerId the client customer ID to make the request
+   * @param string $clientCustomerId the client customer uniqid to make the request
    *     against (optional header). Will overwrite the clientCustomerId entry
    *     loaded from any INI file
    * @param string $settingsIniPath the path to the settings INI file. If
@@ -261,23 +261,23 @@ class AdWordsUser extends AdsUser {
   }
 
   /**
-   * Gets the client customer ID for this user.
-   * @return string the client customer ID for this user
+   * Gets the client customer uniqid for this user.
+   * @return string the client customer uniqid for this user
    */
   public function GetClientCustomerId() {
     return $this->GetHeaderValue('clientCustomerId');
   }
 
   /**
-   * Sets the client customer ID for this user.
-   * @param string $clientCustomerId the client customer ID for this user
+   * Sets the client customer uniqid for this user.
+   * @param string $clientCustomerId the client customer uniqid for this user
    */
   public function SetClientCustomerId($clientCustomerId) {
     $this->SetHeaderValue('clientCustomerId', $clientCustomerId);
   }
 
   /**
-   * Gets the AdWords Express business ID required for AdWords Express
+   * Gets the AdWords Express business uniqid required for AdWords Express
    * PromotionService
    */
   public function GetExpressBusinessId() {
@@ -285,16 +285,16 @@ class AdWordsUser extends AdsUser {
   }
 
   /**
-   * Sets the AdWords Express business ID required for AdWords Express
+   * Sets the AdWords Express business uniqid required for AdWords Express
    * PromotionService
-   * @param string AdWords Express business ID
+   * @param string AdWords Express business uniqid
    */
   public function SetExpressBusinessId($businessId) {
     $this->SetHeaderValue('expressBusinessId', $businessId);
   }
 
   /**
-   * Gets the Google My Business page ID used by AdWords Express
+   * Gets the Google My Business page uniqid used by AdWords Express
    * PromotionService
    */
   public function GetExpressPlusPageId() {
@@ -302,9 +302,9 @@ class AdWordsUser extends AdsUser {
   }
 
   /**
-   * Sets the Google My Business page ID used by AdWords Express
+   * Sets the Google My Business page uniqid used by AdWords Express
    * PromotionService
-   * @param string Google My Business page ID
+   * @param string Google My Business page uniqid
    */
   public function SetExpressPlusPageId($pageId) {
     $this->SetHeaderValue('pageId', $pageId);

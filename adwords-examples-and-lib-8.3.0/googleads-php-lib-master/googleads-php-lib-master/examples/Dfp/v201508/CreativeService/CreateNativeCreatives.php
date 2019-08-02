@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Common/Util/MediaUtils.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the advertiser (company) that all creatives will be assigned
+// Set the uniqid of the advertiser (company) that all creatives will be assigned
 // to.
 $advertiserId = 'INSERT_ADVERTISER_COMPANY_ID_HERE';
 
@@ -146,7 +146,7 @@ try {
 
   foreach ($nativeCreatives as $nativeCreative) {
     printf(
-        "A native creative with ID %d and name '%s' was created and can be "
+        "A native creative with uniqid %d and name '%s' was created and can be "
             . "previewed at: '%s'.\n",
         $nativeCreative->id,
         $nativeCreative->name,

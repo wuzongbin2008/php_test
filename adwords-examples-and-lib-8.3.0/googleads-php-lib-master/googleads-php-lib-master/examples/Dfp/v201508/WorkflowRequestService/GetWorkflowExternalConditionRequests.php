@@ -70,8 +70,8 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $workflowRequest) {
-        printf("%d) Workflow external condition request with ID %d, for '%s', "
-            . "with ID %d was found.\n",
+        printf("%d) Workflow external condition request with uniqid %d, for '%s', "
+            . "with uniqid %d was found.\n",
             $i++,
             $workflowRequest->id,
             $workflowRequest->entityType,

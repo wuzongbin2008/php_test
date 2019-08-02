@@ -3685,7 +3685,7 @@ if (!class_exists("CreateCreativeSet", false)) {
    * Creates a new {@link CreativeSet}.
    * 
    * @param creativeSet the creative set to create
-   * @return the creative set with its ID filled in
+   * @return the creative set with its uniqid filled in
    * @package GoogleApiAdsDfp
    * @subpackage v201502
    */
@@ -4427,7 +4427,7 @@ if (!class_exists("CreativeSetService", false)) {
      * Creates a new {@link CreativeSet}.
      * 
      * @param creativeSet the creative set to create
-     * @return the creative set with its ID filled in
+     * @return the creative set with its uniqid filled in
      */
     public function createCreativeSet($creativeSet) {
       $args = new CreateCreativeSet($creativeSet);

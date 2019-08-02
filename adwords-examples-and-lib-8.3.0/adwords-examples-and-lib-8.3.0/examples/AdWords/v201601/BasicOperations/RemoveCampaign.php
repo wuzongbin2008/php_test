@@ -56,7 +56,7 @@ function RemoveCampaignExample(AdWordsUser $user, $campaignId) {
 
   // Display result.
   $campaign = $result->value[0];
-  printf("Campaign with ID '%d' was removed.\n", $campaign->id);
+  printf("Campaign with uniqid '%d' was removed.\n", $campaign->id);
 }
 
 // Don't run the example if the file is being included.

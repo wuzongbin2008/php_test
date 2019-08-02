@@ -37,7 +37,7 @@ $adGroupId = 'INSERT_AD_GROUP_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param string $adGroupId the ID of the ad group to add the ad to
+ * @param string $adGroupId the uniqid of the ad group to add the ad to
  */
 function AddHtml5Ad(AdWordsUser $user, $adGroupId) {
   // Get the AdGroupAdService, which loads the required classes.
@@ -109,7 +109,7 @@ function AddHtml5Ad(AdWordsUser $user, $adGroupId) {
   $result = $adGroupAdService->mutate($operations);
 
   foreach ($result->value as $adGroupAd) {
-    printf("New HTML5 ad with ID %d and display URL '%s' was created.\n",
+    printf("New HTML5 ad with uniqid %d and display URL '%s' was created.\n",
         $adGroupAd->ad->id, $adGroupAd->ad->displayUrl);
   }
 }

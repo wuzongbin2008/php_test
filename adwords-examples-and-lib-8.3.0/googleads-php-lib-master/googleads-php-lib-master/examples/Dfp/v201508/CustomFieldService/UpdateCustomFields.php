@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201508/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the custom field to update.
+// Set the uniqid of the custom field to update.
 $customFieldId = 'INSERT_CUSTOM_FIELD_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the CustomFieldService.
   $customFieldService = $user->GetService('CustomFieldService', 'v201508');
 
-  // Create a statement to select a single custom field by ID.
+  // Create a statement to select a single custom field by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -71,7 +71,7 @@ try {
   $customFields = $customFieldService->updateCustomFields(array($customField));
 
   foreach ($customFields as $updatedCustomField) {
-    printf("Custom field with ID %d, and name '%s' was updated.\n",
+    printf("Custom field with uniqid %d, and name '%s' was updated.\n",
         $updatedCustomField->id, $updatedCustomField->name);
   }
 } catch (OAuth2Exception $e) {

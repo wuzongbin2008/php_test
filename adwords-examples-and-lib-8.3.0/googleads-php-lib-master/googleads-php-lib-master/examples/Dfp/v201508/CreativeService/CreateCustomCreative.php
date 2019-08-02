@@ -51,7 +51,7 @@ try {
   // Get the CreativeService.
   $creativeService = $user->GetService('CreativeService', 'v201508');
 
-  // Set the ID of the advertiser (company) that all creatives will be
+  // Set the uniqid of the advertiser (company) that all creatives will be
   // assigned to.
   $advertiserId = 'INSERT_ADVERTISER_COMPANY_ID_HERE';
 
@@ -82,7 +82,7 @@ try {
   $customCreatives = $creativeService->createCreatives(array($customCreative));
 
   foreach ($customCreatives as $customCreative) {
-    printf("A custom creative with ID '%s', name '%s', and size '%sx%s' was "
+    printf("A custom creative with uniqid '%s', name '%s', and size '%sx%s' was "
         . "created and can be previewed at: %s\n", $customCreative->id,
         $customCreative->name, $customCreative->size->width,
         $customCreative->size->height, $customCreative->previewUrl);

@@ -112,7 +112,7 @@ try {
   // Display results.
   if (isset($placements)) {
     foreach ($placements as $placement) {
-      print 'A placement with ID "' . $placement->id
+      print 'A placement with uniqid "' . $placement->id
           . '", name "' . $placement->name
           . '", and containing ad units {' .
           implode(', ', (array) $placement->targetedAdUnitIds)

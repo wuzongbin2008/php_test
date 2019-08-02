@@ -35,7 +35,7 @@ $bidModifier = 1.5;
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param string $adGroupId the ID of the ad group to add the bid modifier to
+ * @param string $adGroupId the uniqid of the ad group to add the bid modifier to
  * @param int $bidModifier the bid modifier multiplier
  */
 function AddAdGroupBidModifierExample(AdWordsUser $user, $adGroupId,
@@ -44,7 +44,7 @@ function AddAdGroupBidModifierExample(AdWordsUser $user, $adGroupId,
   $bidModifierService = $user->GetService('AdGroupBidModifierService',
       ADWORDS_VERSION);
 
-  // Mobile criterion ID.
+  // Mobile criterion uniqid.
   $criterionId = 30001;
 
   // Prepare to add an ad group level override.
@@ -69,7 +69,7 @@ function AddAdGroupBidModifierExample(AdWordsUser $user, $adGroupId,
       $value = $modifier->bidModifier;
     }
     printf(
-      'AdGroup ID %d, Criterion ID %d was updated with ' .
+      'AdGroup uniqid %d, Criterion uniqid %d was updated with ' .
           "ad group level modifier: %s\n",
       $modifier->adGroupId,
       $modifier->criterion->id,

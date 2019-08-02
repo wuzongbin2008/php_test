@@ -232,7 +232,7 @@ DlgLnkProtoOther	: "<其它>",
 DlgLnkURL			: "地址",
 DlgLnkAnchorSel		: "选择一个锚点",
 DlgLnkAnchorByName	: "按锚点名称",
-DlgLnkAnchorById	: "按锚点 ID",
+DlgLnkAnchorById	: "按锚点 uniqid",
 DlgLnkNoAnchors		: "<此文档没有可用的锚点>",		//REVIEW : Change < and > with ( and )
 DlgLnkEMail			: "地址",
 DlgLnkEMailSubject	: "主题",

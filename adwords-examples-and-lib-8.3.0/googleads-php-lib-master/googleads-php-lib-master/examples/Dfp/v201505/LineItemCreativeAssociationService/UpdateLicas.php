@@ -38,11 +38,11 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the line item ID of the LICA to update.
+// Set the line item uniqid of the LICA to update.
 $lineItemId = 'INSERT_LINE_ITEM_ID_HERE';
 
-// Set the master or creative set ID of the LICA to update. For creative sets,
-// set the master creative ID.
+// Set the master or creative set uniqid of the LICA to update. For creative sets,
+// set the master creative uniqid.
 $creativeId = 'INSERT_CREATIVE_ID_HERE';
 
 try {
@@ -57,7 +57,7 @@ try {
   $licaService =
       $user->GetService('LineItemCreativeAssociationService', 'v201505');
 
-  // Create a statement to select a single LICA by ID.
+  // Create a statement to select a single LICA by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where(
       'lineItemId = :lineItemId AND creativeId = :creativeId')
@@ -79,7 +79,7 @@ try {
   $licas = $licaService->updateLineItemCreativeAssociations(array($lica));
 
   foreach ($licas as $updatedLica) {
-    printf("Lica with line item ID %d, and creative ID %d was updated.\n",
+    printf("Lica with line item uniqid %d, and creative uniqid %d was updated.\n",
         $updatedLica->lineItemId, $updatedLica->creativeId);
   }
 } catch (OAuth2Exception $e) {

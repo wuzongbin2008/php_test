@@ -4,7 +4,7 @@ usdb('common');
 uslib('xml');
 
 $obj=new Common("rock");
-$mp=$obj->getSign(" and ID=1");//$_GET[ID]
+$mp=$obj->getSign(" and uniqid=1");//$_GET[uniqid]
 
 $filename ="playlist.xml";
 

@@ -1550,7 +1550,7 @@ if (!class_exists("BiddingStrategyConfiguration", false)) {
    * <ul>
    * <li>{@linkplain BiddingStrategyConfiguration#biddingScheme bidding scheme}</li>
    * <li>{@linkplain BiddingStrategyConfiguration#biddingStrategyType bidding strategy type}</li>
-   * <li>{@linkplain BiddingStrategyConfiguration#biddingStrategyId bidding strategy ID} for
+   * <li>{@linkplain BiddingStrategyConfiguration#biddingStrategyId bidding strategy uniqid} for
    * flexible bid strategies.</li>
    * </ul>
    * <p>If the bidding strategy type is used, then schemes are created using default values.

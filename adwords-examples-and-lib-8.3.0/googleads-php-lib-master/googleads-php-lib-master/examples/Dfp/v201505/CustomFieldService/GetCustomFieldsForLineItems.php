@@ -70,7 +70,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $customField) {
-        printf("%d) Custom field with ID %d, and name '%s' was found.\n", $i++,
+        printf("%d) Custom field with uniqid %d, and name '%s' was found.\n", $i++,
             $customField->id, $customField->name);
       }
     }

@@ -76,7 +76,7 @@ function GetCampaignCriterionBidModifierSimulationsExample(AdWordsUser $user,
       foreach ($page->entries as $bidModifierLandscape) {
         printf(
             "Found campaign-level criterion bid modifier landscapes for"
-                . " criterion with ID %d, start date '%s', end date '%s', and"
+                . " criterion with uniqid %d, start date '%s', end date '%s', and"
                 . " landscape points:\n",
             $bidModifierLandscape->criterionId,
             $bidModifierLandscape->startDate,

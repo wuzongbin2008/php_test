@@ -52,11 +52,11 @@ try {
   // Get the NetworkService.
   $networkService = $user->GetService('NetworkService', 'v201511');
 
-  // Get the root ad unit ID to filter on.
+  // Get the root ad unit uniqid to filter on.
   $rootAdUnitId =
       $networkService->getCurrentNetwork()->effectiveRootAdUnitId;
 
-  // Create statement to filter on a parent ad unit with the root ad unit ID to
+  // Create statement to filter on a parent ad unit with the root ad unit uniqid to
   // include all ad units in the network.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('PARENT_AD_UNIT_ID = :parentAdUnitId')

@@ -37,7 +37,7 @@ set_include_path(get_include_path() . PATH_SEPARATOR . $path);
 require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the rate card ID to add the base rate to.
+// Set the rate card uniqid to add the base rate to.
 $rateCardId = 'INSERT_RATE_CARD_ID_HERE';
 
 // Set the product template to apply this base rate to.
@@ -57,7 +57,7 @@ try {
   // Create a base rate for a product template.
   $productTemplateBaseRate = new ProductTemplateBaseRate();
 
-  // Set the rate card ID that the product template base rate belongs to.
+  // Set the rate card uniqid that the product template base rate belongs to.
   $productTemplateBaseRate->rateCardId = $rateCardId;
 
   // Set the product template the base rate will be applied to.
@@ -74,7 +74,7 @@ try {
       $baseRateService->createBaseRates(array($productTemplateBaseRate));
 
   foreach ($baseRates as $createdBaseRate) {
-    printf("A product template base rate with ID %d and rate %.2f %s was "
+    printf("A product template base rate with uniqid %d and rate %.2f %s was "
         . "created.\n",
         $createdBaseRate->id,
         $createdBaseRate->rate->microAmount / 1000000,

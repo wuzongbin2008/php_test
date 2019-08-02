@@ -38,10 +38,10 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201508/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the activity group to update.
+// Set the uniqid of the activity group to update.
 $activityGroupId = 'INSERT_ACTIVITY_GROUP_ID_HERE';
 
-// Set the ID of the company to associate with the activity group.
+// Set the uniqid of the company to associate with the activity group.
 $advertiserCompanyId = 'INSERT_ADVERTISER_COMPANY_ID_HERE';
 
 try {
@@ -55,7 +55,7 @@ try {
   // Get the ActivityGroupService.
   $activityGroupService = $user->GetService('ActivityGroupService', 'v201508');
 
-  // Create a statement to select a single activity group by ID.
+  // Create a statement to select a single activity group by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -75,7 +75,7 @@ try {
       $activityGroupService->updateActivityGroups(array($activityGroup));
 
   foreach ($activityGroups as $updatedActivityGroup) {
-    printf("Activity group with ID %d, and name '%s' was updated.\n",
+    printf("Activity group with uniqid %d, and name '%s' was updated.\n",
         $updatedActivityGroup->id, $updatedActivityGroup->name);
   }
 } catch (OAuth2Exception $e) {

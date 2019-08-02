@@ -65,7 +65,7 @@ function GetKeywordsExample(AdWordsUser $user, $adGroupId) {
     if (isset($page->entries)) {
       foreach ($page->entries as $adGroupCriterion) {
       printf("Keyword with text '%s', match type '%s', criteria type '%s', "
-          . "and ID '%s' was found.\n",
+          . "and uniqid '%s' was found.\n",
           $adGroupCriterion->criterion->text,
           $adGroupCriterion->criterion->matchType,
           $adGroupCriterion->criterion->type,

@@ -36,7 +36,7 @@ $adGroupId = 'INSERT_AD_GROUP_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param string $adGroupId the ID of the ad group to add the keywords to
+ * @param string $adGroupId the uniqid of the ad group to add the keywords to
  */
 function AddKeywordsExample(AdWordsUser $user, $adGroupId) {
   // Get the service, which loads the required classes.
@@ -82,7 +82,7 @@ function AddKeywordsExample(AdWordsUser $user, $adGroupId) {
 
   // Display results.
   foreach ($result->value as $adGroupCriterion) {
-    printf("Keyword with text '%s', match type '%s', and ID '%s' was added.\n",
+    printf("Keyword with text '%s', match type '%s', and uniqid '%s' was added.\n",
         $adGroupCriterion->criterion->text,
         $adGroupCriterion->criterion->matchType,
         $adGroupCriterion->criterion->id);

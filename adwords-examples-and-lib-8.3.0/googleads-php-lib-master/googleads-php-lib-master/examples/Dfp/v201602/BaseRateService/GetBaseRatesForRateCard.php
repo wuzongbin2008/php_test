@@ -41,7 +41,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201602/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the rate card ID to filter base rates on.
+// Set the rate card uniqid to filter base rates on.
 $rateCardId = 'INSERT_RATE_CARD_ID_HERE';
 
 try {
@@ -75,8 +75,8 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $baseRate) {
-        printf("%d) Base rate with ID %d, and type '%s', belonging to rate "
-            . "card ID %d was found.\n",
+        printf("%d) Base rate with uniqid %d, and type '%s', belonging to rate "
+            . "card uniqid %d was found.\n",
             $i++,
             $baseRate->id,
             get_class($baseRate),

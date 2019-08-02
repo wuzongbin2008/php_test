@@ -69,10 +69,10 @@ try {
       $i = $page->startIndex;
       foreach ($page->results as $lica) {
         if (isset($lica->creativeSetId)) {
-          printf("%d) LICA with line item ID %d, and creative set ID %d was "
+          printf("%d) LICA with line item uniqid %d, and creative set uniqid %d was "
               . "found.\n", $i++, $lica->lineItemId, $lica->creativeSetId);
         } else {
-          printf("%d) LICA with line item ID %d, and creative ID %d was "
+          printf("%d) LICA with line item uniqid %d, and creative uniqid %d was "
               . "found.\n", $i++, $lica->lineItemId, $lica->creativeId);
         }
       }

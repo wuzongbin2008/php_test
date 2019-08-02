@@ -2514,7 +2514,7 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
 
 		$cObj		= 0x0001;   // Count of objects in file (set to 1)
 		$OT		  = 0x0008;   // Object type. 8 = Picture
-		$id		  = 0x0001;   // Object ID
+		$id		  = 0x0001;   // Object uniqid
 		$grbit	   = 0x0614;   // Option flags
 
 		$cbMacro	 = 0x0000;   // Length of FMLA structure
@@ -2632,7 +2632,7 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
 			throw new PHPExcel_Writer_Exception("$bitmap doesn't appear to be a valid bitmap image.\n");
 		}
 
-		// Remove bitmap data: ID.
+		// Remove bitmap data: uniqid.
 		$data = substr($data, 2);
 
 		// Read and remove the bitmap size. This is more reliable than reading

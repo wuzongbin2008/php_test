@@ -69,7 +69,7 @@ try {
   // Display results.
   if (isset($customFields)) {
     foreach ($customFields as $customField) {
-      printf("A custom field with ID '%s' and name '%s' was created.\n",
+      printf("A custom field with uniqid '%s' and name '%s' was created.\n",
           $customField->id, $customField->name);
     }
   } else {

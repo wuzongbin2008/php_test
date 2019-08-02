@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201602/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the ad unit to update.
+// Set the uniqid of the ad unit to update.
 $adUnitId = 'INSERT_AD_UNIT_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the InventoryService.
   $inventoryService = $user->GetService('InventoryService', 'v201602');
 
-  // Create a statement to select a single ad unit by ID.
+  // Create a statement to select a single ad unit by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -85,7 +85,7 @@ try {
       $adUnitSizesStrings[] = sprintf('%dx%d', $updatedAdUnitSize->size->width,
           $updatedAdUnitSize->size->height);
     }
-    printf("Ad unit with ID %d, name '%s', and sizes [%s] was updated.\n",
+    printf("Ad unit with uniqid %d, name '%s', and sizes [%s] was updated.\n",
         $updatedAdUnit->id, $updatedAdUnit->name,
         implode(',', $adUnitSizesStrings));
   }

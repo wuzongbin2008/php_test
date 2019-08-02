@@ -39,14 +39,14 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201508/DateTimeUtils.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the proposal that the proposal line items will belong to.
+// Set the uniqid of the proposal that the proposal line items will belong to.
 $proposalId = 'INSERT_PROPOSAL_ID_HERE';
 
-// Set the ID of the product that the proposal line items should be created
+// Set the uniqid of the product that the proposal line items should be created
 // from.
 $productId = 'INSERT_PRODUCT_ID_HERE';
 
-// Set the ID of the rate card that the proposal line items should be priced
+// Set the uniqid of the rate card that the proposal line items should be priced
 // with.
 $rateCardId = 'INSERT_RATE_CARD_ID_HERE';
 
@@ -65,7 +65,7 @@ try {
   // Get the NetworkService.
   $networkService = $user->GetService('NetworkService', 'v201508');
 
-  // Get the root ad unit ID used to target the whole site.
+  // Get the root ad unit uniqid used to target the whole site.
   $rootAdUnitId = $networkService->getCurrentNetwork()->effectiveRootAdUnitId;
 
   // Create inventory targeting.
@@ -121,7 +121,7 @@ try {
       array($proposalLineItem));
 
   foreach ($proposalLineItems as $createdProposalLineItem) {
-    printf("A proposal line item with ID %d and name '%s' was created.\n",
+    printf("A proposal line item with uniqid %d and name '%s' was created.\n",
         $createdProposalLineItem->id, $createdProposalLineItem->name);
   }
 } catch (OAuth2Exception $e) {

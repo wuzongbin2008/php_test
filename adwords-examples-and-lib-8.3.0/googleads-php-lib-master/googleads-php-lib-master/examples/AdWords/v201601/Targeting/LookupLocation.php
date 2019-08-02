@@ -72,7 +72,7 @@ function LookupLocationExample(AdWordsUser $user) {
         $parentLocations = 'N/A';
       }
       printf("The search term '%s' returned the location '%s' of type '%s' "
-          . "with ID '%s', parent locations '%s', and reach '%d' (%s).\n",
+          . "with uniqid '%s', parent locations '%s', and reach '%d' (%s).\n",
           $locationCriterion->searchTerm,
           $locationCriterion->location->locationName,
           $locationCriterion->location->displayType,

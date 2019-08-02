@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201602/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the user to deactivate.
+// Set the uniqid of the user to deactivate.
 $userId = 'INSERT_USER_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the UserService.
   $userService = $user->GetService('UserService', 'v201602');
 
-  // Create a statement to select a single user by ID.
+  // Create a statement to select a single user by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -71,7 +71,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $user) {
-        printf("%d) User with ID %d, email '%s', and role '%s' will be "
+        printf("%d) User with uniqid %d, email '%s', and role '%s' will be "
             . "deactivated.\n", $i++, $user->id, $user->email, $user->roleName);
       }
     }

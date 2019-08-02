@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201602/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the creative to update.
+// Set the uniqid of the creative to update.
 $creativeId = 'INSERT_CREATIVE_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the CreativeService.
   $creativeService = $user->GetService('CreativeService', 'v201602');
 
-  // Create a statement to select a single creative by ID.
+  // Create a statement to select a single creative by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -73,7 +73,7 @@ try {
     $creatives = $creativeService->updateCreatives(array($creative));
 
     foreach ($creatives as $updatedCreative) {
-      printf("Creative with ID %d, and name '%s' was updated.\n",
+      printf("Creative with uniqid %d, and name '%s' was updated.\n",
           $updatedCreative->id, $updatedCreative->name);
     }
   } else {

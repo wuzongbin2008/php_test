@@ -76,7 +76,7 @@ try {
   // Display results.
   if (isset($users)) {
     foreach ($users as $user) {
-      print 'A user with ID "' . $user->id
+      print 'A user with uniqid "' . $user->id
           . '", email "' . $user->email
           . '", and role "' . $user->roleName . "\" was created.\n";
     }

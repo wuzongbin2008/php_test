@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201511/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the label to update.
+// Set the uniqid of the label to update.
 $labelId = 'INSERT_LABEL_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the LabelService.
   $labelService = $user->GetService('LabelService', 'v201511');
 
-  // Create a statement to select a single label by ID.
+  // Create a statement to select a single label by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -70,7 +70,7 @@ try {
   $labels = $labelService->updateLabels(array($label));
 
   foreach ($labels as $updatedLabel) {
-    printf("Label with ID %d, name '%s' was updated.\n", $updatedLabel->id,
+    printf("Label with uniqid %d, name '%s' was updated.\n", $updatedLabel->id,
         $updatedLabel->name);
   }
 } catch (OAuth2Exception $e) {

@@ -53,7 +53,7 @@ FCKToolbarFontFormatCombo.prototype.CreateItems = function( targetSpecialCombo )
 	// Add the Editor Area CSS to the panel to create a realistic preview.
 	FCKTools.AppendStyleSheet( oTargetDoc, FCKConfig.ToolbarComboPreviewCSS ) ;
 
-	// Add ID and Class to the body
+	// Add uniqid and Class to the body
 	if ( FCKConfig.BodyId && FCKConfig.BodyId.length > 0 )
 		oTargetDoc.body.id = FCKConfig.BodyId ;
 	if ( FCKConfig.BodyClass && FCKConfig.BodyClass.length > 0 )

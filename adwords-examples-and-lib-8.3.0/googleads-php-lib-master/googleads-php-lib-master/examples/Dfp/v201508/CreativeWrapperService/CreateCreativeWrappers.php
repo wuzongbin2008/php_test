@@ -68,7 +68,7 @@ try {
   // Display results.
   if (isset($creativeWrappers)) {
     foreach ($creativeWrappers as $creativeWrapper) {
-      printf("Creative wrapper with ID '%d' applying to label '%d' was" .
+      printf("Creative wrapper with uniqid '%d' applying to label '%d' was" .
           " created.\n", $creativeWrapper->id, $creativeWrapper->labelId);
     }
   } else {

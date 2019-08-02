@@ -39,7 +39,7 @@ class PHPExcel_Writer_Excel2007_Drawing extends PHPExcel_Writer_Excel2007_Writer
 	 * Write drawings to XML format
 	 *
 	 * @param 	PHPExcel_Worksheet	$pWorksheet
-	 * @param	int					&$chartRef		Chart ID
+	 * @param	int					&$chartRef		Chart uniqid
 	 * @param	boolean				$includeCharts	Flag indicating if we should include drawing details for charts
 	 * @return 	string 				XML Output
 	 * @throws 	PHPExcel_Writer_Exception

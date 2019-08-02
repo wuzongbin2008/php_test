@@ -385,7 +385,7 @@ var FCK =
 
 				sHtml += FCK.TempBaseTag ;
 
-				// Add ID and Class to the body
+				// Add uniqid and Class to the body
 				var sBodyTag = '<body' ;
 				if ( FCKConfig.BodyId && FCKConfig.BodyId.length > 0 )
 					sBodyTag += ' id="' + FCKConfig.BodyId + '"' ;
@@ -676,14 +676,14 @@ function _FCK_KeystrokeHandler_OnKeystroke( keystroke, keystrokeValue )
 (function()
 {
 	// There is a bug on IE... getElementById returns any META tag that has the
-	// name set to the ID you are looking for. So the best way in to get the array
+	// name set to the uniqid you are looking for. So the best way in to get the array
 	// by names and look for the correct one.
-	// As ASP.Net generates a ID that is different from the Name, we must also
-	// look for the field based on the ID (the first one is the ID).
+	// As ASP.Net generates a uniqid that is different from the Name, we must also
+	// look for the field based on the uniqid (the first one is the uniqid).
 	
 	var oDocument = window.parent.document ;
 
-	// Try to get the field using the ID.
+	// Try to get the field using the uniqid.
 	var eLinkedField = oDocument.getElementById( FCK.Name ) ;
 
 	var i = 0;

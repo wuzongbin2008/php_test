@@ -2423,7 +2423,7 @@ if (!class_exists("GetReportDownloadURL", false)) {
    * <p>
    * The report will be generated as a gzip archive, containing the report file itself.
    * 
-   * @param reportJobId the ID of the {@link ReportJob}
+   * @param reportJobId the uniqid of the {@link ReportJob}
    * @param exportFormat the {@link ExportFormat} for the report file
    * @return the URL for report file download
    * @package GoogleApiAdsDfp
@@ -2518,7 +2518,7 @@ if (!class_exists("GetReportDownloadUrlWithOptions", false)) {
    * By default, the report will be generated as a gzip archive, containing the report file itself.
    * This can be changed by setting {@link ReportDownloadOptions#useGzipCompression} to false.
    * 
-   * @param reportJobId the ID of the {@link ReportJob}
+   * @param reportJobId the uniqid of the {@link ReportJob}
    * @param reportDownloadOptions the {@link ReportDownloadOptions} for the request
    * @return the URL for report file download
    * @package GoogleApiAdsDfp
@@ -2607,7 +2607,7 @@ if (!class_exists("GetReportDownloadUrlWithOptionsResponse", false)) {
 
 if (!class_exists("GetReportJobStatus", false)) {
   /**
-   * Returns the {@link ReportJobStatus} of the report job with the specified ID.
+   * Returns the {@link ReportJobStatus} of the report job with the specified uniqid.
    * @package GoogleApiAdsDfp
    * @subpackage v201505
    */
@@ -2695,7 +2695,7 @@ if (!class_exists("RunReportJob", false)) {
    * </ul>
    * 
    * @param reportJob the report job to run
-   * @return the report job with its ID filled in
+   * @return the report job with its uniqid filled in
    * @package GoogleApiAdsDfp
    * @subpackage v201505
    */
@@ -3215,7 +3215,7 @@ if (!class_exists("ReportService", false)) {
      * <p>
      * The report will be generated as a gzip archive, containing the report file itself.
      * 
-     * @param reportJobId the ID of the {@link ReportJob}
+     * @param reportJobId the uniqid of the {@link ReportJob}
      * @param exportFormat the {@link ExportFormat} for the report file
      * @return the URL for report file download
      */
@@ -3231,7 +3231,7 @@ if (!class_exists("ReportService", false)) {
      * By default, the report will be generated as a gzip archive, containing the report file itself.
      * This can be changed by setting {@link ReportDownloadOptions#useGzipCompression} to false.
      * 
-     * @param reportJobId the ID of the {@link ReportJob}
+     * @param reportJobId the uniqid of the {@link ReportJob}
      * @param reportDownloadOptions the {@link ReportDownloadOptions} for the request
      * @return the URL for report file download
      */
@@ -3241,7 +3241,7 @@ if (!class_exists("ReportService", false)) {
       return $result->rval;
     }
     /**
-     * Returns the {@link ReportJobStatus} of the report job with the specified ID.
+     * Returns the {@link ReportJobStatus} of the report job with the specified uniqid.
      */
     public function getReportJobStatus($reportJobId) {
       $args = new GetReportJobStatus($reportJobId);
@@ -3257,7 +3257,7 @@ if (!class_exists("ReportService", false)) {
      * </ul>
      * 
      * @param reportJob the report job to run
-     * @return the report job with its ID filled in
+     * @return the report job with its uniqid filled in
      */
     public function runReportJob($reportJob) {
       $args = new RunReportJob($reportJob);

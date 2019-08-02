@@ -52,7 +52,7 @@ try {
   $lineItemService = $user->GetService('LineItemService', 'v201508');
 
   // Set the order that all created line items will belong to and the placement
-  // ID to target.
+  // uniqid to target.
   $orderId = 'INSERT_ORDER_ID_HERE';
   $targetPlacementIds = array('INSERT_PLACEMENT_ID_HERE');
 
@@ -167,7 +167,7 @@ try {
   // Display results.
   if (isset($lineItems)) {
     foreach ($lineItems as $lineItem) {
-      printf("A line item with with ID %d, belonging to order ID %d, and name "
+      printf("A line item with with uniqid %d, belonging to order uniqid %d, and name "
           . "%s was created\n", $lineItem->id, $lineItem->orderId,
           $lineItem->name);
     }

@@ -70,7 +70,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $creativeWrapper) {
-        printf("%d) Creative wrapper with ID %d, applying to label %d, and "
+        printf("%d) Creative wrapper with uniqid %d, applying to label %d, and "
             . "status %s was found.\n", $i++, $creativeWrapper->id,
             $creativeWrapper->labelId, $creativeWrapper->status);
       }

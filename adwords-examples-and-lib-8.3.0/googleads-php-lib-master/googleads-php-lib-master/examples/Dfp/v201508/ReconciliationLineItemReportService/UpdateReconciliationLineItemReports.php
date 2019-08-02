@@ -40,7 +40,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201508/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the reconciliation line item report to retrieve.
+// Set the uniqid of the reconciliation line item report to retrieve.
 $reconciliationLineItemReportId =
     'INSERT_RECONCILIATION_LINE_ITEM_REPORT_ID_HERE';
 
@@ -82,7 +82,7 @@ try {
 
   foreach ($updatedLineItemReports as $updatedLineItemReport) {
     printf(
-        "Reconciliation line item report with ID %d for line item ID %d was "
+        "Reconciliation line item report with uniqid %d for line item uniqid %d was "
         . "updated, with manual volume %d.\n",
         $updatedLineItemReport->id,
         $updatedLineItemReport->lineItemId,

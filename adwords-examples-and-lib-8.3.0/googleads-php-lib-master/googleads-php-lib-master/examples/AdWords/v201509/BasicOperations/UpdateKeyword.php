@@ -48,7 +48,7 @@ function UpdateKeywordExample(AdWordsUser $user, $adGroupId, $criterionId) {
   // Create ad group criterion.
   $adGroupCriterion = new BiddableAdGroupCriterion();
   $adGroupCriterion->adGroupId = $adGroupId;
-  // Create criterion using an existing ID. Use the base class Criterion
+  // Create criterion using an existing uniqid. Use the base class Criterion
   // instead of Keyword to avoid having to set keyword-specific fields.
   $adGroupCriterion->criterion = new Criterion($criterionId);
 
@@ -67,7 +67,7 @@ function UpdateKeywordExample(AdWordsUser $user, $adGroupId, $criterionId) {
 
   // Display result.
   $adGroupCriterion = $result->value[0];
-  printf("Keyword with ID '%s' has updated final URL '%s'.\n",
+  printf("Keyword with uniqid '%s' has updated final URL '%s'.\n",
       $adGroupCriterion->criterion->id, $adGroupCriterion->finalUrls->urls[0]);
 }
 

@@ -46,7 +46,7 @@
 			$header .= "Date: ".date("r")."\r\n";
 			$header .= "X-Mailer: 72e.net (PHP/".phpversion().")\r\n";
 			list($msec, $sec) = explode(" ", microtime());
-			$header .= "Message-ID: <".date("YmdHis", $sec).".".($msec*1000000).".".$mail_from.">\r\n";
+			$header .= "Message-uniqid: <".date("YmdHis", $sec).".".($msec*1000000).".".$mail_from.">\r\n";
 			$TO = explode(",", $this->strip_comment($to));
 			if ($cc != "") {
 				$TO = array_merge($TO, explode(",", $this->strip_comment($cc)));

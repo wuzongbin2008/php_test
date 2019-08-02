@@ -40,7 +40,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201602/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the reconciliation report and the row to update.
+// Set the uniqid of the reconciliation report and the row to update.
 $reconciliationReportId = 'INSERT_RECONCILIATION_REPORT_ID_HERE';
 $reconciliationReportRowId = 'INSERT_RECONCILIATION_REPORT_ROW_ID_HERE';
 
@@ -86,8 +86,8 @@ try {
 
   foreach ($updatedRows as $updatedRow) {
     printf(
-        "Reconciliation report row with ID %d for line item ID %d and creative "
-            . "ID %d was updated, with manual volume %d.\n",
+        "Reconciliation report row with uniqid %d for line item uniqid %d and creative "
+            . "uniqid %d was updated, with manual volume %d.\n",
         $updatedRow->id,
         $updatedRow->lineItemId,
         $updatedRow->creativeId,

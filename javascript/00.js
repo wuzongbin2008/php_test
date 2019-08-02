@@ -187,10 +187,10 @@ function Form_Submit(Flag,FormNum){
 			          if(CheckData('Form' + FormNum + '.ID','','',str,'4')==false){
 					     return false;
 					  }else{
-					        window.location.href=FormNum + '01.asp?Flag=2&ID=' + eval('document.Form' + FormNum + '.ID.value');
+					        window.location.href=FormNum + '01.asp?Flag=2&uniqid=' + eval('document.Form' + FormNum + '.ID.value');
 					  }
 			 }else{
-				   window.location.href=FormNum + '01.asp?Flag=2&ID=' + eval('document.Form' + FormNum + '.ID.value');
+				   window.location.href=FormNum + '01.asp?Flag=2&uniqid=' + eval('document.Form' + FormNum + '.ID.value');
 			 }	
   }else if(Flag==3 || Flag==4){
 			 if(CheckData('Form' + FormNum + '.ID','1','',str,'1')==false){
@@ -200,14 +200,14 @@ function Form_Submit(Flag,FormNum){
 					     return false;
 					  }else{
 						   if(ConfirmMsg('請問是否確定刪除？')){ 
-							  if (Flag==3){window.location.href= FormNum + '02.asp?Flag=3&ID=' + eval('document.Form' + FormNum + '.ID.value');};
-							  if (Flag==4){window.location.href= FormNum + '03.asp?Flag=3&ID=' + eval('document.Form' + FormNum + '.ID.value');};
+							  if (Flag==3){window.location.href= FormNum + '02.asp?Flag=3&uniqid=' + eval('document.Form' + FormNum + '.ID.value');};
+							  if (Flag==4){window.location.href= FormNum + '03.asp?Flag=3&uniqid=' + eval('document.Form' + FormNum + '.ID.value');};
 						   }
 					  }
 			 }else{
 			       if(ConfirmMsg('請問是否確定刪除？')){ 
-				      if (Flag==3){window.location.href= FormNum + '02.asp?Flag=3&ID=' + eval('document.Form' + FormNum + '.ID.value');};
-					  if (Flag==4){window.location.href= FormNum + '03.asp?Flag=3&ID=' + eval('document.Form' + FormNum + '.ID.value');};
+				      if (Flag==3){window.location.href= FormNum + '02.asp?Flag=3&uniqid=' + eval('document.Form' + FormNum + '.ID.value');};
+					  if (Flag==4){window.location.href= FormNum + '03.asp?Flag=3&uniqid=' + eval('document.Form' + FormNum + '.ID.value');};
 				   }
 			 }	  
   }
@@ -230,15 +230,15 @@ function Form_Submit2(Flag,FormNum,OtherVar){
 			 if((CheckData('Form' + FormNum + '.ID','1','','請輸入序號！','1')==false) || (CheckData('Form' + FormNum + '.ID','','','請輸入序號！','4')==false)){
 				return false;
 			 }else{
-				   window.location.href=FormNum + '01.asp?Flag=2&ID=' + eval('document.Form' + FormNum + '.ID.value') + OtherVar;
+				   window.location.href=FormNum + '01.asp?Flag=2&uniqid=' + eval('document.Form' + FormNum + '.ID.value') + OtherVar;
 			 }	
   }else if(Flag==3 || Flag==4){
 			 if((CheckData('Form' + FormNum + '.ID','1','','請輸入序號！','1')==false) || (CheckData('Form' + FormNum + '.ID','','','請輸入序號！','4')==false)){
 				return false;
 			 }else{
 			       if(ConfirmMsg('請問是否確定刪除？')){ 
-				      if (Flag==3){window.location.href= FormNum + '02.asp?Flag=3&ID=' + eval('document.Form' + FormNum + '.ID.value') + OtherVar;};
-					  if (Flag==4){window.location.href= FormNum + '03.asp?Flag=3&ID=' + eval('document.Form' + FormNum + '.ID.value') + OtherVar;};
+				      if (Flag==3){window.location.href= FormNum + '02.asp?Flag=3&uniqid=' + eval('document.Form' + FormNum + '.ID.value') + OtherVar;};
+					  if (Flag==4){window.location.href= FormNum + '03.asp?Flag=3&uniqid=' + eval('document.Form' + FormNum + '.ID.value') + OtherVar;};
 				   }
 			 }	  
   }

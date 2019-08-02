@@ -56,7 +56,7 @@ try {
   $customTargetingKeyId = 'INSERT_CUSTOM_TARGETING_KEY_ID_HERE';
   $customTargetingValueId = 'INSERT_CUSTOM_TARGETING_VALUE_ID_HERE';
 
-  // Get the root ad unit ID used to target the whole site.
+  // Get the root ad unit uniqid used to target the whole site.
   $rootAdUnitId = $networkService->getCurrentNetwork()->effectiveRootAdUnitId;
 
   // Create inventory targeting to be used in the segment rule.
@@ -101,7 +101,7 @@ try {
 
   // Display results.
   foreach ($audienceSegments as $createdAudienceSegment) {
-    printf("An audience segment with ID \"%d\", name \"%s\", and type \"%s\" "
+    printf("An audience segment with uniqid \"%d\", name \"%s\", and type \"%s\" "
         . "was created.\n", $createdAudienceSegment->id,
         $createdAudienceSegment->name, $createdAudienceSegment->type);
   }

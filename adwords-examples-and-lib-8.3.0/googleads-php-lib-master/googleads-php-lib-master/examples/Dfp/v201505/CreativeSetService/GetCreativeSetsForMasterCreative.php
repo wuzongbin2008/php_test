@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the master creative to get all creative sets for.
+// Set the uniqid of the master creative to get all creative sets for.
 $masterCreativeId = "INSERT_MASTER_CREATIVE_ID_HERE";
 
 try {
@@ -73,7 +73,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $creativeSet) {
-        printf("%d) Creative set with ID %d, and name '%s' was found.\n", $i++,
+        printf("%d) Creative set with uniqid %d, and name '%s' was found.\n", $i++,
             $creativeSet->id, $creativeSet->name);
       }
     }

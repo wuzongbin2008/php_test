@@ -39,7 +39,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201511/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the premium rate to update.
+// Set the uniqid of the premium rate to update.
 $premiumRateId = 'INSERT_PREMIUM_RATE_ID_HERE';
 
 try {
@@ -53,7 +53,7 @@ try {
   // Get the PremiumRateService.
   $premiumRateService = $user->GetService('PremiumRateService', 'v201511');
 
-  // Create a statement to select a single premium rate by ID.
+  // Create a statement to select a single premium rate by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -80,8 +80,8 @@ try {
   $premiumRates = $premiumRateService->updatePremiumRates(array($premiumRate));
 
   foreach ($premiumRates as $updatedPremiumRate) {
-    printf("Premium rate with ID %d, of type '%s', assigned to rate card with "
-        . "ID %d was updated.\n",
+    printf("Premium rate with uniqid %d, of type '%s', assigned to rate card with "
+        . "uniqid %d was updated.\n",
         $updatedPremiumRate->id,
         get_class($updatedPremiumRate->premiumFeature),
         $updatedPremiumRate->rateCardId

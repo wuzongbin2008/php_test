@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the creative wrapper to update.
+// Set the uniqid of the creative wrapper to update.
 $creativeWrapperId = 'INSERT_CREATIVE_WRAPPER_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the CreativeWrapperService.
   $creativeWrapperService = $user->GetService('CreativeWrapperService', 'v201505');
 
-  // Create a statement to select a single creative wrapper by ID.
+  // Create a statement to select a single creative wrapper by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -72,7 +72,7 @@ try {
       $creativeWrapperService->updateCreativeWrappers(array($creativeWrapper));
 
   foreach ($creativeWrappers as $updatedCreativeWrapper) {
-    printf("Creative wrapper with ID %d, and wrapping order '%s' was "
+    printf("Creative wrapper with uniqid %d, and wrapping order '%s' was "
         . "updated.\n", $updatedCreativeWrapper->id,
         $updatedCreativeWrapper->ordering);
   }

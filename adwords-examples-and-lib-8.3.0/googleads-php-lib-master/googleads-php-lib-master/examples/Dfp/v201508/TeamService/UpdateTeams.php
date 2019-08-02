@@ -38,10 +38,10 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201508/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the team to update.
+// Set the uniqid of the team to update.
 $teamId = 'INSERT_TEAM_ID_HERE';
 
-// Set the ID of the ad unit to add to the team.
+// Set the uniqid of the ad unit to add to the team.
 $adUnitId = 'INSERT_AD_UNIT_ID_HERE';
 
 try {
@@ -55,7 +55,7 @@ try {
   // Get the TeamService.
   $teamService = $user->GetService('TeamService', 'v201508');
 
-  // Create a statement to select a single team by ID.
+  // Create a statement to select a single team by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -76,7 +76,7 @@ try {
     $teams = $teamService->updateTeams(array($team));
 
     foreach ($teams as $updatedTeam) {
-      printf("Team with ID %d, name '%s' was updated.\n", $updatedTeam->id,
+      printf("Team with uniqid %d, name '%s' was updated.\n", $updatedTeam->id,
           $updatedTeam->name);
     }
   } else {

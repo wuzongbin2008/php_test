@@ -39,10 +39,10 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201602/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ad unit ID to add to the placement.
+// Set the ad unit uniqid to add to the placement.
 $adUnitId = 'INSERT_AD_UNIT_ID_HERE';
 
-// Set the placement ID to add the ad unit to.
+// Set the placement uniqid to add the ad unit to.
 $placementId = 'INSERT_PLACEMENT_ID_HERE';
 
 try {
@@ -56,7 +56,7 @@ try {
   // Get the InventoryService.
   $inventoryService = $user->GetService('InventoryService', 'v201602');
 
-  // Create a statement to select a single ad unit by ID.
+  // Create a statement to select a single ad unit by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -76,8 +76,8 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $adUnit) {
-        printf("%d) Ad unit with ID %d, and name '%s' will be added to "
-            . "placement ID %d.\n", $i++, $adUnit->id, $adUnit->name,
+        printf("%d) Ad unit with uniqid %d, and name '%s' will be added to "
+            . "placement uniqid %d.\n", $i++, $adUnit->id, $adUnit->name,
             $placementId);
       }
     }

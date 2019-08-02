@@ -68,7 +68,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $productTemplate) {
-        printf("%d) Product template with ID %d, and name '%s' was found.\n",
+        printf("%d) Product template with uniqid %d, and name '%s' was found.\n",
             $i++, $productTemplate->id, $productTemplate->name);
       }
     }

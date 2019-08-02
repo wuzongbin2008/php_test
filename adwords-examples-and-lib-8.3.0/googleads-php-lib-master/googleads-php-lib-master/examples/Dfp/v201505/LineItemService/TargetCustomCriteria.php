@@ -88,7 +88,7 @@ try {
   $topCustomCriteriaSet->children =
       array($customCriteria1, $subCustomCriteriaSet);
 
-  // Create a statement to select a single line item by ID.
+  // Create a statement to select a single line item by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -107,7 +107,7 @@ try {
   $lineItems = $lineItemService->updateLineItems(array($lineItem));
 
   foreach ($lineItems as $lineItem) {
-    printf("Line item with ID %d was updated.\n", $lineItem->id);
+    printf("Line item with uniqid %d was updated.\n", $lineItem->id);
   }
 } catch (OAuth2Exception $e) {
   ExampleUtils::CheckForOAuth2Errors($e);

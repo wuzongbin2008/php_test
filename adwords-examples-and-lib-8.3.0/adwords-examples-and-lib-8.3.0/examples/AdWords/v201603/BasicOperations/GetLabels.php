@@ -50,7 +50,7 @@ function GetLabelsExample(AdWordsUser $user) {
     // Display results.
     if (isset($page->entries)) {
       foreach ($page->entries as $label) {
-        printf("Label with name '%s' and ID '%s' was found.\n",
+        printf("Label with name '%s' and uniqid '%s' was found.\n",
             $label->name, $label->id);
       }
     } else {

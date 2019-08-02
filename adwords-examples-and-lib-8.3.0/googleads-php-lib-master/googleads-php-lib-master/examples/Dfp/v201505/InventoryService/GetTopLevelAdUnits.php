@@ -52,7 +52,7 @@ try {
   // Get the NetworkService.
   $networkService = $user->GetService('NetworkService', 'v201505');
 
-  // Set the parent ad unit's ID for all children ad units to be fetched from.
+  // Set the parent ad unit's uniqid for all children ad units to be fetched from.
   $parentAdUnitId = $networkService->getCurrentNetwork()->effectiveRootAdUnitId;
 
   // Create a statement to select ad units under the parent ad unit.
@@ -75,7 +75,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $adUnit) {
-        printf("%d) Ad unit with ID %s, name '%s', and status %s was found.\n",
+        printf("%d) Ad unit with uniqid %s, name '%s', and status %s was found.\n",
             $i++, $adUnit->id, $adUnit->name, $adUnit->status);
       }
     }

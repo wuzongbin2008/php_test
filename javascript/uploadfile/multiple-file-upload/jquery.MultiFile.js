@@ -138,7 +138,7 @@
        //===
        
        // Create wrapper to hold our file list
-       MultiFile.wrapID = MultiFile.instanceKey+'_wrap'; // Wrapper ID?
+       MultiFile.wrapID = MultiFile.instanceKey+'_wrap'; // Wrapper uniqid?
        MultiFile.E.wrap('<div class="MultiFile-wrap" id="'+MultiFile.wrapID+'"></div>');
        MultiFile.wrapper = $('#'+MultiFile.wrapID+'');
        
@@ -173,7 +173,7 @@
 								// Clear identifying properties from clones
 								if(slave_count>0) slave.id = slave.name = '';
 								
-        // Define element's ID and name (upload components need this!)
+        // Define element's uniqid and name (upload components need this!)
         //slave.id = slave.id || MultiFile.generateID(slave_count);
 								if(slave_count>0) slave.id = MultiFile.generateID(slave_count);
 								//FIX for: http://code.google.com/p/jquery-multifile-plugin/issues/detail?id=23
@@ -246,7 +246,7 @@
             // Handle error
             MultiFile.error(ERROR);
 												
-            // 2007-06-24: BUG FIX - Thanks to Adrian Wróbel <adrian [dot] wrobel [at] gmail.com>
+            // 2007-06-24: BUG FIX - Thanks to Adrian Wrï¿½bel <adrian [dot] wrobel [at] gmail.com>
             // Ditch the trouble maker and add a fresh new element
             MultiFile.n--;
             MultiFile.addSlave(newEle[0], slave_count);

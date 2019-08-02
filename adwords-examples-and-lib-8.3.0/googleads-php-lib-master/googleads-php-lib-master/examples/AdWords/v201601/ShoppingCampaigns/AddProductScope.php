@@ -50,7 +50,7 @@ function addProductScopeExample(AdWordsUser $user, $campaignId) {
   $productScope->dimensions[] = new ProductOfferId('book1');
   $productScope->dimensions[] = new ProductType('PRODUCT_TYPE_L1', 'Media');
   $productScope->dimensions[] = new ProductType('PRODUCT_TYPE_L2', 'Books');
-  // The value for the bidding category is a fixed ID for the 'Luggage & Bags'
+  // The value for the bidding category is a fixed uniqid for the 'Luggage & Bags'
   // category. You can retrieve IDs for categories from the ConstantDataService.
   // See the 'GetProductCategoryTaxonomy' example for more details.
   $productScope->dimensions[] =
@@ -68,7 +68,7 @@ function addProductScopeExample(AdWordsUser $user, $campaignId) {
   // Make the mutate request.
   $result = $campaignCriterionService->mutate(array($operation));
 
-  printf("Created a ProductScope criterion with ID '%s'",
+  printf("Created a ProductScope criterion with uniqid '%s'",
         $result->value[0]->criterion->id);
 }
 

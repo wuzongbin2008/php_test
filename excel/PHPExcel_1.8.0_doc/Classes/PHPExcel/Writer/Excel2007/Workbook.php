@@ -238,7 +238,7 @@ class PHPExcel_Writer_Excel2007_Workbook extends PHPExcel_Writer_Excel2007_Write
 	 * @param 	PHPExcel_Shared_XMLWriter 	$objWriter 		XML Writer
 	 * @param 	string 						$pSheetname 		Sheet name
 	 * @param 	int							$pSheetId	 		Sheet id
-	 * @param 	int							$pRelId				Relationship ID
+	 * @param 	int							$pRelId				Relationship uniqid
 	 * @param   string                      $sheetState         Sheet state (visible, hidden, veryHidden)
 	 * @throws 	PHPExcel_Writer_Exception
 	 */

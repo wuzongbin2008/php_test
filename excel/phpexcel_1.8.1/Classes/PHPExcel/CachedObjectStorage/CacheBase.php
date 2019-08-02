@@ -304,7 +304,7 @@ abstract class PHPExcel_CachedObjectStorage_CacheBase {
 
 
 	/**
-	 * Generate a unique ID for cache referencing
+	 * Generate a unique uniqid for cache referencing
 	 *
 	 * @return string Unique Reference
 	 */
@@ -351,7 +351,7 @@ abstract class PHPExcel_CachedObjectStorage_CacheBase {
     /**
      * Remove a column, deleting all cells in that column
      *
-     * @param string    $column    Column ID to remove
+     * @param string    $column    Column uniqid to remove
      * @return void
      */
     public function removeColumn($column) {

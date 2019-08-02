@@ -845,7 +845,7 @@ class PHPMailer {
       $result .= $this->HeaderLine('Subject', $this->EncodeHeader($this->SecureHeader($this->Subject)));
     }
 
-    $result .= sprintf("Message-ID: <%s@%s>%s", $uniq_id, $this->ServerHostname(), $this->LE);
+    $result .= sprintf("Message-uniqid: <%s@%s>%s", $uniq_id, $this->ServerHostname(), $this->LE);
     $result .= $this->HeaderLine('X-Priority', $this->Priority);
     $result .= $this->HeaderLine('X-Mailer', 'PHPMailer (phpmailer.sourceforge.net) [version ' . $this->Version . ']');
 
@@ -1076,7 +1076,7 @@ class PHPMailer {
       $mime[] = sprintf("Content-Transfer-Encoding: %s%s", $encoding, $this->LE);
 
       if($disposition == 'inline') {
-        $mime[] = sprintf("Content-ID: <%s>%s", $cid, $this->LE);
+        $mime[] = sprintf("Content-uniqid: <%s>%s", $cid, $this->LE);
       }
 
       $mime[] = sprintf("Content-Disposition: %s; filename=\"%s\"%s", $disposition, $name, $this->LE.$this->LE);
@@ -1313,7 +1313,7 @@ class PHPMailer {
    * image type.  For JPEG images use "image/jpeg" and for GIF images
    * use "image/gif".
    * @param string $path Path to the attachment.
-   * @param string $cid Content ID of the attachment.  Use this to identify
+   * @param string $cid Content uniqid of the attachment.  Use this to identify
    *        the Id for accessing the image in an HTML form.
    * @param string $name Overrides the attachment name.
    * @param string $encoding File encoding (see $Encoding).

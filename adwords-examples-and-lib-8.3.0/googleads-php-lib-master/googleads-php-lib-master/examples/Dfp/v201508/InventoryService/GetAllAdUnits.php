@@ -66,7 +66,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $adUnit) {
-        printf("%d) Ad unit with ID %s, name '%s', and status %s was found.\n",
+        printf("%d) Ad unit with uniqid %s, name '%s', and status %s was found.\n",
             $i++, $adUnit->id, $adUnit->name, $adUnit->status);
       }
     }

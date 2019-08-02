@@ -26,7 +26,7 @@ var
 		return new jQuery.fn.init( selector, context );
 	},
 
-	// A simple way to check for HTML strings or ID strings
+	// A simple way to check for HTML strings or uniqid strings
 	// (both of which we optimize for)
 	quickExpr = /^[^<]*(<(.|\s)+>)[^>]*$|^#([\w-]+)$/,
 	// Is it a simple selector
@@ -46,7 +46,7 @@ jQuery.fn = jQuery.prototype = {
 		}
 		// Handle HTML strings
 		if ( typeof selector === "string" ) {
-			// Are we dealing with HTML string or an ID?
+			// Are we dealing with HTML string or an uniqid?
 			var match = quickExpr.exec( selector );
 
 			// Verify a match, and that no context was specified for #id
@@ -61,7 +61,7 @@ jQuery.fn = jQuery.prototype = {
 					var elem = document.getElementById( match[3] );
 
 					// Handle the case where IE and Opera return items
-					// by name instead of ID
+					// by name instead of uniqid
 					if ( elem && elem.id != match[3] )
 						return jQuery().find( selector );
 
@@ -1278,7 +1278,7 @@ jQuery.extend({
 
 		var id = elem[ expando ];
 
-		// Compute a unique ID for the element
+		// Compute a unique uniqid for the element
 		if ( !id )
 			id = elem[ expando ] = ++uuid;
 
@@ -1291,7 +1291,7 @@ jQuery.extend({
 		if ( data !== undefined )
 			jQuery.cache[ id ][ name ] = data;
 
-		// Return the named cache data, or the ID for the element
+		// Return the named cache data, or the uniqid for the element
 		return name ?
 			jQuery.cache[ id ][ name ] :
 			id;
@@ -2212,7 +2212,7 @@ if ( document.querySelectorAll ) (function(){
 		context = context || document;
 
 		// Only use querySelectorAll on non-XML documents
-		// (ID selectors don't work in non-HTML documents)
+		// (uniqid selectors don't work in non-HTML documents)
 		if ( !seed && context.nodeType === 9 && !isXML(context) ) {
 			try {
 				return makeArray( context.querySelectorAll(query), extra );
@@ -2443,7 +2443,7 @@ jQuery.event = {
 		if ( elem.setInterval && elem != window )
 			elem = window;
 
-		// Make sure that the function being executed has a unique ID
+		// Make sure that the function being executed has a unique uniqid
 		if ( !handler.guid )
 			handler.guid = this.guid++;
 

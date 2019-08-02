@@ -65,7 +65,7 @@ try {
   // Display results.
   if (isset($teams)) {
     foreach ($teams as $team) {
-      print 'A team with ID "' . $team->id
+      print 'A team with uniqid "' . $team->id
           . '" and name "'. $team->name
           . '" was created."' . "\n";
     }

@@ -40,7 +40,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Common/Util/MediaUtils.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the advertiser (company) that all creatives will be
+// Set the uniqid of the advertiser (company) that all creatives will be
 // assigned to.
 $advertiserId = 'INSERT_ADVERTISER_COMPANY_ID_HERE';
 
@@ -89,7 +89,7 @@ try {
     foreach ($imageCreatives as $creative) {
       // Use instanceof to determine what type of creative was returned.
       if ($creative instanceof ImageCreative) {
-        printf("An image creative with ID %d, name '%s', and size '%sx%s' was "
+        printf("An image creative with uniqid %d, name '%s', and size '%sx%s' was "
             . "created and can be previewed at: '%s'\n",
             $creative->id,
             $creative->name,
@@ -98,7 +98,7 @@ try {
             $creative->previewUrl
         );
       } else {
-        printf("A creative with ID %d, name '%s', and type '%s' was created.\n",
+        printf("A creative with uniqid %d, name '%s', and type '%s' was created.\n",
             $creative->id,
             $creative->name,
             get_class($creative)

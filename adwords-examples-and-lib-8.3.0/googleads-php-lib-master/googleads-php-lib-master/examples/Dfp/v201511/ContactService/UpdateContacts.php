@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201511/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the contact to update.
+// Set the uniqid of the contact to update.
 $contactId = 'INSERT_CONTACT_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the ContactService.
   $contactService = $user->GetService('ContactService', 'v201511');
 
-  // Create a statement to select a single contact by ID.
+  // Create a statement to select a single contact by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -71,7 +71,7 @@ try {
   $contacts = $contactService->updateContacts(array($contact));
 
   foreach ($contacts as $updatedContact) {
-    printf("Contact with ID %d, name '%s', and address '%s' was updated.\n",
+    printf("Contact with uniqid %d, name '%s', and address '%s' was updated.\n",
         $updatedContact->id, $updatedContact->name, $updatedContact->address);
   }
 } catch (OAuth2Exception $e) {

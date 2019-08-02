@@ -37,7 +37,7 @@ set_include_path(get_include_path() . PATH_SEPARATOR . $path);
 require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the line item to get a forecast for.
+// Set the uniqid of the line item to get a forecast for.
 $lineItemId = 'INSERT_LINE_ITEM_ID_HERE';
 
 try {

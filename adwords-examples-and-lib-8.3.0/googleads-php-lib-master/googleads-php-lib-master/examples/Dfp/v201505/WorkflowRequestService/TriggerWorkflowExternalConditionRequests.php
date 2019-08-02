@@ -40,7 +40,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the proposal to trigger workflow external conditions for.
+// Set the uniqid of the proposal to trigger workflow external conditions for.
 $proposalId = 'INSERT_PROPOSAL_ID_HERE';
 
 try {
@@ -78,8 +78,8 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $workflowRequest) {
-        printf("%d) Workflow external condition request with ID %d, for '%s', "
-            . "with ID %d will be triggerd.\n",
+        printf("%d) Workflow external condition request with uniqid %d, for '%s', "
+            . "with uniqid %d will be triggerd.\n",
             $i++,
             $workflowRequest->id,
             $workflowRequest->entityType,

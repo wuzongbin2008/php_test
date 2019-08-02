@@ -69,7 +69,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $creativeTemplate) {
-        printf("%d) Creative template with ID %d, name '%s', and type %s was "
+        printf("%d) Creative template with uniqid %d, name '%s', and type %s was "
             . "found.\n", $i++, $creativeTemplate->id, $creativeTemplate->name,
             $creativeTemplate->type);
       }

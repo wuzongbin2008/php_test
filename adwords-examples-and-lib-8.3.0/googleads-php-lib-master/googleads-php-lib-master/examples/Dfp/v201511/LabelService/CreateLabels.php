@@ -65,7 +65,7 @@ try {
   // Display results.
   if (isset($labels)) {
     foreach ($labels as $label) {
-      printf("A label with ID '%s', name '%s', and types {%s} was created.\n",
+      printf("A label with uniqid '%s', name '%s', and types {%s} was created.\n",
           $label->id, $label->name, join(',', $label->types));
     }
   } else {

@@ -2895,7 +2895,7 @@ if (!class_exists("CreateProductPackages", false)) {
    * Creates new {@link ProductPackage} objects.
    * 
    * @param productPackages the product packages to create
-   * @return the persisted product packages with their ID filled in
+   * @return the persisted product packages with their uniqid filled in
    * @package GoogleApiAdsDfp
    * @subpackage v201602
    */
@@ -3823,7 +3823,7 @@ if (!class_exists("ProductPackageService", false)) {
      * Creates new {@link ProductPackage} objects.
      * 
      * @param productPackages the product packages to create
-     * @return the persisted product packages with their ID filled in
+     * @return the persisted product packages with their uniqid filled in
      */
     public function createProductPackages($productPackages) {
       $args = new CreateProductPackages($productPackages);

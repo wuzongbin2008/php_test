@@ -69,7 +69,7 @@ try {
       $exchangeRateService->createExchangeRates(array($exchangeRate));
 
   foreach ($exchangeRates as $createdExchangeRate) {
-    printf("An exchange rate with ID %d, currency code '%s', direction '%s', "
+    printf("An exchange rate with uniqid %d, currency code '%s', direction '%s', "
         . "and exchange rate %.2f was created.\n",
         $createdExchangeRate->id,
         $createdExchangeRate->currencyCode,

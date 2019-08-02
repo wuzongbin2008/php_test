@@ -1738,7 +1738,7 @@ if (!class_exists("StringLengthErrorReason", false)) {
 
 if (!class_exists("ManagedCustomerLabel", false)) {
   /**
-   * A label ID and customer ID the label applies to.
+   * A label uniqid and customer uniqid the label applies to.
    * @package Google_Api_Ads_AdWords_v201601
    * @subpackage v201601
    */
@@ -1834,7 +1834,7 @@ if (!class_exists("ManagedCustomerLabelReturnValue", false)) {
    * <p>For successful {@linkplain ADD} operations, the input {@linkplain ManagedCustomerLabel}
    * is returned.
    * <p>For successful {@linkplain REMOVE} operations, the returned {@linkplain ManagedCustomerLabel}
-   * will contain the customer ID and a null label ID.
+   * will contain the customer uniqid and a null label uniqid.
    * @package Google_Api_Ads_AdWords_v201601
    * @subpackage v201601
    */

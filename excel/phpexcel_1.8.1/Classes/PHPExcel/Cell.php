@@ -751,7 +751,7 @@ class PHPExcel_Cell
 	 *
 	 *	@param	string	$pRange		Cell range (e.g. A1:A1)
 	 *	@return	array	Range coordinates array(Start Cell, End Cell)
-	 *					where Start Cell and End Cell are arrays (Column ID, Row Number)
+	 *					where Start Cell and End Cell are arrays (Column uniqid, Row Number)
 	 */
 	public static function getRangeBoundaries($pRange = 'A1:A1')
 	{

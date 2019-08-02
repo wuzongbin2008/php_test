@@ -66,7 +66,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $contact) {
-        printf("%d) Contact with ID %d, and name '%s' was found.\n", $i++,
+        printf("%d) Contact with uniqid %d, and name '%s' was found.\n", $i++,
             $contact->id, $contact->name);
       }
     }

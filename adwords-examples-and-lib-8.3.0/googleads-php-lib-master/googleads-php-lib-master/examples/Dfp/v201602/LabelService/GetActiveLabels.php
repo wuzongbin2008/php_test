@@ -68,7 +68,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $label) {
-        printf("%d) Label with ID %d, and name '%s' was found.\n", $i++,
+        printf("%d) Label with uniqid %d, and name '%s' was found.\n", $i++,
             $label->id, $label->name);
       }
     }

@@ -113,7 +113,7 @@ function HandlePolicyViolationErrorExample(AdWordsUser $user, $adGroupId) {
 
     // Display results.
     foreach ($result->value as $adGroupAd) {
-      printf("Text ad with headline '%s' and ID '%s' was added.\n",
+      printf("Text ad with headline '%s' and uniqid '%s' was added.\n",
           $adGroupAd->ad->headline, $adGroupAd->ad->id);
     }
   } else {

@@ -52,7 +52,7 @@ try {
   // Get the NetworkService.
   $networkService = $user->GetService('NetworkService', 'v201508');
 
-  // Get the effective root ad unit's ID for all ad units to be created under.
+  // Get the effective root ad unit's uniqid for all ad units to be created under.
   $network = $networkService->getCurrentNetwork();
   $effectiveRootAdUnitId = $network->effectiveRootAdUnitId;
 
@@ -83,8 +83,8 @@ try {
   // Display results.
   if (isset($adUnits)) {
     foreach ($adUnits as $adUnit) {
-      print 'An ad unit with ID "' . $adUnit->id
-          . '" was created under parent with ID "' . $adUnit->parentId
+      print 'An ad unit with uniqid "' . $adUnit->id
+          . '" was created under parent with uniqid "' . $adUnit->parentId
           . "\".\n";
     }
   } else {

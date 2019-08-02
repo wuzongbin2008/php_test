@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the user to fetch all user team associations for.
+// Set the uniqid of the user to fetch all user team associations for.
 $userId = "INSERT_USER_ID_HERE";
 
 try {
@@ -74,8 +74,8 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $userTeamAssociation) {
-        printf("%d) User team association between user with ID %d, and team "
-            . "with ID %d was found.\n", $i++, $userTeamAssociation->userId,
+        printf("%d) User team association between user with uniqid %d, and team "
+            . "with uniqid %d was found.\n", $i++, $userTeamAssociation->userId,
             $userTeamAssociation->teamId);
       }
     }

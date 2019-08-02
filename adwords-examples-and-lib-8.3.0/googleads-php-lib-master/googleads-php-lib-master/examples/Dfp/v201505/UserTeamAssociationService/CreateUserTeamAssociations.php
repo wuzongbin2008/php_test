@@ -50,7 +50,7 @@ try {
   $userTeamAssociationService =
       $user->GetService('UserTeamAssociationService', 'v201505');
 
-  // Set the team ID and user IDs to associate together.
+  // Set the team uniqid and user IDs to associate together.
   $teamId = 'INSERT_TEAM_ID_HERE';
   $userIds = array('INSERT_USER_ID_HERE');
 
@@ -72,8 +72,8 @@ try {
   // Display results.
   if (isset($utas)) {
     foreach ($utas as $uta) {
-      print 'A user team association between user with ID "' . $uta->userId
-          . '" and team with ID "' . $uta->teamId
+      print 'A user team association between user with uniqid "' . $uta->userId
+          . '" and team with uniqid "' . $uta->teamId
           . "\" was created.\n";
     }
   } else {

@@ -61,7 +61,7 @@ function CreateAccountExample(AdWordsUser $user) {
 
   // Display result.
   $customer = $result->value[0];
-  printf("Account with customer ID '%s' was created.\n",
+  printf("Account with customer uniqid '%s' was created.\n",
       $customer->customerId);
 }
 

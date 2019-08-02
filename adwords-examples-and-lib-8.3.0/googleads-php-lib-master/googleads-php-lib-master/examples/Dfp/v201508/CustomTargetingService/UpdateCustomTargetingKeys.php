@@ -39,7 +39,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201508/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the custom targeting key to update.
+// Set the uniqid of the custom targeting key to update.
 $customTargetingKeyId = 'INSERT_CUSTOM_TARGETING_KEY_ID_HERE';
 
 try {
@@ -54,7 +54,7 @@ try {
   $customTargetingService =
       $user->GetService('CustomTargetingService', 'v201508');
 
-  // Create a statement to select a single custom targeting key by ID.
+  // Create a statement to select a single custom targeting key by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -78,7 +78,7 @@ try {
           updateCustomTargetingKeys(array($customTargetingKey));
 
   foreach ($customTargetingKeys as $updatedCustomTargetingKey) {
-    printf("Custom targeting key with ID %d, name '%s', and display name '%s' "
+    printf("Custom targeting key with uniqid %d, name '%s', and display name '%s' "
         . "was updated.\n", $updatedCustomTargetingKey->id,
         $updatedCustomTargetingKey->name,
         $updatedCustomTargetingKey->displayName);

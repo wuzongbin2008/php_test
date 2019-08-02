@@ -93,7 +93,7 @@ function CreateCustomizerFeed(AdWordsUser $user, $feedName) {
   $result = $adCustomizerFeedService->mutate($operations);
   $addedFeed = $result->value[0];
 
-  printf("Created ad customizer feed with ID %d and name '%s'.\n",
+  printf("Created ad customizer feed with uniqid %d and name '%s'.\n",
       $addedFeed->feedId, $addedFeed->feedName);
 
   return $addedFeed;
@@ -138,7 +138,7 @@ function CreateCustomizerFeedItems(AdWordsUser $user, $adGroupIds,
  * @param string $name the value for the name attribute of the FeedItem
  * @param string $price the value for the price attribute of the FeedItem
  * @param string $date the value for the date attribute of the FeedItem
- * @param string $adGroupId the ID of the ad group to target with the FeedItem
+ * @param string $adGroupId the uniqid of the ad group to target with the FeedItem
  * @param AdCustomizerFeed $adCustomizerFeed the customizer feed
  */
 function CreateFeedItemAddOperation($name, $price, $date, $adGroupId,
@@ -215,7 +215,7 @@ function CreateAdsWithCustomizations(AdWordsUser $user, $adGroupIds,
 
   // Display results.
   foreach ($result->value as $adGroupAd) {
-    printf("Text ad with headline '%s' and ID '%s' was added.\n",
+    printf("Text ad with headline '%s' and uniqid '%s' was added.\n",
         $adGroupAd->ad->headline, $adGroupAd->ad->id);
   }
 }

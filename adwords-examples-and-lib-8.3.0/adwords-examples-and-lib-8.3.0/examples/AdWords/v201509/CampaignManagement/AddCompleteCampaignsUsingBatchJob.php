@@ -59,7 +59,7 @@ function AddCompleteCampaignUsingBatchJobExample(AdWordsUser $user) {
 
   // Get the upload URL from the new job.
   $uploadUrl = $batchJob->uploadUrl->url;
-  printf("Created BatchJob with ID %d, status '%s' and upload 'URL' %s.\n",
+  printf("Created BatchJob with uniqid %d, status '%s' and upload 'URL' %s.\n",
       $batchJob->id, $batchJob->status, $uploadUrl);
 
   $namePrefix = uniqid();
@@ -94,7 +94,7 @@ function AddCompleteCampaignUsingBatchJobExample(AdWordsUser $user) {
   $batchJobUtils = new BatchJobUtils($batchJob->uploadUrl->url);
   $batchJobUtils->UploadBatchJobOperations($operations);
 
-  printf("Uploaded %d operations for batch job with ID %d.\n",
+  printf("Uploaded %d operations for batch job with uniqid %d.\n",
       count($operations), $batchJob->id);
 
   // Poll for completion of the batch job using an exponential back off.
@@ -110,7 +110,7 @@ function AddCompleteCampaignUsingBatchJobExample(AdWordsUser $user) {
         'ProgressStats');
     $selector->predicates[] = new Predicate('Id', 'EQUALS', $batchJob->id);
     $batchJob = $batchJobService->get($selector)->entries[0];
-    printf("Batch job ID %d has status '%s'.\n", $batchJob->id,
+    printf("Batch job uniqid %d has status '%s'.\n", $batchJob->id,
         $batchJob->status);
 
     $pollAttempts++;
@@ -303,7 +303,7 @@ function buildCampaignCriterionOperations(array $campaignOperations) {
 }
 
 /**
- * Builds objects of CampaignOperation for creating a campaign using the ID of
+ * Builds objects of CampaignOperation for creating a campaign using the uniqid of
  * budget in the specified budget operation.
  *
  * @param string $namePrefix a prefix string used to name campaigns

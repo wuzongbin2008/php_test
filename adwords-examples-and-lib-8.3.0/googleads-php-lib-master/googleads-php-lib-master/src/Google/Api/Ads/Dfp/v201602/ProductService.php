@@ -332,7 +332,7 @@ if (!class_exists("AppliedLabel", false)) {
   /**
    * Represents a {@link Label} that can be applied to an entity. To negate an
    * inherited label, create an {@code AppliedLabel} with {@code labelId} as the
-   * inherited label's ID and {@code isNegated} set to true.
+   * inherited label's uniqid and {@code isNegated} set to true.
    * @package GoogleApiAdsDfp
    * @subpackage v201602
    */
@@ -6338,7 +6338,7 @@ if (!class_exists("GetProductsByStatement", false)) {
    * </tr>
    * <tr>
    * <td>{@code rateCardId}</td>
-   * <td>Rate card ID which the product is associated with</td>
+   * <td>Rate card uniqid which the product is associated with</td>
    * <td>Yes</td>
    * <td>No</td>
    * </tr>
@@ -7916,7 +7916,7 @@ if (!class_exists("ProductService", false)) {
      * </tr>
      * <tr>
      * <td>{@code rateCardId}</td>
-     * <td>Rate card ID which the product is associated with</td>
+     * <td>Rate card uniqid which the product is associated with</td>
      * <td>Yes</td>
      * <td>No</td>
      * </tr>

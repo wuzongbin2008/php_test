@@ -67,7 +67,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $creative) {
-        printf("%d) Creative with ID %d, and name '%s' was found.\n", $i++,
+        printf("%d) Creative with uniqid %d, and name '%s' was found.\n", $i++,
             $creative->id, $creative->name);
       }
     }

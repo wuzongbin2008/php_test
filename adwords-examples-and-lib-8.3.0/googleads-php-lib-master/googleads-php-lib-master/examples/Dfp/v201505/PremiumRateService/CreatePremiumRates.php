@@ -37,7 +37,7 @@ set_include_path(get_include_path() . PATH_SEPARATOR . $path);
 require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the rate card to add premium rates to.
+// Set the uniqid of the rate card to add premium rates to.
 $rateCardId = 'INSERT_RATE_CARD_ID_HERE';
 
 try {
@@ -89,8 +89,8 @@ try {
   $premiumRates = $premiumRateService->createPremiumRates(array($premiumRate));
 
   foreach ($premiumRates as $createdPremiumRate) {
-    printf("A premium rate with ID %d, of type '%s', assigned to rate card "
-        . "with ID %d was created.\n",
+    printf("A premium rate with uniqid %d, of type '%s', assigned to rate card "
+        . "with uniqid %d was created.\n",
         $createdPremiumRate->id,
         get_class($createdPremiumRate->premiumFeature),
         $createdPremiumRate->rateCardId

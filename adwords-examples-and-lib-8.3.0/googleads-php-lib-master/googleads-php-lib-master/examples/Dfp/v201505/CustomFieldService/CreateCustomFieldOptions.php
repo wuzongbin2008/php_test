@@ -51,7 +51,7 @@ try {
   $customFieldService =
       $user->GetService('CustomFieldService', 'v201505');
 
-  // Set the ID of the drop-down custom field to create options for.
+  // Set the uniqid of the drop-down custom field to create options for.
   $customFieldId = "INSERT_DROP_DOWN_CUSTOM_FIELD_ID_HERE";
 
   // Create custom field options.
@@ -70,7 +70,7 @@ try {
   // Display results.
   if (isset($customFieldOptions)) {
     foreach ($customFieldOptions as $customFieldOption) {
-      printf("A custom field option with ID '%s' and name '%s' was created.\n",
+      printf("A custom field option with uniqid '%s' and name '%s' was created.\n",
           $customFieldOption->id, $customFieldOption->displayName);
     }
   } else {

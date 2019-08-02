@@ -56,7 +56,7 @@ function RemoveAdGroupExample(AdWordsUser $user, $adGroupId) {
 
   // Display result.
   $adGroup = $result->value[0];
-  printf("Ad group with ID '%d' was removed.\n", $adGroup->id);
+  printf("Ad group with uniqid '%d' was removed.\n", $adGroup->id);
 }
 
 // Don't run the example if the file is being included.

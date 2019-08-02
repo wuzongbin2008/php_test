@@ -79,7 +79,7 @@ function AddAudienceExample(AdWordsUser $user) {
   $conversionTracker = $page->entries[0];
 
   // Display result.
-  printf("Audience with name '%s' and ID '%.0f' was added.\n", $userList->name,
+  printf("Audience with name '%s' and uniqid '%.0f' was added.\n", $userList->name,
       $userList->id);
   printf("Tag code:\n%s\n", $conversionTracker->snippet);
 }

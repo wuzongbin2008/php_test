@@ -65,7 +65,7 @@ function GetTextAdsExample(AdWordsUser $user, $adGroupId) {
     // Display results.
     if (isset($page->entries)) {
       foreach ($page->entries as $adGroupAd) {
-        printf("Text ad with headline '%s' and ID '%s' was found.\n",
+        printf("Text ad with headline '%s' and uniqid '%s' was found.\n",
             $adGroupAd->ad->headline, $adGroupAd->ad->id);
       }
     } else {

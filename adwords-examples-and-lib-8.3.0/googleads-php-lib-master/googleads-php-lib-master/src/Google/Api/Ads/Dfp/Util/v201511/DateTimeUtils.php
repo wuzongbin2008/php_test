@@ -147,7 +147,7 @@ class DateTimeUtils {
    *
    * @param DfpDateTime $dfpDateTime the DFP date time to stringify into a new
    *     time zone
-   * @param string $newZoneId the time zone ID of the new zone
+   * @param string $newZoneId the time zone uniqid of the new zone
    * @return string a string representation of the DFP {@code DateTime} in
    *          {@code yyyy-MM-dd'T'HH:mm:ss}
    */

@@ -62,7 +62,7 @@ function AddPromotionExample(AdWordsUser $user, $businessId) {
   $criteria[] = $productService;
 
   // Criterion - English language
-  // The ID can be found in the documentation:
+  // The uniqid can be found in the documentation:
   // https://developers.google.com/adwords/api/docs/appendix/languagecodes
   $language = new Language();
   $language->id = 1000;
@@ -98,7 +98,7 @@ function AddPromotionExample(AdWordsUser $user, $businessId) {
   $result = $promotionService->mutate($operations);
   $addedPromotion = $result[0];
 
-  printf("Added promotion ID %d with name '%s' to business ID %d\n",
+  printf("Added promotion uniqid %d with name '%s' to business uniqid %d\n",
       $addedPromotion->id, $addedPromotion->name, $businessId);
 }
 

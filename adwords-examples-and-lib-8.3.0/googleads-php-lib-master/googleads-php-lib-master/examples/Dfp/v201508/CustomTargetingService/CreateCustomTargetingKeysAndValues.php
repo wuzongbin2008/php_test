@@ -75,7 +75,7 @@ try {
 
   if (isset($keys)) {
     foreach ($keys as $key) {
-      printf("A custom targeting key with ID '%s', name '%s', and display " .
+      printf("A custom targeting key with uniqid '%s', name '%s', and display " .
           "name '%s' was created.\n", $key->id, $key->name, $key->displayName);
     }
   } else {
@@ -129,8 +129,8 @@ try {
 
   if (isset($values)) {
     foreach ($values as $value) {
-      printf("A custom targeting value with ID '%s', belonging to key " .
-          "with ID '%s', name '%s', and display name '%s' was created.\n",
+      printf("A custom targeting value with uniqid '%s', belonging to key " .
+          "with uniqid '%s', name '%s', and display name '%s' was created.\n",
           $value->id, $value->customTargetingKeyId, $value->name,
           $value->displayName);
     }

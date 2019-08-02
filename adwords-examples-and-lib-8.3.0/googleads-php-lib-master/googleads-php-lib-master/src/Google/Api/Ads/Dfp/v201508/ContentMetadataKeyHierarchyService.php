@@ -2441,7 +2441,7 @@ if (!class_exists("GetContentMetadataKeyHierarchiesByStatement", false)) {
    * @param filterStatement a Publisher Query Language statement used to filter a set of
    * content metadata key hierarchies
    * @return the content metadata key hierarchies that match the given filter
-   * @throws ApiException if the ID of the active network does not exist or there is a
+   * @throws ApiException if the uniqid of the active network does not exist or there is a
    * backend error
    * @package GoogleApiAdsDfp
    * @subpackage v201508
@@ -3177,7 +3177,7 @@ if (!class_exists("ContentMetadataKeyHierarchyService", false)) {
      * @param filterStatement a Publisher Query Language statement used to filter a set of
      * content metadata key hierarchies
      * @return the content metadata key hierarchies that match the given filter
-     * @throws ApiException if the ID of the active network does not exist or there is a
+     * @throws ApiException if the uniqid of the active network does not exist or there is a
      * backend error
      */
     public function getContentMetadataKeyHierarchiesByStatement($filterStatement) {

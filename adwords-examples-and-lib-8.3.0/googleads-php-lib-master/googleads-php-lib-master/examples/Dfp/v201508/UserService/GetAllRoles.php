@@ -52,7 +52,7 @@ try {
 
   $i = 0;
   foreach ($roles as $role) {
-    printf("%d) Role with ID %d and name '%s' was found.\n", $i++, $role->id,
+    printf("%d) Role with uniqid %d and name '%s' was found.\n", $i++, $role->id,
         $role->name);
   }
 

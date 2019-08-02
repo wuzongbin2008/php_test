@@ -59,7 +59,7 @@ class AdsSoapClientTest extends PHPUnit_Framework_TestCase {
   public function TypemapLongFromXmlProvider() {
     $data = $this->TypemapLongToXmlProvider();
 
-    // ID fields.
+    // uniqid fields.
     $data[] = array('<id>0</id>', '0', 'string');
     $data[] = array('<tempId>0</tempId>', '0', 'string');
     $data[] = array('<tempID>0</tempID>', '0', 'string');

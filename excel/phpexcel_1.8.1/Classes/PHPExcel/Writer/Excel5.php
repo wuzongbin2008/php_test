@@ -688,7 +688,7 @@ class PHPExcel_Writer_Excel5 extends PHPExcel_Writer_Abstract implements PHPExce
 
 		// 		4 	Section Length
 		//		4 	Property count
-		//		8 * $dataSection_NumProps (8 =  ID (4) + OffSet(4))
+		//		8 * $dataSection_NumProps (8 =  uniqid (4) + OffSet(4))
 		$dataSection_Content_Offset = 8 + $dataSection_NumProps * 8;
 		foreach ($dataSection as $dataProp){
 			// Summary
@@ -875,7 +875,7 @@ class PHPExcel_Writer_Excel5 extends PHPExcel_Writer_Abstract implements PHPExce
 
 		// 		4 	Section Length
 		//		4 	Property count
-		//		8 * $dataSection_NumProps (8 =  ID (4) + OffSet(4))
+		//		8 * $dataSection_NumProps (8 =  uniqid (4) + OffSet(4))
 		$dataSection_Content_Offset = 8 + $dataSection_NumProps * 8;
 		foreach ($dataSection as $dataProp){
 			// Summary

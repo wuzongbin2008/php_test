@@ -41,7 +41,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Common/Util/MediaUtils.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the advertiser (company) that all creatives will be
+// Set the uniqid of the advertiser (company) that all creatives will be
 // assigned to.
 $advertiserId = 'INSERT_ADVERTISER_COMPANY_ID_HERE';
 
@@ -109,7 +109,7 @@ try {
       $creativeService->createCreatives(array($templateCreative));
 
   foreach ($templateCreatives as $templateCreative) {
-    printf("A template creative with ID '%s', name '%s', and type '%s' was "
+    printf("A template creative with uniqid '%s', name '%s', and type '%s' was "
         . "created and can be previewed at: %s\n", $templateCreative->id,
         $templateCreative->name, get_class($templateCreative),
         $templateCreative->previewUrl);

@@ -36,8 +36,8 @@ $adId = 'INSERT_AD_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param string $adGroupId the ID of the ad group of the ad to upgrade
- * @param string $adId the ID of the ad to upgrade
+ * @param string $adGroupId the uniqid of the ad group of the ad to upgrade
+ * @param string $adId the uniqid of the ad to upgrade
  */
 function UpgradeAdUrlExample(AdWordsUser $user, $adGroupId, $adId) {
   // Get the service, which loads the required classes.
@@ -50,7 +50,7 @@ function UpgradeAdUrlExample(AdWordsUser $user, $adGroupId, $adId) {
   $selector->fields = array('Id', 'Url');
   $selector->ordering[] = new OrderBy('Headline', 'ASCENDING');
 
-  // Restrict the fetch to only the selected ad group ID and ad ID.
+  // Restrict the fetch to only the selected ad group uniqid and ad uniqid.
   $selector->predicates[] =
       new Predicate('AdGroupId', 'EQUALS', array($adGroupId));
   $selector->predicates[] = new Predicate('Id', 'EQUALS', array($adId));
@@ -59,7 +59,7 @@ function UpgradeAdUrlExample(AdWordsUser $user, $adGroupId, $adId) {
 
   if (isset($page->entries)) {
     $adGroupAd = $page->entries[0];
-    printf("About to upgrade ad ID %d with URL '%s'.\n",
+    printf("About to upgrade ad uniqid %d with URL '%s'.\n",
         $adGroupAd->ad->id, $adGroupAd->ad->url);
   } else {
     print "Ad for upgrade was not found.\n";
@@ -75,7 +75,7 @@ function UpgradeAdUrlExample(AdWordsUser $user, $adGroupId, $adId) {
 
   // Display results.
   foreach ($result as $adGroupAd) {
-    printf("Text ad with ID %d was upgraded to final URLs: '%s'.\n",
+    printf("Text ad with uniqid %d was upgraded to final URLs: '%s'.\n",
         $adGroupAd->id, join(",", $adGroupAd->finalUrls));
   }
 }

@@ -39,7 +39,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201508/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the content metadata key hierarchy to delete.
+// Set the uniqid of the content metadata key hierarchy to delete.
 $contentMetadataKeyHierarchyId =
     'INSERT_CONTENT_METADATA_KEY_HIERARCHY_ID_HERE';
 
@@ -55,7 +55,7 @@ try {
   $contentMetadataKeyHierarchyService = $user->GetService(
       'ContentMetadataKeyHierarchyService', 'v201508');
 
-  // Create a statement to select a single content metadata key hierarchy by ID.
+  // Create a statement to select a single content metadata key hierarchy by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -76,7 +76,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $contentMetadataKeyHierarchy) {
-        printf("%d) Content metadata key hierarchy with ID %d, and name '%s' "
+        printf("%d) Content metadata key hierarchy with uniqid %d, and name '%s' "
             . "will be deleted.\n", $i++, $contentMetadataKeyHierarchy->id,
             $contentMetadataKeyHierarchy->name);
       }

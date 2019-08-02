@@ -32,8 +32,8 @@ $merchantId = 'INSERT_MERCHANT_CENTER_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param int $budgetId the ID of a portfolio budget to use for the campaign
- * @param int $merchantId the Merchant Center account ID to use for product data
+ * @param int $budgetId the uniqid of a portfolio budget to use for the campaign
+ * @param int $merchantId the Merchant Center account uniqid to use for product data
  */
 function addShoppingCampaignExample(AdWordsUser $user, $budgetId, $merchantId) {
   // Get the services, which loads the required classes.
@@ -76,7 +76,7 @@ function addShoppingCampaignExample(AdWordsUser $user, $budgetId, $merchantId) {
 
   // Display result.
   $campaign = $result->value[0];
-  printf("Campaign with name '%s' and ID '%s' was added.\n", $campaign->name,
+  printf("Campaign with name '%s' and uniqid '%s' was added.\n", $campaign->name,
         $campaign->id);
 
   // Create ad group.
@@ -94,7 +94,7 @@ function addShoppingCampaignExample(AdWordsUser $user, $budgetId, $merchantId) {
 
   // Display result.
   $adGroup = $result->value[0];
-  printf("Ad group with name '%s' and ID '%s' was added.\n", $adGroup->name,
+  printf("Ad group with name '%s' and uniqid '%s' was added.\n", $adGroup->name,
         $adGroup->id);
 
   // Create product ad.
@@ -115,7 +115,7 @@ function addShoppingCampaignExample(AdWordsUser $user, $budgetId, $merchantId) {
 
   // Display result.
   $adGroupAd = $result->value[0];
-  printf("Product ad with ID '%s' was added.\n", $adGroupAd->ad->id);
+  printf("Product ad with uniqid '%s' was added.\n", $adGroupAd->ad->id);
 }
 
 // Don't run the example if the file is being included.

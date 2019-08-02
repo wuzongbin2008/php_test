@@ -35,7 +35,7 @@ require_once dirname(dirname(__FILE__)) . '/init.php';
 define('GMB_EMAIL_ADDRESS', 'INSERT_GMB_EMAIL_ADDRESS');
 
 // If the gmbEmailAddress above is for a GMB manager instead of the GMB account
-// owner, then set businessAccountIdentifier to the +Page ID of a location for
+// owner, then set businessAccountIdentifier to the +Page uniqid of a location for
 // which the manager has access. See the location extensions guide at
 // https://developers.google.com/adwords/api/docs/guides/feed-services-locations
 // for details.
@@ -101,7 +101,7 @@ function AddGoogleMyBusinessLocationExtensions(
   // with the placeholder fields of the LOCATION placeholder type.
   $addFeedResult = $feedService->mutate(array($feedOperation));
   $addedFeed = $addFeedResult->value[0];
-  printf("Added GMB feed with ID %d\n", $addedFeed->id);
+  printf("Added GMB feed with uniqid %d\n", $addedFeed->id);
 
   $customerFeedService = $user->GetService('CustomerFeedService');
 
@@ -156,7 +156,7 @@ function AddGoogleMyBusinessLocationExtensions(
        . 'the CustomerFeed ADD operation later.');
   }
 
-  printf("Added CustomerFeed for feed ID %d and placeholder type %d\n",
+  printf("Added CustomerFeed for feed uniqid %d and placeholder type %d\n",
       $addedCustomerFeed->feedId, $addedCustomerFeed->placeholderTypes[0]);
 
   // OPTIONAL: Create a CampaignFeed to specify which FeedItems to use at the

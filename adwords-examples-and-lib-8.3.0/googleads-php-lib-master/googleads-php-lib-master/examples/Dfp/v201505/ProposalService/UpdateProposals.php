@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the proposal to update.
+// Set the uniqid of the proposal to update.
 $proposalId = 'INSERT_PROPOSAL_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the ProposalService.
   $proposalService = $user->GetService('ProposalService', 'v201505');
 
-  // Create a statement to select a single proposal by ID.
+  // Create a statement to select a single proposal by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -71,7 +71,7 @@ try {
   $proposals = $proposalService->updateProposals(array($proposal));
 
   foreach ($proposals as $updatedProposal) {
-    printf("Proposal with ID %d and name '%s' was updated.\n",
+    printf("Proposal with uniqid %d and name '%s' was updated.\n",
         $updatedProposal->id, $updatedProposal->name);
   }
 } catch (OAuth2Exception $e) {

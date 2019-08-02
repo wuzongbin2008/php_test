@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201511/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the line item to update.
+// Set the uniqid of the line item to update.
 $lineItemId = 'INSERT_LINE_ITEM_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the LineItemService.
   $lineItemService = $user->GetService('LineItemService', 'v201511');
 
-  // Create a statement to select a single line item by ID.
+  // Create a statement to select a single line item by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -72,7 +72,7 @@ try {
     $lineItems = $lineItemService->updateLineItems(array($lineItem));
 
     foreach ($lineItems as $updatedLineItem) {
-      printf("Line item with ID %d, name '%s' was updated.\n",
+      printf("Line item with uniqid %d, name '%s' was updated.\n",
           $updatedLineItem->id, $updatedLineItem->name);
     }
   } else {

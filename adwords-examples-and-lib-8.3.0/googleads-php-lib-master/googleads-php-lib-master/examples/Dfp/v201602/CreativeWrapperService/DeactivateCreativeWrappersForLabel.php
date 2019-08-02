@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201602/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the creative wrapper label to deactivate.
+// Set the uniqid of the creative wrapper label to deactivate.
 $labelId = 'INSERT_CREATIVE_WRAPPER_LABEL_ID_HERE';
 
 try {
@@ -74,7 +74,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $creativeWrapper) {
-        printf("%d) Creative wrapper with ID %d, applying to label with ID %d, "
+        printf("%d) Creative wrapper with uniqid %d, applying to label with uniqid %d, "
             . "with status %s will be deactivated.\n", $i++,
             $creativeWrapper->id, $creativeWrapper->labelId,
             $creativeWrapper->status);

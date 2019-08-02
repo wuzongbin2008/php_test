@@ -45,7 +45,7 @@ class ReportDownloader {
    * and a report job id that the the class works on.
    *
    * @param ReportService $reportService an instance of the report service
-   * @param float $reportJobId the report job ID
+   * @param float $reportJobId the report job uniqid
    */
   public function __construct($reportService, $reportJobId) {
     $this->reportService = $reportService;

@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201511/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the product to update.
+// Set the uniqid of the product to update.
 $productId = 'INSERT_PRODUCT_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the ProductService.
   $productService = $user->GetService('ProductService', 'v201511');
 
-  // Create a statement to select a single product by ID.
+  // Create a statement to select a single product by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -71,7 +71,7 @@ try {
   $products = $productService->updateProducts(array($product));
 
   foreach ($products as $updatedProduct) {
-    printf("Product with ID %d and name '%s' was updated.\n",
+    printf("Product with uniqid %d and name '%s' was updated.\n",
         $updatedProduct->id, $updatedProduct->name);
   }
 } catch (OAuth2Exception $e) {

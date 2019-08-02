@@ -42,8 +42,8 @@ $adGroupId = 'INSERT_AD_GROUP_ID_HERE';
 /**
  * Runs the example.
  * @param AdWordsUser $user the user to run the example with
- * @param string $campaignId the ID of the campaign to add the experiment to
- * @param string $adGroupId the ID of the ad group to set experimental bids on
+ * @param string $campaignId the uniqid of the campaign to add the experiment to
+ * @param string $adGroupId the uniqid of the ad group to set experimental bids on
  */
 function AddExperimentExample(AdWordsUser $user, $campaignId, $adGroupId) {
   // Get the services, which loads the required classes.
@@ -74,7 +74,7 @@ function AddExperimentExample(AdWordsUser $user, $campaignId, $adGroupId) {
 
   // Display result.
   $experiment = $result->value[0];
-  printf ("Experiment with name '%s' and ID '%.0f' was added.\n",
+  printf ("Experiment with name '%s' and uniqid '%.0f' was added.\n",
       $experiment->name, $experiment->id);
 
   // Create ad group bid multipliers to be used in the experiment.
@@ -104,7 +104,7 @@ function AddExperimentExample(AdWordsUser $user, $campaignId, $adGroupId) {
 
   // Display result.
   $adGroup = $result->value[0];
-  printf ("Ad group with name '%s' and ID '%.0f' was updated in the "
+  printf ("Ad group with name '%s' and uniqid '%.0f' was updated in the "
       . "experiment.\n", $adGroup->name, $adGroup->id);
 
   // Create experiment data for a new experiment-only keyword.
@@ -134,7 +134,7 @@ function AddExperimentExample(AdWordsUser $user, $campaignId, $adGroupId) {
 
   // Display result.
   $adGroupCriterion = $result->value[0];
-  printf("Keyword with text '%s', match type '%s', and ID '%s' was added to "
+  printf("Keyword with text '%s', match type '%s', and uniqid '%s' was added to "
       . "the experiment.\n",
       $adGroupCriterion->criterion->text,
       $adGroupCriterion->criterion->matchType,

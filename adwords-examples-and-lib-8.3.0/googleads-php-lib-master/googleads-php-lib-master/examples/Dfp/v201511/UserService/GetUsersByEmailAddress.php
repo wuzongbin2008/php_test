@@ -70,7 +70,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $user) {
-        printf("%d) User with ID %d, email '%s', and role '%s' was found.\n",
+        printf("%d) User with uniqid %d, email '%s', and role '%s' was found.\n",
             $i++, $user->id, $user->email, $user->roleName);
       }
     }

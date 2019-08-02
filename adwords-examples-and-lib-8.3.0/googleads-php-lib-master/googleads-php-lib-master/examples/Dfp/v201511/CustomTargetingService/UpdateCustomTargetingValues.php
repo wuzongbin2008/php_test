@@ -39,7 +39,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201511/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the custom targeting value to update.
+// Set the uniqid of the custom targeting value to update.
 $customTargetingValueId = 'INSERT_CUSTOM_TARGETING_VALUE_ID_HERE';
 
 try {
@@ -54,7 +54,7 @@ try {
   $customTargetingService =
       $user->GetService('CustomTargetingService', 'v201511');
 
-  // Create a statement to select a single custom targeting value by ID.
+  // Create a statement to select a single custom targeting value by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -76,7 +76,7 @@ try {
           array($customTargetingValue));
 
   foreach ($customTargetingValues as $updatedCustomTargetingValue) {
-    printf("Custom targeting value with ID %d, name '%s', and display name "
+    printf("Custom targeting value with uniqid %d, name '%s', and display name "
         . "'%s' was updated.\n", $updatedCustomTargetingValue->id,
         $updatedCustomTargetingValue->name,
         $updatedCustomTargetingValue->displayName);

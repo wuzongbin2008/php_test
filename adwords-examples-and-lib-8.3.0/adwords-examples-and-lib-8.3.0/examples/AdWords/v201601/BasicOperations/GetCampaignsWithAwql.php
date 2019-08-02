@@ -51,7 +51,7 @@ function GetCampaignsWithAwqlExample(AdWordsUser $user) {
     // Display results.
     if (isset($page->entries)) {
       foreach ($page->entries as $campaign) {
-        printf("Campaign with name '%s' and ID '%s' was found.\n",
+        printf("Campaign with name '%s' and uniqid '%s' was found.\n",
             $campaign->name, $campaign->id);
       }
     } else {

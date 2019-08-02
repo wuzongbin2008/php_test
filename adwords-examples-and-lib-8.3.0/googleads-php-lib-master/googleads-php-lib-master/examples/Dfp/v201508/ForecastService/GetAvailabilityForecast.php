@@ -41,7 +41,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201508/DateTimeUtils.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the advertiser (company) to forecast for. Setting an advertiser
+// Set the uniqid of the advertiser (company) to forecast for. Setting an advertiser
 // will cause the forecast to apply the appropriate unified blocking rules.
 $advertiserId = 'INSERT_ADVERTISER_COMPANY_ID_HERE';
 
@@ -59,7 +59,7 @@ try {
   // Get the NetworkService.
   $networkService = $user->GetService('NetworkService', 'v201508');
 
-  // Get the root ad unit ID used to target the whole site.
+  // Get the root ad unit uniqid used to target the whole site.
   $rootAdUnitId = $networkService->getCurrentNetwork()->effectiveRootAdUnitId;
 
   // Create inventory targeting.

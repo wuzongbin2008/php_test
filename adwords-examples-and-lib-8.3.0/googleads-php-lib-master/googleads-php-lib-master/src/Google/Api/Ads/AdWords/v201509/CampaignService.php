@@ -493,7 +493,7 @@ if (!class_exists("BiddingStrategyConfiguration", false)) {
    * <ul>
    * <li>{@linkplain BiddingStrategyConfiguration#biddingScheme bidding scheme}</li>
    * <li>{@linkplain BiddingStrategyConfiguration#biddingStrategyType bidding strategy type}</li>
-   * <li>{@linkplain BiddingStrategyConfiguration#biddingStrategyId bidding strategy ID} for
+   * <li>{@linkplain BiddingStrategyConfiguration#biddingStrategyId bidding strategy uniqid} for
    * flexible bid strategies.</li>
    * </ul>
    * <p>If the bidding strategy type is used, then schemes are created using default values.
@@ -3927,7 +3927,7 @@ if (!class_exists("SettingError", false)) {
 if (!class_exists("ShoppingSetting", false)) {
   /**
    * Setting for shopping campaigns. Defines the universe of products covered by the campaign.
-   * Encapsulates a merchant ID, sales country, and campaign priority.
+   * Encapsulates a merchant uniqid, sales country, and campaign priority.
    * @package Google_Api_Ads_AdWords_v201509
    * @subpackage v201509
    */

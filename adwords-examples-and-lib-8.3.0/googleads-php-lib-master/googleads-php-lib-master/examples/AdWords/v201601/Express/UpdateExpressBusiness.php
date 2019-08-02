@@ -56,7 +56,7 @@ function UpdateExpressBusinessExample(AdWordsUser $user, $businessId) {
   $result = $businessService->mutate($operations);
   $mutatedBusiness = $result[0];
 
-  printf("Express business with ID %d and name '%s' was updated\n",
+  printf("Express business with uniqid %d and name '%s' was updated\n",
       $mutatedBusiness->id, $mutatedBusiness->name);
 }
 

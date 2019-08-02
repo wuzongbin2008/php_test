@@ -38,10 +38,10 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201505/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the user ID of the user team association to update.
+// Set the user uniqid of the user team association to update.
 $userId = 'INSERT_USER_ID_HERE';
 
-// Set the team ID of the user team association to update.
+// Set the team uniqid of the user team association to update.
 $teamId = 'INSERT_TEAM_ID_HERE';
 
 try {
@@ -56,7 +56,7 @@ try {
   $userTeamAssociationService =
       $user->GetService('UserTeamAssociationService', 'v201505');
 
-  // Create a statement to select a single user team association by ID.
+  // Create a statement to select a single user team association by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('userId = :userId AND teamId = :teamId')
       ->OrderBy('userId ASC, teamId ASC')
@@ -78,7 +78,7 @@ try {
           array($userTeamAssociation));
 
   foreach ($userTeamAssociations as $updatedUserTeamAssociation) {
-    printf("User team association with user ID %d, and team ID %d was "
+    printf("User team association with user uniqid %d, and team uniqid %d was "
         . "updated.\n", $updatedUserTeamAssociation->userId,
         $updatedUserTeamAssociation->teamId);
   }

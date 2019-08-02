@@ -75,14 +75,14 @@ function MigrateToExtensionSettingsExample(AdWordsUser $user) {
   foreach ($feeds as $feed) {
     // Retrieve all the sitelinks from the current feed.
     $feedItems = GetSitelinksFromFeed($user, $feed->id);
-    printf("Loaded %d sitelinks for feed ID %d.\n",
+    printf("Loaded %d sitelinks for feed uniqid %d.\n",
            count($feedItems), $feed->id);
 
     // Get all the instances where a sitelink from this feed has been added
     // to a campaign.
     $campaignFeeds =
         GetCampaignFeeds($user, $feed->id, PLACEHOLDER_TYPE_SITELINKS);
-    printf("Loaded %d sitelink to campaign mappings for feed ID %d.\n",
+    printf("Loaded %d sitelink to campaign mappings for feed uniqid %d.\n",
            count($campaignFeeds), $feed->id);
 
     if (!empty($campaignFeeds)) {
@@ -94,7 +94,7 @@ function MigrateToExtensionSettingsExample(AdWordsUser $user) {
             GetPlatformRestrictionsForCampaign($campaignFeed);
 
         if(empty($feedItemIds)) {
-          printf("Skipping feed ID %d for campaign %d -- matching function is "
+          printf("Skipping feed uniqid %d for campaign %d -- matching function is "
               . "missing or too complex for this script.\n",
               $campaignFeed->feedId, $campaignFeed->campaignId);
           continue;
@@ -172,7 +172,7 @@ function GetFeedMapping($user, $feedId, $placeholderTypeId) {
 }
 
 function GetSitelinksFromFeed($user, $feedId) {
-  printf("Processing feed ID %d...\n", $feedId);
+  printf("Processing feed uniqid %d...\n", $feedId);
   $sitelinks = array();
 
   // Retrieve all the feed items from the feed.
@@ -194,7 +194,7 @@ function GetSitelinksFromFeed($user, $feedId) {
         // Get the list of all the fields to which this attribute has been
         //  mapped.
         foreach ($feedMappings[$attributeValue->feedAttributeId] as $fieldId) {
-          // Read the appropriate value depending on the ID of the mapped field.
+          // Read the appropriate value depending on the uniqid of the mapped field.
           switch ($fieldId) {
             case PLACEHOLDER_FIELD_TEXT:
               $sitelinkFromFeed->text = $attributeValue->stringValue;
@@ -315,7 +315,7 @@ function CreateExtensionSetting($user, $feedItems, $campaignId, $feedItemIds,
 
   $operation = new CampaignExtensionSettingOperation($extensionSetting, 'ADD');
 
-  printf("Adding %d sitelinks for campaign ID %d...\n",
+  printf("Adding %d sitelinks for campaign uniqid %d...\n",
       count($feedItemIds), $campaignId);
 
   return $campaignExtensionSettingService->mutate(array($operation));
@@ -325,7 +325,7 @@ function DeleteCampaignFeed($user, $campaignFeed) {
   $campaignFeedService =
       $user->GetService('CampaignFeedService', ADWORDS_VERSION);
 
-  printf("Deleting association of feed ID %d and and campaign ID %d...\n",
+  printf("Deleting association of feed uniqid %d and and campaign uniqid %d...\n",
       $campaignFeed->feedId, $campaignFeed->campaignId);
 
   $operation = new CampaignFeedOperation($campaignFeed, 'REMOVE');
@@ -348,7 +348,7 @@ function DeleteOldFeedItems($user, $feedItemIds, $feedId) {
     $operations[] = $operation;
   }
 
-  printf("Deleting %d old feed items from feed ID %d...\n",
+  printf("Deleting %d old feed items from feed uniqid %d...\n",
       count($feedItemIds), $feedId);
 
   return $feedItemService->mutate($operations);

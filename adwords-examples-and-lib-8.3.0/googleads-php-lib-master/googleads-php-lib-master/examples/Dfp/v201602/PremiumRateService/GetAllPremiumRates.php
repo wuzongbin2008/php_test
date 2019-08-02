@@ -67,8 +67,8 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $premiumRate) {
-        printf("%d) Premium rate with ID %d, of type '%s', assigned to rate "
-            . "card with ID %d was found.\n", $i++, $premiumRate->id,
+        printf("%d) Premium rate with uniqid %d, of type '%s', assigned to rate "
+            . "card with uniqid %d was found.\n", $i++, $premiumRate->id,
             get_class($premiumRate->premiumFeature), $premiumRate->rateCardId);
       }
     }

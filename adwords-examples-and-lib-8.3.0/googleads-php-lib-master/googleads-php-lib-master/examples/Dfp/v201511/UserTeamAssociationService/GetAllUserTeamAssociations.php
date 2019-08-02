@@ -68,8 +68,8 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $userTeamAssociation) {
-        printf("%d) User team association between user with ID %d, and team "
-            . "with ID %d was found.\n", $i++, $userTeamAssociation->userId,
+        printf("%d) User team association between user with uniqid %d, and team "
+            . "with uniqid %d was found.\n", $i++, $userTeamAssociation->userId,
             $userTeamAssociation->teamId);
       }
     }

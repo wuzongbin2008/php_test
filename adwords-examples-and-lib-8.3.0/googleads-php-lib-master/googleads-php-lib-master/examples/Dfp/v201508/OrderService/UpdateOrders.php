@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201508/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the order to update.
+// Set the uniqid of the order to update.
 $orderId = 'INSERT_ORDER_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the OrderService.
   $orderService = $user->GetService('OrderService', 'v201508');
 
-  // Create a statement to select a single order by ID.
+  // Create a statement to select a single order by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -70,7 +70,7 @@ try {
   $orders = $orderService->updateOrders(array($order));
 
   foreach ($orders as $updatedOrder) {
-    printf("Order with ID %d, name '%s' was updated.\n", $updatedOrder->id,
+    printf("Order with uniqid %d, name '%s' was updated.\n", $updatedOrder->id,
         $updatedOrder->name);
   }
 } catch (OAuth2Exception $e) {

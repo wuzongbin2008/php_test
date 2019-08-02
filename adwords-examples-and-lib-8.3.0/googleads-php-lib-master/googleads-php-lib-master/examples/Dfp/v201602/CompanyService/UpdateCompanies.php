@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201602/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the company to update.
+// Set the uniqid of the company to update.
 $companyId = 'INSERT_COMPANY_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the CompanyService.
   $companyService = $user->GetService('CompanyService', 'v201602');
 
-  // Create a statement to select a single company by ID.
+  // Create a statement to select a single company by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -71,7 +71,7 @@ try {
   $companies = $companyService->updateCompanies(array($company));
 
   foreach ($companies as $updatedCompany) {
-    printf("Company with ID %d, name '%s', and comment '%s' was updated.\n",
+    printf("Company with uniqid %d, name '%s', and comment '%s' was updated.\n",
         $updatedCompany->id, $updatedCompany->name, $updatedCompany->comment);
   }
 } catch (OAuth2Exception $e) {

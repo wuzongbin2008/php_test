@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201602/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the proposal to submit for approval.
+// Set the uniqid of the proposal to submit for approval.
 $proposalId = 'INSERT_PROPOSAL_ID_HERE';
 
 try {
@@ -52,7 +52,7 @@ try {
   // Get the ProposalService.
   $proposalService = $user->GetService('ProposalService', 'v201602');
 
-  // Create a statement to select a single proposal by ID.
+  // Create a statement to select a single proposal by uniqid.
   $statementBuilder = new StatementBuilder();
   $statementBuilder->Where('id = :id')
       ->OrderBy('id ASC')
@@ -72,7 +72,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $proposal) {
-        printf("%d) Proposal with ID %d and name '%s' will be submitted for "
+        printf("%d) Proposal with uniqid %d and name '%s' will be submitted for "
             . "approval.\n", $i++, $proposal->id, $proposal->name);
       }
     }

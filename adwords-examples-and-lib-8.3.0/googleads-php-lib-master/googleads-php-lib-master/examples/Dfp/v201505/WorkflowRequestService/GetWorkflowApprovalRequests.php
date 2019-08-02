@@ -70,7 +70,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $workflowRequest) {
-        printf("%d) Workflow approval request with ID %d, for '%s', with ID %d "
+        printf("%d) Workflow approval request with uniqid %d, for '%s', with uniqid %d "
             . "was found.\n",
             $i++,
             $workflowRequest->id,

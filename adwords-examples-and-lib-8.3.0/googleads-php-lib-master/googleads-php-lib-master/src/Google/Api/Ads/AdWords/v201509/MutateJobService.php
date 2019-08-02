@@ -32,7 +32,7 @@ if (!class_exists("Ad", false)) {
   /**
    * The base class of all ad types. {@code Ad} objects themselves cannot be modified. If you want to
    * make a change to an {@code Ad} object, you must REMOVE its AdGroupAd and ADD a new AdGroupAd with
-   * the new {@code Ad}. This will result in a new {@code Ad} ID, so stats for the original {@code Ad}
+   * the new {@code Ad}. This will result in a new {@code Ad} uniqid, so stats for the original {@code Ad}
    * and the new {@code Ad} will appear under separate IDs in reports.
    * 
    * <p>When calling {@code AdGroupAdService} to update the {@code status} of an {@code AdGroupAd},
@@ -2570,7 +2570,7 @@ if (!class_exists("BiddingStrategyConfiguration", false)) {
    * <ul>
    * <li>{@linkplain BiddingStrategyConfiguration#biddingScheme bidding scheme}</li>
    * <li>{@linkplain BiddingStrategyConfiguration#biddingStrategyType bidding strategy type}</li>
-   * <li>{@linkplain BiddingStrategyConfiguration#biddingStrategyId bidding strategy ID} for
+   * <li>{@linkplain BiddingStrategyConfiguration#biddingStrategyId bidding strategy uniqid} for
    * flexible bid strategies.</li>
    * </ul>
    * <p>If the bidding strategy type is used, then schemes are created using default values.
@@ -5999,7 +5999,7 @@ if (!class_exists("FunctionParsingError", false)) {
 if (!class_exists("Gender", false)) {
   /**
    * Represents a Gender criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span>
    * @package Google_Api_Ads_AdWords_v201509
    * @subpackage v201509
@@ -6943,7 +6943,7 @@ if (!class_exists("Label", false)) {
 if (!class_exists("Language", false)) {
   /**
    * Represents a Language criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is enabled for AdX.</span>
    * @package Google_Api_Ads_AdWords_v201509
    * @subpackage v201509
@@ -6996,7 +6996,7 @@ if (!class_exists("Language", false)) {
 if (!class_exists("Location", false)) {
   /**
    * Represents Location criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is enabled for AdX.</span>
    * @package Google_Api_Ads_AdWords_v201509
    * @subpackage v201509
@@ -7948,7 +7948,7 @@ if (!class_exists("MobileApplication", false)) {
 if (!class_exists("MobileDevice", false)) {
   /**
    * Represents a Mobile Device Criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is enabled for AdX.</span>
    * @package Google_Api_Ads_AdWords_v201509
    * @subpackage v201509
@@ -8704,7 +8704,7 @@ if (!class_exists("OperatingSystemVersion", false)) {
    * <a href="/adwords/api/docs/appendix/mobileplatforms">View the complete
    * list of available mobile platforms</a>. You can also get the list from
    * {@link ConstantDataService#getOperatingSystemVersionCriterion ConstantDataService}.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is enabled for AdX.</span>
    * @package Google_Api_Ads_AdWords_v201509
    * @subpackage v201509
@@ -9187,7 +9187,7 @@ if (!class_exists("PlacesOfInterestOperand", false)) {
 if (!class_exists("Platform", false)) {
   /**
    * Represents Platform criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is enabled for AdX.</span>
    * @package Google_Api_Ads_AdWords_v201509
    * @subpackage v201509
@@ -9635,7 +9635,7 @@ if (!class_exists("ProductDimension", false)) {
 
 if (!class_exists("ProductOfferId", false)) {
   /**
-   * An offer ID as specified by the merchant.
+   * An offer uniqid as specified by the merchant.
    * @package Google_Api_Ads_AdWords_v201509
    * @subpackage v201509
    */
@@ -9687,7 +9687,7 @@ if (!class_exists("ProductPartition", false)) {
    * instances of the same class.
    * 
    * To create a subdivision and child node in the same API request, they should refer to each other
-   * using temporary criterion IDs in the {@code parentCriterionId} of the child, and ID field of the
+   * using temporary criterion IDs in the {@code parentCriterionId} of the child, and uniqid field of the
    * subdivision. Temporary IDs are specified by using any negative integer. Temporary IDs only exist
    * within the scope of a single API request. The API will assign real criterion IDs, and replace
    * the temporary values, and the API response will reflect this.
@@ -10795,7 +10795,7 @@ if (!class_exists("SettingError", false)) {
 if (!class_exists("ShoppingSetting", false)) {
   /**
    * Setting for shopping campaigns. Defines the universe of products covered by the campaign.
-   * Encapsulates a merchant ID, sales country, and campaign priority.
+   * Encapsulates a merchant uniqid, sales country, and campaign priority.
    * @package Google_Api_Ads_AdWords_v201509
    * @subpackage v201509
    */
@@ -11722,7 +11722,7 @@ if (!class_exists("TemplateAd", false)) {
    * Represents a <a href=
    * "//www.google.com/adwords/displaynetwork/plan-creative-campaigns/display-ad-builder.html"
    * >Display Ad Builder</a> template ad. A template ad is
-   * composed of a template (specified by its ID) and the data that populates
+   * composed of a template (specified by its uniqid) and the data that populates
    * the template's fields. For a list of available templates and their required
    * fields, see <a href="/adwords/api/docs/appendix/templateads">Template Ads</a>.
    * <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span>
@@ -17574,7 +17574,7 @@ if (!class_exists("GetResult", false)) {
    * 
    * Query mutation results, of a {@code COMPLETED} job.
    * <p>Use a {@link JobSelector} to query and return either a
-   * {@link BulkMutateResult} or a {@link SimpleMutateResult}. Submit only one job ID
+   * {@link BulkMutateResult} or a {@link SimpleMutateResult}. Submit only one job uniqid
    * at a time.</p>
    * @package Google_Api_Ads_AdWords_v201509
    * @subpackage v201509
@@ -18576,7 +18576,7 @@ if (!class_exists("AdxError", false)) {
 if (!class_exists("AgeRange", false)) {
   /**
    * Represents an Age Range criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span>
    * @package Google_Api_Ads_AdWords_v201509
    * @subpackage v201509
@@ -18667,7 +18667,7 @@ if (!class_exists("AppPaymentModel", false)) {
    * Represents a criterion for targeting paid apps.
    * 
    * <p>Possible IDs: {@code 30} ({@code APP_PAYMENT_MODEL_PAID}).</p>
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span>
    * @package Google_Api_Ads_AdWords_v201509
    * @subpackage v201509
@@ -19088,7 +19088,7 @@ if (!class_exists("CampaignOperation", false)) {
 if (!class_exists("Carrier", false)) {
   /**
    * Represents a Carrier Criterion.
-   * <p>A criterion of this type can only be created using an ID.
+   * <p>A criterion of this type can only be created using an uniqid.
    * <span class="constraint AdxEnabled">This is enabled for AdX.</span>
    * @package Google_Api_Ads_AdWords_v201509
    * @subpackage v201509
@@ -20761,7 +20761,7 @@ if (!class_exists("MutateJobService", false)) {
      * 
      * Query mutation results, of a {@code COMPLETED} job.
      * <p>Use a {@link JobSelector} to query and return either a
-     * {@link BulkMutateResult} or a {@link SimpleMutateResult}. Submit only one job ID
+     * {@link BulkMutateResult} or a {@link SimpleMutateResult}. Submit only one job uniqid
      * at a time.</p>
      */
     public function getResult($selector) {

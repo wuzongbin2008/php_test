@@ -49,7 +49,7 @@ try {
   // Get the CreativeSetService.
   $creativeSetService = $user->GetService('CreativeSetService', 'v201508');
 
-  // Set the ID of the creatives to associate with this set.
+  // Set the uniqid of the creatives to associate with this set.
   $masterCreativeID = 'INSERT_MASTER_CREATIVE_ID_HERE';
   $companionCreativeID = 'INSERT_COMPANION_CREATIVE_ID_HERE';
 
@@ -63,7 +63,7 @@ try {
   // Create the creative set on the server.
   $createdCreativeSet = $creativeSetService->createCreativeSet($creativeSet);
 
-  printf("A creative set with ID '%s', name '%s', master creative ID '%s' "
+  printf("A creative set with uniqid '%s', name '%s', master creative uniqid '%s' "
       . ", and companion creativeID(s) {%s} was created.\n",
       $createdCreativeSet->id, $createdCreativeSet->name,
       $createdCreativeSet->masterCreativeId,

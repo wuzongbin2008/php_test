@@ -57,7 +57,7 @@ try {
   $customFieldOptionId = "INSERT_CUSTOM_FIELD_OPTION_ID_HERE";
   $lineItemId = "INSERT_LINE_ITEM_ID_HERE";
 
-  // Create a statement to select a single line item by ID.
+  // Create a statement to select a single line item by uniqid.
   $vars =
       MapUtils::GetMapEntries(array('id' => new NumberValue($lineItemId)));
   $filterStatement = new Statement("WHERE id = :id ORDER BY id ASC LIMIT 1",
@@ -100,16 +100,16 @@ try {
     $customFieldValueStrings = array();
     foreach ($lineItem->customFieldValues as $baseCustomFieldValue) {
       if (($baseCustomFieldValue instanceof CustomFieldValue)) {
-        $customFieldValueStrings[] = sprintf("{ID: '%d', value: '%s'}",
+        $customFieldValueStrings[] = sprintf("{uniqid: '%d', value: '%s'}",
             $baseCustomFieldValue->customFieldId,
             $baseCustomFieldValue->value->value);
       } else if ($baseCustomFieldValue instanceof DropDownCustomFieldValue) {
-        $customFieldValueStrings[] = sprintf("{ID: '%d', custom field option "
-            . "ID: '%d'}", $baseCustomFieldValue->customFieldId,
+        $customFieldValueStrings[] = sprintf("{uniqid: '%d', custom field option "
+            . "uniqid: '%d'}", $baseCustomFieldValue->customFieldId,
             $baseCustomFieldValue->customFieldOptionId);
       }
     }
-    printf("A line item with ID '%s' was set with custom field values '%s'\n.",
+    printf("A line item with uniqid '%s' was set with custom field values '%s'\n.",
         $lineItem->id, join(",", $customFieldValueStrings));
   }
 } catch (OAuth2Exception $e) {

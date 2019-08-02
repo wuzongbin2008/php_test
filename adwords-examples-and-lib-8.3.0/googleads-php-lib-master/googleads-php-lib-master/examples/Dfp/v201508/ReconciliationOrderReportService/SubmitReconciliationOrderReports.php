@@ -39,7 +39,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201508/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the reconciliation order report to submit.
+// Set the uniqid of the reconciliation order report to submit.
 $reconciliationOrderReportId = 'INSERT_RECONCILIATION_ORDER_REPORT_ID_HERE';
 
 try {
@@ -76,7 +76,7 @@ try {
       $i = $page->startIndex;
       foreach ($page->results as $reconciliationOrderReport) {
         printf(
-            "%d) Reconciliation order report with ID %d will be submitted.\n",
+            "%d) Reconciliation order report with uniqid %d will be submitted.\n",
             $reconciliationOrderReport->id
         );
       }

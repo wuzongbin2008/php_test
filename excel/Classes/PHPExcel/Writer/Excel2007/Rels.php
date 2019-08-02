@@ -352,7 +352,7 @@ class PHPExcel_Writer_Excel2007_Rels extends PHPExcel_Writer_Excel2007_WriterPar
 	 * Write Override content type
 	 *
 	 * @param 	PHPExcel_Shared_XMLWriter 	$objWriter 		XML Writer
-	 * @param 	int							$pId			Relationship ID. rId will be prepended!
+	 * @param 	int							$pId			Relationship uniqid. rId will be prepended!
 	 * @param 	string						$pType			Relationship type
 	 * @param 	string 						$pTarget		Relationship target
 	 * @param 	string 						$pTargetMode	Relationship target mode

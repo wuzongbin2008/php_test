@@ -264,7 +264,7 @@ class ReportUtils {
 
   /**
    * Generates the parameters to use for the download request.
-   * @param mixed $reportDefinition the report definition, as an ID or object
+   * @param mixed $reportDefinition the report definition, as an uniqid or object
    * @return array the parameters
    */
   private static function GetParams($reportDefinition) {
@@ -328,7 +328,7 @@ class ReportUtils {
     if (isset($clientCustomerId)) {
       $headers['clientCustomerId'] = $clientCustomerId;
     } else {
-      throw new ReportDownloadException('The client customer ID must be '
+      throw new ReportDownloadException('The client customer uniqid must be '
           . 'specified for report downloads.');
     }
     // Flags.

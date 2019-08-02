@@ -66,7 +66,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $team) {
-        printf("%d) Team with ID %d, and name '%s' was found.\n", $i++,
+        printf("%d) Team with uniqid %d, and name '%s' was found.\n", $i++,
             $team->id, $team->name);
       }
     }

@@ -48,7 +48,7 @@ try {
   // Get the ActivityGroupService.
   $activityGroupService = $user->GetService('ActivityGroupService', 'v201602');
 
-  // Set the ID of the advertiser company this activity group is associated
+  // Set the uniqid of the advertiser company this activity group is associated
   // with.
   $advertiserCompanyId = 'INSERT_ADVERTISER_COMPANY_ID_HERE';
 
@@ -75,7 +75,7 @@ try {
   // Display results.
   if (isset($activityGroups)) {
     foreach ($activityGroups as $activityGroup) {
-      printf("An activity group with ID \"%d\" and name \"%s\" was created.\n",
+      printf("An activity group with uniqid \"%d\" and name \"%s\" was created.\n",
           $activityGroup->id, $activityGroup->name);
     }
   } else {

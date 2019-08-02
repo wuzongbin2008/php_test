@@ -39,7 +39,7 @@ function GetTargetableLanguagesAndCarriersExample(AdWordsUser $user) {
   $languages = $constantDataService->getLanguageCriterion();
 
   foreach ($languages as $language) {
-    printf("Language with name '%s' and ID '%s' was found.\n",
+    printf("Language with name '%s' and uniqid '%s' was found.\n",
         $language->name, $language->id);
   }
 
@@ -49,7 +49,7 @@ function GetTargetableLanguagesAndCarriersExample(AdWordsUser $user) {
   $carriers = $constantDataService->getCarrierCriterion();
 
   foreach ($carriers as $carrier) {
-    printf("Carrier with name '%s', country code '%s', and ID '%s' was "
+    printf("Carrier with name '%s', country code '%s', and uniqid '%s' was "
         . "found.\n", $carrier->name, $carrier->countryCode, $carrier->id);
   }
 }

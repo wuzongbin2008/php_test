@@ -2683,10 +2683,10 @@ if (!class_exists("CreateCustomFieldsResponse", false)) {
 
 if (!class_exists("GetCustomFieldOption", false)) {
   /**
-   * Returns the {@link CustomFieldOption} uniquely identified by the given ID.
+   * Returns the {@link CustomFieldOption} uniquely identified by the given uniqid.
    * 
-   * @param customFieldOptionId the ID of the custom field option, which must already exist
-   * @return the {@code CustomFieldOption} uniquely identified by the given ID
+   * @param customFieldOptionId the uniqid of the custom field option, which must already exist
+   * @return the {@code CustomFieldOption} uniquely identified by the given uniqid
    * @package GoogleApiAdsDfp
    * @subpackage v201508
    */
@@ -3654,10 +3654,10 @@ if (!class_exists("CustomFieldService", false)) {
       return $result->rval;
     }
     /**
-     * Returns the {@link CustomFieldOption} uniquely identified by the given ID.
+     * Returns the {@link CustomFieldOption} uniquely identified by the given uniqid.
      * 
-     * @param customFieldOptionId the ID of the custom field option, which must already exist
-     * @return the {@code CustomFieldOption} uniquely identified by the given ID
+     * @param customFieldOptionId the uniqid of the custom field option, which must already exist
+     * @return the {@code CustomFieldOption} uniquely identified by the given uniqid
      */
     public function getCustomFieldOption($customFieldOptionId) {
       $args = new GetCustomFieldOption($customFieldOptionId);

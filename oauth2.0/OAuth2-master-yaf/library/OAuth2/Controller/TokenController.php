@@ -140,7 +140,7 @@ class TokenController implements TokenControllerInterface
         if ($grantType instanceof ClientAssertionTypeInterface) {
             $clientId = $grantType->getClientId();
         } else {
-            // validate the Client ID (if applicable)
+            // validate the Client uniqid (if applicable)
             if (!is_null($storedClientId = $grantType->getClientId()) && $storedClientId != $clientId) {
                 $response->setError(400, 'invalid_grant', sprintf('%s doesn\'t exist or is invalid for the client', $grantTypeIdentifier));
 

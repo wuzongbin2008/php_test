@@ -63,7 +63,7 @@ try {
   $totalResultsCounter = 0;
 
   foreach ($customTargetingKeys as $customTargetingKey) {
-    // Set the custom targeting key ID to select from.
+    // Set the custom targeting key uniqid to select from.
     $statementBuilder->WithBindVariableValue('customTargetingKeyId',
         $customTargetingKey);
 
@@ -81,8 +81,8 @@ try {
         $totalResultSetSize = $page->totalResultSetSize;
         foreach ($page->results as $customTargetingValue) {
           printf(
-              "%d) Custom targeting value with ID %d, name '%s', display "
-                  . "name '%s', and belonging to key with ID %d was found.\n",
+              "%d) Custom targeting value with uniqid %d, name '%s', display "
+                  . "name '%s', and belonging to key with uniqid %d was found.\n",
               $totalResultsCounter++,
               $customTargetingValue->id,
               $customTargetingValue->name,
@@ -135,7 +135,7 @@ function getAllCustomTargetingKeyIds($user) {
       $i = $page->startIndex;
       foreach ($page->results as $customTargetingKey) {
         printf(
-            "%d) Custom targeting key with ID %d, name '%s', and display "
+            "%d) Custom targeting key with uniqid %d, name '%s', and display "
                 . "name '%s' was found.\n",
             $i++,
             $customTargetingKey->id,

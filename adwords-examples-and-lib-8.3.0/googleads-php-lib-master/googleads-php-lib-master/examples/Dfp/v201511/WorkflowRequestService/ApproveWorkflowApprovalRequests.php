@@ -38,7 +38,7 @@ require_once 'Google/Api/Ads/Dfp/Lib/DfpUser.php';
 require_once 'Google/Api/Ads/Dfp/Util/v201511/StatementBuilder.php';
 require_once dirname(__FILE__) . '/../../../Common/ExampleUtils.php';
 
-// Set the ID of the proposal to approve workflow approval requests for.
+// Set the uniqid of the proposal to approve workflow approval requests for.
 $proposalId = 'INSERT_PROPOSAL_ID_HERE';
 
 try {
@@ -75,7 +75,7 @@ try {
       $totalResultSetSize = $page->totalResultSetSize;
       $i = $page->startIndex;
       foreach ($page->results as $workflowRequest) {
-        printf("%d) Workflow approval request with ID %d, for '%s', with ID %d "
+        printf("%d) Workflow approval request with uniqid %d, for '%s', with uniqid %d "
             . "will be approved.\n",
             $i++,
             $workflowRequest->id,
