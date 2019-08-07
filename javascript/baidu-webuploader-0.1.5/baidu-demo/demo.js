@@ -1,47 +1,33 @@
 jQuery(function() {
     var BASE_URL = "http://localhost/javascript/baidu-webuploader-0.1.5";
     var $ = jQuery,    // just in case. Make sure it's not an other libaray.
-
         $wrap = $('#uploader'),
-
         // 图片容器
         $queue = $('<ul class="filelist"></ul>')
             .appendTo( $wrap.find('.queueList') ),
-
         // 状态栏，包括进度和控制按钮
         $statusBar = $wrap.find('.statusBar'),
-
         // 文件总体选择信息。
         $info = $statusBar.find('.info'),
-
         // 上传按钮
         $upload = $wrap.find('.uploadBtn'),
-
         // 没选择文件之前的内容。
         $placeHolder = $wrap.find('.placeholder'),
-
         // 总体进度条
         $progress = $statusBar.find('.progress').hide(),
-
         // 添加的文件数量
         fileCount = 0,
-
         // 添加的文件总大小
         fileSize = 0,
-
         // 优化retina, 在retina下这个值是2
         ratio = window.devicePixelRatio || 1,
-
         // 缩略图大小
         thumbnailWidth = 50 * ratio,
         thumbnailHeight = 50 * ratio,
-
         // 可能有pedding, ready, uploading, confirm, done.
         state = 'pedding',
-
         // 所有文件的进度信息，key为file id
         percentages = {},
-
         supportTransition = (function(){
             var s = document.createElement('p').style,
                 r = 'transition' in s ||
@@ -52,7 +38,6 @@ jQuery(function() {
             s = null;
             return r;
         })(),
-
         // WebUploader实例
         uploader;
 
@@ -69,21 +54,17 @@ jQuery(function() {
         },
         dnd: '#uploader .queueList',
         paste: document.body,
-
         accept: {
             title: 'Images',
             extensions: 'gif,jpg,jpeg,bmp,png',
             mimeTypes: 'image/*'
         },
-
         // swf文件路径
         swf: BASE_URL + '/Uploader.swf',
-
         disableGlobalDnd: true,
-
         chunked: true,
         server: './fileupload.php',
-        fileNumLimit: 300,
+        fileNumLimit: 5, //最多5个
         fileSizeLimit: 50 * 1024 * 1024,    // 50 M
         fileSingleSizeLimit: 5 * 1024 * 1024    // 5M
     });
@@ -229,7 +210,6 @@ jQuery(function() {
     // 负责view的销毁
     function removeFile( file ) {
         var $li = $('#'+file.id);
-
         delete percentages[ file.id ];
         updateTotalProgress();
         $li.off().find('.file-panel').off().end().remove();
@@ -282,11 +262,9 @@ jQuery(function() {
 
     function setState( val ) {
         var file, stats;
-
         if ( val === state ) {
             return;
         }
-
         $upload.removeClass( 'state-' + state );
         $upload.addClass( 'state-' + val );
         state = val;
@@ -299,7 +277,6 @@ jQuery(function() {
                 $statusBar.addClass( 'element-invisible' );
                 uploader.refresh();
                 break;
-
             case 'ready':
                 $placeHolder.addClass( 'element-invisible' );
                 $( '#filePicker2' ).removeClass( 'element-invisible');
@@ -308,18 +285,15 @@ jQuery(function() {
                 $statusBar.removeClass('element-invisible');
                 uploader.refresh();
                 break;
-
             case 'uploading':
                 $( '#filePicker2' ).addClass( 'element-invisible' );
                 $progress.show();
                 $upload.text( '暂停上传' );
                 break;
-
             case 'paused':
                 $progress.show();
                 $upload.text( '继续上传' );
                 break;
-
             case 'confirm':
                 $progress.hide();
                 $upload.text( '开始上传' ).addClass( 'disabled' );
@@ -341,7 +315,6 @@ jQuery(function() {
                 }
                 break;
         }
-
         updateStatus();
     }
 
