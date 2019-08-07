@@ -1,9 +1,12 @@
 <?php
 $obj = new Code();
-$card_no = $obj->encodeID(1898882,7);
+$n = time()."18570";
+$card_no = $obj->encodeID($n,7);
 var_dump($card_no);
 $n = $obj->decodeID($card_no);
 var_dump($n);
+var_dump(bcmod(5, 4));
+var_dump(bcdiv(4, 2, 0));
 
 /**
  * 原文：https://www.cnblogs.com/yhdsir/p/5288468.html

@@ -1,0 +1,25 @@
+<html>
+<head>
+<link href="../css/uploadfile.css" rel="stylesheet">
+<script src="../../jquery-1.11.0.min.js"></script>
+<script src="../js/jquery.uploadfile.js"></script>
+</head>
+<body>
+<div id="fileuploader">Upload</div>
+<script>
+$(document).ready(function() {
+	$("#fileuploader").uploadFile({
+		url:"../php/upload.php",
+		fileName:"myfile",
+        dragDrop:true,  //可以取消
+        abortStr:"取消",
+        sequential:true,  //按顺序上传
+        sequentialCount:1,  //按顺序上传
+        // autoSubmit : "true",  //取消自动上传
+        showDelete: true,//删除按钮
+	});
+});
+</script>
+</body>
+</html>
+
