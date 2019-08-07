@@ -4,76 +4,42 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <!--引入CSS-->
-    <link rel="stylesheet" type="text/css" href="./webuploader.css">
-    <script type="text/javascript" src="../jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="./font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./demo.css">
+    <link rel="stylesheet" type="text/css" href="../webuploader.css">
+    <link rel="stylesheet" type="text/css" href="./demo.css">
+    <script type="text/javascript" src="../../jquery-1.11.0.min.js"></script>
     <!--引入JS-->
-    <script type="text/javascript" src="./webuploader.js"></script>
+    <script type="text/javascript" src="../webuploader.js"></script>
 
 </head>
 <body>
-<div id="uploader" class="wu-example">
-    <!--用来存放文件信息-->
-    <div id="thelist" class="uploader-list"></div>
-    <div class="btns">
-        <div id="picker">选择文件</div>
-        <button id="ctlBtn" class="btn btn-default">开始上传</button>
+<div class="page-container">
+    <h1 id="demo">Demo</h1>
+
+    <p>您可以尝试文件拖拽，使用QQ截屏工具，然后激活窗口后粘贴，或者点击添加图片按钮，来体验此demo.</p>
+
+    <div id="uploader" class="wu-example">
+        <div class="queueList">
+            <div id="dndArea" class="placeholder">
+                <div id="filePicker"></div>
+                <p>或将照片拖到这里，单次最多可选300张</p>
+            </div>
+        </div>
+        <div class="statusBar" style="display:none;">
+            <div class="progress">
+                <span class="text">0%</span>
+                <span class="percentage"></span>
+            </div><div class="info"></div>
+            <div class="btns">
+                <div id="filePicker2"></div><div class="uploadBtn">开始上传</div>
+            </div>
+        </div>
     </div>
+
 </div>
 </body>
-<script type="text/javascript">
-    var BASE_URL = "http://localhost/javascript/baidu-webuploader-0.1.5";
-    var uploader = WebUploader.create({
-
-        // swf文件路径
-        swf: BASE_URL + '/Uploader.swf',
-
-        // 文件接收服务端。
-        server: 'http://webuploader.duapp.com/server/fileupload.php',
-
-        // 选择文件的按钮。可选。
-        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
-        pick: '#picker',
-
-        // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
-        resize: false
-    });
-
-    // 当有文件被添加进队列的时候
-    uploader.on( 'fileQueued', function( file ) {
-        $('#thelist').append( '<div id="' + file.id + '" class="item">' +
-            '<h4 class="info">' + file.name + '</h4>' +
-            '<p class="state">等待上传...</p>' +
-            '</div>' );
-    });
-
-    // 文件上传过程中创建进度条实时显示。
-    uploader.on( 'uploadProgress', function( file, percentage ) {
-        var $li = $( '#'+file.id ),
-            $percent = $li.find('.progress .progress-bar');
-
-        // 避免重复创建
-        if ( !$percent.length ) {
-            $percent = $('<div class="progress progress-striped active">' +
-                '<div class="progress-bar" role="progressbar" style="width: 0%">' +
-                '</div>' +
-                '</div>').appendTo( $li ).find('.progress-bar');
-        }
-
-        $li.find('p.state').text('上传中');
-
-        $percent.css( 'width', percentage * 100 + '%' );
-    });
-
-    uploader.on( 'uploadSuccess', function( file ) {
-        $( '#'+file.id ).find('p.state').text('已上传');
-    });
-
-    uploader.on( 'uploadError', function( file ) {
-        $( '#'+file.id ).find('p.state').text('上传出错');
-    });
-
-    uploader.on( 'uploadComplete', function( file ) {
-        $( '#'+file.id ).find('.progress').fadeOut();
-    });
-</script>
+<script type="text/javascript" src="demo.js"></script>
 </html>
