@@ -1,7 +1,7 @@
 <?php
 $sk = '94251792d35f45acbb7adaf5784dfd25';
 $baiduApiHost = "http://cdnapi.baidu.com/customer/3t/statistics/";
-$postUrl = $baiduApiHost."http-code";
+$postUrl = $baiduApiHost."flow";
 
 $requestParams = json_encode([
     'start_time' => "2019-07-23 11:00",
@@ -15,8 +15,8 @@ $headerAry = [
     'Authorization: '.$sign
 ];
 $res = curlPost($postUrl, $requestParams, 30, $headerAry);
-echo $res;
-//var_dump(json_decode($res, true));
+//echo $res;
+var_dump(json_decode($res, true));
 
 function genSign($sk) {
     $curTs = time();
